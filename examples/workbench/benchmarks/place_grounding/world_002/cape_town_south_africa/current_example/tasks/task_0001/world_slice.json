@@ -1,0 +1,110 @@
+{
+  "characters": [],
+  "places": [
+    {
+      "place_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+      "name": "Life Grand Cafe Waterfront",
+      "type": "restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9058165,
+        "lng": 18.4211858
+      },
+      "address": "2 Pierhead Road, V&A Waterfront, Cape Town, 2001, South Africa",
+      "rating": 4.2
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+      "name": "The Waterside",
+      "type": "restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9057791,
+        "lng": 18.4211262
+      },
+      "address": "Pierhead Building (next to the NSRI, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+      "rating": 4.7
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijf4pbastnzb0r42rxjnnkhdw",
+      "name": "Time Out Market Cape Town",
+      "type": "restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9065173,
+        "lng": 18.4190808
+      },
+      "address": "The Old Power Station, Dock Rd, Victoria & Alfred Waterfront, Cape Town, 7806, South Africa",
+      "rating": 4.1
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijj1mbugbnzb0ry_ybabqypsk",
+      "name": "V&A Waterfront",
+      "type": "restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9030529,
+        "lng": 18.420928399999998
+      },
+      "address": "19 Dock Rd, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+      "rating": 5
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chij_mllnzb0rstlgz8intry",
+      "name": "Solandra Pool Deck",
+      "type": "restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9028759,
+        "lng": 18.4220972
+      },
+      "address": "InterContinental Table Bay Cape Town by IHG, Quay 6, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+      "rating": 4.3
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijuc8xn61nzb0rbcfwjsawupy",
+      "name": "Den Anker",
+      "type": "belgian_restaurant",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.9060905,
+        "lng": 18.4211876
+      },
+      "address": "Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+      "rating": 4.4
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijvzxnn9oz2k4rjrdi47a9n8g",
+      "name": "Cape Town Cruises",
+      "type": "tour_agency",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.906183899999995,
+        "lng": 18.4209653
+      },
+      "address": "Shop 8, Quay 5, Victoria & Alfred Waterfront, Cape Town, 8002, South Africa",
+      "rating": 4.9
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijpusvz1bnzb0rgee7eawgwx0",
+      "name": "V&A Waterfront",
+      "type": "shopping_mall",
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "location": {
+        "lat": -33.907991599999995,
+        "lng": 18.420161999999998
+      },
+      "address": "Cape Town, 8001, South Africa",
+      "rating": 4.6
+    }
+  ],
+  "services": [],
+  "districts": [
+    {
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "name": "Victoria & Alfred Waterfront",
+      "tags": []
+    }
+  ],
+  "corridors": []
+}

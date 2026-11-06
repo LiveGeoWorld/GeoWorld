@@ -1,0 +1,7 @@
+{
+  "language": "en",
+  "purpose": "English workbench display; original task and evaluation binding preserved",
+  "user_prompt": "Please arrange a cinema outing for Hanako Yamada, Elena Sato, Shota Hayashi, and Kenichi Sato. They will travel to the cinema independently and need to spend 60 minutes there together. Hanako is available from 18:31, Elena from 18:28, Shota from 18:32, and Kenichi from 18:34. All four must leave by 20:30.",
+  "source_user_prompt": "请帮山田 花子、エレナ・サトウ、林翔太和佐藤健一安排一次一起看电影的活动，地点类型为电影院。四人需要分别独立到达会面地点，并一起停留60分钟。山田 花子可从18:31开始参加，エレナ・サトウ可从18:28开始参加，林翔太可从18:32开始参加，佐藤健一可从18:34开始参加，且四人都必须在20:30前离开。",
+  "source_task_sha256": "d5a12fa8ce5f101a40c8959b1ce45d0a5eb4fddf150aa6a5f2f55efd11e1d880"
+}

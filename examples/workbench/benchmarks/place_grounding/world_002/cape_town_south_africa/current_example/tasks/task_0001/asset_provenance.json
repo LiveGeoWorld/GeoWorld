@@ -1,0 +1,26 @@
+{
+  "schema_version": "geoword.task.asset_provenance.v1",
+  "assets": [
+    {
+      "source_path": ".tmp_grounding_english/positive_clues_20261013/batch_assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg",
+      "task_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg",
+      "sha256": "82ca5557fb8fc7865f718d0d6c563e9be81ee15c8033bd007250a2e9fd5ccd83"
+    },
+    {
+      "source_path": ".tmp_grounding_english/positive_clues_20261013/batch_assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg",
+      "task_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg",
+      "sha256": "0111dbf75d2429f5444b85e25902e74735b52f9cee3e312fd8873fe87389087e"
+    },
+    {
+      "source_path": ".tmp_grounding_english/positive_clues_20261013/batch_assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h180.jpg",
+      "task_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h180.jpg",
+      "sha256": "b6d786fb9e94609b74add2f59d480a7c767449a216e8730c0965eccf6f65edbd"
+    },
+    {
+      "source_path": ".tmp_grounding_english/positive_clues_20261013/batch_assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h270.jpg",
+      "task_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h270.jpg",
+      "sha256": "7257131c8e9ec05a1545d62ee97700d5d28c3083c920cd3e65933cb14d1dcf5c"
+    }
+  ],
+  "note": "Task-local copies preserve the original Google Street View bytes; source paths were rewritten only to make this task bundle self-contained."
+}

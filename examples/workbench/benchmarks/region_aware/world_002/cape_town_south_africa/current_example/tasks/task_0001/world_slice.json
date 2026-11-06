@@ -1,0 +1,60 @@
+{
+  "characters": [
+    {
+      "character_id": "char_cape_town_south_africa_010",
+      "name": "Mpho Daniels",
+      "age": 0,
+      "occupation": "",
+      "home_district": "",
+      "preferences": {
+        "prefer": [],
+        "avoid": [],
+        "dietary": "",
+        "budget": ""
+      },
+      "constraints": [],
+      "relationships": []
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_cape_town_south_africa_chijfeaqwlpnzb0rl2i0irvp6si",
+      "name": "Two Oceans Aquarium",
+      "type": "aquarium",
+      "district": "Victoria & Alfred Waterfront",
+      "rating": 4.6,
+      "address": "Dock Rd, Victoria & Alfred Waterfront, Cape Town, 8002, South Africa"
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chij82iwketnzb0ragfrsesomgk",
+      "name": "City Sightseeing Harbour cruise",
+      "type": "tourist_attraction",
+      "district": "Victoria & Alfred Waterfront",
+      "rating": 4.6,
+      "address": "V&A Waterfront, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa"
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijtwnojq1nzb0r0eqyennigi0",
+      "name": "Waterfront, Cape Town",
+      "type": "tourist_attraction",
+      "district": "Victoria & Alfred Waterfront",
+      "rating": 4.7,
+      "address": "Victoria & Alfred Waterfront, Cape Town, 8001, South Africa"
+    }
+  ],
+  "services": [],
+  "districts": [
+    {
+      "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+      "name": "Victoria & Alfred Waterfront",
+      "role_tags": [
+        "commercial",
+        "ferry_terminal",
+        "healthcare_access",
+        "hotel",
+        "retail"
+      ]
+    }
+  ],
+  "corridors": []
+}

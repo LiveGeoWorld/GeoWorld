@@ -1,0 +1,19 @@
+{
+  "schema_version": "geoword.world.registry.v2",
+  "world_id": "world_demo",
+  "display_name": "London example",
+  "lifecycle_status": "active",
+  "import_mode": "bundled_example",
+  "city_count": 1,
+  "city_ids": [
+    "london_smoke"
+  ],
+  "cities": [
+    {
+      "city_id": "london_smoke",
+      "city_name": "London",
+      "active_version": 1,
+      "registry_path": "outputs/worlds/world_demo/cities/london_smoke.json"
+    }
+  ]
+}

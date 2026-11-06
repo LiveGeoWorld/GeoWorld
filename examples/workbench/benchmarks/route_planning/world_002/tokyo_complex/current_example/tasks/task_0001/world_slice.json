@@ -1,0 +1,97 @@
+{
+  "characters": [
+    {
+      "character_id": "char_tokyo_complex_002",
+      "name": "佐藤健一",
+      "age": 67,
+      "occupation": "新宿御苑前町内会役員 (Neighborhood Association Officer, retired salaryman)",
+      "home_district": "Shinjuku",
+      "preferences": {
+        "prefer": [
+          "清晨公园长椅",
+          "老字号和果子店",
+          "无障碍步道",
+          "公共广播清晰的地方"
+        ],
+        "avoid": [
+          "深夜营业的霓虹灯店",
+          "电子支付仅限的店铺",
+          "台阶多的入口"
+        ],
+        "dietary": "low_sodium",
+        "budget": "low"
+      },
+      "constraints": [
+        {
+          "type": "hidden",
+          "content": "我膝盖不好，不能走超过200米的上下坡，规划路线时必须避开歌舞伎町的坡道。",
+          "reveal_trigger": "30min_before_deadline"
+        }
+      ],
+      "relationships": []
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_tokyo_complex_chij_9gsagcnggar6auqgpod5ny",
+      "name": "Tokyu Plaza Harajuku “Harakado”",
+      "type": "shopping_mall",
+      "district": "Shibuya",
+      "rating": 4.3,
+      "address": "日本〒150-0001 Tokyo, Shibuya, Jingūmae, 6-chōme−31−２１ 原宿スクエア内 東急プラザ 原宿「ハラカド」"
+    },
+    {
+      "place_id": "place_tokyo_complex_chiju7ork9_nggarmfvqk0ikkoe",
+      "name": "Premium Karaoke MODIS Shinjuku",
+      "type": "lounge_bar",
+      "district": "Shinjuku",
+      "rating": 4.6,
+      "address": "日本〒160-0021 Tokyo, Shinjuku City, Kabukichō, 1-chōme−3−１６ パセラリゾーツ新宿本店 Ｂ１Ｆ"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijpd37mmgoggarvj2hfxoinve",
+      "name": "仲见世商店街",
+      "type": "tourist_attraction",
+      "district": "Asakusa",
+      "rating": 4.3,
+      "address": "1-chōme-36-3 Asakusa, Taito City, Tokyo 111-0032日本"
+    }
+  ],
+  "services": [],
+  "districts": [
+    {
+      "district_id": "district_tokyo_complex_asakusa",
+      "name": "Asakusa",
+      "role_tags": [
+        "commercial",
+        "historic",
+        "pedestrian",
+        "temple_area",
+        "tourism"
+      ]
+    },
+    {
+      "district_id": "district_tokyo_complex_shibuya",
+      "name": "Shibuya",
+      "role_tags": [
+        "commercial",
+        "fashion_center",
+        "healthcare_access",
+        "high_density",
+        "rail_hub"
+      ]
+    },
+    {
+      "district_id": "district_tokyo_complex_shinjuku",
+      "name": "Shinjuku",
+      "role_tags": [
+        "commercial",
+        "healthcare_access",
+        "high_density",
+        "nightlife",
+        "rail_hub"
+      ]
+    }
+  ],
+  "corridors": []
+}

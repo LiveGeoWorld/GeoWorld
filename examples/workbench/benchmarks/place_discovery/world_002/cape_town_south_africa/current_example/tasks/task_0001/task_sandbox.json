@@ -1,0 +1,13 @@
+{
+  "task_type": "place_discovery",
+  "task_id": "task_cape_town_south_africa_place_discovery_curated_0001",
+  "evaluation_mode": "judge_sequence",
+  "schema_version": "geoword.task.v1",
+  "time_context": {
+    "timezone": "Africa/Johannesburg",
+    "instruction_time": "2026-11-09T15:45:00+02:00",
+    "episode_start": "2026-11-09T15:45:00+02:00",
+    "episode_end": "2026-11-09T19:45:00+02:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

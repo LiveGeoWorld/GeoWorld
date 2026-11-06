@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoworld-studio"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6", "requests>=2", "shapely>=2", "geographiclib>=2", "tzdata>=2024.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["world_module*", "vis*", "shared*", "app*", "test_runner*", "task_module*"]
+
+[tool.setuptools.package-data]
+vis = ["static/*"]
+shared = ["web_ui/*"]
+"world_module.character.vis" = ["static/*"]
+
+"vis.tasks" = ["static/*", "interfaces.json"]
+
+"app.assets" = ["calendars/2026/*.json", "calendars/2026/README.md", "calendars/2026/sources/*.json"]
+
+"test_runner.vis" = ["vis_static/*"]
+
+"task_module.task_types.place_grounding.batch_generation" = ["prompts/*.md"]

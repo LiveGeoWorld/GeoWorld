@@ -1,0 +1,673 @@
+{
+  "region_review": {
+    "places": [
+      {
+        "place_id": "place_cape_town_south_africa_chijfeaqwlpnzb0rl2i0irvp6si",
+        "city_id": "cape_town_south_africa",
+        "name": "Two Oceans Aquarium",
+        "location": {
+          "lat": -33.908031699999995,
+          "lng": 18.4176607
+        },
+        "primary_type": "aquarium",
+        "address": "Dock Rd, Victoria & Alfred Waterfront, Cape Town, 8002, South Africa",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "near_corridor_ids": [
+          "corridor_cape_town_south_africa_v_a_waterfront_to_table_bay_harbour_pedestrian_transfer_spine",
+          "corridor_cape_town_south_africa_myciti_phase_1_corridor_civic_centre_to_table_view_via_marine_drive",
+          "corridor_cape_town_south_africa_n1_freeway_foreshore_to_mowbray"
+        ],
+        "map_projection": {
+          "provider": "google",
+          "google_place_id": "ChIJfeaqwlpnzB0Rl2i0iRvp6SI",
+          "source_place_id": "ChIJfeaqwlpnzB0Rl2i0iRvp6SI",
+          "osm_id": "",
+          "rating": 4.6,
+          "user_rating_count": 25035,
+          "business_status": "OPERATIONAL",
+          "types": [
+            "aquarium",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "google_place_details": {
+            "details_enriched": true,
+            "details_status": "queried",
+            "website_uri": "https://www.aquarium.co.za/",
+            "national_phone_number": "021 418 3823",
+            "current_opening_hours": {
+              "openNow": false,
+              "periods": [
+                {
+                  "open": {
+                    "day": 0,
+                    "hour": 9,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 26
+                    }
+                  },
+                  "close": {
+                    "day": 0,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 26
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 1,
+                    "hour": 9,
+                    "minute": 30,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 27
+                    }
+                  },
+                  "close": {
+                    "day": 1,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 27
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 2,
+                    "hour": 9,
+                    "minute": 30,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 28
+                    }
+                  },
+                  "close": {
+                    "day": 2,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 28
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 3,
+                    "hour": 9,
+                    "minute": 30,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 29
+                    }
+                  },
+                  "close": {
+                    "day": 3,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 29
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 4,
+                    "hour": 9,
+                    "minute": 30,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 30
+                    }
+                  },
+                  "close": {
+                    "day": 4,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 30
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 5,
+                    "hour": 9,
+                    "minute": 30,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 24
+                    }
+                  },
+                  "close": {
+                    "day": 5,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 24
+                    }
+                  }
+                },
+                {
+                  "open": {
+                    "day": 6,
+                    "hour": 9,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 25
+                    }
+                  },
+                  "close": {
+                    "day": 6,
+                    "hour": 18,
+                    "minute": 0,
+                    "date": {
+                      "year": 2026,
+                      "month": 7,
+                      "day": 25
+                    }
+                  }
+                }
+              ],
+              "weekdayDescriptions": [
+                "Monday: 9:30 AM – 6:00 PM",
+                "Tuesday: 9:30 AM – 6:00 PM",
+                "Wednesday: 9:30 AM – 6:00 PM",
+                "Thursday: 9:30 AM – 6:00 PM",
+                "Friday: 9:30 AM – 6:00 PM",
+                "Saturday: 9:00 AM – 6:00 PM",
+                "Sunday: 9:00 AM – 6:00 PM"
+              ],
+              "nextOpenTime": "2026-07-24T07:30:00Z"
+            },
+            "regular_opening_hours": {
+              "openNow": false,
+              "periods": [
+                {
+                  "open": {
+                    "day": 0,
+                    "hour": 9,
+                    "minute": 0
+                  },
+                  "close": {
+                    "day": 0,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 1,
+                    "hour": 9,
+                    "minute": 30
+                  },
+                  "close": {
+                    "day": 1,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 2,
+                    "hour": 9,
+                    "minute": 30
+                  },
+                  "close": {
+                    "day": 2,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 3,
+                    "hour": 9,
+                    "minute": 30
+                  },
+                  "close": {
+                    "day": 3,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 4,
+                    "hour": 9,
+                    "minute": 30
+                  },
+                  "close": {
+                    "day": 4,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 5,
+                    "hour": 9,
+                    "minute": 30
+                  },
+                  "close": {
+                    "day": 5,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                },
+                {
+                  "open": {
+                    "day": 6,
+                    "hour": 9,
+                    "minute": 0
+                  },
+                  "close": {
+                    "day": 6,
+                    "hour": 18,
+                    "minute": 0
+                  }
+                }
+              ],
+              "weekdayDescriptions": [
+                "Monday: 9:30 AM – 6:00 PM",
+                "Tuesday: 9:30 AM – 6:00 PM",
+                "Wednesday: 9:30 AM – 6:00 PM",
+                "Thursday: 9:30 AM – 6:00 PM",
+                "Friday: 9:30 AM – 6:00 PM",
+                "Saturday: 9:00 AM – 6:00 PM",
+                "Sunday: 9:00 AM – 6:00 PM"
+              ],
+              "nextOpenTime": "2026-07-24T07:30:00Z"
+            },
+            "price_level": null,
+            "price_range": {},
+            "reservable": null,
+            "dine_in": null,
+            "takeout": null,
+            "delivery": null,
+            "curbside_pickup": null,
+            "field_status": {
+              "website_uri": "provided",
+              "national_phone_number": "provided",
+              "current_opening_hours": "provided",
+              "regular_opening_hours": "provided",
+              "price_level": "not_provided",
+              "price_range": "not_provided",
+              "reservable": "not_provided",
+              "dine_in": "not_provided",
+              "takeout": "not_provided",
+              "delivery": "not_provided",
+              "curbside_pickup": "not_provided"
+            },
+            "reviews": [
+              {
+                "review_id": "places/ChIJfeaqwlpnzB0Rl2i0iRvp6SI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xBMWRrOUxkV1pxTkRFeVluVXhNMnBzYTNOelZIYxAB",
+                "text": "It took me back to my childhood when we had a proper aquarium in my hometown. My child enjoyed it so much seeing the different aquarium animals. Would suggest packing a small lunch for your toddlers if you decide to go. Place was clean and well kept. Ask at the front desk when feeding times and presentations are beforehand. Definitely recommended.",
+                "original_text": "It took me back to my childhood when we had a proper aquarium in my hometown. My child enjoyed it so much seeing the different aquarium animals. Would suggest packing a small lunch for your toddlers if you decide to go. Place was clean and well kept. Ask at the front desk when feeding times and presentations are beforehand. Definitely recommended.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "2 weeks ago",
+                "publish_time": "2026-07-09T15:03:38.646842369Z",
+                "author_display_name": "Daniel Mitton",
+                "author_uri": "https://www.google.com/maps/contrib/116614895010690391025/reviews"
+              },
+              {
+                "review_id": "places/ChIJfeaqwlpnzB0Rl2i0iRvp6SI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tOVE9VODJVVFJ6UVdOQ05FSjZXbnBuUkRSSWNXYxAB",
+                "text": "I highly recommend the Penguin Experience! My partner and I were completely surrounded by five Rockhopper penguins and two African penguins. The staff even placed a Rockhopper penguin right on my lap, and I got to gently pet it. The entire session was incredibly fun, highly informative, and ended with us walking alongside the five Rockhoppers—they were absolutely adorable.\n\nTip: There are only two spots available each day for this 8:30 AM experience, so definitely make sure to book well in advance.\n\nDo check the feeding schedule for the penguin feeding and shark feeding, those must not be missed.",
+                "original_text": "I highly recommend the Penguin Experience! My partner and I were completely surrounded by five Rockhopper penguins and two African penguins. The staff even placed a Rockhopper penguin right on my lap, and I got to gently pet it. The entire session was incredibly fun, highly informative, and ended with us walking alongside the five Rockhoppers—they were absolutely adorable.\n\nTip: There are only two spots available each day for this 8:30 AM experience, so definitely make sure to book well in advance.\n\nDo check the feeding schedule for the penguin feeding and shark feeding, those must not be missed.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "4 weeks ago",
+                "publish_time": "2026-06-25T01:48:16.449894439Z",
+                "author_display_name": "I W",
+                "author_uri": "https://www.google.com/maps/contrib/111015453324737161305/reviews"
+              },
+              {
+                "review_id": "places/ChIJfeaqwlpnzB0Rl2i0iRvp6SI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xoclpWVlVNWFJRZFZwcWExaEtjVFJEVFVOVkxXYxAB",
+                "text": "Went with my friend to take advantage of the  free birthday ticket and it went so smoothly. We were of course asked to present our ID’s and there was no need to book in advance which was great.\n\nAside from that the experience was good,and we spent close to 45mins there.\n\nThe staff was friendly.\n\nThis is definitely something for small kids but is enjoyable for all ages.",
+                "original_text": "Went with my friend to take advantage of the  free birthday ticket and it went so smoothly. We were of course asked to present our ID’s and there was no need to book in advance which was great.\n\nAside from that the experience was good,and we spent close to 45mins there.\n\nThe staff was friendly.\n\nThis is definitely something for small kids but is enjoyable for all ages.",
+                "language_code": "en",
+                "rating": 4,
+                "relative_publish_time": "3 months ago",
+                "publish_time": "2026-04-14T09:26:13.899125218Z",
+                "author_display_name": "Nina Kleynhans",
+                "author_uri": "https://www.google.com/maps/contrib/108550574300067952180/reviews"
+              }
+            ]
+          }
+        },
+        "relations": [],
+        "control_tags": {
+          "real_data": [
+            "google_place"
+          ]
+        },
+        "director_notes": {
+          "factual_details_policy": "google_place_details_when_available",
+          "density_context": "candidate_place"
+        },
+        "provenance": {
+          "schema_version": "v7.global.v1",
+          "source": [
+            "google_maps"
+          ],
+          "built_at": "2026-07-24T04:06:07.594210+00:00",
+          "generator": "pipeline_v2.map_module",
+          "quality_flags": []
+        }
+      },
+      {
+        "place_id": "place_cape_town_south_africa_chijtwnojq1nzb0r0eqyennigi0",
+        "city_id": "cape_town_south_africa",
+        "name": "Waterfront, Cape Town",
+        "location": {
+          "lat": -33.9028128,
+          "lng": 18.422357299999998
+        },
+        "primary_type": "tourist_attraction",
+        "address": "Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "near_corridor_ids": [
+          "corridor_cape_town_south_africa_v_a_waterfront_to_table_bay_harbour_pedestrian_transfer_spine",
+          "corridor_cape_town_south_africa_myciti_phase_1_corridor_civic_centre_to_table_view_via_marine_drive",
+          "corridor_cape_town_south_africa_n1_freeway_foreshore_to_mowbray"
+        ],
+        "map_projection": {
+          "provider": "google",
+          "google_place_id": "ChIJTWnOjq1nzB0R0eqYenNIgI0",
+          "source_place_id": "ChIJTWnOjq1nzB0R0eqYenNIgI0",
+          "osm_id": "",
+          "rating": 4.7,
+          "user_rating_count": 5401,
+          "business_status": "OPERATIONAL",
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "google_place_details": {
+            "details_enriched": true,
+            "details_status": "queried",
+            "website_uri": "",
+            "national_phone_number": "",
+            "current_opening_hours": {},
+            "regular_opening_hours": {},
+            "price_level": null,
+            "price_range": {},
+            "reservable": null,
+            "dine_in": null,
+            "takeout": null,
+            "delivery": null,
+            "curbside_pickup": null,
+            "field_status": {
+              "website_uri": "not_provided",
+              "national_phone_number": "not_provided",
+              "current_opening_hours": "not_provided",
+              "regular_opening_hours": "not_provided",
+              "price_level": "not_provided",
+              "price_range": "not_provided",
+              "reservable": "not_provided",
+              "dine_in": "not_provided",
+              "takeout": "not_provided",
+              "delivery": "not_provided",
+              "curbside_pickup": "not_provided"
+            },
+            "reviews": [
+              {
+                "review_id": "places/ChIJTWnOjq1nzB0R0eqYenNIgI0/reviews/Ci9DQUlRQUNvZENodHljRjlvT20xSk1HVXRWM1E1YURBeGNtSnNiRWxXY0ZCNmRGRRAB",
+                "text": "Great. My third time here, and walking is made much easier by the painted directions on the pavement. Lots of new buildings but it is so pleasant to take a stroll in this area. There are maps and it is almost impossible to lose one's way.",
+                "original_text": "Great. My third time here, and walking is made much easier by the painted directions on the pavement. Lots of new buildings but it is so pleasant to take a stroll in this area. There are maps and it is almost impossible to lose one's way.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "a month ago",
+                "publish_time": "2026-06-01T19:18:24.081818038Z",
+                "author_display_name": "Simon Drury",
+                "author_uri": "https://www.google.com/maps/contrib/104643714618100599673/reviews"
+              },
+              {
+                "review_id": "places/ChIJTWnOjq1nzB0R0eqYenNIgI0/reviews/Ci9DQUlRQUNvZENodHljRjlvT25Zd1JtVmlZVXhKZVhoeVVrNVlRMXB3Tm5oamJYYxAB",
+                "text": "Great place to walk around and tons of stuff do do. Shops, restaurants, boa and helicopter trips, museums, souvenirs and an art gallery and aquarium .\n\nGreat views of Table Mountain and Signal Hill, and felt very safe with security all over the place.\n\nYou don't need to taje a taxi from the cruise terminal , just walk,it is perfectly safe.",
+                "original_text": "Great place to walk around and tons of stuff do do. Shops, restaurants, boa and helicopter trips, museums, souvenirs and an art gallery and aquarium .\n\nGreat views of Table Mountain and Signal Hill, and felt very safe with security all over the place.\n\nYou don't need to taje a taxi from the cruise terminal , just walk,it is perfectly safe.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "5 months ago",
+                "publish_time": "2026-02-02T12:49:57.448619858Z",
+                "author_display_name": "Martin Rapier",
+                "author_uri": "https://www.google.com/maps/contrib/112871031347151350216/reviews"
+              },
+              {
+                "review_id": "places/ChIJTWnOjq1nzB0R0eqYenNIgI0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSWldXVXpOVEJJWnpka01rTmhSMHhrZVdSVmFrRRAB",
+                "text": "A place that’s definitely worth visiting for a walk, a meal, or just a drink. The views over Cape Town are incredible. Without a doubt, a must-visit spot.",
+                "original_text": "A place that’s definitely worth visiting for a walk, a meal, or just a drink. The views over Cape Town are incredible. Without a doubt, a must-visit spot.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "2 months ago",
+                "publish_time": "2026-05-06T15:36:09.782599013Z",
+                "author_display_name": "Xandro Brun",
+                "author_uri": "https://www.google.com/maps/contrib/110019795327878328340/reviews"
+              }
+            ]
+          }
+        },
+        "relations": [],
+        "control_tags": {
+          "real_data": [
+            "google_place"
+          ]
+        },
+        "director_notes": {
+          "factual_details_policy": "google_place_details_when_available",
+          "density_context": "candidate_place"
+        },
+        "provenance": {
+          "schema_version": "v7.global.v1",
+          "source": [
+            "google_maps"
+          ],
+          "built_at": "2026-07-24T04:06:07.594210+00:00",
+          "generator": "pipeline_v2.map_module",
+          "quality_flags": []
+        }
+      },
+      {
+        "place_id": "place_cape_town_south_africa_chij82iwketnzb0ragfrsesomgk",
+        "city_id": "cape_town_south_africa",
+        "name": "City Sightseeing Harbour cruise",
+        "location": {
+          "lat": -33.9083536,
+          "lng": 18.4182643
+        },
+        "primary_type": "tourist_attraction",
+        "address": "V&A Waterfront, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "near_corridor_ids": [
+          "corridor_cape_town_south_africa_v_a_waterfront_to_table_bay_harbour_pedestrian_transfer_spine",
+          "corridor_cape_town_south_africa_myciti_phase_1_corridor_civic_centre_to_table_view_via_marine_drive",
+          "corridor_cape_town_south_africa_n1_freeway_foreshore_to_mowbray"
+        ],
+        "map_projection": {
+          "provider": "google",
+          "google_place_id": "ChIJ82IwKetnzB0RAgFrSESoMgk",
+          "source_place_id": "ChIJ82IwKetnzB0RAgFrSESoMgk",
+          "osm_id": "",
+          "rating": 4.6,
+          "user_rating_count": 41,
+          "business_status": "OPERATIONAL",
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "google_place_details": {
+            "details_enriched": true,
+            "details_status": "queried",
+            "website_uri": "",
+            "national_phone_number": "",
+            "current_opening_hours": {},
+            "regular_opening_hours": {},
+            "price_level": null,
+            "price_range": {},
+            "reservable": null,
+            "dine_in": null,
+            "takeout": null,
+            "delivery": null,
+            "curbside_pickup": null,
+            "field_status": {
+              "website_uri": "not_provided",
+              "national_phone_number": "not_provided",
+              "current_opening_hours": "not_provided",
+              "regular_opening_hours": "not_provided",
+              "price_level": "not_provided",
+              "price_range": "not_provided",
+              "reservable": "not_provided",
+              "dine_in": "not_provided",
+              "takeout": "not_provided",
+              "delivery": "not_provided",
+              "curbside_pickup": "not_provided"
+            },
+            "reviews": [
+              {
+                "review_id": "places/ChIJ82IwKetnzB0RAgFrSESoMgk/reviews/Ci9DQUlRQUNvZENodHljRjlvT25kNWMyNTRjR1ZKZUd4Zk0wUnFOSGQyVFRoclpXYxAB",
+                "text": "Loved this little freebie bought with our bus ticket. We were going to do tge canal tour but this was recommended to us.\n\nBoat was only small but very efficient. Staff were great. Commentary very informative. Whilst you don't travel far, excellent history.\n\nThe seals at the dock, in the water & around the harbour were great.\n\nHappened to be out at noon & boat driver got us positioned & informed about the noon cannon. A bonus.",
+                "original_text": "Loved this little freebie bought with our bus ticket. We were going to do tge canal tour but this was recommended to us.\n\nBoat was only small but very efficient. Staff were great. Commentary very informative. Whilst you don't travel far, excellent history.\n\nThe seals at the dock, in the water & around the harbour were great.\n\nHappened to be out at noon & boat driver got us positioned & informed about the noon cannon. A bonus.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "8 months ago",
+                "publish_time": "2025-11-14T19:39:51.036131609Z",
+                "author_display_name": "Peter E",
+                "author_uri": "https://www.google.com/maps/contrib/114518460178235776866/reviews"
+              },
+              {
+                "review_id": "places/ChIJ82IwKetnzB0RAgFrSESoMgk/reviews/ChdDSUhNMG9nS0VJQ0FnTUNJd191U3RBRRAB",
+                "text": "Booking is essential.  Tickets in advance helped. Met by friendly crew.  Headphones in German did the trick. Never done this before. Saw alot. The guests enjoyed the harbor cruise very much.  It was worth the money paid. Didnt realize I&J was so enormous.  The view of Table Mountain was great.",
+                "original_text": "Booking is essential.  Tickets in advance helped. Met by friendly crew.  Headphones in German did the trick. Never done this before. Saw alot. The guests enjoyed the harbor cruise very much.  It was worth the money paid. Didnt realize I&J was so enormous.  The view of Table Mountain was great.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "a year ago",
+                "publish_time": "2025-04-04T09:22:55.871889Z",
+                "author_display_name": "Carmen Michelle Sonnenberg",
+                "author_uri": "https://www.google.com/maps/contrib/113170946403039470438/reviews"
+              },
+              {
+                "review_id": "places/ChIJ82IwKetnzB0RAgFrSESoMgk/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xRMFIyRnphVTh5U0hKTFlUVk5SVmRMV2twQ1QzYxAB",
+                "text": "Had a lovely boat ride..\nStaff were friendly and we also saw a lot of seals swimming and playing in the water\nIt was quiet ..ample seating..and yes!budget friendly..\nGreat view of docked ships and boats..would recommend for any1 visiting Cape Town to go for the ride.",
+                "original_text": "Had a lovely boat ride..\nStaff were friendly and we also saw a lot of seals swimming and playing in the water\nIt was quiet ..ample seating..and yes!budget friendly..\nGreat view of docked ships and boats..would recommend for any1 visiting Cape Town to go for the ride.",
+                "language_code": "en",
+                "rating": 5,
+                "relative_publish_time": "10 months ago",
+                "publish_time": "2025-09-17T11:57:35.360291068Z",
+                "author_display_name": "Husain M",
+                "author_uri": "https://www.google.com/maps/contrib/108630797133260701307/reviews"
+              }
+            ]
+          }
+        },
+        "relations": [],
+        "control_tags": {
+          "real_data": [
+            "google_place"
+          ]
+        },
+        "director_notes": {
+          "factual_details_policy": "google_place_details_when_available",
+          "density_context": "candidate_place"
+        },
+        "provenance": {
+          "schema_version": "v7.global.v1",
+          "source": [
+            "google_maps"
+          ],
+          "built_at": "2026-07-24T04:06:07.594210+00:00",
+          "generator": "pipeline_v2.map_module",
+          "quality_flags": []
+        }
+      }
+    ],
+    "warnings": [],
+    "place_evidence": {
+      "place_cape_town_south_africa_chijfeaqwlpnzb0rl2i0irvp6si": {
+        "documents": [
+          {
+            "source_url": "https://www.aquarium.co.za/",
+            "excerpt": "Two Oceans Aquarium | Explore, Experience and Engage Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral ree",
+            "visible_text": "Two Oceans Aquarium | Explore, Experience and Engage Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: Schools Go to: News Go to: Events Go to: IZE 2026 Go to: After Dark concerts Go to: Trash Bash Go to: Members' Sleepovers Go to: Speaker Nights Go to: Marine Protected Areas Day Go to: About Go to: Our staff Go to: Newsroom Go to: Position statements Go to: Vacancies Go to: Volunteers Go to: Affiliations, Membership and Accreditation Go to: Sustainability Go to: Partners Go to: Construction at the Two Oceans Aquarium: FAQ Go to: Growing and caring for corals Go to: Contact us Go to: Tour Operators Portal Go to: Membership Venues Foundation instagram facebook linkedin tiktok Open Mobile Navigation Go to: Buy Tickets Great to sea you Explore, Experience, and Engage Go to: BUY TICKETS TODAY Go to: BECOME A MEMBER Discover marine life Explore dozens of exhibits, showcasing South Africa's incredible ocean Go to: EXPLORE OUR EXHIBITS Go to: YOUR FAVOURITE ANIMALS Experience the ocean Learn to dive, meet the penguins, and explore behind the scenes of the Two Oceans Aquarium Go to: VISIT THE DIVE SCHOOL Go to: OUR EXPERIENCES Visit us Prices and Specials Things to do icon/tickets_white What’s on today Feeding Times Shows on today icon/calendar Education School Groups Our Foundation icon/users Our purpose Why the Two Oceans Aquarium? Our mission is to inspire people to take action so that we may all share abundant and healthy oceans for life. We rely on you to make this vision a reality - your support allows us to create inspiring experiences and to carry out valuable outreach and conservation work through the Two Oceans Aquarium Foundation. Go to: OUR FOUNDATION What is the Two Oceans Aquarium's purpose? 0 1 2 3 Awe-inspiring exhibits Sharks Discover sharks, big and small! The Two Oceans Aquarium is home to many iconic sharks. Break your shark misconceptions at the Save Our Seas Foundation Shark Exhibit, meet the camouflaged sharks of the Kelp Forest Exhibit, and discover small shysharks and their eggs. Go to: Sharks 0 1 2 3 Experiences Meet the penguins Get up close and personal with the adorable northern rockhopper penguins of the Two Oceans Aquarium with our awesome, educational, and interactive Penguin Experience! Go to: Penguin Experience 0 1 2 3 PADI Dive School Explore beneath the surface The Two Oceans Aquarium Dive School is a certified PADI Dive Resort and your one-stop shop for all things scuba diving in Cape Town. We offer courses from PADI, the world’s leading scuba diver training organisation, and your first step to becoming a scuba diver or upgrading your existing skills. Go to: Two Oceans Aquarium Dive School 0 1 2 3 Animals View all animals icon/shark Sharks South Africa is home to over 100 species of sharks – about a quarter of the world’s shark diversity. icon/pengiun Penguins Penguins are flightless seabirds that live almost exclusively below the equator. icon/turtle Turtles The first turtles appeared in the fossil record hundreds of millions of years ago. icon/kelp forest Kelp forest Kelp forests cover approximately 25% of the world’s coastlines. icon/jellyfish Jellies Jellies appeared about 600 million years ago as one of the first complex animals on our planet. icon/coralreef Coral reefs Coral reefs occupy only 0.1% of the world’s oceanic area, yet are believed to be the ecosystem with the highest biodiversity on the planet. I&J Ocean Exhibit Diversity of South Africa’s eastern coastline. At 1.6 million litres, the I&J Ocean Exhibit provides a massive home to rays, musselcrackers, rescued turtles, indigenous fishes, and much more. Whether viewed from the 10-metre-long transparent tunnel or the giant viewing window, the I&J Ocean Exhibit is your glimpse into South Africa's warm waters. Plus: You can scuba dive in this exhibit! Go to external page: View more Two Oceans Aquarium unveils new Ocean Exhibit 0 1 2 3 4 5 Save Our Seas Foundation Shark Exhibit Discover an incredible underwater world at the Save Our Seas Foundation Shark Exhibit ! Here, you can have a close encounter with some of the most misunderstood species in South Africa's oceans. You'll meet a shiver of ragged-tooth sharks and watch schools of giant yellowtail hunt for their next meal. Don't miss the curious yet territorial yellowbelly rockcod standing its ground to much larger predators. Relax in front of the exhibit's large window or spiral around the accessible viewing ramp – the choice is yours! Go to: View more Bon voyage to Dané the ragged-tooth shark 0 1 2 3 4 5 Penguin Exhibit This exhibit is home to a colony of African penguins, some rescued rockhopper penguins, Western leopard toads, and common platannas. A small selection of freshwater fish, indigenous and alien, to our Western Cape rivers can also be viewed in several pools. A bird hide, overlooking the rockhopper rookery, offers people a place to sit and relax in this peaceful riverine environment. Go to: View more Happy World Penguin Day from the Two Oceans Aquarium! 🌍🐧 0 1 2 3 4 5 Kelp Forest Exhibit Living kelp forests are currently only displayed in a handful of aquariums in the world. The Kelp Forest Exhibit is an underwater forest where giant sea bamboo grows like trees, and fish swim through the algae fronds like birds. Our visitors are mesmerised by the hypnotic sway of the tall kelp plants and the play of dappled sunlight on silver fish scales. Central to our \"two oceans\" theme, this enchanting forest remains one of our biggest drawcards, and many visitors return time and time again to its beauty and tranquillity. Go to: View more Underwater videos of the Kelp Forest Exhibit 0 1 2 3 4 5 Microscope Exhibit The Microscope Exhibit opens up a new world: Watch some of the remarkable activities of creatures such as goose barnacles, cushion stars and sea cucumbers as they feed, breathe and even give birth! Our digital microscope projects magnifications of the subject under examination onto an array of screens, so you can see these features in high definition. At the Exhibit is a small pool with various specimens, a display of mermaid's purses, our incredible microscope, and much more. Go to: View more Strawberry anemone under the microscope 0 1 2 3 4 5 Diversity Gallery The southern tip of the African continent is the meeting place of two mighty and bountiful oceans, the Indian and the Atlantic. The Two Oceans Aquarium is ideally positioned to showcase the incredible diversity of marine life found in these two oceans. The Diversity Gallery is home to vibrant tropical beauties from the warm Indian Ocean, such as the popular Western clownfish, and from the colder Atlantic Ocean, the cryptic fishes, translucent jellies, and the common octopus. Go to: View more Aquarium octopus on the lookout 0 1 2 3 4 5 Latest News View all news 28 August, 2026 Toad patrol: Protecting Cape Town’s endangered Western leopard toads Every winter, endangered Western leopard toads emerge from their garden homes and make a perilous journey across Cape Town's urban landscape to breed. For many, that journey involves crossing busy roa... Amphibians , Marine Wildlife , Blog , Conservation 26 August, 2026 Karoline Hanks ran 194km to support Sage, the olive ridley turtle Our Turtle Conservation Centre recently celebrated the incredible determination of Karoline Hanks, who dedicated every kilometre of an extraordinary 194km run to our special olive ridley turtle, Sage. Turtles , Conservation , Foundation , Plastic Pollution , Sustainable Seafood , Blog 25 August, 2026 Tracking our turtles: Twirling travels with Nori and Kai Our Turtle Conservation Centre team has just received the latest tracking update from Nori and Kai, our satellite-tagged turtles! Green turtle Nori has clocked nearly 12 000km since her release, while... Turtles , Turtle tracking , Conservation , Foundation , Blog Sign up to our newsletter Receive monthly news, online courses and conservation programmes. Go to external page: SIGN UP TODAY Visitor information Go to: Plan your trip Go to: Things to see Go to: Aquarium map Go to: Food and Drink Go to: Special Offers Go to: Directions & parking Go to: Download your Happy Snappy photos Go to: Bookings Go to: Buy tickets Go to: Annual memberships Go to: School groups Go to: Tour operators Go to: Activities Go to: Daily programme Go to: Dive School Go to: Adventure Diving Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times Go to: Job Shadowing Go to: News & resources Go to: Blog Go to: Animal hub Go to: About us Go to: Vacancies Go to: Get our newsletter Go to: Our Foundation Go to: Conservation Go to: Education Go to: Research Go to: Support our work Go to: Contact Us Go to external page: General enquiries: aquarium@aquarium.co.za +27 (0)21 418 3823 Two Oceans Aquarium Dock Road, V&A Waterfront Cape Town, South Africa © 2026 Two Oceans Aquarium Cape Town, South Africa. instagram facebook linkedin tiktok"
+          },
+          {
+            "source_url": "https://www.aquarium.co.za/visit-us/special-offers",
+            "excerpt": "Two Oceans Aquarium | Special Offers Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: School",
+            "visible_text": "Two Oceans Aquarium | Special Offers Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: Schools Go to: News Go to: Events Go to: IZE 2026 Go to: After Dark concerts Go to: Trash Bash Go to: Members' Sleepovers Go to: Speaker Nights Go to: Marine Protected Areas Day Go to: About Go to: Our staff Go to: Newsroom Go to: Position statements Go to: Vacancies Go to: Volunteers Go to: Affiliations, Membership and Accreditation Go to: Sustainability Go to: Partners Go to: Construction at the Two Oceans Aquarium: FAQ Go to: Growing and caring for corals Go to: Contact us Go to: Tour Operators Portal Go to: Membership Venues Foundation instagram facebook linkedin tiktok Open Mobile Navigation Go to: Buy Tickets Special Offers Want to squeeze the most value out of your Two Oceans Aquarium visit? These promotions and special offers will help you save money and enjoy the Aquarium experience for less. Go to: Buy now Home / Visit us / Special offers Specials Free entry in your birthday month Enjoy a free visit in your birthday month! Bring your SA ID along to show us your birth date. Specials Women's Day Yoga and Dive Special Celebrate Women's Day with the ultimate feel-good experience! Start your morning with a yoga session and experience the magic of scuba diving alongside our marine life. Specials After 3 Special Enjoy the sea after 3! We are offering an afternoon discount to visitors every day during the South African school term - if you buy your Aquarium ticket at our on-site ticket office after 3PM for use... Specials Cape Town City Pass A Cape Town City Pass unlocks access to more than 70 Cape Town tourist attractions, including the Aquarium. Get Cape Town's ultimate bundle deal. Visitor information Go to: Plan your trip Go to: Things to see Go to: Aquarium map Go to: Food and Drink Go to: Special Offers Go to: Directions & parking Go to: Download your Happy Snappy photos Go to: Bookings Go to: Buy tickets Go to: Annual memberships Go to: School groups Go to: Tour operators Go to: Activities Go to: Daily programme Go to: Dive School Go to: Adventure Diving Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times Go to: Job Shadowing Go to: News & resources Go to: Blog Go to: Animal hub Go to: About us Go to: Vacancies Go to: Get our newsletter Go to: Our Foundation Go to: Conservation Go to: Education Go to: Research Go to: Support our work Go to: Contact Us Go to external page: General enquiries: aquarium@aquarium.co.za +27 (0)21 418 3823 Two Oceans Aquarium Dock Road, V&A Waterfront Cape Town, South Africa © 2026 Two Oceans Aquarium Cape Town, South Africa. instagram facebook linkedin tiktok"
+          },
+          {
+            "source_url": "https://www.aquarium.co.za/visit-us/food-and-drink",
+            "excerpt": "Two Oceans Aquarium | Food and Drink Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: School",
+            "visible_text": "Two Oceans Aquarium | Food and Drink Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: Schools Go to: News Go to: Events Go to: IZE 2026 Go to: After Dark concerts Go to: Trash Bash Go to: Members' Sleepovers Go to: Speaker Nights Go to: Marine Protected Areas Day Go to: About Go to: Our staff Go to: Newsroom Go to: Position statements Go to: Vacancies Go to: Volunteers Go to: Affiliations, Membership and Accreditation Go to: Sustainability Go to: Partners Go to: Construction at the Two Oceans Aquarium: FAQ Go to: Growing and caring for corals Go to: Contact us Go to: Tour Operators Portal Go to: Membership Venues Foundation instagram facebook linkedin tiktok Open Mobile Navigation Go to: Buy Tickets Food and drink Food and refreshments at the Aquarium Home / Visit us / Food and drink Food and refreshments at the Aquarium Whether you feel the need for a quick snack or would like to take some time to enjoy a delicious sit-down meal, there are several enjoyable options for food and drinks at the Two Oceans Aquarium. Please note: Due to the nature of our facility, we ask that visitors please refrain from consuming outside food and drink inside the Aquarium. Designated snack stations are present, and your day ticket will allow you to return to the Aquarium on the day of your visit, should you wish to leave to enjoy a meal elsewhere during the day. RESTAURANT Bootlegger Coffee Company Restaurant Bootlegger's Aquarium branch is open Monday to Friday from 06h30 to 18h00, and weekends and public holidays from 07h30 to 18h00. Grab a delicious cup of coffee or a filling lunch! Members enjoy a 10% discount at the Aquarium Bootlegger restaurant. SNACK STATION I&J Ocean Exhibit Snack Stop Aquarium visitors can purchase snacks and coffee from the Snack Stop at the I&J Ocean Exhibit. Snack on a freshly baked muffin or enjoy an ice-cold cooldrink with a view into the underwater world. KIOSK Bootlegger Kiosk Grab a coffee on the go at Bootlegger's coffee kiosk just outside the Aquarium's main doors - the perfect place for a quick cuppa when passing the Aquarium or heading home after a day out. Thanks to their biodegradable packaging, Bootlegger coffee take-outs aren't harmful to our ocean. Visitor information Go to: Plan your trip Go to: Things to see Go to: Aquarium map Go to: Food and Drink Go to: Special Offers Go to: Directions & parking Go to: Download your Happy Snappy photos Go to: Bookings Go to: Buy tickets Go to: Annual memberships Go to: School groups Go to: Tour operators Go to: Activities Go to: Daily programme Go to: Dive School Go to: Adventure Diving Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times Go to: Job Shadowing Go to: News & resources Go to: Blog Go to: Animal hub Go to: About us Go to: Vacancies Go to: Get our newsletter Go to: Our Foundation Go to: Conservation Go to: Education Go to: Research Go to: Support our work Go to: Contact Us Go to external page: General enquiries: aquarium@aquarium.co.za +27 (0)21 418 3823 Two Oceans Aquarium Dock Road, V&A Waterfront Cape Town, South Africa © 2026 Two Oceans Aquarium Cape Town, South Africa. instagram facebook linkedin tiktok"
+          },
+          {
+            "source_url": "https://www.aquarium.co.za/about",
+            "excerpt": "Two Oceans Aquarium | About us Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: Schools Go t",
+            "visible_text": "Two Oceans Aquarium | About us Skip to content Open daily, 9:30am – 6pm Search instagram facebook linkedin tiktok Membership Venues Foundation Go to home page Search Open daily, 9:30am – 6pm Go to: Buy Tickets Home Go to: Visit Go to: Plan your trip Go to: Things to do Go to: Become a member Go to: Our Exhibits Go to: Special offers Go to: Food and drink Go to: Tour Operators Portal Go to: Experiences Go to: PADI Dive School Go to: Guided shore and boat dives Go to: Snorkelling Experience Go to: Dive in the Aquarium Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times, puppet shows, and presentations Go to: Animals Go to: Sharks Go to: Penguins Go to: Turtles Go to: Octopuses Go to: Kelp forest Go to: Moray eels Go to: Jellies Go to: Coral reefs Go to: Schools Go to: News Go to: Events Go to: IZE 2026 Go to: After Dark concerts Go to: Trash Bash Go to: Members' Sleepovers Go to: Speaker Nights Go to: Marine Protected Areas Day Go to: About Go to: Our staff Go to: Newsroom Go to: Position statements Go to: Vacancies Go to: Volunteers Go to: Affiliations, Membership and Accreditation Go to: Sustainability Go to: Partners Go to: Construction at the Two Oceans Aquarium: FAQ Go to: Growing and caring for corals Go to: Contact us Go to: Tour Operators Portal Go to: Membership Venues Foundation instagram facebook linkedin tiktok Open Mobile Navigation Go to: Buy Tickets About us Home / About Where oceans meet... The southern tip of the African continent is the meeting place of two oceans, the Indian and the Atlantic. The Two Oceans Aquarium in the V&A Waterfront, Cape Town, is ideally positioned to showcase the incredible diversity of marine life found off the southern tip of Africa. Our mission To inspire action for the future well-being of our oceans We know that our beautiful and mysterious oceans, which are the planet’s life support system, are in crisis because of human activities, and that a change in behaviour is needed to ensure abundant and healthy oceans for the future of all life. To raise awareness of the oceans, the Two Oceans Aquarium is designed to showcase the beauty and diversity of the oceans off southern Africa. Our awe-inspiring exhibits aim to encourage love, respect and understanding of our oceans so that people are motivated to take action for their future well-being and to use marine and other natural resources sustainably. Through fun, interactive exhibits, state-of-the-art education programmes, and innovative communication campaigns, the Aquarium offers a world-class, safe, clean and all-weather experience, all designed to ensure quality family time and unforgettable memories. Our vision﻿ Abundant and healthy oceans for life﻿ Internationally respected for its high standards in animal care, the Two Oceans Aquarium promotes sustainability through environmental education and conservation. We participate in the regional and international zoo and aquarium industry associations and are involved in meaningful marine research and conservation projects, in partnership with other like-minded organisations. In whatever we do, our philosophy is to be: Responsible Ethical Compassionate Respectful Dedicated Passionate We invite you to join us and explore, experience, and engage with our world. Go to: Visit us now! Sustainability The Two Oceans Aquarium actively strives to minimise the impact of its operations on the environment and is deeply committed to having a regenerative footprint. The Aquarium aims to be a positive influence, to build environmental and social resilience, and to lead as an organisation in which sustainability is embedded within all aspects of its operation. The Two Oceans Aquarium makes informed decisions to reverse the impacts of human activity to regenerate ecosystems and species, building in circularity, longevity, resilience, and balance so that all may thrive now and into the future. The Aquarium is a proud certified Diamond member of the Heritage Environmental Rating Programme, an internationally recognised eco-labelling programme. We achieved Diamond status in 2017 after maintaining Platinum status, the programme's highest level of achievement, for five years. Diamond status indicates that we continually strive to reduce the impact of our operations on the environment and local communities. Go to: Our sustainability journey Staff and volunteers A small and dedicated staff of approximately 60 supports the Two Oceans Aquarium. They are supported by volunteers whose work is also invaluable to the Aquarium. Go to: Meet our team Accreditations and memberships The Two Oceans Aquarium is a member of several professional bodies and we participate in regional and international zoo and aquarium industry associations. Go to: View our professional memberships Our partners Sincere thanks to our corporate partners, whose generosity and shared vision enable us to foster love, respect and understanding of our oceans. Through these associations, we are able to offer our visitors world-class exhibits, ensure that our staff and visitors have access to state-of-the-art equipment, and ensure that our animals receive the best care. With support from these partners, we are also able to present education programmes, run conservation projects, and conduct research through the registered non-profit public benefit organisation, the Two Oceans Aquarium Foundation. Go to: Our partners Visitor information Go to: Plan your trip Go to: Things to see Go to: Aquarium map Go to: Food and Drink Go to: Special Offers Go to: Directions & parking Go to: Download your Happy Snappy photos Go to: Bookings Go to: Buy tickets Go to: Annual memberships Go to: School groups Go to: Tour operators Go to: Activities Go to: Daily programme Go to: Dive School Go to: Adventure Diving Go to: Penguin Experience Go to: Behind the scenes tours Go to: Feeding times Go to: Job Shadowing Go to: News & resources Go to: Blog Go to: Animal hub Go to: About us Go to: Vacancies Go to: Get our newsletter Go to: Our Foundation Go to: Conservation Go to: Education Go to: Research Go to: Support our work Go to: Contact Us Go to external page: General enquiries: aquarium@aquarium.co.za +27 (0)21 418 3823 Two Oceans Aquarium Dock Road, V&A Waterfront Cape Town, South Africa © 2026 Two Oceans Aquarium Cape Town, South Africa. instagram facebook linkedin tiktok"
+          }
+        ],
+        "matches": {
+          "poi_name": [
+            "Two Oceans Aquarium"
+          ],
+          "service_detail": [
+            "Two Oceans Aquarium"
+          ]
+        },
+        "collection_status": "source_backed"
+      },
+      "place_cape_town_south_africa_chijtwnojq1nzb0r0eqyennigi0": {
+        "documents": [],
+        "matches": null,
+        "collection_status": "source_unavailable"
+      },
+      "place_cape_town_south_africa_chij82iwketnzb0ragfrsesomgk": {
+        "documents": [],
+        "matches": null,
+        "collection_status": "source_unavailable"
+      }
+    },
+    "rule": {
+      "statement": "The Two Oceans Aquarium in Cape Town offers Scuba diving opportunities in its 2.2 million-litre tank for those who prefer not to dive in the open ocean.",
+      "evidence_refs": [
+        "wv_cape_town_south_africa_38_0008"
+      ],
+      "extraction_status": "supported",
+      "rule_id": "rr_cape_town_south_africa_43a7b9eaeddf"
+    },
+    "wikivoyage_source_paragraph": {
+      "evidence_id": "wv_cape_town_south_africa_38_0008",
+      "block_type": "paragraph",
+      "semantic_group_id": "do_diving_38.paragraph_0010",
+      "order": 10,
+      "source_text": "If the open ocean does not appeal to you, the Two Oceans Aquarium also offer diving opportunities in their 2.2 million-litre tank."
+    }
+  }
+}

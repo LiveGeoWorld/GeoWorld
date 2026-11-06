@@ -1,0 +1,66 @@
+{
+  "characters": [
+    {
+      "character_id": "char_tokyo_complex_008",
+      "name": "エレナ・サトウ"
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_tokyo_complex_chij85hbbnomggarygvauinix18",
+      "name": "新宿华盛顿酒店"
+    },
+    {
+      "place_id": "place_tokyo_complex_chij4a8_icinggarwqtfa964zrm",
+      "name": "西武新宿"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijyui5cz_mggarbrxlo384iwq",
+      "name": "水道桥"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijt6sgdmwmggarqcumekzvpyy",
+      "name": "新宿高岛屋"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijbvderkamggarxsijrhycihs",
+      "name": "小石川后乐园"
+    },
+    {
+      "place_id": "place_tokyo_complex_chij_9gsagcnggar6auqgpod5ny",
+      "name": "Tokyu Plaza Harajuku “Harakado”"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijkb268ysnggarmzivao4qyzm",
+      "name": "Shinjuku Ale"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijd9pd_daoggarcygmmxqki5e",
+      "name": "东京晴空街道"
+    }
+  ],
+  "services": [],
+  "districts": [
+    {
+      "district_id": "district_tokyo_complex_asakusa",
+      "name": "Asakusa"
+    },
+    {
+      "district_id": "district_tokyo_complex_kabukicho",
+      "name": "Kabukicho"
+    },
+    {
+      "district_id": "district_tokyo_complex_koishikawa_korakuen",
+      "name": "Koishikawa-Korakuen"
+    },
+    {
+      "district_id": "district_tokyo_complex_shibuya",
+      "name": "Shibuya"
+    },
+    {
+      "district_id": "district_tokyo_complex_shinjuku",
+      "name": "Shinjuku"
+    }
+  ],
+  "corridors": []
+}

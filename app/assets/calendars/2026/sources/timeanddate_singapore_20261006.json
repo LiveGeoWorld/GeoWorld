@@ -1,0 +1,304 @@
+{
+  "url": "https://www.timeanddate.com/holidays/singapore/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year’s Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-01",
+      "name": "Thaipusam",
+      "source_type": "Observance, Hindu",
+      "source_details": "",
+      "source_line": 101,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Valentine's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 102,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Total Defense Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Chinese New Year's Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Second Day of Chinese New Year",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-19",
+      "name": "Ramadan Start",
+      "source_type": "Observance, Muslim",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-08",
+      "name": "International Women's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 107,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 108,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Hari Raya Puasa",
+      "source_type": "National Holiday, Muslim",
+      "source_details": "",
+      "source_line": 109,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-01",
+      "name": "April Fool's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Easter Saturday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Easter Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 113,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Labour Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 115,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-18",
+      "name": "International Museum Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 116,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Hari Raya Haji",
+      "source_type": "National Holiday, Muslim",
+      "source_details": "",
+      "source_line": 117,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Vesak Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 118,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Day off for Vesak Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 119,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Father's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 120,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Singapore Armed Forces Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Racial Harmony Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-09",
+      "name": "National Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 124,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "National Day observed",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali/Deepavali",
+      "source_type": "National Holiday, Hindu",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-09",
+      "name": "Day off for Diwali/Deepavali",
+      "source_type": "National Holiday, Hindu",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-12-22",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 130,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "National Holiday, Christian",
+      "source_details": "",
+      "source_line": 131,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year’s Eve",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 132,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    }
+  ]
+}

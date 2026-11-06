@@ -1,0 +1,38 @@
+{
+  "schema_version": "geoword.dynamic_counterfactual_proof.v3",
+  "state": "pending",
+  "source": {
+    "task_type": "multi_entity",
+    "task_id": "task_shanghai_smoke_multi_entity_0001",
+    "task_folder": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\multi_entity\\world_002\\shanghai_smoke\\20260901_165234\\tasks\\task_0001_请帮李美琴",
+    "task_json_sha256": "",
+    "sandbox_sha256": ""
+  },
+  "scenario_family_id": "multi_0001_verified",
+  "dynamic_level": "episode",
+  "materialized_event_ids": [
+    "probe_0001_authored_001",
+    "probe_0001_authored_002",
+    "probe_0001_authored_003"
+  ],
+  "materialized_event_graph_sha256": "dc93864abfe82f8dd434d9644581e4e71a9e02188b7374016a8e56fdc0de74c9",
+  "required_claims": {
+    "static_baseline_feasible": true,
+    "p1_fixed_before_constraint_delta": true,
+    "forward_solver_matches_fixed_p1": true,
+    "every_event_has_replayed_effect": true,
+    "post_event_feasible_alternative": true,
+    "still_effective_static_constraints_preserved": true,
+    "public_observation_path_for_each_event": true
+  },
+  "required_evidence": {
+    "baseline_solution": "source solver result for P0",
+    "event_impacts": "one exact impact and ablation record per event",
+    "post_event_solution": "same source solver result for P1 after the state overlay",
+    "target_selection": "P1 identity fixed before authoring and replaying the event chain",
+    "dependency_difference": "private P0/P1 dependency footprints and changed owned fields",
+    "constraint_transition": "C0, legal owned-state deltas, and resulting C1",
+    "forward_verification": "exact identity match between fixed P1 and the forward solver result",
+    "public_observation_contract": "owning App/tool path without private identifiers"
+  }
+}

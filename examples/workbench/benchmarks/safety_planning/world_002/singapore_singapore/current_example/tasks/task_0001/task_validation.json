@@ -1,0 +1,9 @@
+{
+  "task_dir": "outputs/benchmarks/safety_planning/world_002/singapore_singapore/20260918_184231/tasks/task_0001_I’m N",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "task_type": "safety_planning",
+  "finalized_at": "2026-09-18T08:43:48.138283+00:00",
+  "state": "formal"
+}

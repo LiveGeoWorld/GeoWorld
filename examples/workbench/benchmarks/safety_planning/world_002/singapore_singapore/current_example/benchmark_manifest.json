@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "safety_planning",
+  "generated_at": "2026-09-18T08:42:31.661186+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_singapore_singapore_safety_planning_0001",
+      "folder": "task_0001"
+    }
+  ]
+}

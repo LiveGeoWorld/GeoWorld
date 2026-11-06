@@ -1,0 +1,254 @@
+{
+  "scope": "Recorded review examples; task requests and reference answers preserved. Portable source pointers and display metadata are tracked separately.",
+  "samples": [
+    {
+      "task_type": "place_grounding",
+      "source": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\.tmp_grounding_english\\positive_clues_20261013\\export\\tasks\\task_0001_I was",
+      "destination": "examples/workbench/benchmarks/place_grounding/world_002/cape_town_south_africa/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-10-13T15:33:52.018754+08:00",
+      "task_id": "task_cape_town_south_africa_place_grounding_curated_0001",
+      "validation": {
+        "task_dir": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\.tmp_grounding_english\\positive_clues_20261013\\export\\tasks\\task_0001_I was",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_type": "place_grounding",
+        "finalized_at": "2026-10-13T15:33:52.161487+08:00",
+        "state": "formal"
+      },
+      "selection": "saved generated sample checked against the current task contract",
+      "sha256": {
+        "asset_provenance.json": "e5d5ec90ccdfd74f5804d57548bd37f01d6d089a2339251dbb7b38bae4a23a05",
+        "curated_source.json": "7bd960e3ffe48e675acccc0436c5442d95d4f897657d45c9d11c49f9693a3110",
+        "env_events.json": "64c1775385de882bf3ea2d627206786eaf50e094e0a9920d9eb55c6680ac3125",
+        "grounding_gold.json": "434768f6c1b8bbab899fd63a34a5cb687d72688dc93e11ac22760c027789f1ba",
+        "judge_sequence.json": "4aaeac5d6b135cad82a05d12de9466a17ac6cf68afbe0cd77c7b711c86bd5fa3",
+        "task.json": "ed6dbddeccaaf5d4ce2b1a1711d30050ff59740e717649e3cfe5aac6b9a45137",
+        "task_sandbox.json": "2809ace799ae1884f05fd5022a110be944da23fc874c73483ea68f1edc6c02de",
+        "task_validation.json": "87ca8f25a6b05a78f0a11b8cdb842ef8d54fe178cff9f1fdd250bc576f2bbb73",
+        "world_slice.json": "9e1869a2d90513048f4ac67aa520df89fbe7aa870ede15a432a16178b313ef38",
+        "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg": "82ca5557fb8fc7865f718d0d6c563e9be81ee15c8033bd007250a2e9fd5ccd83",
+        "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h180.jpg": "b6d786fb9e94609b74add2f59d480a7c767449a216e8730c0965eccf6f65edbd",
+        "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h270.jpg": "7257131c8e9ec05a1545d62ee97700d5d28c3083c920cd3e65933cb14d1dcf5c",
+        "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg": "0111dbf75d2429f5444b85e25902e74735b52f9cee3e312fd8873fe87389087e"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "place_discovery",
+      "source": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\.tmp_discovery_v2\\route_public_verification\\tasks\\task_0001_I’m i",
+      "destination": "examples/workbench/benchmarks/place_discovery/world_002/cape_town_south_africa/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-11-04T16:09:47.296682+08:00",
+      "task_id": "task_cape_town_south_africa_place_discovery_curated_0001",
+      "validation": {
+        "task_dir": ".tmp_discovery_v2\\route_public_verification\\tasks\\task_0001_I’m i",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_type": "place_discovery",
+        "finalized_at": "2026-11-04T16:09:47.512778+08:00",
+        "state": "formal"
+      },
+      "selection": "saved generated sample checked against the current task contract",
+      "sha256": {
+        "curated_source.json": "f6bb2ad27a408fec3d41b9c027804198afc20eb4aac729b6f396a8b4720f44e1",
+        "discovery_gold.json": "0be8ef08b12540b7937eeaeeb0f77d10bdfe7d11cb0d8a2aac28cd13ddda701b",
+        "env_events.json": "64c1775385de882bf3ea2d627206786eaf50e094e0a9920d9eb55c6680ac3125",
+        "judge_sequence.json": "cb999379e4d4075d48775caeb35ab73afd18436aa5ca897ed8c84625afcab4d1",
+        "task.json": "4ce07db5b648f3c26915b4cf820622c24418297237b2df22bb05a290200f43b8",
+        "task_sandbox.json": "020d4945f4ae817fa1097088500f9ee5b80cf48ace75abacba3ec42634b0ce1d",
+        "task_validation.json": "fcf3630852d927e1a20c7d971703fc06d7add3693acf03408e7e0433f731d8bd",
+        "world_slice.json": "2ed157f9c4ecc0d54fe48d8059ff681c43d9c91d034450a3da7c7ad1f309038a"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "route_planning",
+      "source": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\route_planning\\world_002\\tokyo_complex\\20260828_025209\\tasks\\task_0004_请帮佐藤健",
+      "destination": "examples/workbench/benchmarks/route_planning/world_002/tokyo_complex/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-08-28T14:20:46.470934+08:00",
+      "task_id": "task_tokyo_complex_route_planning_0004",
+      "validation": {
+        "task_dir": "outputs/benchmarks/route_planning/world_002/tokyo_complex/20260828_025209/tasks/task_0004_请帮佐藤健",
+        "valid": true,
+        "errors": [],
+        "task_type": "route_planning",
+        "finalized_at": "2026-08-28T01:04:03.473392+08:00",
+        "state": "formal"
+      },
+      "selection": "latest validated batch; internally consistent waypoint purpose",
+      "sha256": {
+        "display_translation.json": "510738fab342ca2f434b1ae031e91030fe12b6121d93354eb89d20eb43d7fcd2",
+        "env_events.json": "75dd9c18df385a46afa83f0ef7845eaf6e0f317eadb73878d44a4ba788e7edfb",
+        "judge_sequence.json": "6483fa95e07cebdbd3073f875b80aa4055a9dd5c844e3d4316955f403e96b1d6",
+        "route_sandbox.json": "98361fc6dbfb1a68e5441e5b92e4101bae138f1a5b369575a9020c0d13477c31",
+        "task.json": "6fa1f99f408b0caea0562aebe4472b77f92072b8310e92876d44013950c2ab57",
+        "task_provenance.json": "53b336035f6f83010cd55ffa27c7a138ba139321b186fb2468bf2b51d81db651",
+        "task_sandbox.json": "1da82a5583188203c32003d33db3488fbd597b8998e49287ff60071d61015681",
+        "task_validation.json": "17059721977371874c456421b6d5b013c772e37089fb0e8d01297cfa8e92189e",
+        "world_slice.json": "7b1a9e20f9003e2c3eff3a978504a1baa4acd88831d406eb188d08980f50c3bd"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "multi_entity",
+      "source": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\multi_entity\\world_002\\tokyo_complex\\20260902_002617\\tasks\\task_0011_请帮山田花",
+      "destination": "examples/workbench/benchmarks/multi_entity/world_002/tokyo_complex/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-09-01T22:32:55.281403+08:00",
+      "task_id": "task_tokyo_complex_multi_entity_0011",
+      "validation": {
+        "task_dir": "outputs/benchmarks/multi_entity/world_002/tokyo_complex/20260902_002617/tasks/task_0011_请帮山田花",
+        "valid": true,
+        "errors": [],
+        "task_type": "multi_entity",
+        "finalized_at": "2026-09-01T22:28:59.074304+08:00",
+        "state": "formal"
+      },
+      "selection": "latest available validated batch; English and natural wording preferred",
+      "sha256": {
+        "display_translation.json": "be2e1a721e115e30103469dc4864f67d0a3868009371392e39e88138a12a91a3",
+        "env_events.json": "75dd9c18df385a46afa83f0ef7845eaf6e0f317eadb73878d44a4ba788e7edfb",
+        "judge_sequence.json": "8e4c4ad6603d4f060c63d869978cdc89ccb7d4f8e3a371392b1a3cf823b7c609",
+        "task.json": "d5a12fa8ce5f101a40c8959b1ce45d0a5eb4fddf150aa6a5f2f55efd11e1d880",
+        "task_provenance.json": "f461a07a03a14078da6101611b3acfbb0800b8639b7f83d9b0e9913ed38eba47",
+        "task_sandbox.json": "2a174168ad805036aa029876ac670e88dcd6b47f492f853cf1948dc3a29e00b5",
+        "task_validation.json": "c2716f4d3a72376272e0a06c0ac004ed52adf85726b9f1fdf32b4829abc70bde",
+        "world_slice.json": "46cefc7e73fb8b1341099f9204bdceb35fd985674235a1e41d261397a64cfce1",
+        "workbench_projection.json": "b6f2311b8150300d2ad736c71a496a94084556f663f325d50fa710b8ed421af2"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "safety_planning",
+      "source": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\safety_planning\\world_002\\singapore_singapore\\20260918_184231\\tasks\\task_0001_I’m N",
+      "destination": "examples/workbench/benchmarks/safety_planning/world_002/singapore_singapore/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-09-18T17:21:17.588288+08:00",
+      "task_id": "task_singapore_singapore_safety_planning_0001",
+      "validation": {
+        "task_dir": "outputs/benchmarks/safety_planning/world_002/singapore_singapore/20260918_184231/tasks/task_0001_I’m N",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_type": "safety_planning",
+        "finalized_at": "2026-09-18T16:43:48.138283+08:00",
+        "state": "formal"
+      },
+      "selection": "latest available validated batch; English and natural wording preferred",
+      "sha256": {
+        "env_events.json": "75dd9c18df385a46afa83f0ef7845eaf6e0f317eadb73878d44a4ba788e7edfb",
+        "judge_sequence.json": "8e4c4ad6603d4f060c63d869978cdc89ccb7d4f8e3a371392b1a3cf823b7c609",
+        "static_app_state.json": "1add53868c9edf23cd482ae2cb073c8acc950ee1682c1aa55bab9593ef20a208",
+        "task.json": "be6b17e369f1ab9fffedba14822f0b08115bef193a2428c1f3a29149c1d65404",
+        "task_provenance.json": "b5208359c5a82fa2d50583fcc63e0990e128239d8b100df1bf05a3810e4ac613",
+        "task_sandbox.json": "3738ac2ea46af4e419ab839de8ab8760ddad651188b2b09bb698c5cf47615ae4",
+        "task_validation.json": "ff7fa60ea7a30795f11c7329d3aa399e93d7204a79e36c62fd22ca8143791def",
+        "workbench_projection.json": "8df430c281d83f65893aaa162dcbf41fcf1c480b00a4b9f2299bb47cb173eb75",
+        "world_slice.json": "66b934b176465384cbbeffe8218d0bd88199135599f2003ee2ae1ed8d3f04cf9",
+        "display_translation.json": "9bc61d4ef4adfd34ee9de8c20d24f455312d6d20a3e4170a0e3ba60bc52094f7"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "region_aware",
+      "source": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\region_aware\\world_002\\cape_town_south_africa\\20260909_145854\\tasks\\task_0011_I’m M",
+      "destination": "examples/workbench/benchmarks/region_aware/world_002/cape_town_south_africa/current_example/tasks/task_0001",
+      "source_batch_created_at": "2026-09-09T06:32:20.547884+00:00",
+      "task_id": "task_cape_town_south_africa_region_aware_0011",
+      "validation": {
+        "task_dir": "outputs/benchmarks/region_aware/world_002/cape_town_south_africa/20260909_145854/tasks/task_0011_I’m M",
+        "valid": true,
+        "errors": [],
+        "task_type": "region_aware",
+        "finalized_at": "2026-09-09T06:38:01.422037+00:00",
+        "state": "formal"
+      },
+      "selection": "User-approved example; frozen evidence and original conditions verified",
+      "sha256": {
+        "env_events.json": "75dd9c18df385a46afa83f0ef7845eaf6e0f317eadb73878d44a4ba788e7edfb",
+        "judge_sequence.json": "8e4c4ad6603d4f060c63d869978cdc89ccb7d4f8e3a371392b1a3cf823b7c609",
+        "task.json": "051d3eee7447813a7151197382d4436152f78b698bf5dae153f97f7e0f5f34d3",
+        "task_provenance.json": "eca299d90d2e960a85ea3e60a90893c10476697e0b41500aa4bf217f07a4fb70",
+        "task_sandbox.json": "b4bc9c632a23f4066e2710f42b7899df2a204da7d3b0cd7bfcd9ed18f916152a",
+        "task_validation.json": "47f2289e5c0c113e5ff9564e0c4f79da1ecc3d89cf74508f5c832623c033f68a",
+        "workbench_projection.json": "7d05dd684cb2915db587a32add36408fb7d9e12596c87d252f141b4b15b1db81",
+        "world_slice.json": "64c159c30933e8558d1856fd3e6eeae06a694cb94e09bc77f642e86e6ab7a7cc"
+      },
+      "scope": "startup browsing demo; execution assets are not included"
+    },
+    {
+      "task_type": "dynamic_replanning",
+      "source": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\outputs\\diagnostics\\multi_events_context_live_20261102\\0001",
+      "destination": "examples/workbench/benchmarks/dynamic_replanning/world_002/shanghai_smoke/current_example/tasks/task_0001",
+      "task_id": "task_shanghai_smoke_dynamic_replanning_0001",
+      "selection": "User-approved new-flow multi-entity episode; fixed k=2 and replay verified",
+      "formal_publication": false,
+      "validation": {
+        "task_dir": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\.tmp_geoworld_full_audit_20261105\\approved\\dynamic_export\\task_0001_task_",
+        "valid": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sha256": {
+        "counterfactual_proof.json": "4a818833115e9cf87463161c6ed047b626490d80e1ec025c9a636cb3e6a6d95c",
+        "counterfactual_proof_request.json": "50d5cd279e02e46ce1819b5535df5a0c5c559a91fcd25e40ad8f6dd8478dd5a1",
+        "display_translation.json": "abb359326b5089ffe65ded0412d213edb9659fb47c373c96e8895f5246bc0b3a",
+        "dynamic_private_audit.json": "de0b3ab23913f438de9a56320efea08248c9bedfe7a2059923032b88a499fffb",
+        "env_events.json": "f4478f8ba8702c835540c8be3ce346584b198e8bdfceeb8392c5282153029411",
+        "judge_sequence.json": "2dff124c5bb29ac3d4522cc99e03c1d7e4fcfe6b661d748a7d84db26d77db3f6",
+        "sample_export_validation.json": "71d9284178a1bd0aca78928ae6382d6b613fd03e8b035de6d39b6723013da76f",
+        "static_app_state.json": "3cd3c2ea0ba94d2e39de3986e3efd2fe992ed413f61cf2af9a7190e977a7db80",
+        "task.json": "4c1168a6def81a182f3ab2eb2d547ff2b9ee8487e00780269ff5ed40a2f7c633",
+        "task_sandbox.json": "9655a92d8f6766178ec0b6829e6d63d22be457c435bc6892f3331b2442fe073e",
+        "workbench_projection.json": "19e532dfe2d7bcc07bcc9c97493383b0e80d27272a3ad925089bc79e6dc10ba1",
+        "world_slice.json": "caef2c8a249010ea47fba30bb8703254b605678040ff7a6c948fb50357487b4c",
+        "generation_log/final_candidate_proof.json": "c1eda99c0783e3526c505b149ba0e1b45a357163584ae90d516ccc90fdef21b1"
+      },
+      "scope": "startup browsing demo; execution assets are not included",
+      "source_batch_created_at": "2026-11-01T17:01:32.804779+00:00"
+    },
+    {
+      "task_type": "itinerary",
+      "source": "D:\\paper\\draft\\GeoAgent\\benchmark\\code\\pipeline_v3\\pipeline_v3\\outputs\\benchmarks\\itinerary\\world_002\\tokyo_complex\\20260917_205134\\tasks\\task_0005_新宿华盛顿",
+      "destination": "examples/workbench/benchmarks/itinerary/world_002/tokyo_complex/current_example/tasks/task_0001",
+      "task_id": "task_tokyo_complex_itinerary_0005",
+      "selection": "User-approved example; frozen evidence and original conditions verified",
+      "source_batch_created_at": "2026-09-17T10:51:34.498211+00:00",
+      "validation": {
+        "task_dir": "outputs/benchmarks/itinerary/world_002/tokyo_complex/20260917_205134/tasks/task_0005_新宿华盛顿",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_type": "itinerary",
+        "finalized_at": "2026-09-17T11:03:32.042839+00:00",
+        "state": "formal"
+      },
+      "sha256": {
+        "display_translation.json": "98ed711e5f34106920dd0df303b34c0d1a08021e48a175b816708785cc9dd138",
+        "env_events.json": "75dd9c18df385a46afa83f0ef7845eaf6e0f317eadb73878d44a4ba788e7edfb",
+        "judge_sequence.json": "8e4c4ad6603d4f060c63d869978cdc89ccb7d4f8e3a371392b1a3cf823b7c609",
+        "task.json": "b307266dc82f0d6e105d2ea70dd360f64fd5075a0bba4493b5013ba73433d772",
+        "task_provenance.json": "82355e9336c4624c7186bb353b8b6b5a8f5827492be4df10add3b2c6a1015da4",
+        "task_sandbox.json": "835781d27f6f20f57c1b5d8a26fed275bb894c4c3080b2ad202c6e8d1a1b6c00",
+        "task_validation.json": "0bf43c6f568743d627bce3fbe07c8859ff54abae7612e58f2d8030a7b9d37f2d",
+        "workbench_projection.json": "37cfea87dc3b9b5814be928edca52466e5dbac420eeef235519844b51837a229",
+        "world_slice.json": "94cfe8f3317fd990a0967f47eebf5d0a5b87e6dd922d84009a76007dd578bb5c"
+      }
+    }
+  ],
+  "writable_source_copies": [
+    {
+      "task_type": "place_discovery",
+      "source_copy": "examples/workbench/sources/place_discovery.json",
+      "curated_source_original_sha256": "f6bb2ad27a408fec3d41b9c027804198afc20eb4aac729b6f396a8b4720f44e1",
+      "curated_source_export_sha256": "630052f6c56a03cc0e1450e52b6556f009e6eec92043445e41936052d67d8b5b",
+      "example_content_unchanged": true
+    },
+    {
+      "task_type": "place_grounding",
+      "source_copy": "examples/workbench/sources/place_grounding.json",
+      "curated_source_original_sha256": "7bd960e3ffe48e675acccc0436c5442d95d4f897657d45c9d11c49f9693a3110",
+      "curated_source_export_sha256": "b85091f166e75c6068965f72ee78013bb126bce200f31d1403623051d176f22b",
+      "example_content_unchanged": true
+    }
+  ]
+}

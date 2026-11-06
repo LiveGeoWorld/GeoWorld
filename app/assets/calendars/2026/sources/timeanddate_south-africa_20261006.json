@@ -1,0 +1,385 @@
+{
+  "url": "https://www.timeanddate.com/holidays/south-africa/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Tweede Nuwe Jaar",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 101,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-17",
+      "name": "Isra and Mi'raj",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 102,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Maha Shivaratri",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-19",
+      "name": "Ramadan Start",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-21",
+      "name": "Armed Forces Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Holi",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-16",
+      "name": "Lailat al-Qadr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 107,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 108,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Eid ul Fitr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 109,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Human Rights Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Holy Saturday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Easter Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 113,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Family Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Freedom Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 115,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Workers' Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 116,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 117,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Eid al-Adha",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 118,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Youth Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 119,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Muharram",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 120,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Father's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Nelson Mandela Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-09",
+      "name": "National Women's Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 124,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Day off for National Women's Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Milad un Nabi",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Raksha Bandhan",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Janmashtami",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Ganesh Chaturthi",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 130,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-09-24",
+      "name": "Heritage Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 131,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Navaratri",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 132,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Dussehra",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 133,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Local Government Elections",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 134,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 135,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-16",
+      "name": "Day of Reconciliation",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 136,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 137,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 138,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 139,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-26",
+      "name": "Day of Goodwill",
+      "source_type": "Public Holiday",
+      "source_details": "",
+      "source_line": 140,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year's Eve",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 141,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    }
+  ]
+}

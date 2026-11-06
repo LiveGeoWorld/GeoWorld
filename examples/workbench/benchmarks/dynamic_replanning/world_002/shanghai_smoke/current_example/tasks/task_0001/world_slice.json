@@ -1,0 +1,41 @@
+{
+  "characters": [
+    {
+      "character_id": "char_shanghai_smoke_007",
+      "name": "李美琴"
+    },
+    {
+      "character_id": "char_shanghai_smoke_004",
+      "name": "陈慧琳"
+    },
+    {
+      "character_id": "char_shanghai_smoke_016",
+      "name": "赵丽"
+    }
+  ],
+  "places": [
+    {
+      "place_id": "exp_1784866105_0d24d4__place_shanghai_smoke_chijfv_p2uvwsjurc_1o95vdd0",
+      "name": "爱玲"
+    },
+    {
+      "place_id": "exp_1784866105_0d24d4__place_shanghai_smoke_chijismzhvhwsjurnoaziikpov8",
+      "name": "沈大成中山东一路店"
+    },
+    {
+      "place_id": "place_shanghai_smoke_chijmevgkyhcmjurd_ehmjm7nho",
+      "name": "上海金茂君悦大酒店"
+    },
+    {
+      "place_id": "place_shanghai_smoke_chije0uhi1dwsjurd1hfe4uubh8",
+      "name": "Bund18"
+    },
+    {
+      "place_id": "place_shanghai_smoke_chijn_lk91hwsjurretvbnwcxjo",
+      "name": "蓝调爵士花园酒吧"
+    }
+  ],
+  "services": [],
+  "districts": [],
+  "corridors": []
+}

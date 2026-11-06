@@ -1,0 +1,96 @@
+{
+  "characters": [
+    {
+      "character_id": "char_cape_town_south_africa_021",
+      "name": "Abdul Kader (Oom Abie)",
+      "occupation": "退休教师，兼职Observatory清真寺社区长者志愿者",
+      "preferences": {
+        "prefer": [
+          "清真认证的烤肉店",
+          "有长椅的树荫步道",
+          "老照片展览",
+          "早市的新鲜薄荷茶"
+        ],
+        "avoid": [
+          "不明确说明来源的肉食",
+          "过于喧闹的电子音乐活动",
+          "超过25分钟的车程"
+        ],
+        "dietary": "halal",
+        "budget": "medium"
+      },
+      "mobility": {
+        "home_district_id": "district_cape_town_south_africa_observatory",
+        "home_district_name": "Observatory",
+        "work_district_id": "district_cape_town_south_africa_de_waterkant",
+        "work_district_name": "De Waterkant",
+        "lat": -33.9383614,
+        "lng": 18.4640718,
+        "preferred_modes": [
+          "train",
+          "walk"
+        ],
+        "max_walk_m": 600,
+        "has_bicycle": false,
+        "has_car": false
+      }
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_cape_town_south_africa_chijaeyhz5ldzb0rktd5qz0zho8",
+      "name": "Woodstock Exchange",
+      "type": "cafe",
+      "district_id": "district_cape_town_south_africa_woodstock",
+      "location": {
+        "lat": -33.926891999999995,
+        "lng": 18.4458725
+      },
+      "address": "66 Albert Rd, Woodstock, Cape Town, 7915, South Africa",
+      "rating": 4.3
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chij_6y2o_1nzb0rqbehpzyc0la",
+      "name": "Stellski Coffee Bar & Café Woodstock",
+      "type": "cafe",
+      "district_id": "district_cape_town_south_africa_woodstock",
+      "location": {
+        "lat": -33.9327969,
+        "lng": 18.4501846
+      },
+      "address": "34 Salisbury St, Woodstock, Cape Town, 8000, South Africa",
+      "rating": 4.5
+    },
+    {
+      "place_id": "place_cape_town_south_africa_chijge27vennzb0rt1ubu6yc44m",
+      "name": "Cubaña Foreshore",
+      "type": "cafe",
+      "district_id": "district_cape_town_south_africa_foreshore",
+      "location": {
+        "lat": -33.921265999999996,
+        "lng": 18.4314091
+      },
+      "address": "89 Hertzog Blvd, Foreshore, Cape Town, 8001, South Africa",
+      "rating": 4
+    }
+  ],
+  "services": [],
+  "districts": [
+    {
+      "district_id": "district_cape_town_south_africa_foreshore",
+      "name": "Foreshore",
+      "tags": []
+    },
+    {
+      "district_id": "district_cape_town_south_africa_observatory",
+      "name": "Observatory",
+      "tags": []
+    },
+    {
+      "district_id": "district_cape_town_south_africa_woodstock",
+      "name": "Woodstock",
+      "tags": []
+    }
+  ],
+  "corridors": []
+}

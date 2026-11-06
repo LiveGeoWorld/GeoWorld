@@ -1,0 +1,1 @@
+"""World cultural source preparation."""

@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "multi_entity",
+  "generated_at": "2026-09-01T14:26:17.553879+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_tokyo_complex_multi_entity_0011",
+      "folder": "task_0001"
+    }
+  ]
+}

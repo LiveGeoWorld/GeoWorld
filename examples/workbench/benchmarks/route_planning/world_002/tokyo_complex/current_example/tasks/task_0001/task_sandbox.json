@@ -1,0 +1,13 @@
+{
+  "task_type": "route_planning",
+  "task_id": "task_tokyo_complex_route_planning_0004",
+  "evaluation_mode": "judge_sequence",
+  "schema_version": "geoword.task.v1",
+  "time_context": {
+    "timezone": "Asia/Tokyo",
+    "instruction_time": "2026-09-21T17:45:00+09:00",
+    "episode_start": "2026-09-21T17:45:00+09:00",
+    "episode_end": "2026-09-21T21:45:00+09:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

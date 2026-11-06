@@ -1,0 +1,30 @@
+{
+  "schema_version": "geoword.static_app_state.v1",
+  "lifecycle": "episode_start_frozen",
+  "apps": {
+    "CityNewsApp": {
+      "entries": [
+        {
+          "info_type": "notice",
+          "category": "infrastructure",
+          "title": "Power outage at Plaza Singapura",
+          "description": "A simulated power outage has affected Plaza Singapura. The approximate affected area is a 300 m radius around the mall. Shopping activities at places within this area are unavailable until power is restored. Please avoid the immediate area and check with businesses before travelling.",
+          "scope": {
+            "name": "Plaza Singapura",
+            "city_name": "Singapore",
+            "approximate": true,
+            "center": {
+              "lat": 1.3000677999999999,
+              "lng": 103.84478310000001
+            },
+            "radius_m": 300
+          },
+          "active_window": {
+            "start": "2026-02-16T12:00:00+08:00",
+            "end": "2026-02-16T16:00:00+08:00"
+          }
+        }
+      ]
+    }
+  }
+}

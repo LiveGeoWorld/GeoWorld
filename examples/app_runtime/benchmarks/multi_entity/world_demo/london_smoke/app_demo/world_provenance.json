@@ -1,0 +1,7 @@
+{
+  "world_id": "world_demo",
+  "city_id": "london_smoke",
+  "required_city_versions": {
+    "london_smoke": 1
+  }
+}

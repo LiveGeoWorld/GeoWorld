@@ -1,0 +1,140 @@
+{
+  "schema_version": "geoword.world.registry.v2",
+  "city_id": "london_smoke",
+  "city_name": "London",
+  "country": "United Kingdom",
+  "timezone": "Europe/London",
+  "lifecycle_status": "active",
+  "import_mode": "bundled_example",
+  "world_binding": {
+    "world_id": "world_demo",
+    "city_id": "london_smoke",
+    "city_version": "v1",
+    "binding_mode": "explicit_artifact_paths"
+  },
+  "capabilities": {
+    "map_world": true,
+    "route_runtime": true,
+    "characters": true,
+    "regional_knowledge": false
+  },
+  "readiness": "ready",
+  "missing_capabilities": [],
+  "active_version": 1,
+  "artifacts": {
+    "map_world": {
+      "status": "available",
+      "path": "outputs/worlds/world_demo/assets/world.json",
+      "sha256": "c7cee3202314d96455281dab1875e9af3aa99de8cf59876180e6a8def7efe168",
+      "bytes": 35587,
+      "metadata": {
+        "counts": {
+          "districts": 2,
+          "corridors": 0,
+          "places": 3,
+          "services": 3,
+          "information_items": 0,
+          "event_templates": 0
+        }
+      }
+    },
+    "characters": {
+      "status": "available",
+      "path": "outputs/worlds/world_demo/assets/characters.json",
+      "sha256": "dba1a06943ed178820a7162db2cc441375d73dad4aa5a77918a6a292227cb695",
+      "bytes": 4706,
+      "metadata": {
+        "characters": 3,
+        "relations": 0
+      }
+    },
+    "route_cache": {
+      "status": "available",
+      "path": "outputs/worlds/world_demo/artifacts/routes/london_smoke/v1/route_cache.json",
+      "sha256": "43a27579fdce34d618c44e3fe710b7a0932c7d452bf805dce2cfe33ae688d650",
+      "bytes": 23718,
+      "metadata": {
+        "cached_pair_count": 6
+      }
+    },
+    "service_detail_cache": {
+      "status": "available",
+      "path": "outputs/worlds/world_demo/assets/service_detail_cache.json",
+      "sha256": "4e01e0ae836140003a925ed15f47cebc682b2face2d1ad2c92c21179bb9ca9f3",
+      "bytes": 168130,
+      "metadata": {}
+    },
+    "local_service_world_state": {
+      "status": "available",
+      "path": "outputs/worlds/world_demo/assets/local_service_world_state.json",
+      "sha256": "2e147a26f4194f8c65c79d7ac7f55ff69fa0a954d66fe5fe3d32ab575c9fad7f",
+      "bytes": 90980,
+      "metadata": {}
+    }
+  },
+  "city_versions": [
+    {
+      "version": 1,
+      "version_id": "v1",
+      "kind": "initial",
+      "parent_version": null,
+      "artifacts": {
+        "map_world": {
+          "status": "available",
+          "path": "outputs/worlds/world_demo/assets/world.json",
+          "sha256": "c7cee3202314d96455281dab1875e9af3aa99de8cf59876180e6a8def7efe168",
+          "bytes": 35587,
+          "metadata": {
+            "counts": {
+              "districts": 2,
+              "corridors": 0,
+              "places": 3,
+              "services": 3,
+              "information_items": 0,
+              "event_templates": 0
+            }
+          }
+        },
+        "characters": {
+          "status": "available",
+          "path": "outputs/worlds/world_demo/assets/characters.json",
+          "sha256": "dba1a06943ed178820a7162db2cc441375d73dad4aa5a77918a6a292227cb695",
+          "bytes": 4706,
+          "metadata": {
+            "characters": 3,
+            "relations": 0
+          }
+        },
+        "route_cache": {
+          "status": "available",
+          "path": "outputs/worlds/world_demo/artifacts/routes/london_smoke/v1/route_cache.json",
+          "sha256": "43a27579fdce34d618c44e3fe710b7a0932c7d452bf805dce2cfe33ae688d650",
+          "bytes": 23718,
+          "metadata": {
+            "cached_pair_count": 6
+          }
+        },
+        "service_detail_cache": {
+          "status": "available",
+          "path": "outputs/worlds/world_demo/assets/service_detail_cache.json",
+          "sha256": "4e01e0ae836140003a925ed15f47cebc682b2face2d1ad2c92c21179bb9ca9f3",
+          "bytes": 168130,
+          "metadata": {}
+        },
+        "local_service_world_state": {
+          "status": "available",
+          "path": "outputs/worlds/world_demo/assets/local_service_world_state.json",
+          "sha256": "2e147a26f4194f8c65c79d7ac7f55ff69fa0a954d66fe5fe3d32ab575c9fad7f",
+          "bytes": 90980,
+          "metadata": {}
+        }
+      },
+      "counts": {
+        "places": 3,
+        "districts": 2,
+        "corridors": 0,
+        "characters": 3
+      }
+    }
+  ]
+}

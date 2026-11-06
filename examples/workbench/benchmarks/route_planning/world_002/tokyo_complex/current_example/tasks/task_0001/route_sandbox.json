@@ -1,0 +1,92 @@
+{
+  "core_places": [
+    {
+      "place_id": "place_tokyo_complex_chij_9gsagcnggar6auqgpod5ny",
+      "name": "Tokyu Plaza Harajuku “Harakado”",
+      "role": "origin"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijpd37mmgoggarvj2hfxoinve",
+      "name": "仲见世商店街",
+      "role": "destination"
+    },
+    {
+      "place_id": "place_tokyo_complex_chiju7ork9_nggarmfvqk0ikkoe",
+      "name": "Premium Karaoke MODIS Shinjuku",
+      "role": "waypoint",
+      "sequence": 1,
+      "semantic_action": "errand",
+      "dwell_min": 15
+    }
+  ],
+  "distractor_places": [],
+  "correct_route_id": "",
+  "correct_leg_route_ids": [
+    "route_tokyo_complex_b255a0f57ef1",
+    "route_tokyo_complex_820fc5141157"
+  ],
+  "correct_route_summary": {
+    "mode": "DRIVE",
+    "leg_modes": [
+      "DRIVE",
+      "DRIVE"
+    ],
+    "time_limit_min": 69,
+    "urgency": "relaxed",
+    "has_waypoint": true,
+    "semantic_stop_count": 1,
+    "route_snapshot_id": "static_v1"
+  },
+  "route_subgraph_build": {
+    "poi_count": 50,
+    "route_pool_stage": "reuse_full",
+    "route_pool_max_pois": 50,
+    "directed_mode_pair_count": 0,
+    "snapshot_id": "static_v1",
+    "max_new_api_requests": 1800,
+    "max_elapsed_s": 600.0,
+    "planned_cache_hits": 0,
+    "planned_new_api_requests": 0,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "api_requests": 0,
+    "api_retries": 0,
+    "elapsed_s": 0.0,
+    "timed_out": false,
+    "selected_coordinate_reuse_hits": 2,
+    "selected_route_reuse_hits": 0
+  },
+  "all_routes_in_task": [],
+  "constraints": {
+    "departure_time_str": "",
+    "arrival_deadline_str": "",
+    "time_budget_min": 69,
+    "stop_duration_min": 15,
+    "stop_durations_min": [
+      15
+    ],
+    "semantic_stop_count": 1,
+    "forbidden_modes": [
+      "WALK"
+    ],
+    "max_walking_distance_m": 1582
+  },
+  "expected_feasible": true,
+  "acceptable_plan_ids": [
+    [
+      "route_tokyo_complex_b255a0f57ef1",
+      "route_tokyo_complex_820fc5141157"
+    ]
+  ],
+  "minimum_possible_duration_min": 55,
+  "schema_version": "geoword.task.v1",
+  "task_type": "route_planning",
+  "task_id": "task_tokyo_complex_route_planning_0004",
+  "time_context": {
+    "timezone": "Asia/Tokyo",
+    "instruction_time": "2026-09-21T17:45:00+09:00",
+    "episode_start": "2026-09-21T17:45:00+09:00",
+    "episode_end": "2026-09-21T21:45:00+09:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

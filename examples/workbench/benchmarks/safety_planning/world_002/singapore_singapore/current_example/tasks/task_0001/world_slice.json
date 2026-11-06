@@ -1,0 +1,771 @@
+{
+  "characters": [
+    {
+      "character_id": "exp_1784865172_c0005d__char_singapore_singapore_001",
+      "name": "纳迪亚·宾蒂·伊斯梅尔"
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_singapore_singapore_chijr1fyfr0z2jerzwo_azij_hm",
+      "city_id": "singapore_singapore",
+      "name": "Plaza Singapura",
+      "location": {
+        "lat": 1.3000677999999999,
+        "lng": 103.84478310000001
+      },
+      "primary_type": "shopping_mall",
+      "address": "68 Orchard Rd, Singapore 238839",
+      "district_id": "district_singapore_singapore_little_india",
+      "near_corridor_ids": [
+        "corridor_singapore_singapore_orchard_road_commercial_spine",
+        "corridor_singapore_singapore_nsl_city_hall_to_marina_bay_section",
+        "corridor_singapore_singapore_mrt_east_west_line_central_segment"
+      ],
+      "map_projection": {
+        "provider": "google",
+        "google_place_id": "ChIJR1Fyfr0Z2jERzwO-AZiJ-HM",
+        "source_place_id": "ChIJR1Fyfr0Z2jERzwO-AZiJ-HM",
+        "osm_id": "",
+        "rating": 4.4,
+        "user_rating_count": 22482,
+        "business_status": "OPERATIONAL",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "google_place_details": {
+          "details_enriched": true,
+          "details_status": "queried",
+          "website_uri": "http://www.plazasingapura.com.sg/",
+          "national_phone_number": "6332 9248",
+          "current_opening_hours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00 AM – 10:00 PM",
+              "Tuesday: 10:00 AM – 10:00 PM",
+              "Wednesday: 10:00 AM – 10:00 PM",
+              "Thursday: 10:00 AM – 10:00 PM",
+              "Friday: 10:00 AM – 10:00 PM",
+              "Saturday: 10:00 AM – 10:00 PM",
+              "Sunday: 10:00 AM – 10:00 PM"
+            ],
+            "nextCloseTime": "2026-07-24T14:00:00Z"
+          },
+          "regular_opening_hours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 22,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00 AM – 10:00 PM",
+              "Tuesday: 10:00 AM – 10:00 PM",
+              "Wednesday: 10:00 AM – 10:00 PM",
+              "Thursday: 10:00 AM – 10:00 PM",
+              "Friday: 10:00 AM – 10:00 PM",
+              "Saturday: 10:00 AM – 10:00 PM",
+              "Sunday: 10:00 AM – 10:00 PM"
+            ],
+            "nextCloseTime": "2026-07-24T14:00:00Z"
+          },
+          "price_level": null,
+          "price_range": {},
+          "reservable": null,
+          "dine_in": null,
+          "takeout": null,
+          "delivery": null,
+          "curbside_pickup": null,
+          "field_status": {
+            "website_uri": "provided",
+            "national_phone_number": "provided",
+            "current_opening_hours": "provided",
+            "regular_opening_hours": "provided",
+            "price_level": "not_provided",
+            "price_range": "not_provided",
+            "reservable": "not_provided",
+            "dine_in": "not_provided",
+            "takeout": "not_provided",
+            "delivery": "not_provided",
+            "curbside_pickup": "not_provided"
+          },
+          "reviews": [
+            {
+              "review_id": "places/ChIJR1Fyfr0Z2jERzwO-AZiJ-HM/reviews/Ci9DQUlRQUNvZENodHljRjlvT21KR1FYWjZUbGxpZVU5bE1EVkNjMFpLVVRabWNGRRAB",
+              "text": "This shopping mall is highly convenient and offers an impressive variety of stores, making it a place where you can find almost anything you need. The directory includes a well-stocked supermarket, numerous fashion boutiques, electronics retailers, and a wide selection of dining options ranging from quick bites to sit-down restaurants. The layout is generally logical, though it can take some time to navigate due to the sheer size of the complex. It serves as an excellent one-stop destination for both daily necessities and specialty items. Facilities like restrooms and parking are well-maintained and accessible. Given the extensive range of shops and services available under one roof, it is a highly practical choice for weekend errands or casual browsing. However, because of its comprehensive nature, it tends to attract large crowds, especially during peak hours and weekends. Overall, it provides a highly efficient and reliable shopping experience for visitors looking to complete multiple tasks in a single trip.",
+              "original_text": "This shopping mall is highly convenient and offers an impressive variety of stores, making it a place where you can find almost anything you need. The directory includes a well-stocked supermarket, numerous fashion boutiques, electronics retailers, and a wide selection of dining options ranging from quick bites to sit-down restaurants. The layout is generally logical, though it can take some time to navigate due to the sheer size of the complex. It serves as an excellent one-stop destination for both daily necessities and specialty items. Facilities like restrooms and parking are well-maintained and accessible. Given the extensive range of shops and services available under one roof, it is a highly practical choice for weekend errands or casual browsing. However, because of its comprehensive nature, it tends to attract large crowds, especially during peak hours and weekends. Overall, it provides a highly efficient and reliable shopping experience for visitors looking to complete multiple tasks in a single trip.",
+              "language_code": "en",
+              "rating": 5,
+              "relative_publish_time": "a month ago",
+              "publish_time": "2026-06-06T07:53:38.933780900Z",
+              "author_display_name": "Yoshi S",
+              "author_uri": "https://www.google.com/maps/contrib/109180839141807756988/reviews"
+            },
+            {
+              "review_id": "places/ChIJR1Fyfr0Z2jERzwO-AZiJ-HM/reviews/Ci9DQUlRQUNvZENodHljRjlvT205R2VFbDRNMUkyVkd0eVFrVXlTakZuYldscFdWRRAB",
+              "text": "A nice, bustling shopping mall set over multiple levels. Lots of restaurants and takeaways across multiple levels, plus a large Kopitiam food court on Level 6. Besides the eateries and 'regular shops' there is a cinema, games arcades and various niche stores, plus access to the Dhoby Ghaut MRT station. Notably clean restrooms.",
+              "original_text": "A nice, bustling shopping mall set over multiple levels. Lots of restaurants and takeaways across multiple levels, plus a large Kopitiam food court on Level 6. Besides the eateries and 'regular shops' there is a cinema, games arcades and various niche stores, plus access to the Dhoby Ghaut MRT station. Notably clean restrooms.",
+              "language_code": "en",
+              "rating": 4,
+              "relative_publish_time": "a month ago",
+              "publish_time": "2026-05-31T07:57:53.142534792Z",
+              "author_display_name": "Barry Rob (Badsnake)",
+              "author_uri": "https://www.google.com/maps/contrib/117386657300799830037/reviews"
+            },
+            {
+              "review_id": "places/ChIJR1Fyfr0Z2jERzwO-AZiJ-HM/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tGMlNuRlhibkJ5ZVZSbFIwVXplRzB0TWtGT2RXYxAB",
+              "text": "This is a long established shopping mall very popular with the locals especially when Yaohan, a Japanese brand first opened up it’s flagship super supermarket here and it was always crowded with families visiting, shopping and dining. It’s sitting immediately on the right when you face the ISTANA.",
+              "original_text": "This is a long established shopping mall very popular with the locals especially when Yaohan, a Japanese brand first opened up it’s flagship super supermarket here and it was always crowded with families visiting, shopping and dining. It’s sitting immediately on the right when you face the ISTANA.",
+              "language_code": "en",
+              "rating": 5,
+              "relative_publish_time": "2 months ago",
+              "publish_time": "2026-05-14T05:27:57.645126768Z",
+              "author_display_name": "Kan Goh",
+              "author_uri": "https://www.google.com/maps/contrib/115611067938027564725/reviews"
+            }
+          ]
+        }
+      },
+      "relations": [],
+      "control_tags": {
+        "real_data": [
+          "google_place"
+        ]
+      },
+      "director_notes": {
+        "factual_details_policy": "google_place_details_when_available",
+        "density_context": "candidate_place"
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:50:34.916499+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    },
+    {
+      "place_id": "exp_1784865172_c0005d__place_singapore_singapore_chiju6qq6y0z2jerzqzrlwnba5k",
+      "city_id": "singapore_singapore",
+      "name": "ION Orchard",
+      "location": {
+        "lat": 1.3039557,
+        "lng": 103.8319537
+      },
+      "primary_type": "shopping_mall",
+      "address": "2 Orchard Turn, Singapore 238801",
+      "district_id": "exp_1784865172_c0005d__district_singapore_singapore_orchard",
+      "near_corridor_ids": [
+        "exp_1784865172_c0005d__corridor_singapore_singapore_orchard_mrt_to_city_hall_mrt_nsl_segment",
+        "exp_1784865172_c0005d__corridor_singapore_singapore_orchard_road",
+        "exp_1784865172_c0005d__corridor_singapore_singapore_central_expressway_cte"
+      ],
+      "map_projection": {
+        "provider": "google",
+        "google_place_id": "ChIJu6qq6Y0Z2jERZQZRLwnba5k",
+        "source_place_id": "ChIJu6qq6Y0Z2jERZQZRLwnba5k",
+        "osm_id": "",
+        "rating": 4.5,
+        "user_rating_count": 30193,
+        "business_status": "OPERATIONAL",
+        "types": [
+          "shopping_mall",
+          "point_of_interest",
+          "establishment"
+        ],
+        "google_place_details": {
+          "details_enriched": true,
+          "details_status": "queried",
+          "website_uri": "http://www.ionorchard.com/",
+          "national_phone_number": "6238 8228",
+          "current_opening_hours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 22,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00 AM – 10:00 PM",
+              "Tuesday: 10:00 AM – 10:00 PM",
+              "Wednesday: 10:00 AM – 10:00 PM",
+              "Thursday: 10:00 AM – 10:00 PM",
+              "Friday: 10:00 AM – 10:00 PM",
+              "Saturday: 10:00 AM – 10:00 PM",
+              "Sunday: 10:00 AM – 10:00 PM"
+            ],
+            "nextCloseTime": "2026-07-24T14:00:00Z"
+          },
+          "regular_opening_hours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 22,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00 AM – 10:00 PM",
+              "Tuesday: 10:00 AM – 10:00 PM",
+              "Wednesday: 10:00 AM – 10:00 PM",
+              "Thursday: 10:00 AM – 10:00 PM",
+              "Friday: 10:00 AM – 10:00 PM",
+              "Saturday: 10:00 AM – 10:00 PM",
+              "Sunday: 10:00 AM – 10:00 PM"
+            ],
+            "nextCloseTime": "2026-07-24T14:00:00Z"
+          },
+          "price_level": null,
+          "price_range": {},
+          "reservable": null,
+          "dine_in": null,
+          "takeout": null,
+          "delivery": null,
+          "curbside_pickup": null,
+          "field_status": {
+            "website_uri": "provided",
+            "national_phone_number": "provided",
+            "current_opening_hours": "provided",
+            "regular_opening_hours": "provided",
+            "price_level": "not_provided",
+            "price_range": "not_provided",
+            "reservable": "not_provided",
+            "dine_in": "not_provided",
+            "takeout": "not_provided",
+            "delivery": "not_provided",
+            "curbside_pickup": "not_provided"
+          },
+          "reviews": [
+            {
+              "review_id": "places/ChIJu6qq6Y0Z2jERZQZRLwnba5k/reviews/Ci9DQUlRQUNvZENodHljRjlvT21sVlZGVmFPVlpCV0Uwd2FIWmxZM0psTlhaUmRIYxAB",
+              "text": "ION Orchard delivers a high-end shopping experience right in the heart of Orchard Road. The architecture is striking, and the mall houses a wide range of luxury brands alongside stylish dining spots. It’s always lively and well-maintained, though it can feel overwhelming due to its size. Still, one of the most iconic retail destinations in Singapore.",
+              "original_text": "ION Orchard delivers a high-end shopping experience right in the heart of Orchard Road. The architecture is striking, and the mall houses a wide range of luxury brands alongside stylish dining spots. It’s always lively and well-maintained, though it can feel overwhelming due to its size. Still, one of the most iconic retail destinations in Singapore.",
+              "language_code": "en",
+              "rating": 5,
+              "relative_publish_time": "3 months ago",
+              "publish_time": "2026-04-02T07:17:09.854622146Z",
+              "author_display_name": "Tran Julie",
+              "author_uri": "https://www.google.com/maps/contrib/110829604676593487794/reviews"
+            },
+            {
+              "review_id": "places/ChIJu6qq6Y0Z2jERZQZRLwnba5k/reviews/Ci9DQUlRQUNvZENodHljRjlvT21WWlpXeEVNbmMwT0VWRGVGQldkRmRqUmw4MGMzYxAB",
+              "text": "It wasn't a goal on my list. I visited it only because through it you have access to ION Sky, an observation deck. What I liked is the absolutely unique architecture, very beautiful. Otherwise, it has nothing extra compared to other malls.",
+              "original_text": "It wasn't a goal on my list. I visited it only because through it you have access to ION Sky, an observation deck. What I liked is the absolutely unique architecture, very beautiful. Otherwise, it has nothing extra compared to other malls.",
+              "language_code": "en",
+              "rating": 4,
+              "relative_publish_time": "8 months ago",
+              "publish_time": "2025-11-13T11:34:48.929859058Z",
+              "author_display_name": "Paul Ciprian",
+              "author_uri": "https://www.google.com/maps/contrib/111291653184300497175/reviews"
+            },
+            {
+              "review_id": "places/ChIJu6qq6Y0Z2jERZQZRLwnba5k/reviews/Ci9DQUlRQUNvZENodHljRjlvT25aSWMwVkNTV2x6UXpNMGFVcE1VbVY1Ym10UVNtYxAB",
+              "text": "A huge, modern, expensive shrine to consumerism. If you have the money, and yoy need lots,  you can find anything here. We did however have the best lunch date at Twinings much to my surprise and delight. I would absolutely go there again.",
+              "original_text": "A huge, modern, expensive shrine to consumerism. If you have the money, and yoy need lots,  you can find anything here. We did however have the best lunch date at Twinings much to my surprise and delight. I would absolutely go there again.",
+              "language_code": "en",
+              "rating": 5,
+              "relative_publish_time": "a month ago",
+              "publish_time": "2026-06-04T06:30:29.428745925Z",
+              "author_display_name": "Just saying.",
+              "author_uri": "https://www.google.com/maps/contrib/114579301210109092274/reviews"
+            }
+          ]
+        }
+      },
+      "relations": [],
+      "control_tags": {
+        "real_data": [
+          "google_place"
+        ]
+      },
+      "director_notes": {
+        "factual_details_policy": "google_place_details_when_available",
+        "density_context": "candidate_place"
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:55:25.929679+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      },
+      "introduced_version": 2,
+      "introduced_at": "2026-07-24T03:55:27Z",
+      "source_batch_id": "exp_1784865172_c0005d"
+    }
+  ]
+}

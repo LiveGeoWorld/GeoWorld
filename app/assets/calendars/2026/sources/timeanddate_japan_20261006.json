@@ -1,0 +1,313 @@
+{
+  "url": "https://www.timeanddate.com/holidays/japan/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "January 2 Bank Holiday",
+      "source_type": "Bank holiday",
+      "source_details": "",
+      "source_line": 101,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-01-03",
+      "name": "January 3 Bank Holiday",
+      "source_type": "Bank holiday",
+      "source_details": "",
+      "source_line": 102,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-01-12",
+      "name": "Coming of Age Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-03",
+      "name": "Setsubun",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-11",
+      "name": "National Foundation Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Valentine's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-23",
+      "name": "Emperor's Birthday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 107,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Dolls' Festival/Girls' Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 108,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Spring Equinox",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 109,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Shōwa Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Constitution Memorial Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Greenery Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 113,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Children's Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Constitution Memorial Day observed",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 115,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 116,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 117,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Star Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 118,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Sea Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 119,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Hiroshima Memorial Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 120,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Nagasaki Memorial Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Mountain Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Respect for the Aged Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-22",
+      "name": "Bridge Public holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 124,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "Autumn Equinox",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Sports Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Culture Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-15",
+      "name": "7-5-3 Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-23",
+      "name": "Labor Thanksgiving Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 130,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-22",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 131,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 132,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "December 31 Bank Holiday",
+      "source_type": "Bank holiday",
+      "source_details": "",
+      "source_line": 133,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    }
+  ]
+}

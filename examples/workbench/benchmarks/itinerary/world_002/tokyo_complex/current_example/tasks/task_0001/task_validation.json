@@ -1,0 +1,9 @@
+{
+  "task_dir": "outputs/benchmarks/itinerary/world_002/tokyo_complex/20260917_205134/tasks/task_0005_新宿华盛顿",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "task_type": "itinerary",
+  "finalized_at": "2026-09-17T11:03:32.042839+00:00",
+  "state": "formal"
+}

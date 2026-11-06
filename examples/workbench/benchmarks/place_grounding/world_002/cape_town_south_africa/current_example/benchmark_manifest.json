@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "place_grounding",
+  "generated_at": "2026-10-13T07:33:52.018754+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_cape_town_south_africa_place_grounding_curated_0001",
+      "folder": "task_0001"
+    }
+  ]
+}

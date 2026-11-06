@@ -1,0 +1,42 @@
+{
+  "task_id": "task_tokyo_complex_itinerary_0005",
+  "task_type": "itinerary",
+  "difficulty": "medium",
+  "city_id": "tokyo_complex",
+  "generated_at": "2026-09-17T10:51:34.498211+00:00",
+  "user_prompt": "Please plan a 3-day Tokyo leisure itinerary for me, using public transit where practical. I am staying at 新宿华盛顿酒店 in Shinjuku.\n\nMonday: I arrive at 西武新宿 at 10:00 and will spend about an hour there before starting the day. After I sort my bags and check directions near the station, I want to go to a department store in Shinjuku where I can do some shopping and also sit down at a cafe. I need to be at 新宿华盛顿酒店 for check-in at 14:00, which takes about 30 minutes. After checking in and getting myself organized, I want to visit a park in the Koishikawa-Korakuen district for a calm garden-style walk, then take a little time afterward to look back at photos and get ready for the next move. Later, I want to head to Shibuya for a place where I can browse shops and then have dinner at a restaurant.\n\nTuesday: I plan to spend much of the day resting at the hotel: unpacking, having a light lunch from snacks I already have, napping, checking messages from my wagashi shop, organizing trip notes, reading with tea, and getting ready to go out in the evening. For dinner, please find a place that works as both a bar and a restaurant, and make sure it includes delivery as a service feature.\n\nWednesday: After getting ready and organizing my hand luggage, I check out of 新宿华盛顿酒店 at 10:30, which takes about 30 minutes. Before my 14:00 departure from 水道桥, I want to visit a shopping mall in the Asakusa district where I can shop and also have a relaxed restaurant lunch. Please make the timing realistic so I can reach 水道桥 by 14:00.",
+  "summary": {
+    "character_count": 1,
+    "num_days": 3,
+    "place_count": 8,
+    "event_count": 36,
+    "menu_slot_count": 25,
+    "expected_feasible": true,
+    "review_feasibility": "feasible",
+    "prompt_language": "en"
+  },
+  "review_metadata": {
+    "feasibility": "feasible",
+    "reason": "",
+    "certificate_present": false
+  },
+  "metadata": {
+    "seed_lineage": {
+      "batch_seed": 7399562935603507391,
+      "task_index": 5,
+      "task_seed": 673288724718256191,
+      "attempt_index": 1,
+      "attempt_seed": 2480110715000233875
+    }
+  },
+  "prompt_language": "en",
+  "schema_version": "geoword.task.v1",
+  "artifact_contract_version": "geoword.task.v1",
+  "time_context": {
+    "timezone": "Asia/Tokyo",
+    "instruction_time": "2026-06-27T15:30:00+09:00",
+    "episode_start": "2026-06-27T15:30:00+09:00",
+    "episode_end": "2026-06-27T19:30:00+09:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

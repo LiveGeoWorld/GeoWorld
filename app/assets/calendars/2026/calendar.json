@@ -1,0 +1,119 @@
+{
+  "schema_version": "city_calendar.v1",
+  "year": 2026,
+  "coverage": "Listed official holidays and explicitly sourced regional events only; not a claim to enumerate all local festivals or closures.",
+  "cities": {
+    "shanghai_smoke": {
+      "timezone": "Asia/Shanghai",
+      "sources": {"gov": "sources/china_gov_20260909.json"},
+      "core_holidays": ["Spring Festival holiday", "Qingming holiday", "Labour Day holiday", "Mid-Autumn Festival holiday", "National Day holiday"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-03", "name": "New Year holiday", "source": "gov"},
+        {"start": "2026-02-15", "end": "2026-02-23", "name": "Spring Festival holiday", "source": "gov"},
+        {"start": "2026-04-04", "end": "2026-04-06", "name": "Qingming holiday", "source": "gov"},
+        {"start": "2026-05-01", "end": "2026-05-05", "name": "Labour Day holiday", "source": "gov"},
+        {"start": "2026-06-19", "end": "2026-06-21", "name": "Dragon Boat Festival holiday", "source": "gov"},
+        {"start": "2026-09-25", "end": "2026-09-27", "name": "Mid-Autumn Festival holiday", "source": "gov"},
+        {"start": "2026-10-01", "end": "2026-10-07", "name": "National Day holiday", "source": "gov"},
+        {"start": "2026-01-04", "end": "2026-01-04", "name": "New Year make-up working day", "kind": "working_day", "source": "gov"},
+        {"start": "2026-02-14", "end": "2026-02-14", "name": "Spring Festival make-up working day", "kind": "working_day", "source": "gov"},
+        {"start": "2026-02-28", "end": "2026-02-28", "name": "Spring Festival make-up working day", "kind": "working_day", "source": "gov"},
+        {"start": "2026-05-09", "end": "2026-05-09", "name": "Labour Day make-up working day", "kind": "working_day", "source": "gov"},
+        {"start": "2026-09-20", "end": "2026-09-20", "name": "National Day make-up working day", "kind": "working_day", "source": "gov"},
+        {"start": "2026-10-10", "end": "2026-10-10", "name": "National Day make-up working day", "kind": "working_day", "source": "gov"}
+      ]
+    },
+    "singapore_singapore": {
+      "timezone": "Asia/Singapore",
+      "sources": {"mom": "sources/singapore_mom_20260909.json"},
+      "core_holidays": ["Chinese New Year", "Hari Raya Puasa", "Good Friday", "National Day and applicable Monday replacement holiday", "Deepavali and applicable Monday replacement holiday"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-01", "name": "New Year's Day", "source": "mom"},
+        {"start": "2026-02-17", "end": "2026-02-18", "name": "Chinese New Year", "source": "mom"},
+        {"start": "2026-03-21", "end": "2026-03-21", "name": "Hari Raya Puasa", "source": "mom"},
+        {"start": "2026-04-03", "end": "2026-04-03", "name": "Good Friday", "source": "mom"},
+        {"start": "2026-05-01", "end": "2026-05-01", "name": "Labour Day", "source": "mom"},
+        {"start": "2026-05-27", "end": "2026-05-27", "name": "Hari Raya Haji", "source": "mom"},
+        {"start": "2026-05-31", "end": "2026-06-01", "name": "Vesak Day and applicable Monday replacement holiday", "source": "mom"},
+        {"start": "2026-08-09", "end": "2026-08-10", "name": "National Day and applicable Monday replacement holiday", "source": "mom"},
+        {"start": "2026-11-08", "end": "2026-11-09", "name": "Deepavali and applicable Monday replacement holiday", "source": "mom"},
+        {"start": "2026-12-25", "end": "2026-12-25", "name": "Christmas Day", "source": "mom"}
+      ]
+    },
+    "london_smoke": {
+      "timezone": "Europe/London",
+      "sources": {"gov": "sources/uk_gov_20260909.json"},
+      "core_holidays": ["Good Friday", "Easter Monday", "Early May bank holiday", "Summer bank holiday", "Christmas Day"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-01", "name": "New Year's Day", "source": "gov"},
+        {"start": "2026-04-03", "end": "2026-04-03", "name": "Good Friday", "source": "gov"},
+        {"start": "2026-04-06", "end": "2026-04-06", "name": "Easter Monday", "source": "gov"},
+        {"start": "2026-05-04", "end": "2026-05-04", "name": "Early May bank holiday", "source": "gov"},
+        {"start": "2026-05-25", "end": "2026-05-25", "name": "Spring bank holiday", "source": "gov"},
+        {"start": "2026-08-31", "end": "2026-08-31", "name": "Summer bank holiday", "source": "gov"},
+        {"start": "2026-12-25", "end": "2026-12-25", "name": "Christmas Day", "source": "gov"},
+        {"start": "2026-12-28", "end": "2026-12-28", "name": "Boxing Day substitute bank holiday", "source": "gov"}
+      ]
+    },
+    "cape_town_south_africa": {
+      "timezone": "Africa/Johannesburg",
+      "sources": {"gov": "sources/south_africa_gov_20260909.json"},
+      "core_holidays": ["Human Rights Day", "Freedom Day", "Workers' Day", "Heritage Day", "Christmas Day"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-01", "name": "New Year's Day", "source": "gov"},
+        {"start": "2026-03-21", "end": "2026-03-21", "name": "Human Rights Day", "source": "gov"},
+        {"start": "2026-04-03", "end": "2026-04-03", "name": "Good Friday", "source": "gov"},
+        {"start": "2026-04-06", "end": "2026-04-06", "name": "Family Day", "source": "gov"},
+        {"start": "2026-04-27", "end": "2026-04-27", "name": "Freedom Day", "source": "gov"},
+        {"start": "2026-05-01", "end": "2026-05-01", "name": "Workers' Day", "source": "gov"},
+        {"start": "2026-06-16", "end": "2026-06-16", "name": "Youth Day", "source": "gov"},
+        {"start": "2026-08-09", "end": "2026-08-10", "name": "National Women's Day and observed public holiday", "source": "gov"},
+        {"start": "2026-09-24", "end": "2026-09-24", "name": "Heritage Day", "source": "gov"},
+        {"start": "2026-12-16", "end": "2026-12-16", "name": "Day of Reconciliation", "source": "gov"},
+        {"start": "2026-12-25", "end": "2026-12-25", "name": "Christmas Day", "source": "gov"},
+        {"start": "2026-12-26", "end": "2026-12-26", "name": "Day of Goodwill", "source": "gov"}
+      ]
+    },
+    "tokyo_complex": {
+      "timezone": "Asia/Tokyo",
+      "sources": {"cao": "sources/japan_cao_20260909.json"},
+      "core_holidays": ["Coming of Age Day", "Showa Day", "Constitution Memorial Day, Greenery Day, Children's Day and substitute holiday", "Marine Day", "Respect for the Aged Day, intervening holiday and Autumnal Equinox Day"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-01", "name": "New Year's Day", "source": "cao"},
+        {"start": "2026-01-12", "end": "2026-01-12", "name": "Coming of Age Day", "source": "cao"},
+        {"start": "2026-02-11", "end": "2026-02-11", "name": "National Foundation Day", "source": "cao"},
+        {"start": "2026-02-23", "end": "2026-02-23", "name": "Emperor's Birthday", "source": "cao"},
+        {"start": "2026-03-20", "end": "2026-03-20", "name": "Vernal Equinox Day", "source": "cao"},
+        {"start": "2026-04-29", "end": "2026-04-29", "name": "Showa Day", "source": "cao"},
+        {"start": "2026-05-03", "end": "2026-05-06", "name": "Constitution Memorial Day, Greenery Day, Children's Day and substitute holiday", "source": "cao"},
+        {"start": "2026-07-20", "end": "2026-07-20", "name": "Marine Day", "source": "cao"},
+        {"start": "2026-08-11", "end": "2026-08-11", "name": "Mountain Day", "source": "cao"},
+        {"start": "2026-09-21", "end": "2026-09-23", "name": "Respect for the Aged Day, intervening holiday and Autumnal Equinox Day", "source": "cao"},
+        {"start": "2026-10-12", "end": "2026-10-12", "name": "Sports Day", "source": "cao"},
+        {"start": "2026-11-03", "end": "2026-11-03", "name": "Culture Day", "source": "cao"},
+        {"start": "2026-11-23", "end": "2026-11-23", "name": "Labour Thanksgiving Day", "source": "cao"}
+      ]
+    },
+    "new_york_united_states": {
+      "timezone": "America/New_York",
+      "sources": {"ny": "sources/new_york_cs_20260909.json", "opm": "sources/us_opm_20260909.json"},
+      "core_holidays": ["Martin Luther King Jr. Day", "Memorial Day", "Juneteenth", "Labor Day", "Thanksgiving Day"],
+      "periods": [
+        {"start": "2026-01-01", "end": "2026-01-01", "name": "New Year's Day", "source": "ny"},
+        {"start": "2026-01-19", "end": "2026-01-19", "name": "Martin Luther King Jr. Day", "source": "ny"},
+        {"start": "2026-02-12", "end": "2026-02-12", "name": "Lincoln's Birthday (state legal/floating holiday)", "source": "ny"},
+        {"start": "2026-02-16", "end": "2026-02-16", "name": "Washington's Birthday observed", "source": "ny"},
+        {"start": "2026-05-25", "end": "2026-05-25", "name": "Memorial Day", "source": "ny"},
+        {"start": "2026-06-19", "end": "2026-06-19", "name": "Juneteenth", "source": "ny"},
+        {"start": "2026-07-03", "end": "2026-07-03", "name": "Independence Day (federal observed)", "source": "opm"},
+        {"start": "2026-07-04", "end": "2026-07-04", "name": "Independence Day (state legal date)", "source": "ny"},
+        {"start": "2026-09-07", "end": "2026-09-07", "name": "Labor Day", "source": "ny"},
+        {"start": "2026-10-12", "end": "2026-10-12", "name": "Columbus Day", "source": "ny"},
+        {"start": "2026-11-03", "end": "2026-11-03", "name": "Election Day (state legal/floating holiday)", "source": "ny"},
+        {"start": "2026-11-11", "end": "2026-11-11", "name": "Veterans Day", "source": "ny"},
+        {"start": "2026-11-26", "end": "2026-11-26", "name": "Thanksgiving Day", "source": "ny"},
+        {"start": "2026-12-25", "end": "2026-12-25", "name": "Christmas Day", "source": "ny"}
+      ]
+    }
+  }
+}

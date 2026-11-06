@@ -1,0 +1,8 @@
+{
+  "task_dir": "outputs/benchmarks/route_planning/world_002/tokyo_complex/20260828_025209/tasks/task_0004_请帮佐藤健",
+  "valid": true,
+  "errors": [],
+  "task_type": "route_planning",
+  "finalized_at": "2026-08-27T17:04:03.473392+00:00",
+  "state": "formal"
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "task_shanghai_smoke_dynamic_replanning_0001",
+  "task_type": "dynamic_replanning",
+  "difficulty": "dynamic",
+  "city_id": "shanghai_smoke",
+  "generated_at": "2026-11-01T17:01:32.804779+00:00",
+  "user_prompt": "请帮李美琴、陈慧琳和赵丽安排一次一起吃饭的会面。三人分别从各自所在地独立出发，李美琴可出发时间为18:35，陈慧琳可出发时间为18:33，赵丽可出发时间为18:37，且三人都必须在20:30前离开。请选择一个中餐馆，并确保三人能共同用餐至少60分钟。",
+  "summary": {
+    "scenario_family_id": "multi_0001_verified",
+    "event_count": 3,
+    "base_task_type": "multi_entity",
+    "comparison_unit": "static_control_dynamic_episode",
+    "prompt_language": "zh-CN"
+  },
+  "time_context": {
+    "timezone": "Asia/Shanghai",
+    "instruction_time": "2026-10-07T09:00:00+08:00",
+    "episode_start": "2026-10-07T06:39:00+08:00",
+    "episode_end": "2026-10-07T13:00:00+08:00",
+    "source": "deterministic_build_assignment_v1",
+    "request_time": "2026-10-07T06:39:00+08:00",
+    "planning_window": {
+      "scenario": "pre_use_replanning",
+      "request_time": "2026-10-07T06:39:00+08:00",
+      "activity_anchor_time": "2026-10-07T09:00:00+08:00",
+      "lead_minutes": 141,
+      "event_schedule_status": "not_assigned",
+      "end_time": "2026-10-07T09:00:00+08:00"
+    }
+  },
+  "prompt_language": "zh-CN",
+  "schema_version": "geoword.task.v1",
+  "artifact_contract_version": "geoword.task.v1"
+}

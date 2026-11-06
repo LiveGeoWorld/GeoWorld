@@ -1,0 +1,15 @@
+{
+  "schema_version": "geoword.evaluation_task_index.v1",
+  "entries": [
+    {
+      "task_id": "task_cape_town_south_africa_region_aware_0011",
+      "task_type": "region_aware",
+      "file_name": "0001.json"
+    },
+    {
+      "task_id": "task_singapore_singapore_safety_planning_0001",
+      "task_type": "safety_planning",
+      "file_name": "0002.json"
+    }
+  ]
+}

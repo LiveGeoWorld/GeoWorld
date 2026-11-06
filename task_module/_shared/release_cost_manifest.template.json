@@ -1,0 +1,8 @@
+{
+  "schema_version": "geoword.release_cost_manifest.v1",
+  "effective_date": "YYYY-MM-DD",
+  "route_request_usd": null,
+  "llm_prompt_token_usd": null,
+  "llm_completion_token_usd": null,
+  "notes": "Fill from the provider price sheet captured for this release. Keep the dated source URL in the release report."
+}

@@ -1,0 +1,41 @@
+/* Task-scoped route evidence; no generation or judging logic. */
+.rr-legend{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.rr-legend button{background:var(--bg2);color:var(--text);font:inherit;font-size:12px;padding:6px 10px;border:1px solid var(--leg-color,var(--bg3));border-radius:6px;cursor:pointer}.rr-legend button:hover{background:var(--bg3)}
+.rr-leg:nth-child(5n+1){--leg-color:#52bfa5}.rr-leg:nth-child(5n+2){--leg-color:#659de0}.rr-leg:nth-child(5n+3){--leg-color:#b995df}.rr-leg:nth-child(5n+4){--leg-color:#dbb45f}.rr-leg:nth-child(5n+5){--leg-color:#dc829c}
+.rr-leg .rr-leg-index{color:var(--leg-color);border:1px solid var(--leg-color)}.rr-leg.rr-selected{border-color:var(--leg-color)!important}
+.rr-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.rr-heading h3{margin:0}.rr-heading select{background:var(--bg2);border:1px solid var(--bg3);color:var(--text);border-radius:6px;padding:7px 10px;font:inherit;font-size:12px}
+.rr-heading .rr-verdict{font-size:13px;margin:0;color:#4ecca3}.rr-heading .rr-negative{color:#e67e22}
+.rr-totals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 18px;padding:14px;background:var(--bg2);border-radius:8px}.rr-totals dt,.rr-leg-metrics dt{font-size:12px;color:var(--text2)}.rr-totals dd,.rr-leg-metrics dd{font-size:14px;margin:6px 0 0;font-variant-numeric:tabular-nums}
+.rr-leg{border:1px solid var(--bg3);border-radius:8px;padding:14px;margin-top:10px;transition:border-color .15s}.rr-leg.rr-selected{border-color:#4ecca3}.rr-leg-title{display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;width:100%;color:var(--text);text-align:left;cursor:pointer;font:inherit;font-size:13px}.rr-leg-title strong{flex:1;font-weight:600;line-height:1.6}.rr-leg-title>span:last-child{color:var(--text2);font-size:12px}.rr-leg-index{background:var(--bg2);border-radius:50%;width:25px;height:25px;display:grid;place-items:center;flex-shrink:0}.rr-leg-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}.rr-leg>.gr-details{font-size:12px;color:var(--text2)}
+@media(max-width:700px){.rr-totals{grid-template-columns:repeat(2,minmax(0,1fr))}.rr-leg-title{flex-wrap:wrap}}
+.rr-map-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(220px,3fr);gap:16px}#route-review-map{height:380px;border-radius:8px;border:1px solid var(--bg3)}
+.rr-stops{border:1px solid var(--bg3);border-radius:8px;padding:10px;max-height:380px;overflow:auto}.rr-stops button{width:100%;display:block;text-align:left;border:0;background:transparent;color:var(--text);padding:12px;cursor:pointer}.rr-stops button:hover{background:var(--bg2)}.rr-stops small{display:block;color:var(--text2);font-size:12px;margin-bottom:5px}.rr-stops strong{font-size:13px;line-height:1.6}
+.rr-section{margin-top:18px;padding:16px;border:1px solid var(--bg3);border-radius:8px;background:var(--bg)}.rr-section h3{font-size:14px;margin:0 0 14px}.rr-verdict{font-size:16px;font-weight:600;margin-bottom:12px}.rr-quality>.difficulty-panel-title{font-size:16px}.rr-quality .gr-details pre{font:12px/1.6 Consolas,monospace;max-height:300px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:1000px){.rr-map-layout{grid-template-columns:1fr}.rr-stops{max-height:200px}}
+#task-detail[data-task-type="route_planning"]{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+.rp-review-layout .section-title{font-size:15px;font-weight:600}
+.rp-map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+.rp-map-toolbar .section-title{margin:0;border:0;padding:0}
+.rp-map-toggles{display:flex;gap:16px;color:var(--text2);font-size:12px}
+.rp-map-toggles label{display:flex;align-items:center;gap:6px}
+.rp-map-section #task-map{width:100%;height:380px;border:1px solid var(--bg3);border-radius:8px;background:var(--bg2)}
+.rp-audit-section{border:1px solid var(--bg3);border-radius:10px;padding:18px;margin-top:18px}
+.rp-editor-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;background:var(--bg2);border:1px solid var(--bg3);border-radius:8px;padding:16px;margin:16px 0}
+.rp-editor-card>b,.rp-editor-card>div:has(#rp-gt-route),.rp-editor-card>div:has(#rp-has-wp),.rp-editor-card>#rp-wp-section,.rp-editor-card>div:has(#rp-prompt){grid-column:1/-1}
+.rp-editor-card>b{font-size:13px!important;font-weight:600}
+.rp-editor-card>div{margin:0!important;min-width:0}
+.rp-editor-card label,.rp-query-card label{display:block;font-size:12px!important;color:var(--text2);margin-bottom:6px;line-height:1.5}
+.rp-editor-card input:not([type="checkbox"]),.rp-review-layout select,.rp-editor-card textarea{width:100%!important;margin:0!important;background:var(--bg)!important;color:var(--text)!important;border:1px solid var(--bg3)!important;border-radius:6px!important;padding:8px 10px!important;font:inherit!important;font-size:13px!important;min-width:0}
+.rp-editor-card input:focus,.rp-review-layout select:focus,.rp-editor-card textarea:focus{outline:1px solid var(--blue);outline-offset:1px}
+.rp-editor-card textarea{min-height:130px;resize:vertical;line-height:1.65}
+.rp-editor-card #rp-wp-section select{margin-bottom:10px!important}
+.rp-review-layout button.save-btn{font:inherit;font-size:13px;padding:8px 14px;border-radius:6px;justify-self:start;cursor:pointer}
+.rp-query-card{padding:16px;border:1px solid var(--bg3);border-radius:8px;margin:16px 0}
+.rp-query-card>div:has(#rp-poi-from){gap:14px!important;margin-bottom:14px!important}
+.rp-query-card>div:has(#rp-poi-mode){align-items:center;gap:12px!important}
+.rp-query-card #rp-poi-mode{width:auto!important;min-width:140px}
+.rp-review-layout #rp-query-result{font-size:13px!important;line-height:1.6;overflow-wrap:anywhere;margin-top:14px!important}
+.rp-audit-section>.editor-grid{gap:12px;margin-top:16px!important}
+.rp-audit-section>.editor-grid .kv{padding:12px;border:1px solid var(--bg3);border-radius:6px;font-size:13px}
+#task-detail[data-task-type="route_planning"] .summary-grid{gap:12px}
+#task-detail[data-task-type="route_planning"] pre{font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+@media(max-width:1000px){.rp-editor-card{grid-template-columns:1fr}.rp-query-card>div:has(#rp-poi-from){grid-template-columns:1fr!important}.rp-map-section #task-map{height:340px}}

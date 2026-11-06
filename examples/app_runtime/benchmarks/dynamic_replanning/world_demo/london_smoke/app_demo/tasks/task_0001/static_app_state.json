@@ -1,0 +1,240 @@
+{
+  "apps": {
+    "CalendarApp": {
+      "participants": [
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_024",
+          "name": "Sebastian Moore",
+          "age": 72,
+          "occupation": "Retired Royal Botanic Gardens Herbarium Curator (specialising in Victorian-era plant specimen restoration)",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_024",
+          "home_place_name": "Sebastian Moore",
+          "home_lat": 51.479774,
+          "home_lng": -0.1418745,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_victoria",
+          "available_from": "18:23",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "vegetarian",
+          "budget": "medium",
+          "personality": "talkative",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "morning walks in Kensington Gardens before crowds",
+              "strong Assam tea with a single digestive biscuit",
+              "conversations about invasive species management",
+              "restoring antique leather-bound gardening manuals"
+            ],
+            "avoid": [
+              "loud music at pavement cafes",
+              "plastic-wrapped supermarket herbs",
+              "tourists who trample flowerbeds for selfies",
+              "any mention of property developers near Holland Park"
+            ],
+            "dietary": "flexitarian (eats fish twice a week, otherwise vegetarian since 1998 after a personal vow)",
+            "budget": "medium-low (pension supplemented by freelance cataloguing for Kew, lives in a rent-controlled flat off Notting Hill Gate)"
+          },
+          "constraints": [
+            {
+              "content": "Firmly believes a rare 1849 flora specimen he personally catalogued was stolen from the Herbarium by a visiting academic in 2003; has kept a private research folder for 22 years and will cautiously investigate anyone who mentions Victorian botany or the name 'Pendleton' (any Arthur Pendleton or Pendry). He will never report it to the police because he 'handled it internally' back then, but still resents the unreturned loss."
+            }
+          ]
+        },
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_004",
+          "name": "Arthur Pendry",
+          "age": 72,
+          "occupation": "Retired canal boat captain & volunteer at Paddington Station community hub",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_004",
+          "home_place_name": "Arthur Pendry",
+          "home_lat": 51.5159175,
+          "home_lng": -0.14840019999999998,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_paddington",
+          "available_from": "18:34",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "none",
+          "budget": "medium",
+          "personality": "punctual",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "traditional English pubs with ales",
+              "historic railway memorabilia",
+              "canalside benches",
+              "Sunday roast dinners"
+            ],
+            "avoid": [
+              "modern fusion cuisine",
+              "espresso bars",
+              "crowded tube stations at peak"
+            ],
+            "dietary": "",
+            "budget": "low"
+          },
+          "constraints": [
+            {
+              "content": "Cannot walk up steep stairs or long slopes due to hip replacement; avoid routes with more than one flight of stairs."
+            }
+          ]
+        },
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_016",
+          "name": "Evelyn Rosewood",
+          "age": 72,
+          "occupation": "retired archive librarian at Guildhall Library",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_016",
+          "home_place_name": "Evelyn Rosewood",
+          "home_lat": 51.5203723,
+          "home_lng": -0.0733297,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_liverpool_street",
+          "available_from": "18:13",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "none",
+          "budget": "medium",
+          "personality": "particular",
+          "can_drive_others": true,
+          "preferences": {
+            "prefer": [
+              "window seat with natural light",
+              "classical music playing softly",
+              "firm mattress"
+            ],
+            "avoid": [
+              "loud crowds",
+              "drag racing sounds at night",
+              "digital-only restaurant menus"
+            ],
+            "dietary": "low_sodium",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "Refuses to stay in a room with a bed less than 200 cm long (due to old injury)."
+            }
+          ]
+        }
+      ]
+    },
+    "MessagingApp": {
+      "participants": [
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_024",
+          "name": "Sebastian Moore",
+          "age": 72,
+          "occupation": "Retired Royal Botanic Gardens Herbarium Curator (specialising in Victorian-era plant specimen restoration)",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_024",
+          "home_place_name": "Sebastian Moore",
+          "home_lat": 51.479774,
+          "home_lng": -0.1418745,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_victoria",
+          "available_from": "18:23",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "vegetarian",
+          "budget": "medium",
+          "personality": "talkative",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "morning walks in Kensington Gardens before crowds",
+              "strong Assam tea with a single digestive biscuit",
+              "conversations about invasive species management",
+              "restoring antique leather-bound gardening manuals"
+            ],
+            "avoid": [
+              "loud music at pavement cafes",
+              "plastic-wrapped supermarket herbs",
+              "tourists who trample flowerbeds for selfies",
+              "any mention of property developers near Holland Park"
+            ],
+            "dietary": "flexitarian (eats fish twice a week, otherwise vegetarian since 1998 after a personal vow)",
+            "budget": "medium-low (pension supplemented by freelance cataloguing for Kew, lives in a rent-controlled flat off Notting Hill Gate)"
+          },
+          "constraints": [
+            {
+              "content": "Firmly believes a rare 1849 flora specimen he personally catalogued was stolen from the Herbarium by a visiting academic in 2003; has kept a private research folder for 22 years and will cautiously investigate anyone who mentions Victorian botany or the name 'Pendleton' (any Arthur Pendleton or Pendry). He will never report it to the police because he 'handled it internally' back then, but still resents the unreturned loss."
+            }
+          ]
+        },
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_004",
+          "name": "Arthur Pendry",
+          "age": 72,
+          "occupation": "Retired canal boat captain & volunteer at Paddington Station community hub",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_004",
+          "home_place_name": "Arthur Pendry",
+          "home_lat": 51.5159175,
+          "home_lng": -0.14840019999999998,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_paddington",
+          "available_from": "18:34",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "none",
+          "budget": "medium",
+          "personality": "punctual",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "traditional English pubs with ales",
+              "historic railway memorabilia",
+              "canalside benches",
+              "Sunday roast dinners"
+            ],
+            "avoid": [
+              "modern fusion cuisine",
+              "espresso bars",
+              "crowded tube stations at peak"
+            ],
+            "dietary": "",
+            "budget": "low"
+          },
+          "constraints": [
+            {
+              "content": "Cannot walk up steep stairs or long slopes due to hip replacement; avoid routes with more than one flight of stairs."
+            }
+          ]
+        },
+        {
+          "character_id": "exp_1784862900_cdd5d7__char_london_smoke_016",
+          "name": "Evelyn Rosewood",
+          "age": 72,
+          "occupation": "retired archive librarian at Guildhall Library",
+          "home_place_id": "exp_1784862900_cdd5d7__char_london_smoke_016",
+          "home_place_name": "Evelyn Rosewood",
+          "home_lat": 51.5203723,
+          "home_lng": -0.0733297,
+          "home_district_id": "exp_1784862900_cdd5d7__district_london_smoke_liverpool_street",
+          "available_from": "18:13",
+          "must_leave_by": "20:30",
+          "has_car": false,
+          "dietary": "none",
+          "budget": "medium",
+          "personality": "particular",
+          "can_drive_others": true,
+          "preferences": {
+            "prefer": [
+              "window seat with natural light",
+              "classical music playing softly",
+              "firm mattress"
+            ],
+            "avoid": [
+              "loud crowds",
+              "drag racing sounds at night",
+              "digital-only restaurant menus"
+            ],
+            "dietary": "low_sodium",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "Refuses to stay in a room with a bed less than 200 cm long (due to old injury)."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "samples": [
+    {
+      "run_id": "example_recorded_results",
+      "destination": "examples/test_results/evaluations/mixed/world_002/all_cities/current_example/example_recorded_results",
+      "task_count": 2,
+      "task_types": [
+        "region_aware",
+        "safety_planning"
+      ],
+      "source_records": [
+        {
+          "task_type": "region_aware",
+          "source_run_id": "run_20260919_052441",
+          "source_record_sha256": "424cc91b36eb1ac1016e54f05151cebf5c18e035d64c27dd41962ac27806a82d",
+          "sample_record_sha256": "2425c8b7c4ee42bc14ce443616eba060537beeaa8f7a9b7bddd95a63537fbae6",
+          "answer_and_metrics_preserved": true
+        },
+        {
+          "task_type": "safety_planning",
+          "source_run_id": "run_20260919_141353",
+          "source_record_sha256": "ca0f4e75e0bbfbd38d8906e86664a7d51dbc1f0e0ef3a13ea7378e686d2a99b1",
+          "sample_record_sha256": "01af5bd8cf52134adab92011140857af111b39cb36a12b731b355ffa9655a25e",
+          "answer_and_metrics_preserved": true
+        }
+      ],
+      "answer_and_metrics_preserved": true
+    }
+  ],
+  "selection": "Two saved English model results matching the existing reviewed task examples, with final submissions and tool traces.",
+  "counts": "One display run with two original results from separate source runs; aggregate counts cover only these two tasks.",
+  "files": {
+    "mixed/world_002/all_cities/current_example/example_recorded_results/results.json": "6db7890376e7c6dbbd199dfaddd936d97c3c1e226e0fd6ca83471877402eca54",
+    "mixed/world_002/all_cities/current_example/example_recorded_results/run_manifest.json": "e5ee28d90fd461fc1c4d39509c51c121e54008cc25ed3c09b89e91e2bc56b43e",
+    "mixed/world_002/all_cities/current_example/example_recorded_results/run_state.json": "60ff516793acc269e42f83a0e8e13a0178940720d0b37ea20bd2f82e46d9ff2f",
+    "mixed/world_002/all_cities/current_example/example_recorded_results/tasks/0001.json": "2425c8b7c4ee42bc14ce443616eba060537beeaa8f7a9b7bddd95a63537fbae6",
+    "mixed/world_002/all_cities/current_example/example_recorded_results/tasks/0002.json": "01af5bd8cf52134adab92011140857af111b39cb36a12b731b355ffa9655a25e",
+    "mixed/world_002/all_cities/current_example/example_recorded_results/tasks/task_index.json": "e339c66af3f7324be9fcc14b52b92e360a473cc69b05304864f2cabc88728a71"
+  }
+}

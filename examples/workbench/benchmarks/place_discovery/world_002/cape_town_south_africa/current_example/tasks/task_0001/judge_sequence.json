@@ -1,0 +1,276 @@
+{
+  "schema_version": "curated.judge.v1",
+  "completion_policy": "key_nodes",
+  "stages": [
+    {
+      "stage_id": "define_discovery_scope",
+      "description": "确认 Cape Town Science Centre（Cape Town）附近 的搜索范围和服务类型",
+      "depends_on": [],
+      "nodes": [
+        {
+          "node_id": "jcp_pd_batch_cape_town_south_africa_0001_WoodstockExchange_area",
+          "category": "information_lookup",
+          "agent_action": "MapApp.search_places",
+          "arg_slots": {
+            "city_hint": "cape_town_south_africa",
+            "place_type": "museum",
+            "keyword": "Cape Town Science Centre（Cape Town）附近",
+            "limit": 5
+          },
+          "description_zh": "确认 Cape Town Science Centre（Cape Town）附近 的搜索范围和服务类型",
+          "label_zh": "确定搜索范围",
+          "role": "locate",
+          "verdict_target": "supporting_step",
+          "is_key": false,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": [
+            {
+              "check_type": "field_not_empty",
+              "field": "response.places",
+              "expected": null,
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "search_candidate_services",
+      "description": "根据用户约束检索本地服务/商户候选",
+      "depends_on": [
+        "define_discovery_scope"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pd_batch_cape_town_south_africa_0001_WoodstockExchange_search",
+          "category": "service_operation",
+          "agent_action": "LocalServiceApp.search_services",
+          "arg_slots": {
+            "service_type": "cafe",
+            "filters": {
+              "constraints": [
+                "a cafe",
+                "in Woodstock",
+                "roughly 2.4 km from the Science Centre",
+                "prices no more than ZAR 300",
+                "open by 8:00 on Tuesday"
+              ],
+              "start": "Cape Town Science Centre（Cape Town）附近"
+            },
+            "limit": 10
+          },
+          "description_zh": "根据用户约束检索本地服务/商户候选",
+          "label_zh": "检索服务候选",
+          "role": "filter",
+          "verdict_target": "candidate_service_retrieval",
+          "is_key": true,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            },
+            {
+              "check_type": "field_not_empty",
+              "field": "response.results",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": [
+            {
+              "check_type": "field_contains",
+              "field": "response.results[].name",
+              "expected": "Woodstock Exchange",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "inspect_service_details",
+      "description": "查看候选商户详情，获取评分、价格、排队、营业状态等证据",
+      "depends_on": [
+        "search_candidate_services"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pd_batch_cape_town_south_africa_0001_WoodstockExchange_detail",
+          "category": "information_lookup",
+          "agent_action": "LocalServiceApp.get_service_detail",
+          "arg_slots": {
+            "name": "Woodstock Exchange",
+            "location": {
+              "lat": -33.926891999999995,
+              "lng": 18.4458725
+            }
+          },
+          "description_zh": "查看候选商户详情，获取评分、价格、排队、营业状态等证据",
+          "label_zh": "查看商户详情",
+          "role": "evidence",
+          "verdict_target": "service_detail_inspection",
+          "is_key": true,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            },
+            {
+              "check_type": "field_not_empty",
+              "field": "response.detail",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": [
+            {
+              "check_type": "field_contains",
+              "field": "response.detail.name",
+              "expected": "Woodstock Exchange",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "compare_candidate_tradeoffs",
+      "description": "比较候选是否满足用户约束，说明推荐与排除理由",
+      "depends_on": [
+        "inspect_service_details"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pd_batch_cape_town_south_africa_0001_WoodstockExchange_compare",
+          "category": "information_lookup",
+          "agent_action": "LocalServiceApp.compare_services",
+          "arg_slots": {
+            "services": [
+              {
+                "name": "Woodstock Exchange",
+                "location": {
+                  "lat": -33.926891999999995,
+                  "lng": 18.4458725
+                }
+              },
+              {
+                "name": "Stellski Coffee Bar & Café Woodstock",
+                "location": {
+                  "lat": -33.9327969,
+                  "lng": 18.4501846
+                }
+              },
+              {
+                "name": "Cubaña Foreshore",
+                "location": {
+                  "lat": -33.921265999999996,
+                  "lng": 18.4314091
+                }
+              }
+            ],
+            "constraints": [
+              "a cafe",
+              "in Woodstock",
+              "roughly 2.4 km from the Science Centre",
+              "prices no more than ZAR 300",
+              "open by 8:00 on Tuesday"
+            ]
+          },
+          "description_zh": "比较候选是否满足用户约束，说明推荐与排除理由",
+          "label_zh": "比较候选取舍",
+          "role": "evidence",
+          "verdict_target": "candidate_tradeoff_comparison",
+          "is_key": false,
+          "depends_on": [],
+          "hard_checks": [],
+          "soft_checks": [
+            {
+              "check_type": "field_not_empty",
+              "field": "response.comparisons",
+              "expected": null,
+              "tolerance": null,
+              "weight": "soft"
+            },
+            {
+              "check_type": "field_contains",
+              "field": "response.comparisons[].name",
+              "expected": "Woodstock Exchange",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "return_ranked_recommendation",
+      "description": "返回排序后的推荐地点，并解释其满足用户约束的依据",
+      "depends_on": [
+        "compare_candidate_tradeoffs"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pd_batch_cape_town_south_africa_0001_WoodstockExchange_rank",
+          "category": "communication",
+          "agent_action": "UserInterfaceApp.send_message_to_user",
+          "arg_slots": {
+            "content": "<ranked_recommendation:Woodstock Exchange>"
+          },
+          "description_zh": "返回排序后的推荐地点，并解释其满足用户约束的依据",
+          "label_zh": "最终推荐",
+          "role": "rank",
+          "verdict_target": "final_recommendation",
+          "is_key": true,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            },
+            {
+              "check_type": "field_contains",
+              "field": "args.content",
+              "expected": "Woodstock Exchange,Stellski Coffee Bar & Café Woodstock,Cubaña Foreshore",
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": [
+            {
+              "check_type": "field_contains",
+              "field": "args.content",
+              "expected": "",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

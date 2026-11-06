@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "region_aware",
+  "generated_at": "2026-09-09T06:32:20.547884+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_cape_town_south_africa_region_aware_0011",
+      "folder": "task_0001"
+    }
+  ]
+}

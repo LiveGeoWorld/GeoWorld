@@ -1,0 +1,84 @@
+{
+  "stages": [
+    {
+      "stage_id": "search",
+      "description": "搜索确认起点、终点和途经点信息",
+      "depends_on": [],
+      "nodes": []
+    },
+    {
+      "stage_id": "plan_route",
+      "description": "规划Tokyu Plaza Harajuku “Harakado”到仲见世商店街的路线",
+      "depends_on": [
+        "search"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_tokyo_complex_0011",
+          "category": "navigation",
+          "agent_action": "MapApp.plan_route",
+          "arg_slots": {
+            "origin_place_id": "place_tokyo_complex_chij_9gsagcnggar6auqgpod5ny",
+            "dest_place_id": "place_tokyo_complex_chijpd37mmgoggarvj2hfxoinve",
+            "mode": "WALK"
+          },
+          "description_zh": "Agent应规划两地之间的最优路线",
+          "hard_checks": [
+            "action_executed",
+            "action_executed",
+            "response.routes"
+          ],
+          "soft_checks": [],
+          "depends_on": []
+        }
+      ]
+    },
+    {
+      "stage_id": "notify",
+      "description": "通知用户最终路线方案",
+      "depends_on": [
+        "plan_route"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_tokyo_complex_0003",
+          "category": "communication",
+          "agent_action": "MessagingAppV2.send_message",
+          "arg_slots": {
+            "recipient_id": "<CHARACTER>",
+            "content": ""
+          },
+          "description_zh": "Agent应通知朋友ミゲル・ロドリゲス预订结果",
+          "hard_checks": [
+            "action_executed",
+            "action_executed",
+            "args.recipient_id"
+          ],
+          "soft_checks": [
+            "args.content"
+          ],
+          "depends_on": []
+        },
+        {
+          "node_id": "jcp_tokyo_complex_0004",
+          "category": "communication",
+          "agent_action": "MessagingAppV2.send_message",
+          "arg_slots": {
+            "recipient_id": "<CHARACTER>",
+            "content": ""
+          },
+          "description_zh": "Agent应通知同学山田 桜子预订结果",
+          "hard_checks": [
+            "action_executed",
+            "action_executed",
+            "args.recipient_id"
+          ],
+          "soft_checks": [
+            "args.content"
+          ],
+          "depends_on": []
+        }
+      ]
+    }
+  ]
+}

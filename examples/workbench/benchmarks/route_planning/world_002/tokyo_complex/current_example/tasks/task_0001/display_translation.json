@@ -1,0 +1,7 @@
+{
+  "language": "en",
+  "purpose": "English workbench display; original task and evaluation binding preserved",
+  "user_prompt": "Please help Kenichi Sato check whether this trip can be completed in time. Start at Tokyu Plaza Harajuku “Harakado”, stop at Premium Karaoke MODIS Shinjuku for 15 minutes to take care of an errand, and then reach Nakamise Shopping Street, all within 69 minutes. Do not choose walking as the travel mode, and keep the total walking distance within 1,582 meters. If the trip is feasible, please provide the route for each leg.\n\nThe stop at Premium Karaoke MODIS Shinjuku is mandatory and includes the 15-minute errand. It is not an optional transfer point.",
+  "source_user_prompt": "请帮佐藤健一确认一个出行安排是否来得及：从Tokyu Plaza Harajuku “Harakado”出发，先去Premium Karaoke MODIS Shinjuku办一件事停留15分钟，再赶往仲见世商店街需要在69分钟内完成，不能使用步行，走路不能超过1582米。如果可行请给出分段路线。\n必经事项：Premium Karaoke MODIS Shinjuku（办理事务，停留15分钟）。这些是需要完成的事务，不是可自由跳过的换乘点。",
+  "source_task_sha256": "6fa1f99f408b0caea0562aebe4472b77f92072b8310e92876d44013950c2ab57"
+}

@@ -1,0 +1,189 @@
+{
+  "public_fact_projection": {
+    "participants": [
+      {
+        "name": "山田 花子",
+        "departure_area": "山田 花子",
+        "available_from": "18:31",
+        "must_leave_by": "20:30"
+      },
+      {
+        "name": "エレナ・サトウ",
+        "departure_area": "エレナ・サトウ",
+        "available_from": "18:28",
+        "must_leave_by": "20:30"
+      },
+      {
+        "name": "林翔太",
+        "departure_area": "林翔太",
+        "available_from": "18:32",
+        "must_leave_by": "20:30"
+      },
+      {
+        "name": "佐藤健一",
+        "departure_area": "佐藤健一",
+        "available_from": "18:34",
+        "must_leave_by": "20:30"
+      }
+    ],
+    "activity": {
+      "activity_type": "movie_visit",
+      "required_place_type": "movie_theater",
+      "duration_min": 60,
+      "arrival_mode": "independent"
+    }
+  },
+  "candidate_choice_verification": {
+    "scope": "task_candidate_places",
+    "candidate_place_ids": [
+      "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+      "place_tokyo_complex_chijxezpcs6nggarfucpwdsqlue",
+      "place_tokyo_complex_chijkb268ysnggarmzivao4qyzm",
+      "place_tokyo_complex_chijj3m_onmmggaroskvpmoxt_o",
+      "place_tokyo_complex_chijk6njrkynggarkxbv_rqdfcs"
+    ],
+    "public_constraints": {
+      "participants": [
+        {
+          "name": "山田 花子",
+          "departure_area": "山田 花子",
+          "available_from": "18:31",
+          "must_leave_by": "20:30"
+        },
+        {
+          "name": "エレナ・サトウ",
+          "departure_area": "エレナ・サトウ",
+          "available_from": "18:28",
+          "must_leave_by": "20:30"
+        },
+        {
+          "name": "林翔太",
+          "departure_area": "林翔太",
+          "available_from": "18:32",
+          "must_leave_by": "20:30"
+        },
+        {
+          "name": "佐藤健一",
+          "departure_area": "佐藤健一",
+          "available_from": "18:34",
+          "must_leave_by": "20:30"
+        }
+      ],
+      "activity": {
+        "activity_type": "movie_visit",
+        "required_place_type": "movie_theater",
+        "duration_min": 60,
+        "arrival_mode": "independent"
+      }
+    },
+    "candidate_results": [
+      {
+        "place_id": "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+        "name": "Shinjuku Wald 9",
+        "status": "feasible",
+        "failures": [],
+        "missing_evidence": [],
+        "travel_evidence": [
+          {
+            "participant": "山田 花子",
+            "route_key": "山田 花子→Shinjuku Wald 9",
+            "travel_mode": "DRIVE",
+            "travel_min": 14,
+            "arrival_min": 1125
+          },
+          {
+            "participant": "エレナ・サトウ",
+            "route_key": "エレナ・サトウ→Shinjuku Wald 9",
+            "travel_mode": "DRIVE",
+            "travel_min": 17,
+            "arrival_min": 1125
+          },
+          {
+            "participant": "林翔太",
+            "route_key": "林翔太→Shinjuku Wald 9",
+            "travel_mode": "DRIVE",
+            "travel_min": 13,
+            "arrival_min": 1125
+          },
+          {
+            "participant": "佐藤健一",
+            "route_key": "佐藤健一→Shinjuku Wald 9",
+            "travel_mode": "WALK",
+            "travel_min": 11,
+            "arrival_min": 1125
+          }
+        ],
+        "meeting_start": "18:45",
+        "meeting_end": "19:45"
+      },
+      {
+        "place_id": "place_tokyo_complex_chijxezpcs6nggarfucpwdsqlue",
+        "name": "Bar NORA",
+        "status": "excluded",
+        "failures": [
+          {
+            "constraint": "required_place_type",
+            "expected": "movie_theater",
+            "actual": "bar"
+          }
+        ],
+        "missing_evidence": [],
+        "travel_evidence": []
+      },
+      {
+        "place_id": "place_tokyo_complex_chijkb268ysnggarmzivao4qyzm",
+        "name": "Shinjuku Ale",
+        "status": "excluded",
+        "failures": [
+          {
+            "constraint": "required_place_type",
+            "expected": "movie_theater",
+            "actual": "bar"
+          }
+        ],
+        "missing_evidence": [],
+        "travel_evidence": []
+      },
+      {
+        "place_id": "place_tokyo_complex_chijj3m_onmmggaroskvpmoxt_o",
+        "name": "Karaoke Pasela Shinjuku Honten",
+        "status": "excluded",
+        "failures": [
+          {
+            "constraint": "required_place_type",
+            "expected": "movie_theater",
+            "actual": "karaoke"
+          }
+        ],
+        "missing_evidence": [],
+        "travel_evidence": []
+      },
+      {
+        "place_id": "place_tokyo_complex_chijk6njrkynggarkxbv_rqdfcs",
+        "name": "Gift",
+        "status": "excluded",
+        "failures": [
+          {
+            "constraint": "required_place_type",
+            "expected": "movie_theater",
+            "actual": "bar"
+          }
+        ],
+        "missing_evidence": [],
+        "travel_evidence": []
+      }
+    ],
+    "accepted_place_ids": [
+      "place_tokyo_complex_chijszwnwtumggarret4_9utbzg"
+    ],
+    "unresolved_place_ids": [],
+    "valid": true
+  },
+  "review_evidence_binding": {
+    "task.json": "d5a12fa8ce5f101a40c8959b1ce45d0a5eb4fddf150aa6a5f2f55efd11e1d880",
+    "task_sandbox.json": "2a174168ad805036aa029876ac670e88dcd6b47f492f853cf1948dc3a29e00b5",
+    "task_provenance.json": "f461a07a03a14078da6101611b3acfbb0800b8639b7f83d9b0e9913ed38eba47",
+    "generation_log/public_fact_projection.json": "fdf20f9a68cc8655595fd8bea1ddf70d346fa35a9b53d5c79fca6e663e5ef6dc",
+    "generation_log/llm_in.txt": "b1567d4feedd82b2cd69aa11c7e5e13a0367713f8332fa0c1a31e14e7a80af77"
+  }
+}

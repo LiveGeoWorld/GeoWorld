@@ -1,0 +1,113 @@
+{
+  "scope": "dynamic_candidate_pool_comparison",
+  "candidate_results": [
+    {
+      "place_id": "place_shanghai_smoke_chij_q0fn0nwsjur8khldngqztg",
+      "name": "泰康汤包馆",
+      "failures": [
+        {
+          "constraint": "service_unavailable"
+        }
+      ],
+      "missing_evidence": [],
+      "travel_evidence": [],
+      "status": "excluded"
+    },
+    {
+      "place_id": "place_shanghai_smoke_chija5s_subwsjurfharlalpojs",
+      "name": "佳家汤包",
+      "failures": [
+        {
+          "constraint": "service_unavailable"
+        }
+      ],
+      "missing_evidence": [],
+      "travel_evidence": [],
+      "status": "excluded"
+    },
+    {
+      "place_id": "place_shanghai_smoke_chijgrhnfknwsjurgkqql8oadfa",
+      "name": "莱莱小吃汤包馆",
+      "status": "feasible",
+      "failures": [],
+      "missing_evidence": [],
+      "travel_evidence": [
+        {
+          "participant": "李美琴",
+          "route_key": "李美琴→莱莱小吃汤包馆",
+          "travel_mode": "DRIVE",
+          "travel_min": 9,
+          "arrival_min": 1124
+        },
+        {
+          "participant": "陈慧琳",
+          "route_key": "陈慧琳→莱莱小吃汤包馆",
+          "travel_mode": "DRIVE",
+          "travel_min": 14,
+          "arrival_min": 1127
+        },
+        {
+          "participant": "赵丽",
+          "route_key": "赵丽→莱莱小吃汤包馆",
+          "travel_mode": "WALK",
+          "travel_min": 16,
+          "arrival_min": 1133
+        }
+      ],
+      "meeting_start": "18:53",
+      "meeting_end": "19:53"
+    }
+  ],
+  "candidate_place_ids": [
+    "place_shanghai_smoke_chij_q0fn0nwsjur8khldngqztg",
+    "place_shanghai_smoke_chija5s_subwsjurfharlalpojs",
+    "place_shanghai_smoke_chijgrhnfknwsjurgkqql8oadfa"
+  ],
+  "accepted_place_ids": [
+    "place_shanghai_smoke_chijgrhnfknwsjurgkqql8oadfa"
+  ],
+  "unresolved_place_ids": [],
+  "valid": true,
+  "public_constraints": {
+    "participants": [
+      {
+        "name": "李美琴",
+        "departure_area": "李美琴",
+        "available_from": "18:35",
+        "must_leave_by": "20:30"
+      },
+      {
+        "name": "陈慧琳",
+        "departure_area": "陈慧琳",
+        "available_from": "18:33",
+        "must_leave_by": "20:30"
+      },
+      {
+        "name": "赵丽",
+        "departure_area": "赵丽",
+        "available_from": "18:37",
+        "must_leave_by": "20:30"
+      }
+    ],
+    "activity": {
+      "activity_type": "shared_meal",
+      "required_place_type": "chinese_restaurant",
+      "duration_min": 60,
+      "arrival_mode": "independent"
+    },
+    "additional_constraints": [
+      {
+        "object": "place",
+        "attribute": "coarse_region",
+        "relation": "eq",
+        "value": "district_shanghai_smoke_people_s_square_station_area"
+      },
+      {
+        "object": "place",
+        "attribute": "rating_band",
+        "relation": "eq",
+        "value": "4_0_to_4_4"
+      }
+    ]
+  }
+}

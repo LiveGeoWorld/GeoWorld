@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "dynamic_replanning",
+  "generated_at": "2026-11-01T17:01:32.804779+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_shanghai_smoke_dynamic_replanning_0001",
+      "folder": "task_0001"
+    }
+  ]
+}

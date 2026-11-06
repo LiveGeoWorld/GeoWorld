@@ -1,0 +1,51 @@
+{
+  "task_id": "task_tokyo_complex_route_planning_0004",
+  "task_type": "route_planning",
+  "scenario_type": "route_planning",
+  "difficulty": "medium",
+  "city_id": "tokyo_complex",
+  "variant": "",
+  "generated_at": "2026-08-27T16:52:10.473779+00:00",
+  "user_prompt": "请帮佐藤健一确认一个出行安排是否来得及：从Tokyu Plaza Harajuku “Harakado”出发，先去Premium Karaoke MODIS Shinjuku办一件事停留15分钟，再赶往仲见世商店街需要在69分钟内完成，不能使用步行，走路不能超过1582米。如果可行请给出分段路线。\n必经事项：Premium Karaoke MODIS Shinjuku（办理事务，停留15分钟）。这些是需要完成的事务，不是可自由跳过的换乘点。",
+  "summary": {
+    "character_count": 1,
+    "place_count": 3,
+    "route_count": 0,
+    "env_event_count": 0,
+    "judge_stage_count": 3,
+    "distance_km": 9.6,
+    "time_limit_min": 69,
+    "mode": "DRIVE",
+    "leg_modes": [
+      "DRIVE",
+      "DRIVE"
+    ],
+    "has_waypoint": true,
+    "semantic_stop_count": 1,
+    "expected_feasible": true,
+    "forbidden_modes": [
+      "WALK"
+    ],
+    "max_walking_m": 1582,
+    "prompt_language": "zh-CN"
+  },
+  "metadata": {
+    "seed_lineage": {
+      "batch_seed": 6564984577959506735,
+      "task_index": 4,
+      "task_seed": 7642563244694225829,
+      "attempt_index": 1,
+      "attempt_seed": 3248385767199538087
+    }
+  },
+  "prompt_language": "zh-CN",
+  "schema_version": "geoword.task.v1",
+  "artifact_contract_version": "geoword.task.v1",
+  "time_context": {
+    "timezone": "Asia/Tokyo",
+    "instruction_time": "2026-09-21T17:45:00+09:00",
+    "episode_start": "2026-09-21T17:45:00+09:00",
+    "episode_end": "2026-09-21T21:45:00+09:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

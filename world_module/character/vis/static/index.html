@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Relationship Graph</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="/ui/i18n.css">
+<script src="/ui/i18n.js" defer></script>
+</head>
+<body>
+
+<div id="sidebar">
+  <h2 data-ui-text>人物关系图谱</h2>
+  <div id="info-bar">Loading...</div>
+
+  <div class="section">
+    <h3 data-ui-text>图例</h3>
+    <div class="legend">
+      <div><span class="swatch male"></span> 男</div>
+      <div><span class="swatch female"></span> 女</div>
+    </div>
+    <div class="legend" style="margin-top:4px;">
+      <div><span class="edge-sample spouse"></span> 配偶</div>
+      <div><span class="edge-sample parent"></span> 父母/子女</div>
+      <div><span class="edge-sample sibling"></span> 兄弟姐妹</div>
+      <div><span class="edge-sample coworker"></span> 同事</div>
+      <div><span class="edge-sample friend"></span> 朋友</div>
+      <div><span class="edge-sample neighbor"></span> 邻居</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 data-ui-text>筛选</h3>
+    <input type="text" id="filter-search" placeholder="搜索名称..." data-ui-placeholder />
+    <div id="filter-results"></div>
+  </div>
+
+  <div class="section">
+    <h3 data-ui-text>统计</h3>
+    <div id="stats-panel">Loading...</div>
+  </div>
+</div>
+
+<div id="graph-container">
+  <svg id="graph-svg"></svg>
+</div>
+
+<!-- Detail panel -->
+<div id="detail-panel" class="hidden">
+  <div class="detail-header">
+    <span id="detail-name"></span>
+    <button id="btn-close-detail">&times;</button>
+  </div>
+  <div id="detail-content"></div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

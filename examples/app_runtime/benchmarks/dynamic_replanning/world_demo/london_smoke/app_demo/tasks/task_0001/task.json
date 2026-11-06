@@ -1,0 +1,26 @@
+{
+  "task_id": "app_demo_dynamic",
+  "task_type": "dynamic_replanning",
+  "city_id": "london_smoke",
+  "user_prompt": "Arrange a one-hour meeting for Sebastian Moore, Arthur Pendry and Evelyn Rosewood. They will travel separately. Their recorded availability and preferences are available through Calendar and Messaging.",
+  "prompt_language": "en",
+  "summary": {
+    "base_task_type": "multi_entity",
+    "example_only": true
+  },
+  "time_context": {
+    "timezone": "Europe/London",
+    "instruction_time": "2026-11-27T13:45:00+00:00",
+    "episode_start": "2026-11-27T12:10:00+00:00",
+    "source": "dynamic_clustered_date_assignment.v1",
+    "episode_end": "2026-11-27T17:45:00+00:00",
+    "request_time": "2026-11-27T12:10:00+00:00",
+    "planning_window": {
+      "scenario": "pre_use_replanning",
+      "request_time": "2026-11-27T12:10:00+00:00",
+      "activity_anchor_time": "2026-11-27T13:45:00+00:00",
+      "lead_minutes": 95,
+      "event_schedule_status": "not_assigned"
+    }
+  }
+}

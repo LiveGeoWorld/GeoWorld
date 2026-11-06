@@ -1,0 +1,51 @@
+{
+  "run_id": "example_recorded_results",
+  "status": "completed",
+  "scope": {
+    "kind": "combined",
+    "world_id": "world_002",
+    "task_type": "all",
+    "city": "all_cities",
+    "batch": "current_example",
+    "selected_tasks": [
+      {
+        "task_id": "task_cape_town_south_africa_region_aware_0011",
+        "task_type": "region_aware",
+        "task_folder": "examples/workbench/benchmarks/region_aware/world_002/cape_town_south_africa/current_example/tasks/task_0001",
+        "source_batch": "current_example"
+      },
+      {
+        "task_id": "task_singapore_singapore_safety_planning_0001",
+        "task_type": "safety_planning",
+        "task_folder": "examples/workbench/benchmarks/safety_planning/world_002/singapore_singapore/current_example/tasks/task_0001",
+        "source_batch": "current_example"
+      }
+    ],
+    "source_batches": [
+      {
+        "task_type": "region_aware",
+        "city_id": "cape_town_south_africa",
+        "batch_id": "current_example",
+        "tasks_dir": "examples/workbench/benchmarks/region_aware/world_002/cape_town_south_africa/current_example/tasks"
+      },
+      {
+        "task_type": "safety_planning",
+        "city_id": "singapore_singapore",
+        "batch_id": "current_example",
+        "tasks_dir": "examples/workbench/benchmarks/safety_planning/world_002/singapore_singapore/current_example/tasks"
+      }
+    ]
+  },
+  "passed": 1,
+  "failed": 1,
+  "token_usage": {
+    "prompt": 88753,
+    "completion": 3971,
+    "total": 92724
+  },
+  "elapsed_seconds": 214.63,
+  "phase": "completed",
+  "completed_count": 2,
+  "total_count": 2,
+  "example_only": true
+}

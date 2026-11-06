@@ -1,0 +1,133 @@
+{
+  "task_id": "task_cape_town_south_africa_place_discovery_curated_0001",
+  "task_type": "place_discovery",
+  "scenario_type": "place_discovery",
+  "difficulty": "easy",
+  "city_id": "cape_town_south_africa",
+  "variant": "complex",
+  "generated_at": "2026-11-04T08:09:47.296682+00:00",
+  "user_prompt": "I’m in Cape Town, starting from the Cape Town Science Centre at 370B Main Rd in Observatory, and I’d like help finding a cafe in Woodstock. I’m hoping for somewhere I can walk to, roughly 2.4 km from the Science Centre, with prices no more than ZAR 300, and it should be open by 8:00 on Tuesday.",
+  "summary": {
+    "curated": true,
+    "evidence_backed": true,
+    "example_id": "pd_batch_cape_town_south_africa_0001_WoodstockExchange",
+    "character_count": 1,
+    "place_count": 3,
+    "judge_stage_count": 5,
+    "judge_node_count": 5,
+    "key_node_count": 3,
+    "total_judge_checks": 13,
+    "completion_policy": "key_nodes",
+    "gold_summary": {
+      "top_candidate": "Woodstock Exchange",
+      "candidate_count": 3,
+      "distractor_count": 0
+    },
+    "review_status": "draft",
+    "prompt_language": "en",
+    "review_language": "",
+    "user_prompt_translation": "",
+    "review_translation": {},
+    "service_type": "cafe",
+    "start": {
+      "area_name": "Cape Town Science Centre（Cape Town）附近",
+      "name": "Cape Town Science Centre",
+      "address": "370B Main Rd, Observatory, Cape Town, 7925, South Africa",
+      "city_id": "cape_town_south_africa",
+      "city_name": "Cape Town",
+      "place_id": "place_cape_town_south_africa_chijp_uehavdzb0rxwsugly4sw0",
+      "source_place_id": "",
+      "source": "world_place",
+      "district_id": "district_cape_town_south_africa_observatory",
+      "district_name": "Observatory",
+      "place_type": "museum",
+      "coordinate": {
+        "lat": -33.9383614,
+        "lng": 18.4640718
+      }
+    },
+    "ranking_criteria": [
+      "a cafe",
+      "in Woodstock",
+      "roughly 2.4 km from the Science Centre",
+      "prices no more than ZAR 300",
+      "open by 8:00 on Tuesday"
+    ],
+    "candidate_scope": {
+      "city_id": "cape_town_south_africa",
+      "district_id": "district_cape_town_south_africa_observatory",
+      "service_type": "cafe",
+      "area_hints": [
+        "Cape Town Science Centre（Cape Town）附近"
+      ]
+    },
+    "difficulty_profile": {},
+    "quality_profile": {
+      "search_ambiguity_score": 0,
+      "constraint_complexity": 6,
+      "search_ambiguity": {
+        "level": "low",
+        "score": 0,
+        "factors": {
+          "same_district_service_count": 0,
+          "nearby_same_service_count_900m": 0,
+          "same_primary_type_count": 0,
+          "verifiable_attribute_count": 0,
+          "confusable_candidate_count": 0,
+          "candidates_in_scope_count": 0
+        }
+      },
+      "character_hard_constraint_count": 0,
+      "character_soft_preference_count": 0,
+      "confusable_candidate_count": 0,
+      "rubric_version": "place_discovery.quality.v1",
+      "constraint_complexity_post": {
+        "level": "medium",
+        "score": 6,
+        "stage": "post",
+        "character_hard_constraint_count": 0,
+        "character_soft_preference_count": 0,
+        "criteria_count": 5,
+        "hard_constraint_count": 5,
+        "soft_preference_count": 0
+      }
+    },
+    "search_landscape": {},
+    "quality_gate": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "curated_schema",
+          "passed": true,
+          "severity": "hard",
+          "message": "ok"
+        },
+        {
+          "name": "top3_ranking_contract",
+          "passed": true,
+          "severity": "hard",
+          "message": "candidate_count=3 ranks=[1, 2, 3]"
+        },
+        {
+          "name": "selected_C_unique",
+          "severity": "hard",
+          "passed": true
+        }
+      ],
+      "hard_failed": [],
+      "soft_failed": []
+    },
+    "distractor_count": 0,
+    "env_event_count": 0
+  },
+  "prompt_language": "en",
+  "schema_version": "geoword.task.v1",
+  "artifact_contract_version": "geoword.task.v1",
+  "time_context": {
+    "timezone": "Africa/Johannesburg",
+    "instruction_time": "2026-11-09T15:45:00+02:00",
+    "episode_start": "2026-11-09T15:45:00+02:00",
+    "episode_end": "2026-11-09T19:45:00+02:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

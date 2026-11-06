@@ -1,0 +1,1239 @@
+{
+  "cities": [
+    {
+      "city_id": "london_smoke",
+      "name": "London",
+      "timezone": "Europe/London",
+      "geometry": {
+        "kind": "point",
+        "data": {
+          "lat": 51.5074,
+          "lng": -0.1278
+        }
+      },
+      "supported_apps": [
+        "UserInterfaceApp",
+        "MapApp",
+        "LocalServiceApp",
+        "ReviewSocialApp",
+        "WeatherCityEventApp"
+      ],
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "yunwu_web_search",
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:12:06.878682+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    }
+  ],
+  "districts": [
+    {
+      "district_id": "district_london_smoke_covent_garden",
+      "city_id": "london_smoke",
+      "name": "Covent Garden",
+      "geometry": {
+        "kind": "point",
+        "data": {
+          "lat": 51.5116571,
+          "lng": -0.1240436
+        }
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "yunwu_web_search",
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:12:06.878682+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    },
+    {
+      "district_id": "exp_1784862900_cdd5d7__district_london_smoke_paddington",
+      "city_id": "london_smoke",
+      "name": "Paddington",
+      "geometry": {
+        "kind": "point",
+        "data": {
+          "lat": 51.515973,
+          "lng": -0.174943
+        }
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "yunwu_web_search",
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:18:11.522841+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "city_id": "london_smoke",
+      "name": "Vue Cinema London - West End (Leicester Square)",
+      "location": {
+        "lat": 51.511514999999996,
+        "lng": -0.129496
+      },
+      "primary_type": "movie_theater",
+      "address": "3 Cranbourn St, London WC2H 7AL, UK",
+      "district_id": "district_london_smoke_covent_garden",
+      "map_projection": {
+        "provider": "google",
+        "google_place_id": "ChIJQ5TwgGyue0gRhxMwO-iXTYU",
+        "source_place_id": "ChIJQ5TwgGyue0gRhxMwO-iXTYU",
+        "osm_id": "",
+        "rating": 4,
+        "user_rating_count": 3885,
+        "business_status": "OPERATIONAL",
+        "types": [
+          "movie_theater",
+          "candy_store",
+          "event_venue",
+          "confectionery",
+          "food_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "food",
+          "establishment"
+        ],
+        "google_place_details": {
+          "details_enriched": true,
+          "details_status": "queried",
+          "website_uri": "https://www.myvue.com/cinema/leicester-square/whats-on",
+          "national_phone_number": "0345 308 4620",
+          "current_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 23,
+                  "minute": 59,
+                  "truncated": true,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00–00:00",
+              "Tuesday: 10:00–00:00",
+              "Wednesday: 10:00–00:00",
+              "Thursday: 10:00–00:00",
+              "Friday: 10:00–00:00",
+              "Saturday: 09:00–00:00",
+              "Sunday: 09:00–00:00"
+            ],
+            "nextOpenTime": "2026-07-24T09:00:00Z"
+          },
+          "regular_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00–00:00",
+              "Tuesday: 10:00–00:00",
+              "Wednesday: 10:00–00:00",
+              "Thursday: 10:00–00:00",
+              "Friday: 10:00–00:00",
+              "Saturday: 09:00–00:00",
+              "Sunday: 09:00–00:00"
+            ],
+            "nextOpenTime": "2026-07-24T09:00:00Z"
+          },
+          "price_level": null,
+          "price_range": {},
+          "reservable": null,
+          "dine_in": null,
+          "takeout": null,
+          "delivery": null,
+          "curbside_pickup": null,
+          "field_status": {
+            "website_uri": "provided",
+            "national_phone_number": "provided",
+            "current_opening_hours": "provided",
+            "regular_opening_hours": "provided",
+            "price_level": "not_provided",
+            "price_range": "not_provided",
+            "reservable": "not_provided",
+            "dine_in": "not_provided",
+            "takeout": "not_provided",
+            "delivery": "not_provided",
+            "curbside_pickup": "not_provided"
+          }
+        }
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:12:06.878682+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    },
+    {
+      "place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "city_id": "london_smoke",
+      "name": "Dishoom Covent Garden",
+      "location": {
+        "lat": 51.512517599999995,
+        "lng": -0.1268291
+      },
+      "primary_type": "indian_restaurant",
+      "address": "12 Upper St Martin's Ln, London WC2H 9FB, UK",
+      "district_id": "district_london_smoke_covent_garden",
+      "map_projection": {
+        "provider": "google",
+        "google_place_id": "ChIJxZXYx7cEdkgRdgAOZ6OHOJw",
+        "source_place_id": "ChIJxZXYx7cEdkgRdgAOZ6OHOJw",
+        "osm_id": "",
+        "rating": 4.7,
+        "user_rating_count": 29308,
+        "business_status": "OPERATIONAL",
+        "types": [
+          "indian_restaurant",
+          "vegan_restaurant",
+          "vegetarian_restaurant",
+          "halal_restaurant",
+          "cafe",
+          "meal_takeaway",
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "google_place_details": {
+          "details_enriched": true,
+          "details_status": "queried",
+          "website_uri": "https://www.dishoom.com/covent-garden/?utm_source=google&utm_medium=organic&utm_campaign=Yext&utm_content=D1-CoventGarden&y_source=1_MjMwNDkyMDMtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+          "national_phone_number": "020 7420 9320",
+          "current_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 23,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 23,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 23,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 23,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 26
+                  }
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 08:00–23:00",
+              "Tuesday: Closed",
+              "Wednesday: 08:00–23:00",
+              "Thursday: 08:00–23:00",
+              "Friday: 08:00–00:00",
+              "Saturday: 08:00–00:00",
+              "Sunday: 08:00–23:00"
+            ],
+            "specialDays": [
+              {
+                "date": {
+                  "year": 2026,
+                  "month": 7,
+                  "day": 28
+                }
+              }
+            ],
+            "nextOpenTime": "2026-07-24T07:00:00Z"
+          },
+          "regular_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 23,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 23,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 23,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 23,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 23,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 0,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 08:00–23:00",
+              "Tuesday: 08:00–23:00",
+              "Wednesday: 08:00–23:00",
+              "Thursday: 08:00–23:00",
+              "Friday: 08:00–00:00",
+              "Saturday: 08:00–00:00",
+              "Sunday: 08:00–23:00"
+            ],
+            "nextOpenTime": "2026-07-24T07:00:00Z"
+          },
+          "price_level": "PRICE_LEVEL_MODERATE",
+          "price_range": {
+            "startPrice": {
+              "currencyCode": "GBP",
+              "units": "20"
+            },
+            "endPrice": {
+              "currencyCode": "GBP",
+              "units": "60"
+            }
+          },
+          "reservable": true,
+          "dine_in": true,
+          "takeout": true,
+          "delivery": true,
+          "curbside_pickup": false,
+          "field_status": {
+            "website_uri": "provided",
+            "national_phone_number": "provided",
+            "current_opening_hours": "provided",
+            "regular_opening_hours": "provided",
+            "price_level": "provided",
+            "price_range": "provided",
+            "reservable": "provided",
+            "dine_in": "provided",
+            "takeout": "provided",
+            "delivery": "provided",
+            "curbside_pickup": "provided"
+          }
+        }
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:12:06.878682+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    },
+    {
+      "place_id": "exp_1784862900_cdd5d7__place_london_smoke_chij00_x5riadkgre_qtehrmbkm",
+      "city_id": "london_smoke",
+      "name": "Bonne Bouche Paddington, Coffee Shop & Takeaway",
+      "location": {
+        "lat": 51.516573699999995,
+        "lng": -0.1735263
+      },
+      "primary_type": "cafe",
+      "address": "129 Praed St, Tyburnia, London W2 1RL, UK",
+      "district_id": "exp_1784862900_cdd5d7__district_london_smoke_paddington",
+      "map_projection": {
+        "provider": "google",
+        "google_place_id": "ChIJ00_x5rIadkgRE_QTeHRmbKM",
+        "source_place_id": "ChIJ00_x5rIadkgRE_QTeHRmbKM",
+        "osm_id": "",
+        "rating": 4.3,
+        "user_rating_count": 658,
+        "business_status": "OPERATIONAL",
+        "types": [
+          "cafe",
+          "coffee_shop",
+          "sandwich_shop",
+          "pastry_shop",
+          "cake_shop",
+          "bakery",
+          "dessert_shop",
+          "confectionery",
+          "food_store",
+          "manufacturer",
+          "store",
+          "wholesaler",
+          "restaurant",
+          "point_of_interest",
+          "food",
+          "establishment"
+        ],
+        "google_place_details": {
+          "details_enriched": true,
+          "details_status": "queried",
+          "website_uri": "https://bonnebouche.co.uk/",
+          "national_phone_number": "020 7724 5784",
+          "current_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 27
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 28
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 29
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 30
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 24
+                  }
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 16,
+                  "minute": 30,
+                  "date": {
+                    "year": 2026,
+                    "month": 7,
+                    "day": 25
+                  }
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 07:00–17:30",
+              "Tuesday: 07:00–17:30",
+              "Wednesday: 07:00–17:30",
+              "Thursday: 07:00–17:30",
+              "Friday: 07:00–17:30",
+              "Saturday: 08:00–16:30",
+              "Sunday: Closed"
+            ],
+            "nextOpenTime": "2026-07-24T06:00:00Z"
+          },
+          "regular_opening_hours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 30
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 30
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 30
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 30
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 30
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 16,
+                  "minute": 30
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 07:00–17:30",
+              "Tuesday: 07:00–17:30",
+              "Wednesday: 07:00–17:30",
+              "Thursday: 07:00–17:30",
+              "Friday: 07:00–17:30",
+              "Saturday: 08:00–16:30",
+              "Sunday: Closed"
+            ],
+            "nextOpenTime": "2026-07-24T06:00:00Z"
+          },
+          "price_level": null,
+          "price_range": {
+            "startPrice": {
+              "currencyCode": "GBP",
+              "units": "1"
+            },
+            "endPrice": {
+              "currencyCode": "GBP",
+              "units": "10"
+            }
+          },
+          "reservable": false,
+          "dine_in": true,
+          "takeout": true,
+          "delivery": true,
+          "curbside_pickup": null,
+          "field_status": {
+            "website_uri": "provided",
+            "national_phone_number": "provided",
+            "current_opening_hours": "provided",
+            "regular_opening_hours": "provided",
+            "price_level": "not_provided",
+            "price_range": "provided",
+            "reservable": "provided",
+            "dine_in": "provided",
+            "takeout": "provided",
+            "delivery": "provided",
+            "curbside_pickup": "not_provided"
+          }
+        }
+      },
+      "provenance": {
+        "schema_version": "v7.global.v1",
+        "source": [
+          "google_maps"
+        ],
+        "built_at": "2026-07-24T03:18:11.522841+00:00",
+        "generator": "pipeline_v2.map_module",
+        "quality_flags": []
+      }
+    }
+  ],
+  "corridors": [],
+  "services": [
+    {
+      "service_id": "service_place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "service_type": "movie_theater",
+      "primary_service_type": "movie_theater",
+      "service_types": [
+        "movie_theater",
+        "shopping"
+      ],
+      "affordances": [],
+      "state_model": {},
+      "constraints": [],
+      "oracle_affordances": [],
+      "app_projection": {
+        "kind": "factual_place_capability",
+        "category": "movie_theater",
+        "categories": [
+          "movie_theater",
+          "shopping"
+        ],
+        "google_primary_type": "movie_theater",
+        "google_types": [
+          "candy_store",
+          "confectionery",
+          "event_venue",
+          "food",
+          "food_store",
+          "manufacturer",
+          "movie_theater",
+          "store"
+        ]
+      },
+      "event_hooks": [],
+      "control_tags": {
+        "real_data": [
+          "google_place_type_projection"
+        ]
+      },
+      "director_notes": {
+        "state_policy": "No availability, reservation, queue, crowding, inventory, or other dynamic state is inferred from place types."
+      },
+      "provenance": {
+        "source": [
+          "google_maps"
+        ],
+        "generator": "factual_service_index.v3",
+        "quality_flags": []
+      }
+    },
+    {
+      "service_id": "service_place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "service_type": "restaurant",
+      "primary_service_type": "restaurant",
+      "service_types": [
+        "restaurant",
+        "cafe",
+        "bar"
+      ],
+      "affordances": [],
+      "state_model": {},
+      "constraints": [],
+      "oracle_affordances": [],
+      "app_projection": {
+        "kind": "factual_place_capability",
+        "category": "restaurant",
+        "categories": [
+          "restaurant",
+          "cafe",
+          "bar"
+        ],
+        "google_primary_type": "indian_restaurant",
+        "google_types": [
+          "bar",
+          "cafe",
+          "food",
+          "halal_restaurant",
+          "indian_restaurant",
+          "meal_takeaway",
+          "restaurant",
+          "vegan_restaurant",
+          "vegetarian_restaurant"
+        ]
+      },
+      "event_hooks": [],
+      "control_tags": {
+        "real_data": [
+          "google_place_type_projection"
+        ]
+      },
+      "director_notes": {
+        "state_policy": "No availability, reservation, queue, crowding, inventory, or other dynamic state is inferred from place types."
+      },
+      "provenance": {
+        "source": [
+          "google_maps"
+        ],
+        "generator": "factual_service_index.v3",
+        "quality_flags": []
+      }
+    },
+    {
+      "service_id": "service_exp_1784862900_cdd5d7__place_london_smoke_chij00_x5riadkgre_qtehrmbkm",
+      "place_id": "exp_1784862900_cdd5d7__place_london_smoke_chij00_x5riadkgre_qtehrmbkm",
+      "service_type": "cafe",
+      "primary_service_type": "cafe",
+      "service_types": [
+        "cafe",
+        "restaurant",
+        "shopping"
+      ],
+      "affordances": [],
+      "state_model": {},
+      "constraints": [],
+      "oracle_affordances": [],
+      "app_projection": {
+        "kind": "factual_place_capability",
+        "category": "cafe",
+        "categories": [
+          "cafe",
+          "restaurant",
+          "shopping"
+        ],
+        "google_primary_type": "cafe",
+        "google_types": [
+          "bakery",
+          "cafe",
+          "cake_shop",
+          "coffee_shop",
+          "confectionery",
+          "dessert_shop",
+          "food",
+          "food_store",
+          "manufacturer",
+          "pastry_shop",
+          "restaurant",
+          "sandwich_shop",
+          "store",
+          "wholesaler"
+        ]
+      },
+      "event_hooks": [],
+      "control_tags": {
+        "real_data": [
+          "google_place_type_projection"
+        ]
+      },
+      "director_notes": {
+        "state_policy": "No availability, reservation, queue, crowding, inventory, or other dynamic state is inferred from place types."
+      },
+      "provenance": {
+        "source": [
+          "google_maps"
+        ],
+        "generator": "factual_service_index.v3",
+        "quality_flags": []
+      }
+    }
+  ],
+  "actors": [],
+  "information_items": [],
+  "event_templates": [],
+  "generation_metadata": {
+    "factual_service_index": {
+      "schema_version": "geoword.factual_service_index.v3",
+      "service_count": 3,
+      "state_policy": "factual_categories_only"
+    }
+  }
+}

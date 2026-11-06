@@ -1,0 +1,14 @@
+{
+  "world_id": "world_demo",
+  "city_id": "london_smoke",
+  "generation_context": {
+    "world_city_versions": {
+      "london_smoke": 1
+    },
+    "world_map_snapshot": {
+      "london_smoke": {
+        "sha256": "c7cee3202314d96455281dab1875e9af3aa99de8cf59876180e6a8def7efe168"
+      }
+    }
+  }
+}

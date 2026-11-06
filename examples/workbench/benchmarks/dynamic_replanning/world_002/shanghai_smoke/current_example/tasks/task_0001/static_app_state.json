@@ -1,0 +1,323 @@
+{
+  "schema_version": "geoword.static_app_state.v1",
+  "lifecycle": "episode_start_frozen",
+  "apps": {
+    "LocalServiceApp": {
+      "services": [
+        {
+          "place_id": "exp_1784866105_0d24d4__place_shanghai_smoke_chijfv_p2uvwsjurc_1o95vdd0",
+          "name": "爱玲",
+          "place_name": "爱玲",
+          "location": {
+            "lat": 31.23511,
+            "lng": 121.50775999999999
+          },
+          "address": "中国上海市浦东新区陆家嘴3层 CN 上海市 浦东新区 世纪大道 100 100号上海环球金融中心 邮政编码: 200120",
+          "district": "exp_1784866105_0d24d4__district_shanghai_smoke_lujiazui",
+          "primary_type": "chinese_restaurant",
+          "types": [],
+          "activity_type": "shared_meal"
+        },
+        {
+          "place_id": "exp_1784866105_0d24d4__place_shanghai_smoke_chijismzhvhwsjurnoaziikpov8",
+          "name": "沈大成中山东一路店",
+          "place_name": "沈大成中山东一路店",
+          "location": {
+            "lat": 31.23775,
+            "lng": 121.4906
+          },
+          "address": "中国上海市黄浦区外滩中山东一路287号 邮政编码: 200002",
+          "district": "exp_1784866105_0d24d4__district_shanghai_smoke_bund",
+          "primary_type": "coffee_shop",
+          "types": [],
+          "activity_type": "shared_meal"
+        },
+        {
+          "place_id": "place_shanghai_smoke_chijmevgkyhcmjurd_ehmjm7nho",
+          "name": "上海金茂君悦大酒店",
+          "place_name": "上海金茂君悦大酒店",
+          "location": {
+            "lat": 31.2353438,
+            "lng": 121.50577969999999
+          },
+          "address": "中国上海市浦东新区陆家嘴世纪大道88号 邮政编码: 200120",
+          "district": "district_shanghai_smoke_lujiazui",
+          "primary_type": "hotel",
+          "types": [],
+          "activity_type": "shared_activity"
+        },
+        {
+          "place_id": "place_shanghai_smoke_chije0uhi1dwsjurd1hfe4uubh8",
+          "name": "Bund18",
+          "place_name": "Bund18",
+          "location": {
+            "lat": 31.238447999999998,
+            "lng": 121.48980200000001
+          },
+          "address": "中国上海市黄浦区外滩中山东一路18号 邮政编码: 200002",
+          "district": "district_shanghai_smoke_bund",
+          "primary_type": "shopping_mall",
+          "types": [],
+          "activity_type": "shopping_visit"
+        },
+        {
+          "place_id": "place_shanghai_smoke_chijn_lk91hwsjurretvbnwcxjo",
+          "name": "蓝调爵士花园酒吧",
+          "place_name": "蓝调爵士花园酒吧",
+          "location": {
+            "lat": 31.235457999999994,
+            "lng": 121.489206
+          },
+          "address": "中国上海市黄浦区外滩福州路60号 邮政编码: 200002",
+          "district": "district_shanghai_smoke_nanjing_road_pedestrian_mall",
+          "primary_type": "bar",
+          "types": [],
+          "activity_type": "shared_activity"
+        },
+        {
+          "name": "泰康汤包馆",
+          "location": {
+            "lat": 31.235152,
+            "lng": 121.475894
+          }
+        },
+        {
+          "name": "佳家汤包",
+          "location": {
+            "lat": 31.234576999999998,
+            "lng": 121.47082099999999
+          }
+        }
+      ]
+    },
+    "CalendarApp": {
+      "participants": [
+        {
+          "character_id": "char_shanghai_smoke_007",
+          "name": "李美琴",
+          "age": 34,
+          "occupation": "永安百货化妆品专柜导购",
+          "home_place_id": "char_shanghai_smoke_007",
+          "home_place_name": "李美琴",
+          "home_lat": 31.229669999999995,
+          "home_lng": 121.47616099999999,
+          "home_district_id": "district_shanghai_smoke_east_nanjing_road",
+          "available_from": "18:35",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "随和",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "百货商场地下食堂的轻食沙拉",
+              "商场清洁无味的卫生间",
+              "顾客少的工作日上午试妆时间"
+            ],
+            "avoid": [
+              "户外暴晒路段",
+              "油烟味重的路边摊",
+              "突然的行程变更影响排班"
+            ],
+            "dietary": "vegetarian",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "每周六下午三点到四点雷打不动要接孩子放学，这段时间不能安排任何活动"
+            }
+          ]
+        },
+        {
+          "character_id": "char_shanghai_smoke_004",
+          "name": "陈慧琳",
+          "age": 34,
+          "occupation": "金融科技产品经理（陆家嘴某外资银行总部）",
+          "home_place_id": "char_shanghai_smoke_004",
+          "home_place_name": "陈慧琳",
+          "home_lat": 31.2369025,
+          "home_lng": 121.50133980000001,
+          "home_district_id": "district_shanghai_smoke_lujiazui",
+          "available_from": "18:33",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "守时",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "静音咖啡区",
+              "可步行到达的工作午餐店",
+              "手机信号稳定的场所",
+              "能快速出餐的简餐"
+            ],
+            "avoid": [
+              "开放式厨房餐厅",
+              "午间高峰排队区域",
+              "需要绕行天桥的动线",
+              "网红打卡吵闹店"
+            ],
+            "dietary": "无",
+            "budget": "high"
+          },
+          "constraints": [
+            {
+              "content": "她实际上对海鲜严重过敏，但从不主动提起，因为觉得会显得麻烦。如果推荐有海鲜的餐厅，她会直接拒绝并说‘换一个’，但不会解释原因。"
+            }
+          ]
+        },
+        {
+          "character_id": "char_shanghai_smoke_016",
+          "name": "赵丽",
+          "age": 45,
+          "occupation": "新世界城化妆品专柜柜长，周末常带外地亲戚逛南京路",
+          "home_place_id": "char_shanghai_smoke_016",
+          "home_place_name": "赵丽",
+          "home_lat": 31.233608,
+          "home_lng": 121.48446,
+          "home_district_id": "district_shanghai_smoke_nanjing_road_pedestrian_mall",
+          "available_from": "18:37",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "健谈",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "带座位的快速午餐（如小杨生煎）",
+              "能拿试用装的化妆品柜",
+              "洗手间干净的商场"
+            ],
+            "avoid": [
+              "外地游客聚集的特产店长队",
+              "需要走回头路的路线",
+              "价格虚高的景区餐厅"
+            ],
+            "dietary": "seafood_allergy",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "她每经过泰康食品商店必须进去买一包话梅，如果计划没有自动包含这一站，她会强行更改路线"
+            },
+            {
+              "content": "如果计划中的午餐地点距‘新世界城’东门超过300米，她会拒绝，因为她女儿半小时后会在东门等她交作业本"
+            }
+          ]
+        }
+      ]
+    },
+    "MessagingApp": {
+      "participants": [
+        {
+          "character_id": "char_shanghai_smoke_007",
+          "name": "李美琴",
+          "age": 34,
+          "occupation": "永安百货化妆品专柜导购",
+          "home_place_id": "char_shanghai_smoke_007",
+          "home_place_name": "李美琴",
+          "home_lat": 31.229669999999995,
+          "home_lng": 121.47616099999999,
+          "home_district_id": "district_shanghai_smoke_east_nanjing_road",
+          "available_from": "18:35",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "随和",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "百货商场地下食堂的轻食沙拉",
+              "商场清洁无味的卫生间",
+              "顾客少的工作日上午试妆时间"
+            ],
+            "avoid": [
+              "户外暴晒路段",
+              "油烟味重的路边摊",
+              "突然的行程变更影响排班"
+            ],
+            "dietary": "vegetarian",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "每周六下午三点到四点雷打不动要接孩子放学，这段时间不能安排任何活动"
+            }
+          ]
+        },
+        {
+          "character_id": "char_shanghai_smoke_004",
+          "name": "陈慧琳",
+          "age": 34,
+          "occupation": "金融科技产品经理（陆家嘴某外资银行总部）",
+          "home_place_id": "char_shanghai_smoke_004",
+          "home_place_name": "陈慧琳",
+          "home_lat": 31.2369025,
+          "home_lng": 121.50133980000001,
+          "home_district_id": "district_shanghai_smoke_lujiazui",
+          "available_from": "18:33",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "守时",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "静音咖啡区",
+              "可步行到达的工作午餐店",
+              "手机信号稳定的场所",
+              "能快速出餐的简餐"
+            ],
+            "avoid": [
+              "开放式厨房餐厅",
+              "午间高峰排队区域",
+              "需要绕行天桥的动线",
+              "网红打卡吵闹店"
+            ],
+            "dietary": "无",
+            "budget": "high"
+          },
+          "constraints": [
+            {
+              "content": "她实际上对海鲜严重过敏，但从不主动提起，因为觉得会显得麻烦。如果推荐有海鲜的餐厅，她会直接拒绝并说‘换一个’，但不会解释原因。"
+            }
+          ]
+        },
+        {
+          "character_id": "char_shanghai_smoke_016",
+          "name": "赵丽",
+          "age": 45,
+          "occupation": "新世界城化妆品专柜柜长，周末常带外地亲戚逛南京路",
+          "home_place_id": "char_shanghai_smoke_016",
+          "home_place_name": "赵丽",
+          "home_lat": 31.233608,
+          "home_lng": 121.48446,
+          "home_district_id": "district_shanghai_smoke_nanjing_road_pedestrian_mall",
+          "available_from": "18:37",
+          "must_leave_by": "20:30",
+          "has_car": true,
+          "personality": "健谈",
+          "can_drive_others": false,
+          "preferences": {
+            "prefer": [
+              "带座位的快速午餐（如小杨生煎）",
+              "能拿试用装的化妆品柜",
+              "洗手间干净的商场"
+            ],
+            "avoid": [
+              "外地游客聚集的特产店长队",
+              "需要走回头路的路线",
+              "价格虚高的景区餐厅"
+            ],
+            "dietary": "seafood_allergy",
+            "budget": "medium"
+          },
+          "constraints": [
+            {
+              "content": "她每经过泰康食品商店必须进去买一包话梅，如果计划没有自动包含这一站，她会强行更改路线"
+            },
+            {
+              "content": "如果计划中的午餐地点距‘新世界城’东门超过300米，她会拒绝，因为她女儿半小时后会在东门等她交作业本"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "projection_source": "dynamic_source_loader.v1"
+}

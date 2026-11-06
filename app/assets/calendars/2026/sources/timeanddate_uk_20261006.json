@@ -1,0 +1,853 @@
+{
+  "url": "https://www.timeanddate.com/holidays/uk/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "2nd January",
+      "source_type": "Local Bank Holiday",
+      "source_details": "Scotland",
+      "source_line": 101,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Twelfth Night",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 102,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Epiphany",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-07",
+      "name": "Orthodox Christmas Day",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-14",
+      "name": "Orthodox New Year",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-16",
+      "name": "Isra and Mi'raj",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-17",
+      "name": "Isra and Mi'raj",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 107,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-18",
+      "name": "Isra and Mi'raj",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 108,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-25",
+      "name": "Burns Night",
+      "source_type": "Local Observance",
+      "source_details": "Scotland",
+      "source_line": 109,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-02-02",
+      "name": "Tu B'Shevat",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Valentine's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Carnival / Shrove Tuesday / Pancake Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Lunar New Year",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 113,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Ramadan Start",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Carnival / Ash Wednesday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 115,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "St. David's Day",
+      "source_type": "Local Observance",
+      "source_details": "Wales",
+      "source_line": 116,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Purim",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 117,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-15",
+      "name": "Lailat al-Qadr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 118,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-15",
+      "name": "Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 119,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-17",
+      "name": "St. Patrick's Day",
+      "source_type": "Local Bank Holiday",
+      "source_details": "NIR",
+      "source_line": 120,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Eid ul Fitr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Palm Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Daylight Saving Time starts",
+      "source_type": "Clock Change/Daylight Saving Time",
+      "source_details": "",
+      "source_line": 124,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Maundy Thursday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "First day of Passover",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Holy Saturday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Easter Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Easter Monday",
+      "source_type": "Local Observance",
+      "source_details": "Scotland",
+      "source_line": 130,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Easter Monday",
+      "source_type": "Common Local Holiday",
+      "source_details": "ENG, NIR, WAL",
+      "source_line": 131,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Last day of Passover",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 132,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Orthodox Good Friday",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 133,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Orthodox Holy Saturday",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 134,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Orthodox Easter",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 135,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Orthodox Easter Monday",
+      "source_type": "Observance, Orthodox",
+      "source_details": "",
+      "source_line": 136,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Yom HaShoah",
+      "source_type": "Jewish Commemoration",
+      "source_details": "",
+      "source_line": 137,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Yom HaAtzmaut",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 138,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Stephen Lawrence Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 139,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "St. George's Day",
+      "source_type": "Local Observance",
+      "source_details": "",
+      "source_line": 140,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Shakespeare Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 141,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Early May Bank Holiday",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 142,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Lag B'Omer",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 143,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Ascension Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 144,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Shavuot",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 145,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Pentecost",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 146,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Whit Monday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 147,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Spring Bank Holiday",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 148,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Eid al-Adha",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 149,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Trinity Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 150,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Corpus Christi",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 151,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "King's Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 152,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-15",
+      "name": "World Cup Bank Holiday",
+      "source_type": "Local Bank Holiday",
+      "source_details": "Scotland",
+      "source_line": 153,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Muharram",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 154,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Father's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 155,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 156,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Windrush Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 157,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Ashura (Tentative Date)",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 158,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-12",
+      "name": "Battle of the Boyne",
+      "source_type": "Local Bank Holiday",
+      "source_details": "NIR",
+      "source_line": 159,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-07-13",
+      "name": "Battle of the Boyne observed",
+      "source_type": "Local Bank Holiday",
+      "source_details": "NIR",
+      "source_line": 160,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Tisha B'Av",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 161,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Summer Bank Holiday",
+      "source_type": "Local Bank Holiday",
+      "source_details": "Scotland",
+      "source_line": 162,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Assumption of Mary",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 163,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Milad un Nabi",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 164,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "Summer Bank Holiday",
+      "source_type": "Common Local Holiday",
+      "source_details": "ENG, NIR, WAL",
+      "source_line": 165,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Janmashtami (Smarta)",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 166,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Janmashtami",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 167,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Rosh Hashana",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 168,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Yom Kippur",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 169,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 170,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "First day of Sukkot",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 171,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Hoshana Rabbah",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 172,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-03",
+      "name": "Shemini Atzeret",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 173,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "Feast of St Francis of Assisi",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 174,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "Simchat Torah",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 175,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-25",
+      "name": "Daylight Saving Time ends",
+      "source_type": "Clock Change/Daylight Saving Time",
+      "source_details": "",
+      "source_line": 176,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-10-31",
+      "name": "Halloween",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 177,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "All Saints' Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 178,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "All Souls' Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 179,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-05",
+      "name": "Guy Fawkes Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 180,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali/Deepavali",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 181,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Remembrance Sunday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 182,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-29",
+      "name": "First Sunday of Advent",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 183,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "St. Andrew's Day",
+      "source_type": "Local Bank Holiday",
+      "source_details": "Scotland",
+      "source_line": 184,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_London"
+    },
+    {
+      "date": "2026-12-05",
+      "name": "First Day of Hanukkah",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 185,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-08",
+      "name": "Feast of the Immaculate Conception",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 186,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-12",
+      "name": "Last day of Hanukkah",
+      "source_type": "Jewish Holiday",
+      "source_details": "",
+      "source_line": 187,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 188,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 189,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 190,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-26",
+      "name": "Boxing Day",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 191,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-28",
+      "name": "Substitute Bank Holiday for Boxing Day",
+      "source_type": "Bank Holiday",
+      "source_details": "",
+      "source_line": 192,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year's Eve",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 193,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    }
+  ]
+}

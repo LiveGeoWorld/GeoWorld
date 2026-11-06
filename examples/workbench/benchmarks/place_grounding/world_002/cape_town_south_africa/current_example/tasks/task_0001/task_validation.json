@@ -1,0 +1,9 @@
+{
+  "task_dir": "D:\\codex\\codex\\worktrees\\73f5\\pipeline_v3\\.tmp_grounding_english\\positive_clues_20261013\\export\\tasks\\task_0001_I was",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "task_type": "place_grounding",
+  "finalized_at": "2026-10-13T07:33:52.161487+00:00",
+  "state": "formal"
+}

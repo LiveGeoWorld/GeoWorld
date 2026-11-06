@@ -1,0 +1,84 @@
+{
+  "description": "Small recorded London App episode, using the formal participant/state/event formats and common loader. Source C/GT and generation proofs are not exported as App observations.",
+  "source_world": "world_002",
+  "source_city": "london_smoke",
+  "source_map_sha256": "b1b3aeec41949128f8dd37eccbdcc00a0c1c4922fa23979d2619d7d5c9e9604c",
+  "source_service_cache_sha256": "8ee73da128c0445584bf77075abdcf98b011b1a61101079de715efa7bbb9293e",
+  "source_route_cache_sha256": "4228cce153eb9f710f6b20ec6e974324c274ce8354d14c22af482a826256d385",
+  "place_names": [
+    "Vue Cinema London - West End (Leicester Square)",
+    "Dishoom Covent Garden",
+    "Bonne Bouche Paddington, Coffee Shop & Takeaway"
+  ],
+  "route_entries": 6,
+  "files": {
+    "world_manifest.json": "a2ab783fbcabf3a72d55d2f0840fa4797236816ace2ffe94234d9a9c21aa09b2",
+    "artifacts/routes/london_smoke/v1/route_cache.json": "43a27579fdce34d618c44e3fe710b7a0932c7d452bf805dce2cfe33ae688d650",
+    "assets/characters.json": "dba1a06943ed178820a7162db2cc441375d73dad4aa5a77918a6a292227cb695",
+    "assets/local_service_world_state.json": "2e147a26f4194f8c65c79d7ac7f55ff69fa0a954d66fe5fe3d32ab575c9fad7f",
+    "assets/service_detail_cache.json": "4e01e0ae836140003a925ed15f47cebc682b2face2d1ad2c92c21179bb9ca9f3",
+    "assets/world.json": "c7cee3202314d96455281dab1875e9af3aa99de8cf59876180e6a8def7efe168",
+    "cities/london_smoke.json": "70dbb412b7654bebd869e740cea0322d5e6c18a7df8e90e74ebb6bfa4ea692d4"
+  },
+  "display_translations": {
+    "3 Cranbourn St, London WC2H 7AL英国": "3 Cranbourn St, London WC2H 7AL, UK",
+    "星期一: 10:00–00:00": "Monday: 10:00–00:00",
+    "星期二: 10:00–00:00": "Tuesday: 10:00–00:00",
+    "星期三: 10:00–00:00": "Wednesday: 10:00–00:00",
+    "星期四: 10:00–00:00": "Thursday: 10:00–00:00",
+    "星期五: 10:00–00:00": "Friday: 10:00–00:00",
+    "星期六: 09:00–00:00": "Saturday: 09:00–00:00",
+    "星期日: 09:00–00:00": "Sunday: 09:00–00:00",
+    "12 Upper St Martin's Ln, London WC2H 9FB英国": "12 Upper St Martin's Ln, London WC2H 9FB, UK",
+    "星期一: 08:00–23:00": "Monday: 08:00–23:00",
+    "星期二: 休息": "Tuesday: 休息",
+    "星期三: 08:00–23:00": "Wednesday: 08:00–23:00",
+    "星期四: 08:00–23:00": "Thursday: 08:00–23:00",
+    "星期五: 08:00–00:00": "Friday: 08:00–00:00",
+    "星期六: 08:00–00:00": "Saturday: 08:00–00:00",
+    "星期日: 08:00–23:00": "Sunday: 08:00–23:00",
+    "星期二: 08:00–23:00": "Tuesday: 08:00–23:00",
+    "Tuesday: 休息": "Tuesday: Closed",
+    "健谈": "talkative",
+    "守时": "punctual",
+    "挑剔": "particular"
+  },
+  "omitted_optional_data": [
+    "Author-only anchor lists",
+    "Google review excerpts"
+  ],
+  "source_episode": "outputs\\benchmarks\\dynamic_replanning\\world_002\\london_smoke\\20260925_051755\\tasks\\task_0019_task_",
+  "source_episode_sha256": {
+    "task.json": "7a7e5bf9025423c226a43de1e13e764bff2526165262da52315066f0bea9fbf5",
+    "task_sandbox.json": "ea393a97d99cbda6295a96a90b2284b2ea145a730b1c5775ca96dd3b1d4e5bd0",
+    "static_app_state.json": "2a89bc71956872f44b82de362ba83c1a247e011d6793c1ef6c3db4a9fc6f098b",
+    "env_events.json": "009052ef85a1026850a288618ad831d111b91112655077454f4230fb6f19fb96"
+  },
+  "event_translations": [
+    {
+      "original": "各位好，先说一声今晚聚会的事：我这边的素食忌口从现在起取消了，现在什么都能吃，选店的时候不用再专门为我找素食菜单，常规菜单我也没问题。",
+      "english": "Hi everyone, a quick update for tonight's get-together: I no longer need a vegetarian meal. A regular menu is fine, so you don't need to look for a vegetarian menu for me."
+    },
+    {
+      "original": "【门店公告】Bonne Bouche Paddington（129 Praed St）因厨房设备突发故障，今天 12:30 起暂停营业，今日剩余时段堂食与外带均不接待，已预约的顾客请联系店员改期，明早 7:00 恢复正常营业。",
+      "english": "Bonne Bouche Paddington (129 Praed St): due to an unexpected kitchen equipment fault, we are closed from 12:30 for the rest of today. Dine-in and takeaway are unavailable. If you have a reservation, please contact us to reschedule. We reopen at 07:00 tomorrow."
+    }
+  ],
+  "runtime_files": {
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/city_event_ledger.json": "de78bd3c890f312b8ad3e2ce00809850b7386fceb88fa545c65f68160787c25d",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/world_provenance.json": "d89cb53bdce0a67e405bdae403f0ed17290c2e80b5ad5a201799b5d7ac711092",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/env_events.json": "d2e74bfa3c7b86d888ee2e977ca8db9fcf6d273b450541cb983ac660a96e8f7f",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/static_app_state.json": "8622fb2bb97d66f55f645096150ed586e90e7c2986c56d3f3009c2987fb02ed6",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/task.json": "a95a53f03bf406163686d94cd8b418be965cb4976f6bf16e26d56e942f6e5e0d",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/task_provenance.json": "dfcd3103ae78cafdaf0f999c41e02123350d741a79fab4b084d887a347bbd818",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/task_sandbox.json": "1f0f34128129e260a69bf4947f63b341ee621bb9834b2a2f330f3a391913aade",
+    "examples/app_runtime/benchmarks/dynamic_replanning/world_demo/london_smoke/app_demo/tasks/task_0001/world_slice.json": "11a18112ba46eafeff7a2438c232ef87b309bfbeb6b69bb6b067686de47e2214",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/world_provenance.json": "d89cb53bdce0a67e405bdae403f0ed17290c2e80b5ad5a201799b5d7ac711092",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/env_events.json": "6b86b42d2d3558a3744e08b45c8ab206bb6fab598c46be16b5a912d097f4b8ac",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/static_app_state.json": "8622fb2bb97d66f55f645096150ed586e90e7c2986c56d3f3009c2987fb02ed6",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/task.json": "468594283a9b57d2cbdbe13cc0ec742bb402b74c72a018faf4082916ece1b856",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/task_provenance.json": "dfcd3103ae78cafdaf0f999c41e02123350d741a79fab4b084d887a347bbd818",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/task_sandbox.json": "20ff3351911b2fbef14bcd2b93d2a7a58f316af297c5fb9fed2f0d18076c4431",
+    "examples/app_runtime/benchmarks/multi_entity/world_demo/london_smoke/app_demo/tasks/task_0001/world_slice.json": "11a18112ba46eafeff7a2438c232ef87b309bfbeb6b69bb6b067686de47e2214"
+  }
+}

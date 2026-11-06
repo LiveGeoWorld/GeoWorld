@@ -1,0 +1,382 @@
+{
+  "task_type": "multi_entity",
+  "scenario": {
+    "family": "independent_meeting",
+    "activity_type": "movie_visit",
+    "required_primary_type": "movie_theater",
+    "meeting_duration_min": 60,
+    "allowed_travel_modes": [
+      "WALK",
+      "TRANSIT",
+      "DRIVE"
+    ],
+    "relations": [
+      "joint_activity",
+      "individual_time_windows"
+    ],
+    "resources": []
+  },
+  "participants": [
+    {
+      "character_id": "char_tokyo_complex_006",
+      "name": "山田 花子",
+      "age": 8,
+      "occupation": "小学2年生",
+      "home_place_id": "char_tokyo_complex_006",
+      "home_place_name": "山田 花子",
+      "home_lat": 35.6441631,
+      "home_lng": 139.69884439999998,
+      "home_district_id": "district_tokyo_complex_shibuya",
+      "available_from": "18:31",
+      "must_leave_by": "20:30",
+      "has_car": false,
+      "personality": "守时",
+      "can_drive_others": false,
+      "preferences": {
+        "prefer": [
+          "ふわふわのパンケーキ",
+          "動物カフェ",
+          "駅前の公園ブランコ"
+        ],
+        "avoid": [
+          "すごく混んでいるスクランブル交差点",
+          "長時間の歩行",
+          "予定の急な変更"
+        ],
+        "dietary": "無",
+        "budget": "low"
+      },
+      "constraints": [
+        {
+          "content": "実は母親と待ち合わせしていて、指定された時間に109前で合流しないといけない。プラン受諾後、「お母さんと約束があるから」と伝える。"
+        }
+      ]
+    },
+    {
+      "character_id": "char_tokyo_complex_008",
+      "name": "エレナ・サトウ",
+      "age": 52,
+      "occupation": "老舗和菓子店の女将",
+      "home_place_id": "char_tokyo_complex_008",
+      "home_place_name": "エレナ・サトウ",
+      "home_lat": 35.6522875,
+      "home_lng": 139.683855,
+      "home_district_id": "district_tokyo_complex_shibuya",
+      "available_from": "18:28",
+      "must_leave_by": "20:30",
+      "has_car": true,
+      "personality": "守时",
+      "can_drive_others": true,
+      "preferences": {
+        "prefer": [
+          "抹茶スイーツ",
+          "静かな路地裏の喫茶店",
+          "手みやげが買える場所"
+        ],
+        "avoid": [
+          "外国人多めのクラブエリア",
+          "電子マネーしか使えない店",
+          "急いで食べるランチ"
+        ],
+        "dietary": "無",
+        "budget": "medium"
+      },
+      "constraints": [
+        {
+          "content": "実は糖尿病予備軍で、甘いもの制限が必要。締め切り30分前に『血糖値が気になるので、食事は低糖質メニューに変えられますか？』と伝える。"
+        }
+      ]
+    },
+    {
+      "character_id": "char_tokyo_complex_004",
+      "name": "林翔太",
+      "age": 8,
+      "occupation": "新宿区立小学校3年生 (Elementary School Student, Grade 3)",
+      "home_place_id": "char_tokyo_complex_004",
+      "home_place_name": "林翔太",
+      "home_lat": 35.6979038,
+      "home_lng": 139.7203396,
+      "home_district_id": "district_tokyo_complex_shinjuku",
+      "available_from": "18:32",
+      "must_leave_by": "20:30",
+      "has_car": false,
+      "personality": "守时",
+      "can_drive_others": false,
+      "preferences": {
+        "prefer": [
+          "有游乐设施的公园",
+          "可以抓独角仙的绿地",
+          "儿童餐附玩具",
+          "明亮且安全的步道"
+        ],
+        "avoid": [
+          "人挤人的地下通道",
+          "没有卡通人物的菜单",
+          "气味浓烈的烤串摊",
+          "长时间步行"
+        ],
+        "dietary": "",
+        "budget": "low"
+      },
+      "constraints": [
+        {
+          "content": "我爸爸严格规定下午5点前必须回家，且不能独自过马路。规划路线必须包含监护人接送点。"
+        }
+      ]
+    },
+    {
+      "character_id": "char_tokyo_complex_002",
+      "name": "佐藤健一",
+      "age": 67,
+      "occupation": "新宿御苑前町内会役員 (Neighborhood Association Officer, retired salaryman)",
+      "home_place_id": "char_tokyo_complex_002",
+      "home_place_name": "佐藤健一",
+      "home_lat": 35.685176299999995,
+      "home_lng": 139.7100517,
+      "home_district_id": "district_tokyo_complex_shinjuku",
+      "available_from": "18:34",
+      "must_leave_by": "20:30",
+      "has_car": false,
+      "personality": "健谈",
+      "can_drive_others": false,
+      "preferences": {
+        "prefer": [
+          "清晨公园长椅",
+          "老字号和果子店",
+          "无障碍步道",
+          "公共广播清晰的地方"
+        ],
+        "avoid": [
+          "深夜营业的霓虹灯店",
+          "电子支付仅限的店铺",
+          "台阶多的入口"
+        ],
+        "dietary": "low_sodium",
+        "budget": "low"
+      },
+      "constraints": [
+        {
+          "content": "我膝盖不好，不能走超过200米的上下坡，规划路线时必须避开歌舞伎町的坡道。"
+        }
+      ]
+    }
+  ],
+  "candidate_places": [
+    {
+      "place_id": "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+      "name": "Shinjuku Wald 9",
+      "place_name": "Shinjuku Wald 9",
+      "location": {
+        "lat": 35.6901053,
+        "lng": 139.7058564
+      },
+      "address": "日本〒160-0022 Tokyo, Shinjuku City, Shinjuku, 3-chōme−1−２６ 三丁目イーストビル ９階",
+      "district": "district_tokyo_complex_golden_gai",
+      "primary_type": "movie_theater",
+      "types": [],
+      "activity_type": "movie_visit"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijxezpcs6nggarfucpwdsqlue",
+      "name": "Bar NORA",
+      "place_name": "Bar NORA",
+      "location": {
+        "lat": 35.696261199999995,
+        "lng": 139.7022383
+      },
+      "address": "日本〒160-0021 Tokyo, Shinjuku City, Kabukichō, 2-chōme−38−１ 三実ビル 3階",
+      "district": "district_tokyo_complex_kabukicho",
+      "primary_type": "bar",
+      "types": [],
+      "activity_type": "shared_activity"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijkb268ysnggarmzivao4qyzm",
+      "name": "Shinjuku Ale",
+      "place_name": "Shinjuku Ale",
+      "location": {
+        "lat": 35.6946659,
+        "lng": 139.7019914
+      },
+      "address": "１F２F, 1-chōme-14-5 Kabukichō, Shinjuku City, Tokyo 160-0021日本",
+      "district": "district_tokyo_complex_shinjuku",
+      "primary_type": "bar",
+      "types": [],
+      "activity_type": "shared_activity"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijj3m_onmmggaroskvpmoxt_o",
+      "name": "Karaoke Pasela Shinjuku Honten",
+      "place_name": "Karaoke Pasela Shinjuku Honten",
+      "location": {
+        "lat": 35.694322199999995,
+        "lng": 139.7038617
+      },
+      "address": "日本〒160-0021 Tokyo, Shinjuku City, Kabukichō, 1-chōme−3−１６ パセラリゾーツ新宿本店１Ｆ",
+      "district": "district_tokyo_complex_shinjuku",
+      "primary_type": "karaoke",
+      "types": [],
+      "activity_type": "shared_activity"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijk6njrkynggarkxbv_rqdfcs",
+      "name": "Gift",
+      "place_name": "Gift",
+      "location": {
+        "lat": 35.696390799999996,
+        "lng": 139.7022608
+      },
+      "address": "日本〒160-0021 Tokyo, Shinjuku City, Kabukichō, 2-chōme−38−１１ Skylark Bldg., 5階",
+      "district": "district_tokyo_complex_kabukicho",
+      "primary_type": "bar",
+      "types": [],
+      "activity_type": "shared_activity"
+    }
+  ],
+  "route_data": {
+    "山田 花子→Shinjuku Wald 9": {
+      "DRIVE": 14
+    },
+    "山田 花子→Bar NORA": {
+      "DRIVE": 19
+    },
+    "山田 花子→Shinjuku Ale": {
+      "DRIVE": 16
+    },
+    "山田 花子→Karaoke Pasela Shinjuku Honten": {
+      "DRIVE": 17
+    },
+    "山田 花子→Gift": {
+      "DRIVE": 20
+    },
+    "エレナ・サトウ→Shinjuku Wald 9": {
+      "WALK": 80,
+      "DRIVE": 17
+    },
+    "エレナ・サトウ→Bar NORA": {
+      "DRIVE": 23
+    },
+    "エレナ・サトウ→Shinjuku Ale": {
+      "WALK": 86,
+      "DRIVE": 20
+    },
+    "エレナ・サトウ→Karaoke Pasela Shinjuku Honten": {
+      "DRIVE": 20
+    },
+    "エレナ・サトウ→Gift": {
+      "DRIVE": 23
+    },
+    "林翔太→Shinjuku Wald 9": {
+      "WALK": 29,
+      "DRIVE": 13
+    },
+    "林翔太→Bar NORA": {
+      "WALK": 27,
+      "DRIVE": 12
+    },
+    "林翔太→Shinjuku Ale": {
+      "WALK": 28,
+      "DRIVE": 15
+    },
+    "林翔太→Karaoke Pasela Shinjuku Honten": {
+      "WALK": 25,
+      "DRIVE": 14
+    },
+    "林翔太→Gift": {
+      "WALK": 27,
+      "DRIVE": 12
+    },
+    "佐藤健一→Shinjuku Wald 9": {
+      "WALK": 11
+    },
+    "佐藤健一→Bar NORA": {
+      "WALK": 24,
+      "DRIVE": 11
+    },
+    "佐藤健一→Shinjuku Ale": {
+      "WALK": 22,
+      "DRIVE": 10
+    },
+    "佐藤健一→Karaoke Pasela Shinjuku Honten": {
+      "WALK": 20,
+      "DRIVE": 8
+    },
+    "佐藤健一→Gift": {
+      "WALK": 24,
+      "DRIVE": 11
+    }
+  },
+  "constraints": {
+    "party_size": 4,
+    "max_commute_min": 17,
+    "common_time_window": {
+      "start": "18:34",
+      "end": "20:30"
+    },
+    "minimum_meeting_duration_min": 60,
+    "activity_type": "movie_visit",
+    "required_primary_type": "movie_theater",
+    "allowed_travel_modes": [
+      "WALK",
+      "TRANSIT",
+      "DRIVE"
+    ],
+    "scenario_family": "independent_meeting",
+    "relations": [
+      "joint_activity",
+      "individual_time_windows"
+    ],
+    "resources": []
+  },
+  "expected_feasible": true,
+  "expected_place_id": "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+  "acceptable_plans": [
+    {
+      "total_commute_min": 55,
+      "max_individual_commute_min": 17,
+      "assignments": [
+        {
+          "character_id": "char_tokyo_complex_006",
+          "arrival_mode": "independent"
+        },
+        {
+          "character_id": "char_tokyo_complex_008",
+          "arrival_mode": "independent"
+        },
+        {
+          "character_id": "char_tokyo_complex_004",
+          "arrival_mode": "independent"
+        },
+        {
+          "character_id": "char_tokyo_complex_002",
+          "arrival_mode": "independent"
+        }
+      ],
+      "pickup_order": [],
+      "place_id": "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+      "place_name": "Shinjuku Wald 9",
+      "location": {
+        "lat": 35.6901053,
+        "lng": 139.7058564
+      },
+      "activity_type": "movie_visit",
+      "meeting_start": "18:45",
+      "meeting_end": "19:45",
+      "scenario_family": "independent_meeting"
+    }
+  ],
+  "required_output_fields": [
+    "selection",
+    "assignments",
+    "total_commute_min"
+  ],
+  "schema_version": "geoword.task.v1",
+  "task_id": "task_tokyo_complex_multi_entity_0011",
+  "time_context": {
+    "timezone": "Asia/Tokyo",
+    "instruction_time": "2026-04-20T08:30:00+09:00",
+    "episode_start": "2026-04-20T08:30:00+09:00",
+    "episode_end": "2026-04-20T12:30:00+09:00",
+    "source": "deterministic_build_assignment_v1"
+  }
+}

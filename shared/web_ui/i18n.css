@@ -1,0 +1,43 @@
+/* Layout changes are limited to translated UI; data and maps keep their layout. */
+.ui-language { max-width: 140px; flex: 0 0 auto; padding: 6px 10px; border: 1px solid var(--bg3,#454b50); border-radius: 6px; background: var(--bg2,#202427); color: var(--text,#f1f3f4); font-family: inherit; font-size: 13px; font-weight: 400; }
+.ui-balanced-header .nav-btn, #topbar.ui-balanced-header .tab-btn { font-family: inherit; font-weight: 400; }
+.header.ui-balanced-header .ui-language {
+  background: var(--bg); border-color: var(--bg3); color: var(--text2);
+  border-radius: 6px; padding: 6px 12px;
+}
+#topbar.ui-balanced-header .ui-language {
+  font-size: 12px; background: #11111b; border-color: #313244;
+  color: #a6adc8; border-radius: 4px; padding: 5px 14px;
+}
+#topbar.ui-balanced-header .ui-language:hover { color: #cdd6f4; border-color: #45475a; }
+.ui-balanced-header .ui-language { cursor: pointer; color-scheme: dark; }
+.header.ui-balanced-header, #topbar.ui-balanced-header {
+  display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+  align-items: center; gap: 16px; height: auto; min-height: 42px;
+}
+.ui-brand-group { display: flex; align-items: center; gap: 12px; min-width: 0; }
+#topbar.ui-balanced-header { flex: 0 0 auto; padding-top: 6px; padding-bottom: 6px; }
+.ui-brand-group > h1, .ui-brand-group > .brand { margin: 0; white-space: nowrap; }
+.ui-balanced-header > .top-nav, #topbar.ui-balanced-header > .tabs {
+  justify-self: center; justify-content: center; margin: 0; flex-wrap: wrap;
+}
+.ui-balanced-header > #city-info, #topbar.ui-balanced-header > .topbar-meta {
+  justify-self: end; min-width: 0; margin: 0; text-align: right; overflow-wrap: anywhere;
+}
+@media (max-width: 1200px) {
+  .header.ui-balanced-header, #topbar.ui-balanced-header { grid-template-columns: minmax(0,1fr) auto; }
+  .ui-balanced-header > .top-nav, #topbar.ui-balanced-header > .tabs { grid-column: 1 / -1; grid-row: 2; }
+  .ui-brand-group { flex-wrap: wrap; }
+  .ui-brand-group > h1, .ui-brand-group > .brand { white-space: normal; }
+}
+html[lang="en"] .header, html[lang="en"] #topbar, html[lang="en"] .top-nav, html[lang="en"] .tabs { flex-wrap: wrap; gap: 8px; }
+html[lang="en"] [data-ui-text], html[lang="en"] [data-ui-output] { overflow-wrap: anywhere; }
+html[lang="en"] button[data-ui-text] { white-space: normal; height: auto; min-height: 30px; }
+html[lang="en"] .ds-count, html[lang="en"] .ds-city-card, html[lang="en"] .gen-field { min-width: 0; }
+html[lang="en"] .ds-count b, html[lang="en"] .ds-count small { overflow-wrap: anywhere; }
+html[lang="en"] .ds-table-wrap { overflow-x: auto; }
+html[lang="en"] .ds-target-table { min-width: 900px; }
+html[lang="en"] .ds-target-table th, html[lang="en"] .ds-target-table td { overflow-wrap: normal; word-break: normal; min-width: 80px; }
+@media (max-width: 900px) {
+  html[lang="en"] .ds-cost-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,9 @@
+{
+  "task_dir": ".tmp_discovery_v2\\route_public_verification\\tasks\\task_0001_I’m i",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "task_type": "place_discovery",
+  "finalized_at": "2026-11-04T08:09:47.512778+00:00",
+  "state": "formal"
+}

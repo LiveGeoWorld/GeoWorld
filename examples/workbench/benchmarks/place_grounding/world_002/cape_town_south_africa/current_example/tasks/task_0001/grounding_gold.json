@@ -1,0 +1,81 @@
+{
+  "example_id": "pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront",
+  "task_type": "place_grounding",
+  "service_type": "",
+  "start": {},
+  "gold": {
+    "place_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+    "candidate_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+    "place_name": "Life Grand Cafe Waterfront",
+    "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+    "district_name": "district_cape_town_south_africa_victoria_alfred_waterfront",
+    "coordinate": {
+      "lat": -33.9058165,
+      "lng": 18.4211858
+    },
+    "anchor_places": [
+      "Life Grand Cafe Waterfront",
+      "The Waterside",
+      "Den Anker",
+      "Cape Town Cruises"
+    ]
+  },
+  "evaluation": {
+    "must_mention": [
+      "Life Grand Cafe Waterfront"
+    ],
+    "must_avoid": [
+      "The Waterside as the final answer",
+      "Time Out Market Cape Town as the final answer",
+      "V&A Waterfront as the final answer",
+      "Solandra Pool Deck as the final answer",
+      "Returning only a district or broad waterfront area"
+    ]
+  },
+  "ranking_criteria": [],
+  "ambiguity_landscape": {
+    "ambiguity_score": 8,
+    "same_type_within_300m": 2,
+    "same_type_within_500m": 4,
+    "same_type_within_1000m": 8,
+    "all_places_within_300m": 11,
+    "all_places_within_500m": 21,
+    "nearest_same_type_m": 6.8955045219407465,
+    "nearest_same_type_name": "The Waterside",
+    "confusable_candidates": [
+      {
+        "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+        "name": "The Waterside",
+        "distance_m": 7,
+        "primary_type": "restaurant",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "similarity_reason": "same_type"
+      },
+      {
+        "place_id": "place_cape_town_south_africa_chijf4pbastnzb0r42rxjnnkhdw",
+        "name": "Time Out Market Cape Town",
+        "distance_m": 209,
+        "primary_type": "restaurant",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "similarity_reason": "same_type"
+      },
+      {
+        "place_id": "place_cape_town_south_africa_chijj1mbugbnzb0ry_ybabqypsk",
+        "name": "V&A Waterfront",
+        "distance_m": 308,
+        "primary_type": "restaurant",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "similarity_reason": "same_type"
+      },
+      {
+        "place_id": "place_cape_town_south_africa_chij_mllnzb0rstlgz8intry",
+        "name": "Solandra Pool Deck",
+        "distance_m": 338,
+        "primary_type": "restaurant",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "similarity_reason": "same_type"
+      }
+    ]
+  },
+  "distractors": []
+}

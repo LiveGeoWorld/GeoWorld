@@ -1,0 +1,65 @@
+{
+  "schema_version": "geoword.dynamic_judge.v2",
+  "completion_policy": "all_materialized_events_before_final_answer",
+  "checkpoints": [
+    {
+      "event_id": "probe_0001_authored_001",
+      "activation_time": "2026-10-07T07:00:00+08:00",
+      "app": "MessagingApp",
+      "scope": {
+        "type": "user_request",
+        "id": "task_shanghai_smoke_multi_entity_0001"
+      },
+      "state_field": "user.constraint_update",
+      "required_observation": {
+        "mode": "pull",
+        "notify": false,
+        "public_observation_path": {
+          "app": "MessagingApp",
+          "tool": "get_user_messages"
+        }
+      }
+    },
+    {
+      "event_id": "probe_0001_authored_002",
+      "activation_time": "2026-10-07T07:20:00+08:00",
+      "app": "LocalServiceApp",
+      "scope": {
+        "type": "service",
+        "id": "place_shanghai_smoke_chij_q0fn0nwsjur8khldngqztg"
+      },
+      "state_field": "service.open_status",
+      "required_observation": {
+        "mode": "pull",
+        "notify": false,
+        "public_observation_path": {
+          "app": "LocalServiceApp",
+          "tool": "get_service_detail"
+        }
+      }
+    },
+    {
+      "event_id": "probe_0001_authored_003",
+      "activation_time": "2026-10-07T07:25:00+08:00",
+      "app": "LocalServiceApp",
+      "scope": {
+        "type": "service",
+        "id": "place_shanghai_smoke_chija5s_subwsjurfharlalpojs"
+      },
+      "state_field": "service.open_status",
+      "required_observation": {
+        "mode": "pull",
+        "notify": false,
+        "public_observation_path": {
+          "app": "LocalServiceApp",
+          "tool": "get_service_detail"
+        }
+      }
+    }
+  ],
+  "requirements": {
+    "initial_plan_required": true,
+    "all_events_must_apply_before_final_answer": true,
+    "public_observation_must_match_app_transition": true
+  }
+}

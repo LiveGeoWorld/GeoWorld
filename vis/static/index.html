@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoWorld — World Studio</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css?v=16" />
+<link rel="stylesheet" href="/ui/i18n.css">
+<script src="/ui/i18n.js?v=release-4" defer></script>
+</head>
+<body>
+
+<!-- 顶部 tab -->
+<div id="topbar" class="ui-balanced-header">
+  <div class="ui-brand-group"><div class="brand">GeoWorld <span data-ui-text>世界工作台</span></div></div>
+  <div class="tabs">
+    <button class="tab-btn active" data-view="map" data-ui-text>地图视图</button>
+    <button class="tab-btn" data-view="graph" data-ui-text>人物关系图</button>
+    <button class="tab-btn" data-view="manager" data-ui-text>世界管理</button>
+    <a class="tab-btn" href="/tasks/" style="text-decoration:none">Tasks &amp; Evaluation</a>
+  </div>
+  <div class="topbar-meta"><span id="topbar-city" data-ui-output>Loading...</span></div>
+</div>
+
+<!-- 视图 1：地图 -->
+<div id="view-map" class="view active">
+  <div id="sidebar">
+    <h2 data-ui-text>地图</h2>
+    <div id="city-name" data-ui-output>Loading...</div>
+
+    <div class="section">
+      <h3 data-ui-text>底图</h3>
+      <select id="basemap-provider">
+        <option value="google" selected>Google Maps</option>
+        <option value="osm">OpenStreetMap</option>
+      </select>
+      <div id="basemap-status" class="hint" data-ui-output data-ui-text>正在检测 Google Maps 配置…</div>
+    </div>
+
+    <div class="section">
+      <h3 data-ui-text>地图范围</h3>
+      <select id="map-scope-select"></select>
+      <div id="map-scope-hint" class="hint" data-ui-output></div>
+    </div>
+
+    <!-- Layer toggles -->
+    <div class="section">
+      <h3 data-ui-text>图层</h3>
+      <label data-ui-text><input type="checkbox" id="layer-places" checked> <span class="dot" style="background:#3388ff"></span> 商户 <span id="count-places">0</span></label>
+      <label data-ui-text><input type="checkbox" id="layer-actors" checked> <span class="dot" style="background:#e74c3c"></span> 人物 <span id="count-actors">0</span></label>
+      <label data-ui-text><input type="checkbox" id="layer-districts" checked> <span class="dot" style="background:#666"></span> 区域 <span id="count-districts">0</span></label>
+      <label data-ui-text><input type="checkbox" id="layer-corridors" checked> <span class="line-sample rail"></span> 通道 <span id="count-corridors">0</span></label>
+      <div class="legend" style="margin-left:20px;gap:4px;display:flex;flex-wrap:wrap;font-size:10px;color:#a6adc8;">
+        <span data-ui-text><span class="line-sample rail"></span> 轨道</span>
+        <span data-ui-text><span class="line-sample intermodal"></span> 换乘</span>
+        <span data-ui-text><span class="line-sample pedestrian"></span> 步行/商业</span>
+        <span data-ui-text><span class="line-sample waterfront"></span> 滨水</span>
+        <span data-ui-text><span class="line-sample road"></span> 公路/巴士</span>
+      </div>
+      <div class="legend" style="margin-left:20px;gap:4px;display:flex;flex-wrap:wrap;font-size:10px;color:#a6adc8;">
+        <span data-ui-text>实线=Routes API 已验证</span>
+        <span data-ui-text>虚线=未验证（直连节点）</span>
+        <span data-ui-text>细虚线=service_axis（服务轴）</span>
+      </div>
+      <div class="hint" data-ui-text>点击彩色通道线或节点圆点，可在右侧展开 Corridor 详情。</div>
+    </div>
+
+    <div class="section" id="corridor-inspector-section">
+      <h3 data-ui-text>当前通道详情</h3>
+      <div id="corridor-inspector" class="sidebar-inspector empty" data-ui-output>
+        点击地图上的通道线或节点后，这里会显示通道信息。
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="section">
+      <h3 data-ui-text>数据范围</h3>
+      <select id="graph-map-scope-legacy" aria-hidden="true" tabindex="-1" style="display:none">
+        <option value="current_city" data-ui-text>当前城市</option>
+        <option value="world" data-ui-text>整个世界</option>
+      </select>
+      <div class="hint" data-ui-text>世界级视图只汇总已构建城市的人物与已有关系，不自动推断跨城市关系。</div>
+    </div>
+
+    <div class="section">
+      <h3 data-ui-text>筛选</h3>
+      <input type="text" id="filter-search" placeholder="搜索名称..." data-ui-placeholder />
+      <select id="filter-category">
+        <option value="" data-ui-text>全部类别</option>
+      </select>
+      <div class="range-row">
+        <label data-ui-text>最低评分: <span id="rating-val">0</span></label>
+        <input type="range" id="filter-rating" min="0" max="5" step="0.5" value="0" />
+      </div>
+      <select id="filter-district">
+        <option value="" data-ui-text>全部区域</option>
+      </select>
+      <button id="btn-reset-filters" data-ui-text>重置筛选</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="section">
+      <h3 data-ui-text>统计</h3>
+      <div id="stats-panel">Loading...</div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Popup detail panel (hidden by default) -->
+  <div id="detail-panel" class="hidden">
+    <div class="detail-header">
+      <span id="detail-title"></span>
+      <button id="btn-close-detail">&times;</button>
+    </div>
+    <div id="detail-content"></div>
+  </div>
+</div>
+
+<!-- 视图 2：人物关系图 -->
+<div id="view-graph" class="view">
+  <div id="graph-sidebar">
+    <h2 data-ui-text>人物关系图谱</h2>
+    <div id="graph-info-bar" data-ui-output>Loading...</div>
+
+    <div class="section">
+      <h3 data-ui-text>关系图范围</h3>
+      <select id="graph-scope"></select>
+      <div class="hint">World scope retains only existing city relationships; no cross-city edges are inferred.</div>
+    </div>
+
+    <div class="section">
+      <h3 data-ui-text>图例</h3>
+      <div class="legend">
+        <div data-ui-text><span class="swatch male"></span> 男</div>
+        <div data-ui-text><span class="swatch female"></span> 女</div>
+      </div>
+      <div class="legend" style="margin-top:4px;">
+        <div data-ui-text><span class="edge-sample spouse"></span> 配偶</div>
+        <div data-ui-text><span class="edge-sample parent"></span> 父母/子女</div>
+        <div data-ui-text><span class="edge-sample sibling"></span> 兄弟姐妹</div>
+        <div data-ui-text><span class="edge-sample coworker"></span> 同事</div>
+        <div data-ui-text><span class="edge-sample friend"></span> 朋友</div>
+        <div data-ui-text><span class="edge-sample neighbor"></span> 邻居</div>
+        <div data-ui-text><span class="edge-sample classmate"></span> 同学</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 data-ui-text>筛选</h3>
+      <input type="text" id="graph-filter-search" placeholder="搜索人名..." data-ui-placeholder />
+      <div id="graph-filter-results"></div>
+    </div>
+
+    <div class="section">
+      <h3 data-ui-text>统计</h3>
+      <div id="graph-stats" data-ui-output>Loading...</div>
+    </div>
+  </div>
+
+  <div id="graph-container">
+    <svg id="graph-svg"></svg>
+    <div id="graph-empty" class="empty-overlay hidden" data-ui-text>当前视图没有人物资料。</div>
+  </div>
+
+  <div id="char-detail-panel" class="hidden">
+    <div class="detail-header">
+      <span id="char-detail-name"></span>
+      <button id="btn-close-char-detail">&times;</button>
+    </div>
+    <div id="char-detail-content"></div>
+  </div>
+</div>
+
+<!-- 视图 3：世界管理 -->
+<div id="view-manager" class="view">
+  <div id="mgr-current-bar">
+    <span class="mgr-current-label" data-ui-text>当前世界:</span>
+    <span id="mgr-current-name" class="mgr-current-name" data-ui-text>未加载</span>
+    <span id="mgr-current-path" class="mgr-current-path"></span>
+  </div>
+
+  <div id="mgr-body">
+    <aside id="mgr-sidebar">
+      <h2 data-ui-text>世界与城市构建</h2>
+
+      <div class="mgr-sidebar-grid">
+        <div class="mgr-form-col">
+          <div class="mgr-form-section">
+            <h3 data-ui-text>目标世界</h3>
+            <div class="mgr-field">
+              <label data-ui-text>当前世界</label>
+              <select id="mgr-active-world"></select>
+            </div>
+            <div id="mgr-build-context" class="mgr-build-context" aria-live="polite"></div>
+            <div class="mgr-world-create-row">
+              <label class="mgr-world-create-field">
+                <span data-ui-text>新建世界 ID</span>
+                <input type="text" id="mgr-new-world-id" placeholder="例如 world_002" autocomplete="off" data-ui-placeholder >
+              </label>
+              <button id="mgr-btn-create-world" type="button" class="mgr-btn" data-ui-text>新建空世界</button>
+            </div>
+            <div class="mgr-world-hint" data-ui-text>选择世界会同时切换地图视图与人物关系图的数据世界；新建空世界不会生成城市、POI 或人物。</div>
+          </div>
+
+          <div class="mgr-import-bar">
+            <label data-ui-text class="mgr-import-btn">
+              导入 Seed 文件
+              <input type="file" id="mgr-import-file" accept=".json" hidden>
+            </label>
+            <span class="mgr-import-hint" data-ui-text>从本地 JSON 导入</span>
+          </div>
+
+          <div class="mgr-form-section">
+            <h3 data-ui-text>城市搜索</h3>
+            <div class="mgr-search-row">
+              <input type="text" id="mgr-city-search" autocomplete="off" placeholder="输入城市与国家，如 Shanghai, China / 上海，中国" data-ui-placeholder >
+              <button id="mgr-btn-search" class="mgr-search-btn" data-ui-text>查找</button>
+            </div>
+            <div id="mgr-search-result" class="mgr-search-result hidden"></div>
+            <div class="mgr-search-hint" data-ui-text>输入至少 3 个英文字符或 2 个中文字符后显示候选。必须选择具体城市；选中后才会将规范化地理信息写入 Seed。</div>
+          </div>
+
+          <div class="mgr-form-section mgr-map-section">
+            <h3 data-ui-text>地图预览 <span class="mgr-optional" data-ui-text>拖动标记或点击地图调整中心</span></h3>
+            <div id="mgr-preview-map" class="mgr-preview-map"></div>
+            <div class="mgr-map-legend">
+              <span data-ui-text class="mgr-map-legend-item"><span class="mgr-map-legend-swatch bbox"></span> 世界边界框 (生成区域)</span>
+            </div>
+            <div class="mgr-preset-bar">
+              <span class="mgr-preset-label" data-ui-text>预设:</span>
+              <button class="mgr-preset-btn" data-preset="smoke">Smoke</button>
+              <button class="mgr-preset-btn" data-preset="standard">Standard</button>
+              <button class="mgr-preset-btn" data-preset="large">Large</button>
+            </div>
+          </div>
+
+          <div class="mgr-form-section">
+            <h3 data-ui-text>地理坐标</h3>
+            <div class="mgr-field-row">
+              <div class="mgr-field">
+                <label data-ui-text>中心纬度</label>
+                <input type="number" id="mgr-lat" step="0.0001" placeholder="31.2304">
+              </div>
+              <div class="mgr-field">
+                <label data-ui-text>中心经度</label>
+                <input type="number" id="mgr-lng" step="0.0001" placeholder="121.4737">
+              </div>
+            </div>
+            <label class="mgr-checkbox-row">
+              <input type="checkbox" id="mgr-auto-bbox" checked>
+              <span data-ui-text>自动计算边界框 (基于搜索半径)</span>
+            </label>
+            <div id="mgr-bbox-fields" class="mgr-bbox-grid hidden">
+              <div class="mgr-field"><label>N</label><input type="number" id="mgr-bbox-n" step="0.01"></div>
+              <div class="mgr-field"><label>S</label><input type="number" id="mgr-bbox-s" step="0.01"></div>
+              <div class="mgr-field"><label>E</label><input type="number" id="mgr-bbox-e" step="0.01"></div>
+              <div class="mgr-field"><label>W</label><input type="number" id="mgr-bbox-w" step="0.01"></div>
+            </div>
+          </div>
+
+          <div class="mgr-form-section">
+            <h3 data-ui-text>城市基础信息</h3>
+            <div class="mgr-field">
+              <label data-ui-text>城市名称</label>
+              <input type="text" id="mgr-city-name" placeholder="请先从搜索结果中选择" readonly data-ui-placeholder >
+            </div>
+            <div class="mgr-field">
+              <label data-ui-text>城市 ID <span class="mgr-auto-tag" data-ui-text>自动</span></label>
+              <input type="text" id="mgr-city-id" placeholder="由选择的城市自动生成" readonly data-ui-placeholder >
+            </div>
+            <div class="mgr-field-row">
+              <div class="mgr-field">
+                <label data-ui-text>国家</label>
+              <input type="text" id="mgr-country" placeholder="由选择的城市填充" readonly data-ui-placeholder >
+              </div>
+              <div class="mgr-field">
+                <label data-ui-text>语言</label>
+                <select id="mgr-language" disabled>
+                  <option value="zh-CN" data-ui-text>中文</option>
+                  <option value="en-US">English</option>
+                  <option value="ja-JP" data-ui-text>日本語</option>
+                </select>
+              </div>
+            </div>
+            <div class="mgr-field">
+              <label data-ui-text>时区</label>
+              <select id="mgr-timezone" disabled>
+                <option value="Asia/Shanghai">Asia/Shanghai</option>
+                <option value="Asia/Tokyo">Asia/Tokyo</option>
+                <option value="Europe/London">Europe/London</option>
+                <option value="America/New_York">America/New_York</option>
+                <option value="America/Los_Angeles">America/Los_Angeles</option>
+                <option value="Europe/Paris">Europe/Paris</option>
+                <option value="Asia/Singapore">Asia/Singapore</option>
+                <option value="Asia/Seoul">Asia/Seoul</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mgr-form-col">
+          <div id="mgr-world-scale" class="mgr-form-section">
+            <div class="mgr-scale-heading">
+              <h3 data-ui-text>世界规模 <span id="mgr-scale-mode" class="mgr-optional"></span></h3>
+              <button id="mgr-btn-cancel-expansion" type="button" class="mgr-btn mgr-btn-cancel-expansion hidden" data-ui-text>取消扩增，改为新建城市</button>
+            </div>
+            <div id="mgr-expansion-context" class="mgr-expansion-context hidden" aria-live="polite"></div>
+            <div class="mgr-slider-field">
+              <div class="mgr-slider-header">
+              <label data-ui-text>区域目标</label>
+                <span class="mgr-slider-val" id="mgr-district-count-val">4</span>
+              </div>
+              <div class="mgr-slider-control">
+                <button type="button" class="mgr-slider-step" data-target="mgr-district-count" data-direction="-1" data-ui-aria-label aria-label="减少区域目标">-</button>
+                <input type="range" id="mgr-district-count" min="2" max="40" value="4">
+                <button type="button" class="mgr-slider-step" data-target="mgr-district-count" data-direction="1" data-ui-aria-label aria-label="增加区域目标">+</button>
+              </div>
+            </div>
+            <div class="mgr-slider-field">
+              <div class="mgr-slider-header">
+              <label data-ui-text>通道目标</label>
+                <span class="mgr-slider-val" id="mgr-corridor-count-val">4</span>
+              </div>
+              <div class="mgr-slider-control">
+                <button type="button" class="mgr-slider-step" data-target="mgr-corridor-count" data-direction="-1" data-ui-aria-label aria-label="减少通道目标">-</button>
+                <input type="range" id="mgr-corridor-count" min="2" max="40" value="4">
+                <button type="button" class="mgr-slider-step" data-target="mgr-corridor-count" data-direction="1" data-ui-aria-label aria-label="增加通道目标">+</button>
+              </div>
+            </div>
+            <div class="mgr-slider-field">
+              <div class="mgr-slider-header">
+              <label data-ui-text>POI 目标</label>
+                <span class="mgr-slider-val" id="mgr-places-target-val">72</span>
+              </div>
+              <div class="mgr-slider-control">
+                <button type="button" class="mgr-slider-step" data-target="mgr-places-target" data-direction="-1" data-ui-aria-label aria-label="减少 POI 目标">-</button>
+                <input type="range" id="mgr-places-target" min="1" max="160" step="1" value="72">
+                <button type="button" class="mgr-slider-step" data-target="mgr-places-target" data-direction="1" data-ui-aria-label aria-label="增加 POI 目标">+</button>
+              </div>
+              <div class="mgr-slider-hint" data-ui-text>POI 为期望总量；生成器会将其换算为东个区域的发现规模，实际数量以构建结果为准。</div>
+            </div>
+            <div class="mgr-slider-field">
+              <div class="mgr-slider-header">
+                <label data-ui-text>人物目标</label>
+                <span class="mgr-slider-val" id="mgr-character-count-val">15</span>
+              </div>
+              <div class="mgr-slider-control">
+                <button type="button" class="mgr-slider-step" data-target="mgr-character-count" data-direction="-1" data-ui-aria-label aria-label="减少人物目标">-</button>
+                <input type="range" id="mgr-character-count" min="1" max="40" step="1" value="15">
+                <button type="button" class="mgr-slider-step" data-target="mgr-character-count" data-direction="1" data-ui-aria-label aria-label="增加人物目标">+</button>
+              </div>
+            </div>
+            <div class="mgr-slider-field">
+              <div class="mgr-slider-header">
+                <label data-ui-text>搜索半径 (m)</label>
+                <span class="mgr-slider-val" id="mgr-search-radius-val">2200</span>
+              </div>
+              <div class="mgr-slider-control">
+                <button type="button" class="mgr-slider-step" data-target="mgr-search-radius" data-direction="-1" data-ui-aria-label aria-label="减少搜索半径">-</button>
+                <input type="range" id="mgr-search-radius" min="500" max="5000" step="100" value="2200">
+                <button type="button" class="mgr-slider-step" data-target="mgr-search-radius" data-direction="1" data-ui-aria-label aria-label="增加搜索半径">+</button>
+              </div>
+              <div class="mgr-slider-hint" data-ui-text>每个区域中心的 POI 搜索半径；自动边界框边长 ≈ 2×半径</div>
+            </div>
+          </div>
+
+          <div class="mgr-form-section mgr-place-types-section">
+            <h3 data-ui-text>地点类型</h3>
+            <div class="mgr-chip-group" id="mgr-place-types" aria-live="polite"></div>
+            <div class="mgr-slider-hint" data-ui-text>选择本次构建要覆盖的地点类别；每个 POI 仍保留 Google 返回的精确类型。</div>
+          </div>
+
+          <div class="mgr-form-section">
+            <h3 data-ui-text>生成描述 <span class="mgr-optional" data-ui-text>可选</span></h3>
+            <textarea id="mgr-notes" rows="2" placeholder="指导 LLM 发现城市骨架，如：覆盖外滩/陆家嘴滨水区、南京路商业街..." data-ui-placeholder ></textarea>
+          </div>
+
+          <div class="mgr-form-section">
+            <h3>Geo Provider</h3>
+            <label class="mgr-radio-row"><input type="radio" name="mgr-geo" value="auto" checked> <span>Auto</span> <span class="hint-inline" data-ui-text>先 Google，失败回退 OSM</span></label>
+            <label class="mgr-radio-row"><input type="radio" name="mgr-geo" value="google"> <span>Google</span> <span class="hint-inline" data-ui-text>真实 POI + 评论</span></label>
+            <label class="mgr-radio-row"><input type="radio" name="mgr-geo" value="osm"> <span>OSM</span> <span class="hint-inline" data-ui-text>免费，无评论</span></label>
+          </div>
+
+          <details class="mgr-advanced">
+            <summary data-ui-text>高级设置</summary>
+            <div class="mgr-form-section">
+              <div class="mgr-field-row">
+                <div class="mgr-field">
+                  <label data-ui-text>每地点保留真实 Google 评论</label>
+                  <input type="number" id="mgr-google-reviews" value="3" min="0" max="5">
+                </div>
+              </div>
+              <div class="mgr-field-row">
+                <div class="mgr-field">
+                  <label data-ui-text>并发数</label>
+                  <input type="number" id="mgr-google-workers" value="8" min="1" max="30">
+                </div>
+                <div class="mgr-field">
+                  <label data-ui-text>走廊节点采样</label>
+                  <input type="number" id="mgr-corridor-nodes" value="3" min="1" max="10">
+                </div>
+              </div>
+              <div class="mgr-field-row">
+                <div class="mgr-field">
+                  <label data-ui-text>走廊 band 数</label>
+                  <input type="number" id="mgr-corridor-bands" value="2" min="1" max="5">
+                </div>
+                <div class="mgr-field">
+                  <label data-ui-text>走廊半径 (m)</label>
+                  <input type="number" id="mgr-corridor-radius" value="1200" min="200" max="3000">
+                </div>
+              </div>
+              <label class="mgr-checkbox-row">
+                <input type="checkbox" id="mgr-validate-places" checked>
+                <span data-ui-text>验证地点质量 (去重、坐标校验)</span>
+              </label>
+            </div>
+          </details>
+
+          <div class="mgr-generate-actions">
+            <button id="mgr-btn-generate" class="mgr-btn-primary" data-ui-text>选择目标世界后构建</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mgr-gen-panel" class="mgr-gen-panel hidden">
+        <div class="mgr-gen-header">
+          <span id="mgr-gen-status" class="mgr-gen-status" data-ui-text>准备中...</span>
+          <span id="mgr-gen-elapsed" class="mgr-gen-elapsed"></span>
+        </div>
+        <div id="mgr-gen-progress" class="mgr-gen-progress" aria-live="polite">
+          <div id="mgr-gen-stage-list" class="mgr-gen-stage-list"></div>
+          <div id="mgr-gen-current-step" class="mgr-gen-current-step" data-ui-text>等待构建开始</div>
+          <div id="mgr-gen-subprogress" class="mgr-gen-subprogress hidden"><span id="mgr-gen-subprogress-fill"></span></div>
+        </div>
+        <pre id="mgr-gen-output" class="mgr-gen-output"></pre>
+        <div id="mgr-gen-retry" class="mgr-gen-retry">
+          <button type="button" id="mgr-btn-cancel-job" class="mgr-btn mgr-btn-cancel-job" disabled data-ui-text>停止本次构建</button>
+          <button type="button" id="mgr-btn-retry-reuse" class="mgr-btn mgr-btn-secondary" disabled data-ui-text>继续构建</button>
+          <button type="button" id="mgr-btn-retry-refresh" class="mgr-btn mgr-btn-secondary mgr-btn-retry-refresh" disabled data-ui-text>重新构建</button>
+          <button type="button" id="mgr-btn-register-actual" class="mgr-btn mgr-btn-secondary mgr-btn-register-actual" disabled data-ui-text>按实际产物登记</button>
+        </div>
+        <div id="mgr-gen-recovery-plan" class="mgr-gen-recovery-plan" aria-live="polite"></div>
+      </div>
+    </aside>
+
+    <main id="mgr-main">
+      <div class="mgr-main-header">
+        <div>
+          <h3 id="mgr-worlds-title" data-ui-text>已构建城市</h3>
+          <div id="mgr-assets-subtitle" class="mgr-assets-subtitle" data-ui-text>按资产归属查看，不改变世界登记或生成产物。</div>
+        </div>
+        <label class="mgr-inventory-filter">
+          <span data-ui-text>资产范围</span>
+            <select id="mgr-inventory-scope">
+              <option value="target" data-ui-text>已登记城市</option>
+              <option value="unregistered" data-ui-text>未登记资产</option>
+          </select>
+        </label>
+        <span data-ui-text class="mgr-assets-count"><span id="mgr-worlds-count">0</span> 项</span>
+      </div>
+      <div id="mgr-worlds-list" class="mgr-worlds-list">Loading...</div>
+  </main>
+
+  <dialog id="mgr-version-dialog" class="mgr-version-dialog">
+    <form method="dialog">
+      <div class="mgr-version-dialog-header">
+        <h3 id="mgr-version-title" data-ui-text>选择版本</h3>
+        <button class="mgr-version-close" value="cancel" aria-label="关闭" data-ui-aria-label>x</button>
+      </div>
+      <div id="mgr-version-options" class="mgr-version-options"></div>
+      <div class="mgr-version-actions">
+        <button class="mgr-btn" value="cancel" data-ui-text>取消</button>
+        <button id="mgr-version-confirm" class="mgr-btn mgr-btn-primary" type="button" data-ui-text>使用所选版本</button>
+      </div>
+    </form>
+  </dialog>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="app.js?v=release-4"></script>
+<script src="character-graph.js?v=release-4"></script>
+<script src="world-manager.js?v=release-7"></script>
+</body>
+</html>

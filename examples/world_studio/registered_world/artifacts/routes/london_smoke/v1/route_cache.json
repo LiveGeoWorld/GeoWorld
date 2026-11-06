@@ -1,0 +1,790 @@
+{
+  "city_id": "london_smoke",
+  "cached_pair_count": 6,
+  "cache": [
+    {
+      "route_id": "route_london_smoke_c48ad2fa9cb1",
+      "origin_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "origin_name": "Vue Cinema London - West End (Leicester Square)",
+      "origin_lat": 51.511514999999996,
+      "origin_lng": -0.129496,
+      "dest_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "dest_name": "Dishoom Covent Garden",
+      "dest_lat": 51.512517599999995,
+      "dest_lng": -0.1268291,
+      "mode": "WALK",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "distance_m": 283,
+        "duration_s": 242,
+        "summary": "Cranbourn St and B404",
+        "steps": [
+          {
+            "distance_m": 45,
+            "duration_s": 32,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5115417,
+                "longitude": -0.1293165
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.511155599999995,
+                "longitude": -0.129153
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "czkyHfgX|@WLI"
+            },
+            "travelMode": "WALK",
+            "instruction": "Head south on Leicester Ct toward Cranbourn St"
+          },
+          {
+            "distance_m": 160,
+            "duration_s": 140,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.511155599999995,
+                "longitude": -0.129153
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5118224,
+                "longitude": -0.1271427
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "wwkyHdfX]}BOCKi@F?Ws@_@oAMq@Ko@"
+            },
+            "travelMode": "WALK",
+            "instruction": "Turn left onto Cranbourn St"
+          },
+          {
+            "distance_m": 79,
+            "duration_s": 70,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5118224,
+                "longitude": -0.1271427
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5125095,
+                "longitude": -0.1270174
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "{{kyHryWC??ZM??YK??[y@Aq@B"
+            },
+            "travelMode": "WALK",
+            "instruction": "Turn left onto Upper St Martin's Ln/B404\nDestination will be on the right"
+          }
+        ],
+        "polyline_points": [
+          {
+            "lat": 51.511540000000004,
+            "lng": -0.12932000000000002
+          },
+          {
+            "lat": 51.511230000000005,
+            "lng": -0.1292
+          },
+          {
+            "lat": 51.511160000000004,
+            "lng": -0.12915000000000001
+          },
+          {
+            "lat": 51.51131,
+            "lng": -0.12852000000000002
+          },
+          {
+            "lat": 51.511390000000006,
+            "lng": -0.1285
+          },
+          {
+            "lat": 51.51145,
+            "lng": -0.12829000000000002
+          },
+          {
+            "lat": 51.511410000000005,
+            "lng": -0.12829000000000002
+          },
+          {
+            "lat": 51.51153000000001,
+            "lng": -0.12803
+          },
+          {
+            "lat": 51.51169,
+            "lng": -0.12763000000000002
+          },
+          {
+            "lat": 51.51176,
+            "lng": -0.12738000000000002
+          },
+          {
+            "lat": 51.51182000000001,
+            "lng": -0.12714
+          },
+          {
+            "lat": 51.51184000000001,
+            "lng": -0.12714
+          },
+          {
+            "lat": 51.51184000000001,
+            "lng": -0.12728
+          },
+          {
+            "lat": 51.51191000000001,
+            "lng": -0.12728
+          },
+          {
+            "lat": 51.51191000000001,
+            "lng": -0.12715
+          },
+          {
+            "lat": 51.511970000000005,
+            "lng": -0.12715
+          },
+          {
+            "lat": 51.511970000000005,
+            "lng": -0.12701
+          },
+          {
+            "lat": 51.512260000000005,
+            "lng": -0.127
+          },
+          {
+            "lat": 51.512510000000006,
+            "lng": -0.12702000000000002
+          }
+        ],
+        "encoded_polyline": "czkyHfgX|@WLI]}BOCKi@F?Ws@_@oAMq@Ko@C??ZM??YK??[y@Aq@B",
+        "available": true,
+        "walking_distance_m": 284
+      }
+    },
+    {
+      "route_id": "route_london_smoke_1492657ea31b",
+      "origin_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "origin_name": "Vue Cinema London - West End (Leicester Square)",
+      "origin_lat": 51.511514999999996,
+      "origin_lng": -0.129496,
+      "dest_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "dest_name": "Dishoom Covent Garden",
+      "dest_lat": 51.512517599999995,
+      "dest_lng": -0.1268291,
+      "mode": "DRIVE",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "distance_m": 750,
+        "duration_s": 286,
+        "summary": "Shaftesbury Ave/A401",
+        "steps": [
+          {
+            "distance_m": 177,
+            "duration_s": 70,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.511713900000004,
+                "longitude": -0.1295616
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.511035899999996,
+                "longitude": -0.13185349999999998
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "e{kyHvhXLvAJr@zAtGNf@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Head west on Lisle St toward Leicester Pl\nClosed 12:00 PM – 12:00 AM"
+          },
+          {
+            "distance_m": 94,
+            "duration_s": 48,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.511035899999996,
+                "longitude": -0.13185349999999998
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.511807999999995,
+                "longitude": -0.1324156
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "_wkyH`wXyCpB"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Wardour St\nLeaving toll zone"
+          },
+          {
+            "distance_m": 281,
+            "duration_s": 96,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.511807999999995,
+                "longitude": -0.1324156
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5132688,
+                "longitude": -0.1291394
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "y{kyHrzXiBcGcBiGo@oAe@q@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Shaftesbury Ave/A401\nEntering toll zone"
+          },
+          {
+            "distance_m": 55,
+            "duration_s": 23,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5132688,
+                "longitude": -0.1291394
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.512803299999995,
+                "longitude": -0.1288599
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "}dlyHbfX|Aw@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Charing Cross Rd"
+          },
+          {
+            "distance_m": 77,
+            "duration_s": 25,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.512803299999995,
+                "longitude": -0.1288599
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.512765099999996,
+                "longitude": -0.1277613
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "_blyHjdXJkEEO"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn left onto Litchfield St\nLeaving toll zone"
+          },
+          {
+            "distance_m": 46,
+            "duration_s": 16,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.512765099999996,
+                "longitude": -0.1277613
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5126853,
+                "longitude": -0.127152
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "yalyHn}WP_@?y@A_@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto West St"
+          },
+          {
+            "distance_m": 20,
+            "duration_s": 9,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5126853,
+                "longitude": -0.127152
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.512505399999995,
+                "longitude": -0.1271126
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "ialyHtyWb@G"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Upper St Martin's Ln/B404\nEntering toll zone\nDestination will be on the left"
+          }
+        ],
+        "polyline_points": [
+          {
+            "lat": 51.51171,
+            "lng": -0.12956
+          },
+          {
+            "lat": 51.51164000000001,
+            "lng": -0.13
+          },
+          {
+            "lat": 51.51158,
+            "lng": -0.13026000000000001
+          },
+          {
+            "lat": 51.511120000000005,
+            "lng": -0.13165000000000002
+          },
+          {
+            "lat": 51.51104,
+            "lng": -0.13185000000000002
+          },
+          {
+            "lat": 51.511810000000004,
+            "lng": -0.13242
+          },
+          {
+            "lat": 51.51234,
+            "lng": -0.13112000000000001
+          },
+          {
+            "lat": 51.512840000000004,
+            "lng": -0.12979000000000002
+          },
+          {
+            "lat": 51.51308,
+            "lng": -0.12939
+          },
+          {
+            "lat": 51.513270000000006,
+            "lng": -0.12914
+          },
+          {
+            "lat": 51.512800000000006,
+            "lng": -0.12886
+          },
+          {
+            "lat": 51.51274,
+            "lng": -0.12784
+          },
+          {
+            "lat": 51.51277,
+            "lng": -0.12776
+          },
+          {
+            "lat": 51.51268,
+            "lng": -0.12760000000000002
+          },
+          {
+            "lat": 51.51268,
+            "lng": -0.12731
+          },
+          {
+            "lat": 51.512690000000006,
+            "lng": -0.12715
+          },
+          {
+            "lat": 51.512510000000006,
+            "lng": -0.12711
+          }
+        ],
+        "encoded_polyline": "e{kyHvhXLvAJr@zAtGNf@yCpBiBcGcBiGo@oAe@q@|Aw@JkEEOP_@?y@A_@b@G",
+        "available": true,
+        "walking_distance_m": 0
+      }
+    },
+    {
+      "route_id": "route_london_smoke_2f800f28f8ad",
+      "origin_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "origin_name": "Vue Cinema London - West End (Leicester Square)",
+      "origin_lat": 51.511514999999996,
+      "origin_lng": -0.129496,
+      "dest_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "dest_name": "Dishoom Covent Garden",
+      "dest_lat": 51.512517599999995,
+      "dest_lng": -0.1268291,
+      "mode": "TRANSIT",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "available": false,
+        "distance_m": 0,
+        "duration_s": 0,
+        "summary": "UNAVAILABLE",
+        "steps": [],
+        "walking_distance_m": 0
+      }
+    },
+    {
+      "route_id": "route_london_smoke_e44aea70442c",
+      "origin_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "origin_name": "Dishoom Covent Garden",
+      "origin_lat": 51.512517599999995,
+      "origin_lng": -0.1268291,
+      "dest_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "dest_name": "Vue Cinema London - West End (Leicester Square)",
+      "dest_lat": 51.511514999999996,
+      "dest_lng": -0.129496,
+      "mode": "WALK",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "distance_m": 283,
+        "duration_s": 240,
+        "summary": "B404 and Cranbourn St",
+        "steps": [
+          {
+            "distance_m": 79,
+            "duration_s": 63,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5125095,
+                "longitude": -0.1270174
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5118289,
+                "longitude": -0.12703979999999998
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "e`lyHzxWlAEd@BCQJ?BTF@"
+            },
+            "travelMode": "WALK",
+            "instruction": "Head south on Upper St Martin's Ln/B404 toward Great Newport St\nParts of this road are closed 11:00 AM – 11:00 PM"
+          },
+          {
+            "distance_m": 160,
+            "duration_s": 138,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5118289,
+                "longitude": -0.12703979999999998
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.511155599999995,
+                "longitude": -0.129153
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "}{kyH~xWB^R|@BVh@fBLZG?Jh@NB\\|B"
+            },
+            "travelMode": "WALK",
+            "instruction": "Turn right onto Cranbourn St/B402\nContinue to follow Cranbourn St"
+          },
+          {
+            "distance_m": 45,
+            "duration_s": 40,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.511155599999995,
+                "longitude": -0.129153
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5115417,
+                "longitude": -0.1293165
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "wwkyHdfXc@Rg@L"
+            },
+            "travelMode": "WALK",
+            "instruction": "Turn right onto Leicester Ct\nDestination will be on the left"
+          }
+        ],
+        "polyline_points": [
+          {
+            "lat": 51.512510000000006,
+            "lng": -0.12702000000000002
+          },
+          {
+            "lat": 51.51212,
+            "lng": -0.12699000000000002
+          },
+          {
+            "lat": 51.51193000000001,
+            "lng": -0.12701
+          },
+          {
+            "lat": 51.511950000000006,
+            "lng": -0.12692
+          },
+          {
+            "lat": 51.51189,
+            "lng": -0.12692
+          },
+          {
+            "lat": 51.51187,
+            "lng": -0.12703
+          },
+          {
+            "lat": 51.51183,
+            "lng": -0.12704000000000001
+          },
+          {
+            "lat": 51.511810000000004,
+            "lng": -0.1272
+          },
+          {
+            "lat": 51.51171,
+            "lng": -0.12751
+          },
+          {
+            "lat": 51.51169,
+            "lng": -0.12763000000000002
+          },
+          {
+            "lat": 51.511480000000006,
+            "lng": -0.12815000000000001
+          },
+          {
+            "lat": 51.511410000000005,
+            "lng": -0.12829000000000002
+          },
+          {
+            "lat": 51.51145,
+            "lng": -0.12829000000000002
+          },
+          {
+            "lat": 51.511390000000006,
+            "lng": -0.1285
+          },
+          {
+            "lat": 51.51131,
+            "lng": -0.12852000000000002
+          },
+          {
+            "lat": 51.511160000000004,
+            "lng": -0.12915000000000001
+          },
+          {
+            "lat": 51.511340000000004,
+            "lng": -0.12925
+          },
+          {
+            "lat": 51.511540000000004,
+            "lng": -0.12932000000000002
+          }
+        ],
+        "encoded_polyline": "e`lyHzxWlAEd@BCQJ?BTF@B^R|@BVh@fBLZG?Jh@NB\\|Bc@Rg@L",
+        "available": true,
+        "walking_distance_m": 284
+      }
+    },
+    {
+      "route_id": "route_london_smoke_98ef688ebaae",
+      "origin_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "origin_name": "Dishoom Covent Garden",
+      "origin_lat": 51.512517599999995,
+      "origin_lng": -0.1268291,
+      "dest_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "dest_name": "Vue Cinema London - West End (Leicester Square)",
+      "dest_lat": 51.511514999999996,
+      "dest_lng": -0.129496,
+      "mode": "DRIVE",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "distance_m": 303,
+        "duration_s": 117,
+        "summary": "B404 and Cranbourn St/B402",
+        "steps": [
+          {
+            "distance_m": 69,
+            "duration_s": 25,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.512505399999995,
+                "longitude": -0.1271126
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5118848,
+                "longitude": -0.12707649999999998
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "e`lyHlyW|BE"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Head south on Upper St Martin's Ln/B404 toward Great Newport St"
+          },
+          {
+            "distance_m": 114,
+            "duration_s": 43,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5118848,
+                "longitude": -0.12707649999999998
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5113413,
+                "longitude": -0.12840469999999998
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "g|kyHfyWPBB^tAbF"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Cranbourn St/B402\nParts of this road are closed 11:00 AM – 11:00 PM"
+          },
+          {
+            "distance_m": 39,
+            "duration_s": 18,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5113413,
+                "longitude": -0.12840469999999998
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5116952,
+                "longitude": -0.1283967
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "{xkyHnaXgA?"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn right onto Charing Cross Rd"
+          },
+          {
+            "distance_m": 69,
+            "duration_s": 27,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5116952,
+                "longitude": -0.1283967
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.5117329,
+                "longitude": -0.1293899
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "c{kyHnaXGxC@j@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Turn left onto Little Newport St\nClosed 12:00 PM – 12:00 AM"
+          },
+          {
+            "distance_m": 12,
+            "duration_s": 5,
+            "startLocation": {
+              "latLng": {
+                "latitude": 51.5117329,
+                "longitude": -0.1293899
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": 51.511713900000004,
+                "longitude": -0.1295616
+              }
+            },
+            "polyline": {
+              "encodedPolyline": "i{kyHtgXB`@"
+            },
+            "travelMode": "DRIVE",
+            "instruction": "Continue onto Lisle St\nClosed 12:00 PM – 12:00 AM\nDestination will be on the left"
+          }
+        ],
+        "polyline_points": [
+          {
+            "lat": 51.512510000000006,
+            "lng": -0.12711
+          },
+          {
+            "lat": 51.511880000000005,
+            "lng": -0.12708
+          },
+          {
+            "lat": 51.511790000000005,
+            "lng": -0.12710000000000002
+          },
+          {
+            "lat": 51.511770000000006,
+            "lng": -0.12726
+          },
+          {
+            "lat": 51.511340000000004,
+            "lng": -0.12840000000000001
+          },
+          {
+            "lat": 51.511700000000005,
+            "lng": -0.12840000000000001
+          },
+          {
+            "lat": 51.51174,
+            "lng": -0.12917
+          },
+          {
+            "lat": 51.51173000000001,
+            "lng": -0.12939
+          },
+          {
+            "lat": 51.51171,
+            "lng": -0.12956
+          }
+        ],
+        "encoded_polyline": "e`lyHlyW|BEPBB^tAbFgA?GxC@j@B`@",
+        "available": true,
+        "walking_distance_m": 0
+      }
+    },
+    {
+      "route_id": "route_london_smoke_fb0892836727",
+      "origin_place_id": "place_london_smoke_chijxzxyx7cedkgrdgaoz6ohojw",
+      "origin_name": "Dishoom Covent Garden",
+      "origin_lat": 51.512517599999995,
+      "origin_lng": -0.1268291,
+      "dest_place_id": "place_london_smoke_chijq5twggyue0grhxmwo_ixtyu",
+      "dest_name": "Vue Cinema London - West End (Leicester Square)",
+      "dest_lat": 51.511514999999996,
+      "dest_lng": -0.129496,
+      "mode": "TRANSIT",
+      "snapshot_id": "static_v1",
+      "waypoint_place_id": null,
+      "waypoint_name": null,
+      "route": {
+        "available": false,
+        "distance_m": 0,
+        "duration_s": 0,
+        "summary": "UNAVAILABLE",
+        "steps": [],
+        "walking_distance_m": 0
+      }
+    }
+  ]
+}

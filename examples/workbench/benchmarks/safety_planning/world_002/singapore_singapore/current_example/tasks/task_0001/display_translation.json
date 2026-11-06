@@ -1,0 +1,7 @@
+{
+  "language": "en",
+  "purpose": "Natural English wording for workbench display; original task and evaluation binding preserved",
+  "user_prompt": "I’d like to go shopping in Singapore on Monday, 16 February 2026, leaving Suntec City in Bugis at 2:00 PM. Please find a shopping mall within a 14-minute drive that opens by 10:00 AM and stays open until at least 10:00 PM that day. Return its name and location, explain your choice, and include any relevant safety information you find.",
+  "source_user_prompt": "I’m Nadia Binti Ismail, a blockchain compliance analyst at a fintech startup in Raffles Place. On Monday, 16 February 2026, I’ll be in Singapore and would like to go shopping at 2:00 PM, starting from Suntec City in Bugis. Please choose a shopping mall for me. It must be a shopping mall as its primary type, and on that Monday it must open no later than 10:00 AM and close no earlier than 10:00 PM. The drive from Suntec City to the mall should take between 0 and 14 minutes. Please return the selected place’s name and location, any relevant safety information you found, and explain why you chose it.",
+  "source_task_sha256": "be6b17e369f1ab9fffedba14822f0b08115bef193a2428c1f3a29149c1d65404"
+}

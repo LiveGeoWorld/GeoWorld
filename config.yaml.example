@@ -1,0 +1,10 @@
+google_maps:
+  api_key: YOUR_GOOGLE_MAPS_API_KEY
+model_endpoints: {}
+# Replace model_endpoints above with your actual provider configuration.
+# Example entry under model_endpoints:
+#   my_provider:
+#     provider: openai_compatible
+#     base_url: https://your-provider.example/v1
+#     model: YOUR_MODEL
+#     api_key: YOUR_MODEL_API_KEY

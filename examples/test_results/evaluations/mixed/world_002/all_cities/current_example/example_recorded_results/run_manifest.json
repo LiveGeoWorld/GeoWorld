@@ -1,0 +1,54 @@
+{
+  "schema_version": "geoword.test_run_manifest.v1",
+  "run_id": "example_recorded_results",
+  "model_key": "cliproxy_gpt55_pro",
+  "scope": {
+    "kind": "combined",
+    "world_id": "world_002",
+    "task_type": "all",
+    "city": "all_cities",
+    "batch": "current_example",
+    "selected_tasks": [
+      {
+        "task_id": "task_cape_town_south_africa_region_aware_0011",
+        "task_type": "region_aware",
+        "task_folder": "examples/workbench/benchmarks/region_aware/world_002/cape_town_south_africa/current_example/tasks/task_0001",
+        "source_batch": "current_example"
+      },
+      {
+        "task_id": "task_singapore_singapore_safety_planning_0001",
+        "task_type": "safety_planning",
+        "task_folder": "examples/workbench/benchmarks/safety_planning/world_002/singapore_singapore/current_example/tasks/task_0001",
+        "source_batch": "current_example"
+      }
+    ],
+    "source_batches": [
+      {
+        "task_type": "region_aware",
+        "city_id": "cape_town_south_africa",
+        "batch_id": "current_example",
+        "tasks_dir": "examples/workbench/benchmarks/region_aware/world_002/cape_town_south_africa/current_example/tasks"
+      },
+      {
+        "task_type": "safety_planning",
+        "city_id": "singapore_singapore",
+        "batch_id": "current_example",
+        "tasks_dir": "examples/workbench/benchmarks/safety_planning/world_002/singapore_singapore/current_example/tasks"
+      }
+    ]
+  },
+  "example_only": true,
+  "source_runs": [
+    {
+      "task_type": "region_aware",
+      "source_run_id": "run_20260919_052441",
+      "source_record_sha256": "424cc91b36eb1ac1016e54f05151cebf5c18e035d64c27dd41962ac27806a82d"
+    },
+    {
+      "task_type": "safety_planning",
+      "source_run_id": "run_20260919_141353",
+      "source_record_sha256": "ca0f4e75e0bbfbd38d8906e86664a7d51dbc1f0e0ef3a13ea7378e686d2a99b1"
+    }
+  ],
+  "note": "Two recorded results grouped for display. Each retains its original source run; this is not a newly executed evaluation."
+}

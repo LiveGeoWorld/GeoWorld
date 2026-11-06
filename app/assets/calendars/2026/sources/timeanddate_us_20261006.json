@@ -1,0 +1,5146 @@
+{
+  "url": "https://www.timeanddate.com/holidays/us/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "State Holiday",
+      "source_details": "All",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 101,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "New Year Holiday",
+      "source_type": "State Holiday",
+      "source_details": "Florida",
+      "source_line": 102,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-04",
+      "name": "World Braille Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Epiphany",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-07",
+      "name": "Orthodox Christmas Day",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-07",
+      "name": "International Programmers' Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-07",
+      "name": "Estelle Reel Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 107,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-08",
+      "name": "Battle of New Orleans",
+      "source_type": "State Legal Holiday",
+      "source_details": "Louisiana",
+      "source_line": 108,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-13",
+      "name": "Stephen Foster Memorial Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 109,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-14",
+      "name": "Orthodox New Year",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-16",
+      "name": "Isra and Mi'raj",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-18",
+      "name": "World Religion Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "source_type": "State Holiday",
+      "source_details": "All",
+      "source_line": 113,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Robert E. Lee's Birthday",
+      "source_type": "State Legal Holiday",
+      "source_details": "Florida",
+      "source_line": 115,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Robert E. Lee's Birthday",
+      "source_type": "State Holiday",
+      "source_details": "Alabama, Mississippi",
+      "source_line": 116,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Confederate Heroes' Day",
+      "source_type": "State Holiday",
+      "source_details": "Texas",
+      "source_line": 117,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Idaho Human Rights Day",
+      "source_type": "State Holiday",
+      "source_details": "Idaho",
+      "source_line": 118,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Civil Rights Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona, New Hampshire",
+      "source_line": 119,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-01-24",
+      "name": "International Day of Education",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 120,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-25",
+      "name": "World Leprosy Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-26",
+      "name": "International Customs Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-27",
+      "name": "International Day of Commemoration in Memory of the Victims of the Holocaust",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-01-29",
+      "name": "Kansas Day",
+      "source_type": "State Observance",
+      "source_details": "Kansas",
+      "source_line": 124,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-01",
+      "name": "National Freedom Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-01",
+      "name": "First Day of Black History Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-02",
+      "name": "Tu Bishvat",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-02",
+      "name": "World Wetlands Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-02",
+      "name": "Groundhog Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-04",
+      "name": "International Day of Human Fraternity",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 130,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-04",
+      "name": "World Cancer Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 131,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-04",
+      "name": "Rosa Parks Day",
+      "source_type": "State Observance",
+      "source_details": "CA, MO, NY",
+      "source_line": 132,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-04",
+      "name": "National Girls and Women in Sports Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 133,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-06",
+      "name": "International Day of Zero Tolerance for Female Genital Mutilation",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 134,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-06",
+      "name": "Ronald Reagan Day",
+      "source_type": "State Observance",
+      "source_details": "California",
+      "source_line": 135,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-06",
+      "name": "National Wear Red Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 136,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-08",
+      "name": "Super Bowl",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 137,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-02-10",
+      "name": "World Pulses Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 138,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-11",
+      "name": "International Day of Women and Girls in Science",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 139,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-11",
+      "name": "World Day of the Sick",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 140,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-12",
+      "name": "Lincoln's Birthday",
+      "source_type": "State Holiday",
+      "source_details": "CT, IL, MO, NY",
+      "source_line": 141,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-12",
+      "name": "Lincoln's Birthday",
+      "source_type": "State Legal Holiday",
+      "source_details": "California, Florida",
+      "source_line": 142,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-12",
+      "name": "Georgia Day",
+      "source_type": "State Observance",
+      "source_details": "Georgia",
+      "source_line": 143,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-13",
+      "name": "World Radio Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 144,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-13",
+      "name": "Friday the 13th",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 145,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Valentine's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 146,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Statehood Day",
+      "source_type": "Local Observance",
+      "source_details": "Arizona",
+      "source_line": 147,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Maha Shivaratri",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 148,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Susan B. Anthony's Birthday",
+      "source_type": "State Observance",
+      "source_details": "CO, FL, NY, WI",
+      "source_line": 149,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents’ Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 150,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents’ Day",
+      "source_type": "State Holiday",
+      "source_details": "All except DE, FL, GA, IA, IN, KS, KY, LA, NC, NM, RI, WI",
+      "source_line": 151,
+      "decision": "pending",
+      "reason": "requires_review_of_state_exceptions"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents’ Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "KS, KY, LA, NC, RI, WI",
+      "source_line": 152,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Washington’s Birthday",
+      "source_type": "State Holiday",
+      "source_details": "Florida",
+      "source_line": 153,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Daisy Gatson Bates Day",
+      "source_type": "State Holiday",
+      "source_details": "Arkansas",
+      "source_line": 154,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Elizabeth Peratrovich Day",
+      "source_type": "State Observance",
+      "source_details": "Alaska",
+      "source_line": 155,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Shrove Tuesday/Mardi Gras",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 156,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Shrove Tuesday/Mardi Gras",
+      "source_type": "State Holiday",
+      "source_details": "AL*, FL**, LA, MS**",
+      "source_line": 157,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Lunar New Year",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 158,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Ash Wednesday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 159,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Ramadan Starts",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 160,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-20",
+      "name": "World Day of Social Justice",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 161,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-21",
+      "name": "International Mother Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 162,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-02-25",
+      "name": "African-American Scientist and Inventor Day",
+      "source_type": "State Observance",
+      "source_details": "Virginia",
+      "source_line": 163,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-25",
+      "name": "George Rogers Clark Day",
+      "source_type": "State Observance",
+      "source_details": "Indiana",
+      "source_line": 164,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-02-28",
+      "name": "Linus Pauling Day",
+      "source_type": "Local Observance",
+      "source_details": "Oregon",
+      "source_line": 165,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "Zero Discrimination Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 166,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "Self-Injury Awareness Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 167,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "St. David's Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 168,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "First Day of Women's History Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 169,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-01",
+      "name": "First Day of Irish American Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 170,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-02",
+      "name": "Texas Independence Day",
+      "source_type": "State Holiday",
+      "source_details": "Texas",
+      "source_line": 171,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-02",
+      "name": "Casimir Pulaski Day",
+      "source_type": "State Observance",
+      "source_details": "Illinois, Indiana",
+      "source_line": 172,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-02",
+      "name": "Read Across America Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 173,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Holi",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 174,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Purim",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 175,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "World Wildlife Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 176,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Town Meeting Day",
+      "source_type": "State Holiday",
+      "source_details": "Vermont",
+      "source_line": 177,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-04",
+      "name": "Casimir Pulaski Day",
+      "source_type": "State Observance",
+      "source_details": "Wisconsin",
+      "source_line": 178,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-06",
+      "name": "Employee Appreciation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 179,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-08",
+      "name": "International Women's Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 180,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-08",
+      "name": "Daylight Saving Time starts",
+      "source_type": "Clock Change/Daylight Saving Time",
+      "source_details": "",
+      "source_line": 181,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-10",
+      "name": "International Day of Women Judges",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 182,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-12",
+      "name": "World Kidney Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 183,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Friday the 13th",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 184,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-15",
+      "name": "Lailat al-Qadr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 185,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-15",
+      "name": "Long Covid Awareness Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 186,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-15",
+      "name": "Statehood Day",
+      "source_type": "Local Observance",
+      "source_details": "Maine",
+      "source_line": 187,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-17",
+      "name": "St. Patrick's Day",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 188,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-17",
+      "name": "Evacuation Day",
+      "source_type": "State Holiday",
+      "source_details": "Massachusetts*",
+      "source_line": 189,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Eid al-Fitr",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 190,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "French Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 191,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "International Day of Happiness",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 192,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Nowruz Day",
+      "source_type": "State Observance",
+      "source_details": "California",
+      "source_line": 193,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 194,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "International Day for the Elimination of Racial Discrimination",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 195,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "World Poetry Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 196,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "International Day of Nowruz",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 197,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "World Down Syndrome Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 198,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "International Day of Forests",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 199,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-22",
+      "name": "World Water Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 200,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-23",
+      "name": "World Meteorological Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 201,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-24",
+      "name": "World Tuberculosis Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 202,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-24",
+      "name": "International Day for the Right to the Truth concerning Gross Human Rights Violations and for the Dignity of Victims",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 203,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-25",
+      "name": "International Day of Remembrance of the Victims of Slavery and the Transatlantic Slave Trade",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 204,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-25",
+      "name": "International Day of Solidarity with Detained and Missing Staff Members",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 205,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Maryland Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "Maryland",
+      "source_line": 206,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Prince Jonah Kuhio Kalanianaole Day",
+      "source_type": "State Holiday",
+      "source_details": "Hawaii",
+      "source_line": 207,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-28",
+      "name": "Earth Hour",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 208,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Palm Sunday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 209,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-29",
+      "name": "National Vietnam War Veterans Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 210,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Wyoming Veterans Welcome Home Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 211,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Doctors' Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 212,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Seward's Day",
+      "source_type": "State Holiday",
+      "source_details": "Alaska",
+      "source_line": 213,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Vietnam Veterans Day",
+      "source_type": "State Observance",
+      "source_details": "Delaware, West Virginia",
+      "source_line": 214,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "International Transgender Day of Visibility",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 215,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "César Chávez Day",
+      "source_type": "State Holiday",
+      "source_details": "CA, CO***, NM*, TX***",
+      "source_line": 216,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "César Chávez Day",
+      "source_type": "State Observance",
+      "source_details": "Michigan, Washington",
+      "source_line": 217,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Farmworkers Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona*",
+      "source_line": 218,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Passover Eve",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 219,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-01",
+      "name": "April Fool's Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 220,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Maundy Thursday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 221,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Passover (first day)",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 222,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "World Autism Awareness Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 223,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Pascua Florida Day",
+      "source_type": "Local Observance",
+      "source_details": "Florida",
+      "source_line": 224,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "source_type": "State Holiday",
+      "source_details": "CT, DE, HI, IN, KY, LA, NC, ND, NJ, TN, TX***",
+      "source_line": 225,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "State Holiday",
+      "source_type": "State Holiday",
+      "source_details": "Georgia",
+      "source_line": 226,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Holy Saturday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 227,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "United Nations' Mine Awareness Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 228,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "International Day of Conscience",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 229,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Easter Sunday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 230,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "International Day of Sport for Development and Peace",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 231,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Easter Monday",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 232,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "National Tartan Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 233,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-07",
+      "name": "World Health Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 234,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Day of Remembrance of the Victims of the Rwanda Genocide",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 235,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Last Day of Passover",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 236,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "National Former Prisoner of War Recognition Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 237,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Orthodox Good Friday",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 238,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Dolores Huerta Day",
+      "source_type": "State Observance",
+      "source_details": "CA, NM, WA",
+      "source_line": 239,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Orthodox Holy Saturday",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 240,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Orthodox Easter",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 241,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-12",
+      "name": "International Day of Human Space Flight",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 242,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Orthodox Easter Monday",
+      "source_type": "Orthodox",
+      "source_details": "",
+      "source_line": 243,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Thomas Jefferson's Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 244,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Yom HaShoah",
+      "source_type": "Jewish commemoration",
+      "source_details": "",
+      "source_line": 245,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "World Chagas Disease Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 246,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "World Art Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 247,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Tax Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 248,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Father Damien Day",
+      "source_type": "Local Observance",
+      "source_details": "Hawaii",
+      "source_line": 249,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Emancipation Day",
+      "source_type": "State Holiday",
+      "source_details": "DC",
+      "source_line": 250,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Arbor Day",
+      "source_type": "State Observance",
+      "source_details": "Colorado",
+      "source_line": 251,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-18",
+      "name": "International Day for Monuments and Sites",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 252,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Chinese Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 253,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Patriots' Day",
+      "source_type": "State Holiday",
+      "source_details": "Maine, Massachusetts",
+      "source_line": 254,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Boston Marathon",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 255,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-04-21",
+      "name": "World Creativity and Innovation Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 256,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-21",
+      "name": "San Jacinto Day",
+      "source_type": "State Holiday",
+      "source_details": "Texas",
+      "source_line": 257,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-21",
+      "name": "National Library Workers' Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 258,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Yom Ha'atzmaut",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 259,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Earth Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 260,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Oklahoma Day",
+      "source_type": "Local Observance",
+      "source_details": "Oklahoma",
+      "source_line": 261,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Administrative Professionals Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 262,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "World Book and Copyright Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 263,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "International Girls in ICT Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 264,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "World Spanish Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 265,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "English Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 266,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Take our Daughters and Sons to Work Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 267,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-24",
+      "name": "International Day of Multilateralism and Diplomacy for Peace",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 268,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Arbor Day",
+      "source_type": "State Holiday",
+      "source_details": "Nebraska",
+      "source_line": 269,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Arbor Day",
+      "source_type": "State Observance",
+      "source_details": "Arizona, Delaware",
+      "source_line": 270,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-25",
+      "name": "International Delegates' Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 271,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-25",
+      "name": "World Malaria Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 272,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-26",
+      "name": "World Intellectual Property Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 273,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-26",
+      "name": "International Chernobyl Disaster Remembrance Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 274,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Confederate Memorial Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "Florida",
+      "source_line": 275,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Arbor Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 276,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Confederate Memorial Day",
+      "source_type": "State Holiday",
+      "source_details": "Mississippi",
+      "source_line": 277,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Confederate Memorial Day",
+      "source_type": "State Holiday",
+      "source_details": "Alabama",
+      "source_line": 278,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Confederate Memorial Day observed",
+      "source_type": "State Legal Holiday",
+      "source_details": "Florida",
+      "source_line": 279,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-04-28",
+      "name": "World Day for Safety and Health at Work",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 280,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "International Jazz Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 281,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Day of Vesak",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 282,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Kentucky Oaks",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 283,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Law Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 284,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Loyalty Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 285,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Lei Day",
+      "source_type": "Local Observance",
+      "source_details": "Hawaii",
+      "source_line": 286,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "First Day of Military Appreciation Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 287,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "First Day of Asian Pacific American Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 288,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "First Day of Jewish American Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 289,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "World Tuna Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 290,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Kentucky Derby",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 291,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "National Explosive Ordnance Disposal (EOD) Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 292,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "World Press Freedom Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 293,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "International Family Equality Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 294,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Kent State Shootings Remembrance",
+      "source_type": "Local Observance",
+      "source_details": "Ohio",
+      "source_line": 295,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Rhode Island Independence Day",
+      "source_type": "State Observance",
+      "source_details": "Rhode Island",
+      "source_line": 296,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Lag BaOmer",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 297,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "World Portuguese Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 298,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Cinco de Mayo",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 299,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Primary Election Day",
+      "source_type": "State Holiday",
+      "source_details": "Indiana",
+      "source_line": 300,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "National Teacher Appreciation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 301,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-06",
+      "name": "National Nurses Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 302,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-07",
+      "name": "National Day of Prayer",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 303,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-07",
+      "name": "West Virginia Day of Prayer",
+      "source_type": "State Observance",
+      "source_details": "West Virginia",
+      "source_line": 304,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 305,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "World Ovarian Cancer Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 306,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "World Red Cross and Red Crescent Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 307,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Truman Day",
+      "source_type": "State Holiday",
+      "source_details": "Missouri",
+      "source_line": 308,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Victory in Europe Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 309,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Native American Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 310,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Military Spouse Appreciation Day",
+      "source_type": "State Observance",
+      "source_details": "Delaware",
+      "source_line": 311,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Military Spouse Appreciation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 312,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-09",
+      "name": "World Migratory Bird Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 313,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "International Day of Argania",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 314,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mother's Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona",
+      "source_line": 315,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 316,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Confederate Memorial Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "North Carolina",
+      "source_line": 317,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Confederate Memorial Day",
+      "source_type": "State Holiday",
+      "source_details": "South Carolina",
+      "source_line": 318,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Confederate Memorial Day observed",
+      "source_type": "State Holiday",
+      "source_details": "South Carolina",
+      "source_line": 319,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-12",
+      "name": "International Nurses Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 320,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Primary Election Day",
+      "source_type": "State Holiday",
+      "source_details": "West Virginia",
+      "source_line": 321,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Ascension Day",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 322,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "International Day of Families",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 323,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Peace Officers Memorial Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 324,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "National Defense Transportation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 325,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-16",
+      "name": "International Day of Living Together in Peace",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 326,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-16",
+      "name": "International Day of Light",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 327,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Public Lands Day",
+      "source_type": "State Observance",
+      "source_details": "Colorado",
+      "source_line": 328,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Armed Forces Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 329,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Preakness Stakes",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 330,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-05-17",
+      "name": "World Telecommunication and Information Society Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 331,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "World Bee Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 332,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "World Autoimmune / Autoinflammatory Arthritis Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 333,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Emergency Medical Services for Children Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 334,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-21",
+      "name": "World Day for Cultural Diversity for Dialogue and Development",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 335,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-21",
+      "name": "International Tea Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 336,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Shavuot",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 337,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "International Day for Biological Diversity",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 338,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "National Maritime Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 339,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Harvey Milk Day",
+      "source_type": "Local Observance",
+      "source_details": "California",
+      "source_line": 340,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-23",
+      "name": "International Day to End Obstetric Fistula",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 341,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Pentecost",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 342,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Whit Monday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 343,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "African Liberation Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 344,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "source_type": "State Holiday",
+      "source_details": "AK, AL, AR, AZ, CA",
+      "source_line": 345,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 346,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Jefferson Davis' Birthday",
+      "source_type": "Local Observance",
+      "source_details": "Mississippi",
+      "source_line": 347,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "National Missing Children's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 348,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Eid al-Adha",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 349,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "International Day of UN Peacekeepers",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 350,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Trinity Sunday",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 351,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-31",
+      "name": "World No Tobacco Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 352,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Global Day of Parents",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 353,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "First Day of Pride Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 354,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "First Day of Caribbean-American Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 355,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Statehood Day",
+      "source_type": "Local Observance",
+      "source_details": "Kentucky, Tennessee",
+      "source_line": 356,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Jefferson Davis' Birthday",
+      "source_type": "State Holiday",
+      "source_details": "Alabama",
+      "source_line": 357,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-03",
+      "name": "World Bicycle Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 358,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Jefferson Davis' Birthday",
+      "source_type": "Local Observance",
+      "source_details": "Florida",
+      "source_line": 359,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Corpus Christi",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 360,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-04",
+      "name": "International Day of Innocent Children Victims of Aggression",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 361,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "World Environment Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 362,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "International Day for the Fight against Illegal, Unreported and Unregulated Fishing",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 363,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Day of the Russian Language",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 364,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "D-Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 365,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Belmont Stakes",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 366,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-06-07",
+      "name": "World Food Safety Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 367,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Native American Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona",
+      "source_line": 368,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-08",
+      "name": "World Oceans Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 369,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Kamehameha Day",
+      "source_type": "State Holiday",
+      "source_details": "Hawaii",
+      "source_line": 370,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "World Day Against Child Labour",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 371,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Loving Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 372,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "International Albinism Awareness Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 373,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-14",
+      "name": "World Blood Donor Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 374,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Army Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 375,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Flag Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 376,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-15",
+      "name": "World Elder Abuse Awareness Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 377,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-15",
+      "name": "Juneteenth Freedom Day (substitute)",
+      "source_type": "State Holiday",
+      "source_details": "Utah",
+      "source_line": 378,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Muharram",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 379,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "International Day of Family Remittances",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 380,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-17",
+      "name": "World Day to Combat Desertification and Drought",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 381,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Bunker Hill Day",
+      "source_type": "Local Holiday",
+      "source_details": "Massachusetts*",
+      "source_line": 382,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Sustainable Gastronomy Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 383,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "International Day for the Elimination of Sexual Violence in Conflict",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 384,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 385,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth Day",
+      "source_type": "State Holiday",
+      "source_details": "25 states",
+      "source_line": 386,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth Day",
+      "source_type": "State Observance",
+      "source_details": "15 states",
+      "source_line": 387,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth Day",
+      "source_type": "State Holiday",
+      "source_details": "New Jersey",
+      "source_line": 388,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth Freedom Day",
+      "source_type": "State Holiday",
+      "source_details": "Utah",
+      "source_line": 389,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Emancipation Day",
+      "source_type": "State Holiday",
+      "source_details": "Texas",
+      "source_line": 390,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "World Refugee Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 391,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Juneteenth National Freedom Day",
+      "source_type": "State Observance",
+      "source_details": "AR, CA, IA, LA, MT, OK, WY",
+      "source_line": 392,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "West Virginia Day",
+      "source_type": "State Holiday",
+      "source_details": "West Virginia",
+      "source_line": 393,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "American Eagle Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 394,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "International Day of Yoga",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 395,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "International Day of the Celebration of the Solstice",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 396,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Father's Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "Arizona",
+      "source_line": 397,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Father's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 398,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 399,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Public Service Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 400,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-23",
+      "name": "International Widows' Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 401,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Ashura",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 402,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Day of the Seafarer",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 403,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-26",
+      "name": "International Day Against Drug Abuse and Illicit Trafficking",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 404,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-26",
+      "name": "International Day in Support of Victims of Torture",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 405,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Micro-, Small and Medium-sized Enterprises Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 406,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Carolina Day",
+      "source_type": "State Observance",
+      "source_details": "South Carolina",
+      "source_line": 407,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-06-29",
+      "name": "International Day of the Tropics",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 408,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-30",
+      "name": "International Asteroid Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 409,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-06-30",
+      "name": "International Day of Parliamentarism",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 410,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day (substitute)",
+      "source_type": "State Holiday",
+      "source_details": "AK, AL, AR, AZ, OK",
+      "source_line": 411,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day (substitute)",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 412,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-07-04",
+      "name": "International Day of Cooperatives",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 413,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Independence Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 414,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Independence Day",
+      "source_type": "State Holiday",
+      "source_details": "California",
+      "source_line": 415,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Independence Day",
+      "source_type": "State Holiday",
+      "source_details": "AK, AL, AR, AZ, OK",
+      "source_line": 416,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-11",
+      "name": "World Population Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 417,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-13",
+      "name": "Nathan Bedford Forrest Day",
+      "source_type": "Local Observance",
+      "source_details": "Tennessee",
+      "source_line": 418,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Bastille Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 419,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-15",
+      "name": "World Youth Skills Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 420,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Rural Transit Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 421,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Nelson Mandela International Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 422,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-20",
+      "name": "International Chess Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 423,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Tisha B'Av",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 424,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Pioneer Day",
+      "source_type": "State Holiday",
+      "source_details": "Utah",
+      "source_line": 425,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-25",
+      "name": "World Drowning Prevention Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 426,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Parents' Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 427,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-27",
+      "name": "Korean War Veteran Recognition Day",
+      "source_type": "State Observance",
+      "source_details": "West Virginia",
+      "source_line": 428,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-07-27",
+      "name": "National Korean War Veterans Armistice Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 429,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-28",
+      "name": "World Hepatitis Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 430,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-30",
+      "name": "International Day of Friendship",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 431,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-07-30",
+      "name": "World Day Against Trafficking in Persons",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 432,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Colorado Day",
+      "source_type": "State Observance",
+      "source_details": "Colorado",
+      "source_line": 433,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-02",
+      "name": "American Family Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona",
+      "source_line": 434,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Coast Guard Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 435,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Barack Obama Day",
+      "source_type": "Observance",
+      "source_details": "Illinois",
+      "source_line": 436,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Purple Heart Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 437,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Purple Heart Day",
+      "source_type": "State Observance",
+      "source_details": "West Virginia, Wyoming",
+      "source_line": 438,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-09",
+      "name": "International Day of the World's Indigenous Peoples",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 439,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Victory Day",
+      "source_type": "State Holiday",
+      "source_details": "Rhode Island",
+      "source_line": 440,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "International Youth Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 441,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Assumption of Mary",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 442,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-16",
+      "name": "National Navajo Code Talkers Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona",
+      "source_line": 443,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-16",
+      "name": "Bennington Battle Day",
+      "source_type": "State Holiday",
+      "source_details": "Vermont",
+      "source_line": 444,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-16",
+      "name": "National Senior Citizens Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 445,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Bennington Battle Day observed",
+      "source_type": "State Holiday",
+      "source_details": "Vermont",
+      "source_line": 446,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "World Humanitarian Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 447,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "National Aviation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 448,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "International Day of Remembrance and Tribute to the Victims of Terrorism",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 449,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Hawaii Statehood Day",
+      "source_type": "State Holiday",
+      "source_details": "Hawaii",
+      "source_line": 450,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-22",
+      "name": "International Day Commemorating the Victims of Acts of Violence Based on Religion or Belief",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 451,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-23",
+      "name": "International Day for the Remembrance of the Slave Trade and Its Abolition",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 452,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "The Prophet's Birthday",
+      "source_type": "Muslim",
+      "source_details": "",
+      "source_line": 453,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Susan B. Anthony Day",
+      "source_type": "State Observance",
+      "source_details": "Massachusetts",
+      "source_line": 454,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Women's Equality Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 455,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Raksha Bandhan",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 456,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Lyndon Baines Johnson Day",
+      "source_type": "State Holiday",
+      "source_details": "Texas",
+      "source_line": 457,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-08-29",
+      "name": "International Day against Nuclear Tests",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 458,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-30",
+      "name": "International Day of the Victims of Enforced Disappearances",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 459,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "International Day for People of African Descent",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 460,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "International Overdose Awareness Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 461,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Janmashtami",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 462,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "World Sexual Health Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 463,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-05",
+      "name": "International Day of Charity",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 464,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "International Day of Clean Air for Blue Skies",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 465,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Still's Disease Awareness Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 466,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "source_type": "State Holiday",
+      "source_details": "All",
+      "source_line": 467,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 468,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "International Literacy Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 469,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "International Day to Protect Education from Attack",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 470,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "California Admission Day",
+      "source_type": "State Holiday",
+      "source_details": "California*",
+      "source_line": 471,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "World Suicide Prevention Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 472,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "First Responders Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "North Carolina",
+      "source_line": 473,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Patriot Day",
+      "source_type": "State Observance",
+      "source_details": "Alaska",
+      "source_line": 474,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Patriot Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 475,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Rosh Hashana",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 476,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "International Day for South-South Cooperation",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 477,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Carl Garner Federal Lands Cleanup Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 478,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Native American Day",
+      "source_type": "State Observance",
+      "source_details": "Delaware",
+      "source_line": 479,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Rosh Hashana",
+      "source_type": "State Holiday",
+      "source_details": "Texas***",
+      "source_line": 480,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-13",
+      "name": "International Programmers' Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 481,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-13",
+      "name": "National Grandparents Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 482,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Constitution Commemoration Day",
+      "source_type": "State Holiday",
+      "source_details": "Arizona",
+      "source_line": 483,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Ganesh Chaturthi",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 484,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-15",
+      "name": "International Day of Democracy",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 485,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-15",
+      "name": "First Day of National Hispanic Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 486,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-16",
+      "name": "International Day for the Preservation of the Ozone Layer",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 487,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-17",
+      "name": "World Patient Safety Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 488,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-17",
+      "name": "Constitution Day and Citizenship Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 489,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "International Equal Pay Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 490,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Air Force Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 491,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "National POW/MIA Recognition Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 492,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Yom Kippur",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 493,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "International Day of Peace",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 494,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Yom Kippur",
+      "source_type": "State Holiday",
+      "source_details": "Texas***",
+      "source_line": 495,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-22",
+      "name": "Emancipation Day",
+      "source_type": "Local Observance",
+      "source_details": "Ohio",
+      "source_line": 496,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-22",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 497,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "International Day of Sign Languages",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 498,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "International Celebrate Bisexuality Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 499,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-24",
+      "name": "World Maritime Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 500,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Native American Day",
+      "source_type": "State Observance",
+      "source_details": "California, Nevada",
+      "source_line": 501,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "American Indian Heritage Day",
+      "source_type": "State Observance",
+      "source_details": "Montana, Texas",
+      "source_line": 502,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Michigan Indian Day",
+      "source_type": "State Observance",
+      "source_details": "Michigan",
+      "source_line": 503,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Dolly Parton Day",
+      "source_type": "State Observance",
+      "source_details": "CA, MT, NC, OH",
+      "source_line": 504,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "First Day of Sukkot",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 505,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "International Day for the Total Elimination of Nuclear Weapons",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 506,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Public Lands Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 507,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "National Public Lands Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 508,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Indian Day",
+      "source_type": "State Observance",
+      "source_details": "Oklahoma",
+      "source_line": 509,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-27",
+      "name": "World Tourism Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 510,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-27",
+      "name": "Gold Star Mother's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 511,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-28",
+      "name": "International Day for Universal Access to Information",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 512,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-28",
+      "name": "World Rabies Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 513,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-28",
+      "name": "American Indian Day",
+      "source_type": "State Observance",
+      "source_details": "Tennessee",
+      "source_line": 514,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-09-29",
+      "name": "International Day of Awareness of Food Loss and Waste",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 515,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-29",
+      "name": "World Heart Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 516,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-09-30",
+      "name": "International Translation Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 517,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "International Day of Older Persons",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 518,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "World Vegetarian Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 519,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Last Day of Sukkot",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 520,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "International Day of Non-Violence",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 521,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-03",
+      "name": "Shmini Atzeret",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 522,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "Feast of St Francis of Assisi",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 523,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "Simchat Torah",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 524,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "World Teachers' Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 525,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "World Habitat Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 526,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "Frances Xavier Cabrini Day",
+      "source_type": "State Holiday",
+      "source_details": "Colorado",
+      "source_line": 527,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "Child Health Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 528,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "World Cerebral Palsy Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 529,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "German American Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 530,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "World Sight Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 531,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "World Post Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 532,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Leif Erikson Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 533,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Leif Erikson Day",
+      "source_type": "Local Observance",
+      "source_details": "Colorado",
+      "source_line": 534,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "World Mental Health Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 535,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "World Migratory Bird Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 536,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "Robert E. Lee's Birthday",
+      "source_type": "State Observance",
+      "source_details": "Arkansas",
+      "source_line": 537,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Navratri",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 538,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "International Day of the Girl Child",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 539,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Casimir Pulaski Day",
+      "source_type": "State Observance",
+      "source_details": "MA, MI, RI",
+      "source_line": 540,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "Chicago Marathon",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 541,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Columbus Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 542,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Columbus Day",
+      "source_type": "State Holiday",
+      "source_details": "22 states",
+      "source_line": 543,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Columbus Day",
+      "source_type": "State Legal Holiday",
+      "source_details": "Tennessee",
+      "source_line": 544,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Fraternal Day",
+      "source_type": "State Holiday",
+      "source_details": "Alabama",
+      "source_line": 545,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Yorktown Victory Day",
+      "source_type": "State Holiday",
+      "source_details": "Virginia",
+      "source_line": 546,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Discoverers' Day",
+      "source_type": "State Observance",
+      "source_details": "Hawaii",
+      "source_line": 547,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Native American Day",
+      "source_type": "State Holiday",
+      "source_details": "South Dakota",
+      "source_line": 548,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Native American Day",
+      "source_type": "State Observance",
+      "source_details": "Oklahoma",
+      "source_line": 549,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous People's Day",
+      "source_type": "State Observance",
+      "source_details": "28 states",
+      "source_line": 550,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous People's Day (Tentative Date)",
+      "source_type": "State Observance",
+      "source_details": "Michigan, Minnesota",
+      "source_line": 551,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous People's Day",
+      "source_type": "State Holiday",
+      "source_details": "DC, ME, NE, NM",
+      "source_line": 552,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "American Indian Heritage Day",
+      "source_type": "State Holiday",
+      "source_details": "Alabama",
+      "source_line": 553,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-13",
+      "name": "International Day for Disaster Risk Reduction",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 554,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Navy Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 555,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "International Day of Rural Women",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 556,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "White Cane Safety Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 557,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "World Food Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 558,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "Boss's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 559,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-17",
+      "name": "International Day for the Eradication of Poverty",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 560,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-18",
+      "name": "Alaska Day",
+      "source_type": "State Holiday",
+      "source_details": "Alaska",
+      "source_line": 561,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-19",
+      "name": "Alaska Day observed",
+      "source_type": "State Holiday",
+      "source_details": "Alaska",
+      "source_line": 562,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Dussehra",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 563,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-24",
+      "name": "United Nations Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 564,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-24",
+      "name": "World Development Information Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 565,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-27",
+      "name": "World Day for Audiovisual Heritage",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 566,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-29",
+      "name": "World Stroke Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 567,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-30",
+      "name": "Nevada Day",
+      "source_type": "State Holiday",
+      "source_details": "Nevada",
+      "source_line": 568,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-10-31",
+      "name": "World Cities Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 569,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-10-31",
+      "name": "Halloween",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 570,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "All Saints' Day",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 571,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "World Vegan Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 572,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "First Day of Native American Heritage Month",
+      "source_type": "Annual Monthly Observance",
+      "source_details": "",
+      "source_line": 573,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "New York City Marathon",
+      "source_type": "Sporting Event",
+      "source_details": "",
+      "source_line": 574,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "Daylight Saving Time ends",
+      "source_type": "Clock Change/Daylight Saving Time",
+      "source_details": "",
+      "source_line": 575,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "All Souls' Day",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 576,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "International Day to End Impunity for Crimes against Journalists",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 577,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 578,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day",
+      "source_type": "State Holiday",
+      "source_details": "12 states",
+      "source_line": 579,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Susan B. Anthony Day",
+      "source_type": "State Observance",
+      "source_details": "West Virginia",
+      "source_line": 580,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-05",
+      "name": "World Tsunami Awareness Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 581,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-05",
+      "name": "Return Day",
+      "source_type": "State Holiday",
+      "source_details": "Delaware*",
+      "source_line": 582,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-06",
+      "name": "International Day for Preventing the Exploitation of the Environment in War and Armed Conflict",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 583,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali/Deepavali",
+      "source_type": "Hindu Holiday",
+      "source_details": "",
+      "source_line": 584,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali/Deepavali",
+      "source_type": "State Observance",
+      "source_details": "Connecticut, North Carolina",
+      "source_line": 585,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Diwali/Deepavali",
+      "source_type": "State Legal Holiday",
+      "source_details": "California, Pennsylvania",
+      "source_line": 586,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-09",
+      "name": "Barack Obama Day",
+      "source_type": "Local Observance",
+      "source_details": "Alabama**",
+      "source_line": 587,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-10",
+      "name": "World Science Day for Peace and Development",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 588,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-10",
+      "name": "Marine Corps Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 589,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Singles' Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 590,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 591,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "source_type": "State Holiday",
+      "source_details": "All except MA, WY",
+      "source_line": 592,
+      "decision": "pending",
+      "reason": "requires_review_of_state_exceptions"
+    },
+    {
+      "date": "2026-11-12",
+      "name": "World Pneumonia Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 593,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-13",
+      "name": "Friday the 13th",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 594,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-14",
+      "name": "World Diabetes Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 595,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-15",
+      "name": "World Day of Remembrance for Road Traffic Victims",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 596,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-16",
+      "name": "International Day for Tolerance",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 597,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-17",
+      "name": "World Prematurity Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 598,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "World Philosophy Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 599,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "World Toilet Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 600,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "International Men's Day",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 601,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "George Rogers Clark Day",
+      "source_type": "State Observance",
+      "source_details": "Ohio",
+      "source_line": 602,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "World Children's Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 603,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "Africa Industrialization Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 604,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "Transgender Day of Remembrance",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 605,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "Fake Friday",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 606,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-21",
+      "name": "World Television Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 607,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "International Day for the Elimination of Violence against Women",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 608,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-26",
+      "name": "Thanksgiving Day",
+      "source_type": "State Holiday",
+      "source_details": "All",
+      "source_line": 609,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-26",
+      "name": "Thanksgiving Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 610,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "State Holiday",
+      "source_type": "State Holiday",
+      "source_details": "Georgia",
+      "source_line": 611,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Presidents’ Day (Observed)",
+      "source_type": "State Holiday",
+      "source_details": "New Mexico",
+      "source_line": 612,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Lincoln's Birthday/Lincoln's Day",
+      "source_type": "State Holiday",
+      "source_details": "Indiana",
+      "source_line": 613,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Day After Thanksgiving",
+      "source_type": "State Holiday",
+      "source_details": "22 states",
+      "source_line": 614,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Black Friday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 615,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "American Indian Heritage Day",
+      "source_type": "State Holiday",
+      "source_details": "Maryland",
+      "source_line": 616,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Native American Heritage Day",
+      "source_type": "State Holiday",
+      "source_details": "Washington",
+      "source_line": 617,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Native American Heritage Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 618,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-29",
+      "name": "First Sunday of Advent",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 619,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-29",
+      "name": "International Day of Solidarity with the Palestinian People",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 620,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-29",
+      "name": "Nellie Tayloe Ross' Birthday",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 621,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Day of Remembrance for all Victims of Chemical Warfare",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 622,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Cyber Monday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 623,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-01",
+      "name": "World AIDS Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 624,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-01",
+      "name": "GivingTuesday",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 625,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-01",
+      "name": "Rosa Parks Day",
+      "source_type": "State Observance",
+      "source_details": "Alabama, Ohio",
+      "source_line": 626,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-01",
+      "name": "GivingTuesday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 627,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-02",
+      "name": "International Day for the Abolition of Slavery",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 628,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-03",
+      "name": "International Day of Persons with Disabilities",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 629,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-04",
+      "name": "International Day of Banks",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 630,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-05",
+      "name": "Chanukah/Hanukkah (first day)",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 631,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-05",
+      "name": "International Volunteer Day for Economic and Social Development",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 632,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-05",
+      "name": "World Soil Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 633,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-06",
+      "name": "St Nicholas Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 634,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-07",
+      "name": "International Civil Aviation Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 635,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-07",
+      "name": "Pearl Harbor Remembrance Day",
+      "source_type": "State Observance",
+      "source_details": "Alaska, Wyoming",
+      "source_line": 636,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-07",
+      "name": "Pearl Harbor Remembrance Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 637,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-07",
+      "name": "Delaware Day",
+      "source_type": "State Observance",
+      "source_details": "Delaware",
+      "source_line": 638,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-08",
+      "name": "Feast of the Immaculate Conception",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 639,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-09",
+      "name": "International Anti-Corruption Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 640,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-09",
+      "name": "World Genocide Commemoration Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 641,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-10",
+      "name": "Human Rights Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 642,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-10",
+      "name": "Wyoming Day",
+      "source_type": "State Observance",
+      "source_details": "Wyoming",
+      "source_line": 643,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-11",
+      "name": "International Mountain Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 644,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-12",
+      "name": "Last Day of Chanukah",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 645,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-12",
+      "name": "International Day of Neutrality",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 646,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-12",
+      "name": "Universal Health Coverage Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 647,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-12",
+      "name": "Feast of Our Lady of Guadalupe",
+      "source_type": "Christian",
+      "source_details": "",
+      "source_line": 648,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-13",
+      "name": "National Guard Birthday",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 649,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-14",
+      "name": "Green Monday",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 650,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-15",
+      "name": "Bill of Rights Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 651,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-17",
+      "name": "Pan American Aviation Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 652,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-17",
+      "name": "Wright Brothers Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 653,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "International Migrants Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 654,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Arabic Language Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 655,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-19",
+      "name": "Super Saturday",
+      "source_type": "Worldwide Observance",
+      "source_details": "",
+      "source_line": 656,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-20",
+      "name": "Asarah B'Tevet",
+      "source_type": "Jewish holiday",
+      "source_details": "",
+      "source_line": 657,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-20",
+      "name": "International Human Solidarity Day",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 658,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 659,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve",
+      "source_type": "State Holiday",
+      "source_details": "AR, KS*, KY, MI, NC, ND, OK, SC, TX, VA*, WI",
+      "source_line": 660,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve",
+      "source_type": "Observance, Christian",
+      "source_details": "",
+      "source_line": 661,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Washington’s Birthday",
+      "source_type": "State Holiday",
+      "source_details": "Georgia, Indiana",
+      "source_line": 662,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "State Holiday",
+      "source_details": "All",
+      "source_line": 663,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "Federal Holiday",
+      "source_details": "",
+      "source_line": 664,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-26",
+      "name": "Kwanzaa (first day)",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 665,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-26",
+      "name": "Day After Christmas Day",
+      "source_type": "State Holiday",
+      "source_details": "South Carolina, Texas",
+      "source_line": 666,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-27",
+      "name": "International Day of Epidemic Preparedness",
+      "source_type": "United Nations Observance",
+      "source_details": "",
+      "source_line": 667,
+      "decision": "pending",
+      "reason": "not_automatically_classified_as_common_observance"
+    },
+    {
+      "date": "2026-12-28",
+      "name": "Christmas Holiday",
+      "source_type": "State Holiday",
+      "source_details": "North Carolina",
+      "source_line": 668,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year's Eve",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 669,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-31",
+      "name": "New Year's Eve",
+      "source_type": "State Holiday",
+      "source_details": "Michigan, Wisconsin",
+      "source_line": 670,
+      "decision": "excluded",
+      "reason": "regional_record_not_applicable_to_New_York"
+    }
+  ]
+}

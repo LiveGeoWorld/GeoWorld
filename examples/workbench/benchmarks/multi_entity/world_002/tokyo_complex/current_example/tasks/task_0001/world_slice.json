@@ -1,0 +1,45 @@
+{
+  "characters": [
+    {
+      "character_id": "char_tokyo_complex_006",
+      "name": "山田 花子"
+    },
+    {
+      "character_id": "char_tokyo_complex_008",
+      "name": "エレナ・サトウ"
+    },
+    {
+      "character_id": "char_tokyo_complex_004",
+      "name": "林翔太"
+    },
+    {
+      "character_id": "char_tokyo_complex_002",
+      "name": "佐藤健一"
+    }
+  ],
+  "places": [
+    {
+      "place_id": "place_tokyo_complex_chijszwnwtumggarret4_9utbzg",
+      "name": "Shinjuku Wald 9"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijxezpcs6nggarfucpwdsqlue",
+      "name": "Bar NORA"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijkb268ysnggarmzivao4qyzm",
+      "name": "Shinjuku Ale"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijj3m_onmmggaroskvpmoxt_o",
+      "name": "Karaoke Pasela Shinjuku Honten"
+    },
+    {
+      "place_id": "place_tokyo_complex_chijk6njrkynggarkxbv_rqdfcs",
+      "name": "Gift"
+    }
+  ],
+  "services": [],
+  "districts": [],
+  "corridors": []
+}

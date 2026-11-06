@@ -1,0 +1,72 @@
+{
+  "schema_version": "geoword.task.provenance.v1",
+  "world_id": "world_002",
+  "city_id": "cape_town_south_africa",
+  "batch_id": "20260909_145854",
+  "task_type": "region_aware",
+  "generation_context": {
+    "generation_id": "2026-09-09T06:32:20.524770+00:00::region_aware::append",
+    "at": "2026-09-09T06:32:20.524780+00:00",
+    "city_id": "cape_town_south_africa",
+    "city_version": "v1",
+    "required_city_versions": {
+      "cape_town_south_africa": 1
+    },
+    "world_city_versions": {
+      "cape_town_south_africa": 1,
+      "london_smoke": 2,
+      "new_york_united_states": 1,
+      "shanghai_smoke": 2,
+      "singapore_singapore": 2,
+      "tokyo_complex": 1
+    },
+    "world_map_snapshot": {
+      "cape_town_south_africa": {
+        "version": 1,
+        "path": "outputs/worlds/world_002/artifacts/mapseeds/cape_town_south_africa/base/world.json",
+        "sha256": "5dda783827f77b9890260002c96a03b669c7926f139b0b72db5a63ebe2ceff05"
+      },
+      "london_smoke": {
+        "version": 2,
+        "path": "outputs/worlds/world_002/artifacts/cities/london_smoke/expansions/exp_1784862900_cdd5d7/world.json",
+        "sha256": "95ff488c04a77c9f1f7a0dae2cbd2d1f28f7e111bb4cfe4a7bad23ca379c5f3c"
+      },
+      "new_york_united_states": {
+        "version": 1,
+        "path": "outputs/worlds/world_002/artifacts/mapseeds/new_york_united_states/base/world.json",
+        "sha256": "e11cb83f15a0a91da36c80fa91c70f7b733afc98462f51df214481d2c72e67cc"
+      },
+      "shanghai_smoke": {
+        "version": 2,
+        "path": "outputs/worlds/world_002/artifacts/cities/shanghai_smoke/expansions/exp_1784866105_0d24d4/world.json",
+        "sha256": "7a5bfbe1cf145eb3df4b32bce2e3a13336f9001805d3a24b602437e1d2d93268"
+      },
+      "singapore_singapore": {
+        "version": 2,
+        "path": "outputs/worlds/world_002/artifacts/cities/singapore_singapore/expansions/exp_1784865172_c0005d/world.json",
+        "sha256": "3a7add1134fc1637c922d1d60f50d3d9c8feb1f7d25568df6949099ced66d110"
+      },
+      "tokyo_complex": {
+        "version": 1,
+        "path": "outputs/worlds/world_002/artifacts/mapseeds/tokyo_complex/complex/world.json",
+        "sha256": "3a097d5605ad745940359f88c09f75c2ad8f9270a9fe0d798e89cc3da7f57c02"
+      }
+    },
+    "task_type": "region_aware",
+    "generation_mode": "append",
+    "artifact_snapshot": {
+      "map_world": "5dda783827f77b9890260002c96a03b669c7926f139b0b72db5a63ebe2ceff05",
+      "map_manifest": "6b61b179affcc7805ecbef949a66acb99a51ad73e97caede58e0e399aa667350",
+      "route_cache": "49540574651a5c5e5750242f22e81689eb79a10f67a507c9c77640d85f2d5642",
+      "characters": "b03923ef6a913b1a8668beee8659b44fc47e9472cd61acf5a9d0f735bf7b5628",
+      "cultural_constraints": "79cc9a9db0abbda096f41b001fe2384e02a9845ad2d5bec91719007d89aa2205",
+      "cultural_evidence": "5eb5cb2f64cc07d3d63fa60536919781da124ab7c58f45ae0f1dac2723723dc1",
+      "factual_service_index": "4d153197856cac9b9b28fd1395cfed42b62968fffada10886766d229bc312471",
+      "place_alias_cache": "9e3166c1eafc18bfc2caee9479baf8ead0ce80c5b0f2f087602d0f2496ad22cb",
+      "service_detail_cache": "eb228b69b600c5e7bc4e2a19067e8d5611c98ab9e15aa6ccba92b5495a678ba3",
+      "local_service_world_state": "f9de2488fdad118a068d38d1de00ab00b54ac0753b55a17f5a611058fbe6d893"
+    }
+  },
+  "task_json_sha256": "051d3eee7447813a7151197382d4436152f78b698bf5dae153f97f7e0f5f34d3",
+  "created_at": "2026-09-09T06:38:01.435513+00:00"
+}

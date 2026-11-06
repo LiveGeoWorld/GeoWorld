@@ -1,0 +1,147 @@
+{
+  "schema_version": "curated.judge.v1",
+  "completion_policy": "key_nodes",
+  "stages": [
+    {
+      "stage_id": "retrieve_near_anchor_candidates",
+      "description": "根据图文线索使用地图字段检索候选：category、area_hint、address_hint、near",
+      "depends_on": [],
+      "nodes": [
+        {
+          "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_search",
+          "category": "information_lookup",
+          "agent_action": "MapApp.search_grounding_candidates",
+          "arg_slots": {
+            "keyword": "Life Grand Cafe Waterfront",
+            "city_id": "cape_town_south_africa",
+            "limit": 8,
+            "category": "restaurant",
+            "area_hint": "V&A Waterfront, Cape Town",
+            "address_hint": "Pierhead Road",
+            "near": "The Waterside",
+            "near_radius_m": 1200
+          },
+          "description_zh": "模型应先把图文线索转化为地图字段检索；该节点用于诊断候选召回质量。",
+          "label_zh": "检索定位候选",
+          "role": "search",
+          "verdict_target": "candidate_retrieval",
+          "is_key": false,
+          "depends_on": [],
+          "hard_checks": [],
+          "soft_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "soft"
+            },
+            {
+              "check_type": "field_not_empty",
+              "field": "response.candidates",
+              "expected": null,
+              "tolerance": null,
+              "weight": "soft"
+            },
+            {
+              "check_type": "field_contains",
+              "field": "response.candidates[].name",
+              "expected": "Life Grand Cafe Waterfront",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "select_grounded_location",
+      "description": "提交最终 grounding 候选：Life Grand Cafe Waterfront",
+      "depends_on": [
+        "retrieve_near_anchor_candidates"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_select",
+          "category": "information_lookup",
+          "agent_action": "MapApp.select_grounded_location",
+          "arg_slots": {
+            "candidate_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+            "rationale": "<grounding_rationale>"
+          },
+          "description_zh": "exact_poi 任务以 candidate_id 命中为主判定，坐标距离仅作诊断。",
+          "label_zh": "选择定位结果",
+          "role": "locate",
+          "verdict_target": "final_grounded_location",
+          "is_key": true,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            },
+            {
+              "check_type": "field_equals",
+              "field": "args.candidate_id",
+              "expected": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": []
+        }
+      ]
+    },
+    {
+      "stage_id": "return_grounding_result",
+      "description": "将定位结果、关键线索和不确定性返回给用户",
+      "depends_on": [
+        "select_grounded_location"
+      ],
+      "nodes": [
+        {
+          "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_respond",
+          "category": "communication",
+          "agent_action": "UserInterfaceApp.send_message_to_user",
+          "arg_slots": {
+            "content": "<grounding_result:Life Grand Cafe Waterfront>"
+          },
+          "description_zh": "模型需要把工具层定位结果转化为用户可见回答。",
+          "label_zh": "最终用户回复",
+          "role": "respond",
+          "verdict_target": "final_user_response",
+          "is_key": true,
+          "depends_on": [],
+          "hard_checks": [
+            {
+              "check_type": "action_executed",
+              "field": "",
+              "expected": null,
+              "tolerance": null,
+              "weight": "hard"
+            },
+            {
+              "check_type": "field_contains",
+              "field": "args.content",
+              "expected": "Life Grand Cafe Waterfront",
+              "tolerance": null,
+              "weight": "hard"
+            }
+          ],
+          "soft_checks": [
+            {
+              "check_type": "field_contains",
+              "field": "args.content",
+              "expected": "Life Grand Cafe Waterfront",
+              "tolerance": null,
+              "weight": "soft"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

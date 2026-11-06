@@ -1,0 +1,9 @@
+{
+  "examples/world_studio/registered_world/world_manifest.json": "a2ab783fbcabf3a72d55d2f0840fa4797236816ace2ffe94234d9a9c21aa09b2",
+  "examples/world_studio/registered_world/artifacts/routes/london_smoke/v1/route_cache.json": "43a27579fdce34d618c44e3fe710b7a0932c7d452bf805dce2cfe33ae688d650",
+  "examples/world_studio/registered_world/assets/characters.json": "dba1a06943ed178820a7162db2cc441375d73dad4aa5a77918a6a292227cb695",
+  "examples/world_studio/registered_world/assets/local_service_world_state.json": "2e147a26f4194f8c65c79d7ac7f55ff69fa0a954d66fe5fe3d32ab575c9fad7f",
+  "examples/world_studio/registered_world/assets/service_detail_cache.json": "4e01e0ae836140003a925ed15f47cebc682b2face2d1ad2c92c21179bb9ca9f3",
+  "examples/world_studio/registered_world/assets/world.json": "c7cee3202314d96455281dab1875e9af3aa99de8cf59876180e6a8def7efe168",
+  "examples/world_studio/registered_world/cities/london_smoke.json": "70dbb412b7654bebd869e740cea0322d5e6c18a7df8e90e74ebb6bfa4ea692d4"
+}

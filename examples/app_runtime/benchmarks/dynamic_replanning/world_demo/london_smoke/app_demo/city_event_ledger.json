@@ -1,0 +1,93 @@
+{
+  "city_id": "london_smoke",
+  "events": [
+    {
+      "proposal_index": 0,
+      "event_id": "dynamic_ed2f759ce751_authored_001",
+      "event_type": "participant.dietary",
+      "app": "MessagingApp",
+      "scope": {
+        "type": "participant",
+        "id": "exp_1784862900_cdd5d7__char_london_smoke_024"
+      },
+      "public_scope": {
+        "type": "participant",
+        "id": "exp_1784862900_cdd5d7__char_london_smoke_024"
+      },
+      "state_field": "participant.dietary",
+      "state_patch": {
+        "participant_updates": [
+          {
+            "character_id": "exp_1784862900_cdd5d7__char_london_smoke_024",
+            "dietary": "none"
+          }
+        ],
+        "content": "Hi everyone, a quick update for tonight's get-together: I no longer need a vegetarian meal. A regular menu is fine, so you don't need to look for a vegetarian menu for me."
+      },
+      "activation": {
+        "mode": "absolute",
+        "time": "2026-11-27T12:20:00+00:00"
+      },
+      "activation_time": "2026-11-27T12:20:00+00:00",
+      "end_time": "",
+      "observability": {
+        "mode": "pull",
+        "notify": false,
+        "public_observation_path": {
+          "app": "MessagingApp",
+          "tool": "get_contact"
+        }
+      },
+      "causal_parents": [],
+      "public_message": "Hi everyone, a quick update for tonight's get-together: I no longer need a vegetarian meal. A regular menu is fine, so you don't need to look for a vegetarian menu for me.",
+      "world_binding": "world_demo/london_smoke/v1"
+    },
+    {
+      "proposal_index": 1,
+      "event_id": "dynamic_ed2f759ce751_authored_002",
+      "event_type": "service.open_status",
+      "app": "LocalServiceApp",
+      "scope": {
+        "type": "service",
+        "id": "exp_1784862900_cdd5d7__place_london_smoke_chij00_x5riadkgre_qtehrmbkm"
+      },
+      "public_scope": {
+        "type": "service",
+        "name": "Bonne Bouche Paddington, Coffee Shop & Takeaway",
+        "location": {
+          "lat": 51.516573699999995,
+          "lng": -0.1735263
+        }
+      },
+      "state_field": "service.open_status",
+      "state_patch": {
+        "open_status": "closed",
+        "availability": "unavailable"
+      },
+      "activation": {
+        "mode": "absolute",
+        "time": "2026-11-27T12:30:00+00:00"
+      },
+      "activation_time": "2026-11-27T12:30:00+00:00",
+      "end_time": "2026-11-27T23:00:00+00:00",
+      "observability": {
+        "mode": "pull",
+        "notify": false,
+        "public_observation_path": {
+          "app": "LocalServiceApp",
+          "tool": "get_service_detail"
+        }
+      },
+      "causal_parents": [],
+      "public_message": "Bonne Bouche Paddington (129 Praed St): due to an unexpected kitchen equipment fault, we are closed from 12:30 for the rest of today. Dine-in and takeaway are unavailable. If you have a reservation, please contact us to reschedule. We reopen at 07:00 tomorrow.",
+      "world_binding": "world_demo/london_smoke/v1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1735263,
+          51.516573699999995
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-ui-text>GeoWorld 审核工作台</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/tasks/static/style.css">
+<link rel="stylesheet" href="/tasks/static/grounding_review.css">
+<link rel="stylesheet" href="/tasks/static/route_review.css">
+<link rel="stylesheet" href="/tasks/static/multi_review.css">
+<link rel="stylesheet" href="/tasks/static/itinerary_review.css">
+<link rel="stylesheet" href="/tasks/static/safety_review.css">
+<link rel="stylesheet" href="/tasks/static/region_review.css">
+<link rel="stylesheet" href="/tasks/static/dynamic_review.css">
+<link rel="stylesheet" href="/tasks/static/app_content.css">
+<link rel="stylesheet" href="/ui/i18n.css">
+<script src="/tasks/static/workbench.js"></script>
+<script src="/ui/i18n.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+  <div class="header ui-balanced-header">
+    <div class="ui-brand-group"><h1>GeoWorld <span data-ui-text>审核工作台</span></h1></div>
+  <div class="top-nav">
+      <a class="nav-btn nav-route-link" id="nav-worlds" href="/" title="管理多城市世界、地图和人物关系" data-ui-text data-ui-title>世界构建</a>
+      <button class="nav-btn active" id="nav-tasks" onclick="showTaskView()" title="浏览、编辑并审核任务" data-ui-text data-ui-title>任务审核</button>
+      <button class="nav-btn" id="nav-app-content" onclick="showAppContent()" title="只读查看静态与动态 APP" data-ui-title>APP</button>
+      <button class="nav-btn" id="nav-runs" onclick="showRunView()" title="运行模型并查看结果" data-ui-text data-ui-title>测试结果</button>
+    </div>
+    <div id="city-info" data-ui-output></div>
+  </div>
+
+  <div class="main">
+    <!-- Left: Task List -->
+    <div class="sidebar" id="task-list">
+      <div class="sidebar-header">
+        <h2 data-ui-text>任务列表</h2>
+        <span id="task-count" data-ui-output></span>
+      </div>
+      <div class="sidebar-scroll">
+        <div class="search-box">
+          <input type="text" id="filter-input" placeholder="搜索任务..." oninput="filterTasks()" data-ui-placeholder>
+          <select id="status-filter" onchange="filterTasks()">
+            <option value="" data-ui-text>全部状态</option>
+            <option value="draft">draft</option>
+            <option value="approved">approved</option>
+            <option value="needs_fix">needs_fix</option>
+            <option value="rejected">rejected</option>
+          </select>
+          <select id="language-filter" onchange="filterTasks()">
+            <option value="" data-ui-text>全部语言</option>
+            <option value="zh-CN">zh-CN</option>
+            <option value="ja-JP">ja-JP</option>
+            <option value="en-GB">en-GB</option>
+            <option value="en">en</option>
+          </select>
+            <select id="city-filter" onchange="onCityChange()">
+              <option value="" data-ui-text>全部城市</option>
+            </select>
+            <select id="task-type-filter" onchange="onTaskTypeChange()">
+              <option value="" data-ui-text>全部任务类型</option>
+              <option value="place_grounding">place_grounding</option>
+              <option value="place_discovery">place_discovery</option>
+              <option value="route_planning">route_planning</option>
+              <option value="multi_entity">multi_entity</option>
+              <option value="itinerary">itinerary</option>
+              <option value="safety_planning">safety_planning</option>
+              <option value="region_aware">region_aware</option>
+              <option value="dynamic_replanning">dynamic_replanning</option>
+            </select>
+            <select id="batch-filter" onchange="switchBatch(this.value)">
+            </select>
+            <div id="gen-panel" class="gen-panel" style="display:none">
+              <div class="gen-panel-head">
+                <div class="gen-title" data-ui-text>生成任务</div>
+                <button id="gen-panel-toggle" class="gen-panel-toggle" type="button" onclick="toggleGenerationPanel()" aria-controls="gen-panel-content" aria-expanded="true" title="收起任务构建详情" aria-label="收起任务构建详情" data-ui-title data-ui-aria-label>&#9652;</button>
+              </div>
+              <div id="gen-panel-compact" class="gen-panel-compact" hidden aria-live="polite"></div>
+              <div id="gen-panel-content" class="gen-panel-content">
+                <label class="gen-field" data-ui-text>构建模型
+                  <select id="gen-model"></select>
+                </label>
+                  <label class="gen-field" data-ui-text>数量
+                  <input id="gen-count" value="5" type="number" min="1" max="100" oninput="updateFeasibilityControls(); invalidateRouteCostPreview()">
+                </label>
+                <div id="gen-feasibility" class="gen-feasibility" hidden>
+                  <label class="gen-field" data-ui-text>任务可行性
+                    <select id="gen-feasibility-mode" onchange="updateFeasibilityControls()">
+                      <option value="feasible_only" selected data-ui-text>仅可完成</option>
+                      <option value="mixed" data-ui-text>混合构建</option>
+                    </select>
+                  </label>
+                  <label id="dynamic-source-field" class="gen-field" hidden data-ui-text>静态题来源
+                    <select id="dynamic-admission" onchange="dynamicAdmission=this.value">
+                      <option value="all_validated_static" data-ui-text>已生成且自动校验通过</option>
+                      <option value="audit_approved_only" data-ui-text>仅人工审核通过</option>
+                    </select>
+                  </label>
+                  <label id="gen-infeasible-percent-wrap" class="gen-field" hidden data-ui-text>不可完成任务占比
+                    <span class="percent-input"><input id="gen-infeasible-percent" value="20" type="number" min="1" max="100" step="1" oninput="updateFeasibilityControls()"><b>%</b></span>
+                  </label>
+                  <div id="gen-feasibility-status" class="gen-feasibility-status" hidden data-ui-output></div>
+                </div>
+                <div class="gen-mode">
+                  <label data-ui-text><input type="radio" name="gen-mode" value="append" checked onchange="invalidateRouteCostPreview();dynamicOutputChanged()"> 沿用当前批次</label>
+                  <label data-ui-text><input type="radio" name="gen-mode" value="new" onchange="invalidateRouteCostPreview();dynamicOutputChanged()"> 新建批次</label>
+                </div>
+                <div id="route-resource-fields" class="route-resource-fields" hidden>
+                  <div class="route-resource-title" data-ui-text>路线资源</div>
+                  <div class="route-resource-current"><span data-ui-text>当前路线池</span><b id="route-pool-current" data-ui-text>-- 个 POI</b></div>
+                  <div id="multi-character-current" class="route-resource-current" hidden><span data-ui-text>可用人物</span><b data-ui-text>-- 名</b></div>
+                  <label id="route-diffusion-field" class="gen-field" data-ui-text>扩散阶段起点
+                    <input id="route-diffusion-start" value="20" type="number" min="1" step="1" oninput="invalidateRouteCostPreview()">
+                  </label>
+                  <label id="route-pool-max-field" class="gen-field" data-ui-text>路线池上限
+                    <input id="route-pool-max" value="50" type="number" min="1" step="1" oninput="invalidateRouteCostPreview()">
+                  </label>
+                  <div id="route-resource-error" class="route-resource-error" hidden data-ui-output></div>
+                  <button id="service-detail-build" class="route-cost-preview service-detail-build" type="button" onclick="previewRegionServiceDetailBuild()" hidden data-ui-text>构建服务详情</button>
+                  <button id="route-cost-preview" class="route-cost-preview" type="button" onclick="previewRouteGoogleCost()" data-ui-text>预估 Google API 成本详情</button>
+                </div>
+                <div id="gen-cmd" class="gen-status" data-ui-output></div>
+                <div id="gen-progress" class="gen-progress" hidden aria-live="polite"></div>
+                <div id="gen-start-wrap" class="generation-start-wrap">
+                  <button id="gen-start" class="save-btn" onclick="showGenCmd()" data-ui-text>生成任务</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div id="task-items"></div>
+      </div>
+    </div>
+
+    <!-- Right: Task Detail -->
+    <div class="content" id="task-detail">
+      <div class="placeholder" data-ui-text>← 从左侧选择一个任务查看详情</div>
+    </div>
+  </div>
+</div>
+
+<!-- Detail tooltip -->
+<div id="tooltip" class="tooltip hidden"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/tasks/static/polyline.js"></script>
+<script src="/tasks/static/review_state.js"></script>
+<script src="/tasks/static/grounding_review.js"></script>
+<script src="/tasks/static/discovery_review.js"></script>
+<script src="/tasks/static/route_review.js"></script>
+<script src="/tasks/static/multi_review.js"></script>
+<script src="/tasks/static/itinerary_review.js"></script>
+<script src="/tasks/static/app.js"></script>
+<script src="/tasks/static/dynamic_sources.js"></script>
+<script src="/tasks/static/app_content.js"></script>
+<script src="/tasks/static/app_runtime.js"></script>
+<script src="/tasks/static/app_map.js"></script>
+<script src="/tasks/static/date_time_picker.js"></script>
+<script src="/tasks/static/event_overview.js"></script>
+<script src="/tasks/static/safety_review.js"></script>
+<script src="/tasks/static/region_review.js"></script>
+<script src="/tasks/static/dynamic_review.js"></script>
+</body>
+</html>

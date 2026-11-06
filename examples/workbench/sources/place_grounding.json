@@ -1,0 +1,1254 @@
+{
+  "examples": [
+    {
+      "example_id": "pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront",
+      "task_type": "place_grounding",
+      "difficulty": "hard",
+      "character_id": "",
+      "character_name": "",
+      "image_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg",
+      "prompt_reference_image_path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg",
+      "prompt_language": "en",
+      "review_language": "zh-CN",
+      "user_prompt": "I was sent this photo from inside a place at the V&A Waterfront in Cape Town, and I’m trying to pin down the exact restaurant or cafe rather than just the waterfront area. It felt like a quieter, old Pierhead Road building with an upstairs lounge or stairwell, not a food-market hall, and my friend mentioned being very close to The Waterside and Den Anker, with the cruise/tour boats around Quay 5 nearby. Could you use the photo plus those hints to work out which specific place this is?",
+      "user_prompt_translation": "有人发给我这张照片，说是在开普敦 V&A Waterfront 的某个地方里面拍的，我想确定的是具体哪一家餐厅或咖啡馆，而不只是这个海滨区域。那里感觉像 Pierhead Road 上一栋比较安静的老建筑，里面有楼上的休息区或楼梯间，不像美食市场大厅；朋友还提到它离 The Waterside 和 Den Anker 很近，附近还有 Quay 5 一带的游船/旅游船。你能结合这张照片和这些线索，判断这是哪个具体地点吗？",
+      "review_translation": {
+        "language": "zh-CN",
+        "user_prompt": "有人发给我这张照片，说是在开普敦 V&A Waterfront 的某个地方里面拍的，我想确定的是具体哪一家餐厅或咖啡馆，而不只是这个海滨区域。那里感觉像 Pierhead Road 上一栋比较安静的老建筑，里面有楼上的休息区或楼梯间，不像美食市场大厅；朋友还提到它离 The Waterside 和 Den Anker 很近，附近还有 Quay 5 一带的游船/旅游船。你能结合这张照片和这些线索，判断这是哪个具体地点吗？",
+        "notes": "The translation preserves the uncertainty and does not add the gold place name."
+      },
+      "grounding_target_type": "poi",
+      "acceptable_granularity": "exact_poi",
+      "evidence_channels": [
+        "image",
+        "text",
+        "map_search"
+      ],
+      "visual_clues": [
+        "The final image shows an indoor heritage-style space rather than a street frontage.",
+        "A staircase or landing with dark wooden banisters is visible.",
+        "The wall has framed drawings or prints, with warm ceiling lighting and a white paneled ceiling.",
+        "There are closed double doors and polished wooden flooring, suggesting an older building interior."
+      ],
+      "text_clues": [
+        "The user says the place is at the V&A Waterfront in Cape Town.",
+        "The user is looking for an exact restaurant or cafe, not the broader waterfront area.",
+        "The user recalls an old Pierhead Road building with an upstairs lounge or stairwell.",
+        "The user says it did not feel like a food-market hall.",
+        "The user mentions nearby anchors The Waterside and Den Anker.",
+        "The user mentions cruise or tour boats around Quay 5 nearby."
+      ],
+      "negative_clues": [
+        "The request excludes identifying only the general V&A Waterfront area.",
+        "The request says the target is not a food-market hall, helping distinguish it from nearby market-style dining candidates."
+      ],
+      "candidate_scope": {
+        "city_id": "cape_town_south_africa",
+        "allowed_place_types": [
+          "restaurant",
+          "cafe",
+          "sushi_restaurant",
+          "japanese_restaurant",
+          "food"
+        ],
+        "area_hints": [
+          "V&A Waterfront, Cape Town",
+          "Pierhead area"
+        ],
+        "address_hints": [
+          "Pierhead Road",
+          "near Quay 5"
+        ],
+        "nearby_anchors": [
+          "The Waterside",
+          "Den Anker",
+          "Cape Town Cruises"
+        ]
+      },
+      "gold": {
+        "place_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+        "candidate_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+        "place_name": "Life Grand Cafe Waterfront",
+        "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "district_name": "district_cape_town_south_africa_victoria_alfred_waterfront",
+        "coordinate": {
+          "lat": -33.9058165,
+          "lng": 18.4211858
+        },
+        "anchor_places": [
+          "Life Grand Cafe Waterfront",
+          "The Waterside",
+          "Den Anker",
+          "Cape Town Cruises"
+        ]
+      },
+      "grounding_constraints": [
+        "Use the single final task image as the visual evidence available to the tested agent.",
+        "Use the textual clues to guide map search around the V&A Waterfront and Pierhead Road area.",
+        "Do not treat MapApp as a visual oracle; the agent should interpret the image itself and then search map candidates.",
+        "Return the exact POI if identifiable, not merely the district, waterfront complex, or a nearby anchor.",
+        "Do not rely on the gold place name being present in the user prompt."
+      ],
+      "evaluation": {
+        "must_mention": [
+          "Life Grand Cafe Waterfront"
+        ],
+        "must_avoid": [
+          "The Waterside as the final answer",
+          "Time Out Market Cape Town as the final answer",
+          "V&A Waterfront as the final answer",
+          "Solandra Pool Deck as the final answer",
+          "Returning only a district or broad waterfront area"
+        ]
+      },
+      "ambiguity_landscape": {
+        "ambiguity_score": 8,
+        "same_type_within_300m": 2,
+        "same_type_within_500m": 4,
+        "same_type_within_1000m": 8,
+        "all_places_within_300m": 11,
+        "all_places_within_500m": 21,
+        "nearest_same_type_m": 6.8955045219407465,
+        "nearest_same_type_name": "The Waterside",
+        "confusable_candidates": [
+          {
+            "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+            "name": "The Waterside",
+            "distance_m": 7,
+            "primary_type": "restaurant",
+            "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+            "similarity_reason": "same_type"
+          },
+          {
+            "place_id": "place_cape_town_south_africa_chijf4pbastnzb0r42rxjnnkhdw",
+            "name": "Time Out Market Cape Town",
+            "distance_m": 209,
+            "primary_type": "restaurant",
+            "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+            "similarity_reason": "same_type"
+          },
+          {
+            "place_id": "place_cape_town_south_africa_chijj1mbugbnzb0ry_ybabqypsk",
+            "name": "V&A Waterfront",
+            "distance_m": 308,
+            "primary_type": "restaurant",
+            "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+            "similarity_reason": "same_type"
+          },
+          {
+            "place_id": "place_cape_town_south_africa_chij_mllnzb0rstlgz8intry",
+            "name": "Solandra Pool Deck",
+            "distance_m": 338,
+            "primary_type": "restaurant",
+            "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+            "similarity_reason": "same_type"
+          }
+        ]
+      },
+      "evidence_ledger": {
+        "image_assets": [
+          {
+            "role": "evaluation",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 0,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 4,
+              "requests_by_profile": {
+                "google_maps_3": 2,
+                "google_maps_4": 2
+              },
+              "api_retries": 2,
+              "api_failures": 1,
+              "api_elapsed_s": 0.484,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 2
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 1
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "prompt_reference",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 90,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 6,
+              "requests_by_profile": {
+                "google_maps_3": 3,
+                "google_maps_4": 3
+              },
+              "api_retries": 3,
+              "api_failures": 2,
+              "api_elapsed_s": 0.625,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 4
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 2
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "candidate",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h180.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 180,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 8,
+              "requests_by_profile": {
+                "google_maps_3": 4,
+                "google_maps_4": 4
+              },
+              "api_retries": 4,
+              "api_failures": 3,
+              "api_elapsed_s": 0.765,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 6
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 3
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "candidate",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h270.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 270,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 10,
+              "requests_by_profile": {
+                "google_maps_3": 5,
+                "google_maps_4": 5
+              },
+              "api_retries": 5,
+              "api_failures": 4,
+              "api_elapsed_s": 0.89,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 8
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 4
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          }
+        ],
+        "place_evidence": {
+          "place_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+          "name": "Life Grand Cafe Waterfront",
+          "address": "2 Pierhead Road, V&A Waterfront, Cape Town, 2001, South Africa",
+          "primary_type": "restaurant",
+          "types": [
+            "restaurant",
+            "sushi_restaurant",
+            "japanese_restaurant",
+            "cafe",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ],
+          "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+          "city_id": "cape_town_south_africa",
+          "location": {
+            "lat": -33.9058165,
+            "lng": 18.4211858
+          },
+          "nearby_anchors": [
+            {
+              "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+              "name": "The Waterside",
+              "type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Pierhead Building (next to the NSRI, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+              "distance_m": 7
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijuc8xn61nzb0rbcfwjsawupy",
+              "name": "Den Anker",
+              "type": "belgian_restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+              "distance_m": 30
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijvzxnn9oz2k4rjrdi47a9n8g",
+              "name": "Cape Town Cruises",
+              "type": "tour_agency",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Shop 8, Quay 5, Victoria & Alfred Waterfront, Cape Town, 8002, South Africa",
+              "distance_m": 46
+            }
+          ],
+          "confusable_names": [
+            "The Waterside",
+            "Time Out Market Cape Town",
+            "V&A Waterfront",
+            "Solandra Pool Deck"
+          ],
+          "allowed_for_prompt": [
+            "address",
+            "primary_type",
+            "types",
+            "district_id",
+            "nearby_anchors",
+            "confusable_names"
+          ]
+        },
+        "ambiguity_landscape": {
+          "ambiguity_score": 8,
+          "same_type_within_300m": 2,
+          "same_type_within_500m": 4,
+          "same_type_within_1000m": 8,
+          "all_places_within_300m": 11,
+          "all_places_within_500m": 21,
+          "nearest_same_type_m": 6.8955045219407465,
+          "nearest_same_type_name": "The Waterside",
+          "confusable_candidates": [
+            {
+              "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+              "name": "The Waterside",
+              "distance_m": 7,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijf4pbastnzb0r42rxjnnkhdw",
+              "name": "Time Out Market Cape Town",
+              "distance_m": 209,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijj1mbugbnzb0ry_ybabqypsk",
+              "name": "V&A Waterfront",
+              "distance_m": 308,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chij_mllnzb0rstlgz8intry",
+              "name": "Solandra Pool Deck",
+              "distance_m": 338,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            }
+          ]
+        },
+        "generation_notes": [
+          "This draft is generated from Bench map fields and Google Street View evidence when available.",
+          "Prompt-writing reference images must be distinct from the final evaluation image bound to image_path.",
+          "StreetView recency, viewpoint quality, occlusion, and target consistency require manual approval."
+        ]
+      },
+      "source_evidence": {
+        "image_assets": [
+          {
+            "role": "evaluation",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 0,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 4,
+              "requests_by_profile": {
+                "google_maps_3": 2,
+                "google_maps_4": 2
+              },
+              "api_retries": 2,
+              "api_failures": 1,
+              "api_elapsed_s": 0.484,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 2
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 1
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "prompt_reference",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 90,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 6,
+              "requests_by_profile": {
+                "google_maps_3": 3,
+                "google_maps_4": 3
+              },
+              "api_retries": 3,
+              "api_failures": 2,
+              "api_elapsed_s": 0.625,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 4
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 2
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "candidate",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h180.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 180,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 8,
+              "requests_by_profile": {
+                "google_maps_3": 4,
+                "google_maps_4": 4
+              },
+              "api_retries": 4,
+              "api_failures": 3,
+              "api_elapsed_s": 0.765,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 6
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 3
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          },
+          {
+            "role": "candidate",
+            "path": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h270.jpg",
+            "source": "google_streetview_static",
+            "capture_date": "2018-06",
+            "viewpoint": {
+              "heading": 270,
+              "fov": 80,
+              "pitch": 0,
+              "size": "640x640",
+              "radius_m": 60,
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "pano_location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              }
+            },
+            "gold_coordinate": {
+              "lat": -33.9058165,
+              "lng": 18.4211858
+            },
+            "quality": "candidate",
+            "error": "",
+            "metadata": {
+              "copyright": "© My Panoramic",
+              "date": "2018-06",
+              "location": {
+                "lat": -33.90583727042189,
+                "lng": 18.42118919461575
+              },
+              "pano_id": "CAoSFkNJSE0wb2dLRUlDQWdJQzQ5OG5lTWc.",
+              "status": "OK"
+            },
+            "google_request_telemetry": {
+              "service": "google_maps",
+              "start_profile": "google_maps_3",
+              "configured_profile_order": [
+                "google_maps_3",
+                "google_maps_4",
+                "google_maps",
+                "google_maps_2"
+              ],
+              "requests_total": 10,
+              "requests_by_profile": {
+                "google_maps_3": 5,
+                "google_maps_4": 5
+              },
+              "api_retries": 5,
+              "api_failures": 4,
+              "api_elapsed_s": 0.89,
+              "requests_by_endpoint": {
+                "metadata": 2,
+                "streetview_image": 8
+              },
+              "failures_by_endpoint": {
+                "streetview_image": 4
+              },
+              "cost_status": "pricing_not_configured",
+              "money_estimate": null
+            }
+          }
+        ],
+        "place_evidence": {
+          "place_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+          "name": "Life Grand Cafe Waterfront",
+          "address": "2 Pierhead Road, V&A Waterfront, Cape Town, 2001, South Africa",
+          "primary_type": "restaurant",
+          "types": [
+            "restaurant",
+            "sushi_restaurant",
+            "japanese_restaurant",
+            "cafe",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ],
+          "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+          "city_id": "cape_town_south_africa",
+          "location": {
+            "lat": -33.9058165,
+            "lng": 18.4211858
+          },
+          "nearby_anchors": [
+            {
+              "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+              "name": "The Waterside",
+              "type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Pierhead Building (next to the NSRI, Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+              "distance_m": 7
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijuc8xn61nzb0rbcfwjsawupy",
+              "name": "Den Anker",
+              "type": "belgian_restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Victoria & Alfred Waterfront, Cape Town, 8001, South Africa",
+              "distance_m": 30
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijvzxnn9oz2k4rjrdi47a9n8g",
+              "name": "Cape Town Cruises",
+              "type": "tour_agency",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "address": "Shop 8, Quay 5, Victoria & Alfred Waterfront, Cape Town, 8002, South Africa",
+              "distance_m": 46
+            }
+          ],
+          "confusable_names": [
+            "The Waterside",
+            "Time Out Market Cape Town",
+            "V&A Waterfront",
+            "Solandra Pool Deck"
+          ],
+          "allowed_for_prompt": [
+            "address",
+            "primary_type",
+            "types",
+            "district_id",
+            "nearby_anchors",
+            "confusable_names"
+          ]
+        },
+        "ambiguity_landscape": {
+          "ambiguity_score": 8,
+          "same_type_within_300m": 2,
+          "same_type_within_500m": 4,
+          "same_type_within_1000m": 8,
+          "all_places_within_300m": 11,
+          "all_places_within_500m": 21,
+          "nearest_same_type_m": 6.8955045219407465,
+          "nearest_same_type_name": "The Waterside",
+          "confusable_candidates": [
+            {
+              "place_id": "place_cape_town_south_africa_chijxssxaplnzb0rsbcuew07viw",
+              "name": "The Waterside",
+              "distance_m": 7,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijf4pbastnzb0r42rxjnnkhdw",
+              "name": "Time Out Market Cape Town",
+              "distance_m": 209,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chijj1mbugbnzb0ry_ybabqypsk",
+              "name": "V&A Waterfront",
+              "distance_m": 308,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            },
+            {
+              "place_id": "place_cape_town_south_africa_chij_mllnzb0rstlgz8intry",
+              "name": "Solandra Pool Deck",
+              "distance_m": 338,
+              "primary_type": "restaurant",
+              "district_id": "district_cape_town_south_africa_victoria_alfred_waterfront",
+              "similarity_reason": "same_type"
+            }
+          ]
+        },
+        "generation_notes": [
+          "This draft is generated from Bench map fields and Google Street View evidence when available.",
+          "Prompt-writing reference images must be distinct from the final evaluation image bound to image_path.",
+          "StreetView recency, viewpoint quality, occlusion, and target consistency require manual approval."
+        ]
+      },
+      "prompt_evidence_map": {
+        "inside a place at the V&A Waterfront in Cape Town": [
+          "place_evidence.address",
+          "place_evidence.district_id"
+        ],
+        "exact restaurant or cafe": [
+          "place_evidence.primary_type",
+          "place_evidence.types"
+        ],
+        "old Pierhead Road building": [
+          "place_evidence.address",
+          "image_assets[0]",
+          "image_assets[1]",
+          "image_assets[2]",
+          "image_assets[3]"
+        ],
+        "upstairs lounge or stairwell": [
+          "image_assets[0]",
+          "image_assets[1]"
+        ],
+        "not a food-market hall": [
+          "place_evidence.confusable_names",
+          "ambiguity_landscape.confusable_candidates"
+        ],
+        "very close to The Waterside": [
+          "place_evidence.nearby_anchors[0]"
+        ],
+        "very close to Den Anker": [
+          "place_evidence.nearby_anchors[1]"
+        ],
+        "cruise/tour boats around Quay 5 nearby": [
+          "place_evidence.nearby_anchors[2]"
+        ],
+        "hard to distinguish from nearby restaurants": [
+          "ambiguity_landscape.same_type_within_300m",
+          "ambiguity_landscape.same_type_within_500m",
+          "ambiguity_landscape.nearest_same_type_m"
+        ]
+      },
+      "quality_profile": {
+        "ambiguity_score": 8,
+        "complexity_score": 10,
+        "display_difficulty": "hard",
+        "place_ambiguity": {
+          "level": "hard",
+          "score": 8,
+          "factors": {
+            "same_type_within_300m": 2,
+            "same_type_within_500m": 4,
+            "same_type_within_1000m": 8,
+            "all_places_within_500m": 21,
+            "nearest_same_type_m": 6.8955045219407465,
+            "confusable_candidate_count": 4
+          }
+        },
+        "rubric_version": "place_grounding.quality.v1",
+        "difficulty": "hard",
+        "info_count": 15,
+        "attribute_coverage": [
+          "address_hint",
+          "appearance",
+          "district",
+          "nearby_anchor",
+          "negative_constraint",
+          "place_type"
+        ],
+        "confusable_candidate_count": 4,
+        "task_complexity_post": {
+          "level": "high",
+          "score": 10,
+          "stage": "post",
+          "mapped_evidence_count": 19,
+          "attribute_coverage": [
+            "address_hint",
+            "appearance",
+            "district",
+            "nearby_anchor",
+            "negative_constraint",
+            "place_type"
+          ]
+        }
+      },
+      "difficulty_profile": {
+        "ambiguity_score": 8,
+        "complexity_score": 10,
+        "display_difficulty": "hard",
+        "place_ambiguity": {
+          "level": "hard",
+          "score": 8,
+          "factors": {
+            "same_type_within_300m": 2,
+            "same_type_within_500m": 4,
+            "same_type_within_1000m": 8,
+            "all_places_within_500m": 21,
+            "nearest_same_type_m": 6.8955045219407465,
+            "confusable_candidate_count": 4
+          }
+        },
+        "rubric_version": "place_grounding.quality.v1",
+        "difficulty": "hard",
+        "info_count": 15,
+        "attribute_coverage": [
+          "address_hint",
+          "appearance",
+          "district",
+          "nearby_anchor",
+          "negative_constraint",
+          "place_type"
+        ],
+        "confusable_candidate_count": 4,
+        "task_complexity_post": {
+          "level": "high",
+          "score": 10,
+          "stage": "post",
+          "mapped_evidence_count": 19,
+          "attribute_coverage": [
+            "address_hint",
+            "appearance",
+            "district",
+            "nearby_anchor",
+            "negative_constraint",
+            "place_type"
+          ]
+        }
+      },
+      "prompt_generation": {
+        "type": "llm",
+        "stage": "local_grounding_test",
+        "endpoint": "local_grounding_test",
+        "model": "gpt-5.5"
+      },
+      "review_status": "draft",
+      "batch_metadata": {
+        "generated_at": "2026-10-13T07:32:33.210002+00:00",
+        "generator": "place_grounding.batch_generation",
+        "gold_source": "world.place",
+        "ambiguity_score": 8,
+        "complexity_score": 10
+      },
+      "judge_sequence_override": {
+        "schema_version": "curated.judge.v1",
+        "completion_policy": "key_nodes",
+        "stages": [
+          {
+            "stage_id": "retrieve_near_anchor_candidates",
+            "description": "根据图文线索使用地图字段检索候选：category、area_hint、address_hint、near",
+            "depends_on": [],
+            "nodes": [
+              {
+                "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_search",
+                "category": "information_lookup",
+                "agent_action": "MapApp.search_grounding_candidates",
+                "arg_slots": {
+                  "keyword": "Life Grand Cafe Waterfront",
+                  "city_id": "cape_town_south_africa",
+                  "limit": 8,
+                  "category": "restaurant",
+                  "area_hint": "V&A Waterfront, Cape Town",
+                  "address_hint": "Pierhead Road",
+                  "near": "The Waterside",
+                  "near_radius_m": 1200
+                },
+                "description_zh": "模型应先把图文线索转化为地图字段检索；该节点用于诊断候选召回质量。",
+                "label_zh": "检索定位候选",
+                "role": "search",
+                "verdict_target": "candidate_retrieval",
+                "is_key": false,
+                "depends_on": [],
+                "hard_checks": [],
+                "soft_checks": [
+                  {
+                    "check_type": "action_executed",
+                    "field": "",
+                    "expected": null,
+                    "tolerance": null,
+                    "weight": "soft"
+                  },
+                  {
+                    "check_type": "field_not_empty",
+                    "field": "response.candidates",
+                    "expected": null,
+                    "tolerance": null,
+                    "weight": "soft"
+                  },
+                  {
+                    "check_type": "field_contains",
+                    "field": "response.candidates[].name",
+                    "expected": "Life Grand Cafe Waterfront",
+                    "tolerance": null,
+                    "weight": "soft"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "stage_id": "select_grounded_location",
+            "description": "提交最终 grounding 候选：Life Grand Cafe Waterfront",
+            "depends_on": [
+              "retrieve_near_anchor_candidates"
+            ],
+            "nodes": [
+              {
+                "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_select",
+                "category": "information_lookup",
+                "agent_action": "MapApp.select_grounded_location",
+                "arg_slots": {
+                  "candidate_id": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+                  "rationale": "<grounding_rationale>"
+                },
+                "description_zh": "exact_poi 任务以 candidate_id 命中为主判定，坐标距离仅作诊断。",
+                "label_zh": "选择定位结果",
+                "role": "locate",
+                "verdict_target": "final_grounded_location",
+                "is_key": true,
+                "depends_on": [],
+                "hard_checks": [
+                  {
+                    "check_type": "action_executed",
+                    "field": "",
+                    "expected": null,
+                    "tolerance": null,
+                    "weight": "hard"
+                  },
+                  {
+                    "check_type": "field_equals",
+                    "field": "args.candidate_id",
+                    "expected": "place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy",
+                    "tolerance": null,
+                    "weight": "hard"
+                  }
+                ],
+                "soft_checks": []
+              }
+            ]
+          },
+          {
+            "stage_id": "return_grounding_result",
+            "description": "将定位结果、关键线索和不确定性返回给用户",
+            "depends_on": [
+              "select_grounded_location"
+            ],
+            "nodes": [
+              {
+                "node_id": "jcp_pg_batch_cape_town_south_africa_0001_LifeGrandCafeWaterfront_respond",
+                "category": "communication",
+                "agent_action": "UserInterfaceApp.send_message_to_user",
+                "arg_slots": {
+                  "content": "<grounding_result:Life Grand Cafe Waterfront>"
+                },
+                "description_zh": "模型需要把工具层定位结果转化为用户可见回答。",
+                "label_zh": "最终用户回复",
+                "role": "respond",
+                "verdict_target": "final_user_response",
+                "is_key": true,
+                "depends_on": [],
+                "hard_checks": [
+                  {
+                    "check_type": "action_executed",
+                    "field": "",
+                    "expected": null,
+                    "tolerance": null,
+                    "weight": "hard"
+                  },
+                  {
+                    "check_type": "field_contains",
+                    "field": "args.content",
+                    "expected": "Life Grand Cafe Waterfront",
+                    "tolerance": null,
+                    "weight": "hard"
+                  }
+                ],
+                "soft_checks": [
+                  {
+                    "check_type": "field_contains",
+                    "field": "args.content",
+                    "expected": "Life Grand Cafe Waterfront",
+                    "tolerance": null,
+                    "weight": "soft"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "batch_schema",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          },
+          {
+            "name": "image_exists",
+            "passed": true,
+            "severity": "hard",
+            "message": "assets/streetview/place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg"
+          },
+          {
+            "name": "google_streetview_source",
+            "passed": true,
+            "severity": "hard",
+            "message": "4/4 valid Google Street View assets"
+          },
+          {
+            "name": "prompt_reference_image_separation",
+            "passed": true,
+            "severity": "hard",
+            "message": "evaluation=.tmp_grounding_english\\positive_clues_20261013\\batch_assets\\streetview\\place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy\\place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h0.jpg; prompt_reference=.tmp_grounding_english\\positive_clues_20261013\\batch_assets\\streetview\\place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy\\place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy_h90.jpg"
+          },
+          {
+            "name": "streetview_gold_distance",
+            "passed": true,
+            "severity": "hard",
+            "message": "nearest pano distance=2m"
+          },
+          {
+            "name": "prompt_gold_name_leakage",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          },
+          {
+            "name": "llm_prompt_generation",
+            "passed": true,
+            "severity": "soft",
+            "message": "type=llm, stage=local_grounding_test, endpoint=local_grounding_test, model=gpt-5.5"
+          },
+          {
+            "name": "prompt_style_and_evidence",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          },
+          {
+            "name": "quality_profile_valid",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          },
+          {
+            "name": "ambiguity_range_valid",
+            "passed": true,
+            "severity": "hard",
+            "message": "ambiguity_score=8"
+          },
+          {
+            "name": "prompt_evidence_coverage",
+            "passed": true,
+            "severity": "hard",
+            "message": "19 mapped evidence references"
+          },
+          {
+            "name": "confusable_candidates_ok",
+            "passed": true,
+            "severity": "soft",
+            "message": "4 confusable candidates"
+          },
+          {
+            "name": "judge_flow_required_actions",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          },
+          {
+            "name": "mapapp_gold_recall",
+            "passed": true,
+            "severity": "soft",
+            "message": "target=place_cape_town_south_africa_chij7fklg1pnzb0r7htnav9biuy; recalled=True"
+          },
+          {
+            "name": "mapapp_named_anchor_recall",
+            "passed": true,
+            "severity": "hard",
+            "message": "ok"
+          }
+        ],
+        "hard_failed": [],
+        "soft_failed": []
+      },
+      "_seed_lineage": {
+        "task_index": 1,
+        "attempt_index": 1
+      },
+      "_cost_generation_unit_id": "slot_0001"
+    }
+  ]
+}

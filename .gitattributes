@@ -1,0 +1,6 @@
+# Keep frozen records byte-identical so provenance hashes survive Git checkout.
+* text=auto eol=lf
+*.json -text
+*.jsonl -text
+examples/** -text
+data/** -text

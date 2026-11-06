@@ -1,0 +1,12 @@
+{
+  "world_id": "world_002",
+  "task_type": "itinerary",
+  "generated_at": "2026-09-17T10:51:34.498211+00:00",
+  "sample_excerpt": true,
+  "tasks": [
+    {
+      "task_id": "task_tokyo_complex_itinerary_0005",
+      "folder": "task_0001"
+    }
+  ]
+}

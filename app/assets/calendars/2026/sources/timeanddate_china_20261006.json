@@ -1,0 +1,529 @@
+{
+  "url": "https://www.timeanddate.com/holidays/china/2026",
+  "retrieved_date": "2026-10-06",
+  "retrieval_method": "web tool rendered table; not original HTTP body",
+  "rows": [
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 100,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "New Year’s Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 101,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-01-03",
+      "name": "New Year’s Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 102,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-01-04",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 103,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-02-14",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 104,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-02-15",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 105,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Spring Festival Eve",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 106,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Chinese New Year",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 107,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-02-18",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 108,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-19",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 109,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-20",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 110,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-21",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 111,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-22",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 112,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-23",
+      "name": "Spring Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 113,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-02-28",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 114,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "Lantern Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 115,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-08",
+      "name": "International Women's Day",
+      "source_type": "Half Day Holiday",
+      "source_details": "",
+      "source_line": 116,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-12",
+      "name": "Arbor Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 117,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Zhonghe Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 118,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "March Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 119,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Qing Ming Jie Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 120,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Qing Ming Jie",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 121,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Qing Ming Jie Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 122,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Labour Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 123,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Labour Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 124,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Labour Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 125,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Labour Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 126,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Youth Day",
+      "source_type": "Half Day Holiday",
+      "source_details": "",
+      "source_line": 127,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Labour Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 128,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 129,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Children's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 130,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Dragon Boat Festival",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 131,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Dragon Boat Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 132,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Dragon Boat Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 133,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "June Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 134,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-07-01",
+      "name": "CPC Founding Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 135,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-07-11",
+      "name": "Maritime Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 136,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Army Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 137,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Chinese Valentine's Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 138,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Spirit Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 139,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Teachers' Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 140,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-20",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 141,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "September Equinox",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 142,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Mid-Autumn Festival",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 143,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Mid-Autumn Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 144,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-09-27",
+      "name": "Mid-Autumn Festival Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 145,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "National Day",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 146,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "National Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 147,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-03",
+      "name": "National Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 148,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "National Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 149,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "National Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 150,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "National Day Golden Week holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 151,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-07",
+      "name": "National Day Holiday",
+      "source_type": "National Holiday",
+      "source_details": "",
+      "source_line": 152,
+      "decision": "excluded",
+      "reason": "holiday_extension_or_substitute_not_festival_date"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "Special Working Day",
+      "source_type": "Working Day on a Weekend",
+      "source_details": "",
+      "source_line": 153,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-10-18",
+      "name": "Double Ninth Festival",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 154,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Journalists' Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 155,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    },
+    {
+      "date": "2026-12-22",
+      "name": "December Solstice",
+      "source_type": "Season",
+      "source_details": "",
+      "source_line": 156,
+      "decision": "excluded",
+      "reason": "not_festival_category"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "source_type": "Observance",
+      "source_details": "",
+      "source_line": 157,
+      "decision": "included",
+      "reason": "confirmed_festival_or_observance_category"
+    }
+  ]
+}

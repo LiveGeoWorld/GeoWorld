@@ -1,0 +1,436 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/app-content/catalog",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/app-content/event-overview",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/app-content/map-query",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/app-content/preview",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/app-content/query",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/app-content/static-events",
+    "feature": "app",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/asset",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/batches",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/cached_places",
+    "feature": "map",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/cities",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/config",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/dynamic/confirm",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/dynamic/cost-actual",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/dynamic/overview",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/dynamic/sources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/evidence/update",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/generate",
+    "feature": "generation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/generate/cancel",
+    "feature": "generation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/generate/status",
+    "feature": "generation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/itinerary/cost-preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/itinerary/route-resources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/kb",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/kb/approve",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/kb/cities",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/kb/reject",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/kb/update",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/manifest",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/multi-entity/cost-preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/multi-entity/route-resources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/region/build/cancel",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/build/config",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/region/build/start",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/build/status",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/region/cost-preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/route-resources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/rule-cities",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/rules",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/region/rules/update",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/service-detail/preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/region/service-detail/start",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/region/service-detail/status",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "POST",
+    "path": "/api/route-planning/cost-preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/route-planning/resources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/route_cache",
+    "feature": "map",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/routes",
+    "feature": "map",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/run",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/run",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/run/start",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/run/status",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/run/task",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/runs",
+    "feature": "evaluation",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/safety/cost-preflight",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/safety/route-resources",
+    "feature": "generation",
+    "status": "not_connected",
+    "status_label": "Pending migration and integration"
+  },
+  {
+    "method": "GET",
+    "path": "/api/task",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/task/files",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/task/judge",
+    "feature": "review",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/task/review",
+    "feature": "review",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/task/save",
+    "feature": "review",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "POST",
+    "path": "/api/task/source",
+    "feature": "review",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/task_types",
+    "feature": "browse",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/world/full",
+    "feature": "map",
+    "status": "connected",
+    "status_label": "Connected"
+  },
+  {
+    "method": "GET",
+    "path": "/api/world/points",
+    "feature": "map",
+    "status": "connected",
+    "status_label": "Connected"
+  }
+]
