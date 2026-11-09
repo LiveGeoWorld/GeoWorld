@@ -34,7 +34,9 @@
     const previous = originals.get(node);
     const source = previous && node.nodeValue === previous.shown ? previous.source : node.nodeValue;
     const trimmed = source.trim();
-    const shown = source.replace(trimmed, t(trimmed));
+    const english = node.parentElement?.getAttribute('data-ui-en-text');
+    const shown = source.replace(trimmed, () => language === 'en' && english != null
+      ? english : t(trimmed));
     originals.set(node, {source, shown});
     if (shown !== node.nodeValue) node.nodeValue = shown;
   }

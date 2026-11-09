@@ -33,6 +33,82 @@ def _get_route_cache(cache_path: Path) -> dict:
     _route_cache_stamps[key] = revision
     return cached
 
+
+
+def inject_bound_route_evidence(task_dir: Path, sandbox: dict) -> None:
+    """Resolve the review evidence from the same managed route cache as evaluation."""
+    provenance = task_dir / 'task_provenance.json'
+    batch_provenance = task_dir.parent.parent / 'world_provenance.json'
+    record = read_json(provenance) if provenance.is_file() else (
+        read_json(batch_provenance) if batch_provenance.is_file() else {}
+    )
+    context = record.get('generation_context') or record
+    world = record.get('world_id') or context.get('world_id')
+    city = record.get('city_id') or context.get('city_id')
+    version = context.get('city_version') or (record.get('required_city_versions') or {}).get(city)
+    if world and city and version:
+        _inject_gt_routes(sandbox, resolve_world_route_cache(world, city, version))
+
+
+def _inject_gt_routes(sb: dict, route_cache: Path | None) -> None:
+    """Inject gt_route/gt_segments from route_cache (like per-type route_planning vis_server)."""
+    if not route_cache or not route_cache.exists():
+        return
+    cached = _get_route_cache(route_cache)
+    routes = cached["routes"]
+
+    def _enrich(r):
+        # Resolve only within this bound cache; keep the referring identity.
+        r = dict(r)
+        source = r
+        seen = {r.get("route_id")}
+        while not source.get("route") and source.get("route_ref"):
+            ref = source["route_ref"]
+            if ref in seen or ref not in routes:
+                break
+            seen.add(ref)
+            source = routes[ref]
+        if source.get("route") and not r.get("route"):
+            r["route"] = source["route"]
+        if r.get("polyline_encodings"): return r
+        encodings = []
+        route_data = (r.get("route", {}) or {})
+        steps = route_data.get("steps", []) or []
+        for step in steps:
+            enc = (step.get("polyline", {}) or {}).get("encodedPolyline", "")
+            if enc: encodings.append(enc)
+        if encodings:
+            r["polyline_encodings"] = encodings
+            r.setdefault("distance_km", (route_data.get("distance_m", 0) or 0) / 1000)
+            r.setdefault("duration_min", (route_data.get("duration_s", 0) or 0) / 60)
+        return r
+
+    rid = sb.get("correct_route_id", "")
+    if rid and rid in routes:
+        sb["gt_route"] = _enrich(routes[rid])
+    leg_ids = sb.get("correct_leg_route_ids", []) or []
+    segments = []
+    if leg_ids:
+        for lid in leg_ids:
+            if lid and lid in routes:
+                segments.append(_enrich(routes[lid]))
+        if segments:
+            sb["gt_segments"] = segments
+    # Supplement all_routes_in_task
+    all_routes = [_enrich(routes.get(r.get("route_id"), r)) for r in (sb.get("all_routes_in_task", []) or [])]
+    existing_ids = {r.get("route_id", "") for r in all_routes}
+    core_place_ids = {p.get("place_id") for p in (sb.get("core_places", []) or [])}
+    for rid, r in routes.items():
+        if rid in existing_ids:
+            continue
+        if r.get("origin_place_id") in core_place_ids or r.get("dest_place_id") in core_place_ids:
+            all_routes.append(_enrich({**r, "route_id": rid}))
+            existing_ids.add(rid)
+    if all_routes:
+        sb["all_routes_in_task"] = all_routes
+
+
+
 def _is_relative_to(path: Path, parent: Path) -> bool:
     try:
         path.relative_to(parent)
@@ -354,6 +430,11 @@ class WorkbenchHTTP(AppHTTP):
         gold_path = base_dir / ('grounding_gold.json' if task_type == 'place_grounding' else 'discovery_gold.json')
         if gold_path.exists() and isinstance(example.get('gold'), dict):
             gold_payload = {'example_id': example.get('example_id', ''), 'task_type': task_type, 'service_type': example.get('service_type', ''), 'start': example.get('start', {}), 'gold': example.get('gold', {}), 'evaluation': example.get('evaluation', {}), 'ranking_criteria': example.get('ranking_criteria', []), 'distractors': example.get('distractors', [])}
+            existing_gold = read_json(gold_path)
+            if "ambiguity_landscape" in example:
+                gold_payload["ambiguity_landscape"] = example["ambiguity_landscape"]
+            elif "ambiguity_landscape" in existing_gold:
+                gold_payload["ambiguity_landscape"] = existing_gold["ambiguity_landscape"]
             gold_path.write_text(json.dumps(gold_payload, ensure_ascii=False, indent=2), encoding='utf-8')
 
     def _sync_judge_to_source(self, base_dir: Path, payload: dict) -> bool:

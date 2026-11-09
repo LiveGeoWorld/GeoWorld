@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "geoworld-studio"
 version = "0.1.0"
 requires-python = ">=3.10"
-dependencies = ["PyYAML>=6", "requests>=2", "shapely>=2", "geographiclib>=2", "tzdata>=2024.1"]
+dependencies = ["PyYAML>=6", "requests>=2", "shapely>=2", "Pillow>=9", "geographiclib>=2", "tzdata>=2024.1"]
 
 [project.optional-dependencies]
 test = ["pytest>=7"]
@@ -26,3 +26,6 @@ shared = ["web_ui/*"]
 "test_runner.vis" = ["vis_static/*"]
 
 "task_module.task_types.place_grounding.batch_generation" = ["prompts/*.md"]
+
+
+"task_module.task_types.place_discovery.batch_generation" = ["prompts/*.md"]

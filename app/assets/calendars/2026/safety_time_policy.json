@@ -1,0 +1,15 @@
+{
+  "schema_version": "safety_time_policy.v1",
+  "year": 2026,
+  "preferred_days_before": 1,
+  "preferred_days_after": 1,
+  "expansion_step_days": 1,
+  "regional_event_target": 20,
+  "protection_attempts_per_cluster": 2,
+  "activity_start": "10:00",
+  "activity_end": "11:30",
+  "event_start": "08:00",
+  "event_end": "18:00",
+  "anchor_date": null,
+  "city_overrides": {}
+}

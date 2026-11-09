@@ -3,6 +3,29 @@ let discoveryReviewMap = null;
 let discoveryReviewMarkers = [];
 let discoveryPersonMarker = null;
 const discoveryLabel = text => `<span data-ui-text>${esc(text)}</span>`;
+function discoveryConstraintText(c) {
+  const names = {primary_type:'地点类型',district_name:'地区',service_feature:'服务特征',
+    price_maximum:'消费上限',price_target_amount:'消费金额',route_duration_range:'路线时间',
+    walking_distance_range:'步行距离',opens_by:'开门时间不晚于',closes_at_or_after:'关门时间不早于'};
+  const value = ['opens_by','closes_at_or_after'].includes(c.type) ? sfClock(c.value) :
+    c.minimum != null || c.maximum != null ? `${c.minimum ?? '—'} – ${c.maximum ?? '—'}` : String(c.value ?? '—').replaceAll('_',' ');
+  return `${discoveryLabel(names[c.type] || c.type)} · ${esc(value)}${c.type==='route_duration_range'?' min':''}${c.type==='walking_distance_range'?' m':''}${c.mode?' · '+sfMode(c.mode):''}${c.currency?' '+esc(c.currency):''}${c.weekday_index!=null?' · '+discoveryLabel(['星期日','星期一','星期二','星期三','星期四','星期五','星期六'][c.weekday_index]):''}`;
+}
+function renderDiscoveryConstruction(contract) {
+  const option = (contract.options || []).find(o=>o.option_id===contract.selected_option_id);
+  const facts = contract.candidate_facts || [], atoms = new Map((contract.atom_evidence || []).map(a=>[a.constraint_id,a]));
+  const ids = Object.keys(option?.checks?.[facts[0]?.place_id] || {});
+  const accepted = new Set(option?.matching_place_ids || []);
+  return `<section class="ds-conditions"><h3>${discoveryLabel('任务约束')}</h3><p>${discoveryLabel('公开起点')} · ${esc(contract.public_origin?.name || '—')}</p>
+    <ul>${(contract.selected_constraints || []).map(c=>`<li>${discoveryConstraintText(c)}</li>`).join('')}</ul>
+    <h3>${discoveryLabel('完整构造比较池')}</h3><p>${discoveryLabel('以下展示保存的逐条件核验结果，不在浏览时重新计算。')}</p>
+    <div class="ds-table-scroll"><table class="confusable-table"><thead><tr><th>${discoveryLabel('名称')}</th><th>${discoveryLabel('地点类型')}</th>
+    ${ids.map(id=>`<th>${discoveryConstraintText(atoms.get(id)?.constraint || {})}</th>`).join('')}<th>${discoveryLabel('最终结果')}</th></tr></thead><tbody>
+    ${facts.map(p=>`<tr><td>${accepted.has(p.place_id)?'GT · ':''}${esc(p.name)}</td><td>${esc((p.primary_type || '').replaceAll('_',' '))}</td>
+      ${ids.map(id=>`<td>${option.checks[p.place_id]?.[id]===true?'✓':option.checks[p.place_id]?.[id]===false?'✗':'—'}</td>`).join('')}
+      <td>${discoveryLabel(accepted.has(p.place_id)?'满足全部条件':'不满足')}</td></tr>`).join('')}</tbody></table></div>
+    <details class="gr-details"><summary>${discoveryLabel('路线事实')}</summary>${sfRaw(contract.route_evidence || [])}</details></section>`;
+}
 function discoveryReviewData(data) {
   const ex = data.curated_source?.example || {}, saved = data.discovery_gold || {};
   const gold = saved.gold || ex.gold || {}, start = saved.start || ex.start || {};

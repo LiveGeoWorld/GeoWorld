@@ -1,0 +1,10 @@
+{
+  "schema_version": "safety_time_policy.v2",
+  "year": 2026,
+  "preferred_days_before": 1,
+  "preferred_days_after": 1,
+  "expansion_step_days": 1,
+  "protection_attempts_per_cluster": 3,
+  "anchor_date": null,
+  "city_overrides": {}
+}

@@ -6,9 +6,13 @@ from typing import Any
 import unicodedata
 from difflib import SequenceMatcher
 from shared.io import read_json
+from shared.map_place_index import map_index_places
 from shared.public_place_facts import public_place_facts
 from app.apps.base import BaseApp
 'Public MapApp sandbox backed by a frozen city map snapshot and route cache.\n\nMapApp is the authority for POI discovery and immutable map facts. Its public\nidentity is a name plus coordinates; storage IDs remain inside the sandbox.\nDynamic service state belongs to its owning non-map application.\n'
+from shared.person_route_identity import person_route_ids, route_endpoint_matches
+from shared.route_coordinate_keys import build_coordinate_key, frozen_coordinate_index
+
 
 class MapAppSandbox(BaseApp):
     """Expose frozen MapApp facts without exposing world storage identifiers."""
@@ -20,10 +24,12 @@ class MapAppSandbox(BaseApp):
 
     def __init__(self, route_cache_path: str='', world_paths: list[str] | None=None, route_cache_data: dict[str, Any] | None=None, *, route_cache_paths: list[str] | None=None, prefer_inline_routes: bool=False):
         super().__init__()
+        self._anchor_ids_by_name: dict[str, list[str]] = {}
         self._places: dict[str, dict[str, Any]] = {}
         self._frozen_districts: list[dict[str, Any]] = []
         self._frozen_routes: dict[str, dict[str, Any]] = {}
         self._route_index: dict[tuple[str, str], list[dict[str, Any]]] = {}
+        self._coordinate_routes = None
         for path in world_paths or []:
             if path and Path(path).is_file():
                 self._load_world(path)
@@ -37,8 +43,9 @@ class MapAppSandbox(BaseApp):
             self._load_cache_data(route_cache_data)
 
     def _remove_overridden_routes(self, data: dict[str, Any]) -> None:
+        self._coordinate_routes = None
         for row in data.get('cache', []):
-            pair = (row['origin_place_id'], row['dest_place_id'])
+            pair = self._route_pair(row)
             if pair in self._route_index:
                 self._route_index[pair] = [route for route in self._route_index[pair] if route['mode'] != row['mode']]
 
@@ -47,7 +54,7 @@ class MapAppSandbox(BaseApp):
         self._frozen_districts.extend(data.get('districts') or [])
         districts = {str(raw.get('district_id') or ''): str(raw.get('name') or '') for raw in data.get('districts', []) if isinstance(raw, dict)}
         cities = {str(raw.get('city_id') or ''): str(raw.get('name') or '') for raw in data.get('cities', []) if isinstance(raw, dict)}
-        for raw in data.get('places', []):
+        for raw in map_index_places(data):
             if not isinstance(raw, dict):
                 continue
             place_id = str(raw.get('place_id') or '')
@@ -55,6 +62,27 @@ class MapAppSandbox(BaseApp):
             if not place_id or not isinstance(location, dict):
                 continue
             self._places[place_id] = {'name': str(raw.get('name') or ''), 'location': {'lat': location.get('lat'), 'lng': location.get('lng')}, 'address': str(raw.get('address') or ''), 'primary_type': str(raw.get('primary_type') or ''), 'google_types': list((raw.get('map_projection') or {}).get('types') or []), '_district_name': districts.get(str(raw.get('district_id') or ''), ''), '_city_name': cities.get(str(raw.get('city_id') or ''), ''), '_city_id': str(raw.get('city_id') or ''), '_aliases': self._saved_aliases(raw), '_public_details': public_place_facts(raw, district_name=districts.get(str(raw.get('district_id') or ''), ''), city_name=cities.get(str(raw.get('city_id') or ''), ''))}
+            if place_id.startswith("district_anchor:"):
+                name = self._places[place_id]["name"].casefold().strip()
+                anchor_ids = self._anchor_ids_by_name.setdefault(name, [])
+                if place_id not in anchor_ids:
+                    anchor_ids.append(place_id)
+
+    def _route_pair(self, entry: dict[str, Any]) -> tuple[str, str]:
+        endpoints = []
+        for side in ("origin", "dest"):
+            place_id = str(entry.get(f"{side}_place_id") or "")
+            if place_id and place_id not in self._places:
+                name = str(entry.get(f"{side}_name") or "").casefold().strip()
+                location = {"lat": entry.get(f"{side}_lat"), "lng": entry.get(f"{side}_lng")}
+                matches = [
+                    anchor_id for anchor_id in self._anchor_ids_by_name.get(name, [])
+                    if self._same_location(location, self._places[anchor_id]["location"])
+                ]
+                if len(matches) == 1:
+                    place_id = matches[0]
+            endpoints.append(place_id)
+        return endpoints[0], endpoints[1]
 
     @staticmethod
     def _saved_aliases(raw: dict[str, Any]) -> list[str]:
@@ -72,12 +100,12 @@ class MapAppSandbox(BaseApp):
         self._load_cache_data(read_json(path))
 
     def _load_cache_data(self, data: dict[str, Any]) -> None:
+        self._coordinate_routes = None
         entries = [entry for entry in data.get('cache', []) if isinstance(entry, dict)]
         routes_by_id = {str(entry.get('route_id') or ''): entry.get('route') for entry in entries if entry.get('route_id') and isinstance(entry.get('route'), dict)}
         self._frozen_routes.update({str(row['route_id']): {**row, 'route': row.get('route') or routes_by_id.get(str(row.get('route_ref') or '')) or {}} for row in entries if row.get('route_id')})
         for entry in entries:
-            origin_id = str(entry.get('origin_place_id') or '')
-            dest_id = str(entry.get('dest_place_id') or '')
+            origin_id, dest_id = self._route_pair(entry)
             if not origin_id or not dest_id:
                 continue
             self._add_legacy_place(origin_id, entry.get('origin_name'), entry.get('origin_lat'), entry.get('origin_lng'))
@@ -89,6 +117,7 @@ class MapAppSandbox(BaseApp):
                     public_route[field] = route[field]
             if any((field in route for field in ('steps', 'polyline_points', 'encoded_polyline'))):
                 public_route['_navigation'] = {'steps': route.get('steps', []), 'polyline_points': route.get('polyline_points', []), 'encoded_polyline': route.get('encoded_polyline', '')}
+            public_route["_endpoint_record"] = entry
             self._route_index.setdefault((origin_id, dest_id), []).append(public_route)
 
     def _add_legacy_place(self, place_id: str, name: Any, lat: Any, lng: Any) -> None:
@@ -256,7 +285,36 @@ class MapAppSandbox(BaseApp):
         if not normalized or not location:
             return None
         matches = [(place_id, place) for (place_id, place) in self._places.items() if ' '.join(place['name'].casefold().split()) == normalized and self._same_location(location, place.get('location'))]
-        return matches[0] if len(matches) == 1 else None
+        if len(matches) == 1:
+            return matches[0]
+        if len(matches) == 2:
+            ids = person_route_ids(matches[0][0])
+            if ids[0].startswith("char_") and {match[0] for match in matches} == set(ids):
+                bare, prefixed = (dict(matches)[key] for key in ids)
+                record = {f"origin_{axis}": bare["location"].get(axis) for axis in ("lat", "lng")}
+                if route_endpoint_matches(record, "origin", prefixed["location"]):
+                    return matches[0]
+        return None
+
+    def _lookup_public_routes(self, origin, destination):
+        endpoints = (origin, destination)
+        ids = [person_route_ids(key) if key.removeprefix("character:").startswith("char_") else (key,)
+               for key, _ in endpoints]
+        if all(len(options) == 1 for options in ids):
+            return self._route_index.get((origin[0], destination[0]), [])
+        result = []
+        for left in ids[0]:
+            for right in ids[1]:
+                for route in self._route_index.get((left, right), []):
+                    record = route.get("_endpoint_record") or {}
+                    if any(len(options) == 2 and not route_endpoint_matches(
+                            record, side, place["location"], place["name"])
+                           for side, options, (_, place) in zip(("origin", "dest"), ids, endpoints)):
+                        continue
+                    fact = {key: value for key, value in route.items() if key != "_endpoint_record"}
+                    if fact not in result:
+                        result.append(fact)
+        return result
 
     @classmethod
     def _normalize_route_mode(cls, mode: Any) -> str | None:
@@ -277,13 +335,14 @@ class MapAppSandbox(BaseApp):
     def _supported_primary_types(self) -> list[str]:
         return sorted({self._normalize_primary_type(place.get('primary_type', '')) for place in self._places.values() if str(place.get('primary_type') or '').strip()})
 
-    def search_places(self, query: str='', limit: int=10, primary_type: str='', offset: int | None=None) -> dict[str, Any]:
+    def search_places(self, query: str='', limit: int=10, primary_type: str='', offset: int | None=None, place_type: str = "") -> dict[str, Any]:
         """Search the complete frozen map directory, not a task candidate set."""
         try:
             max_results = max(1, min(int(limit), 50))
         except (TypeError, ValueError):
             max_results = 10
         requested_type = self._normalize_primary_type(primary_type)
+        requested_place_type = self._normalize_primary_type(place_type)
         supported_types = self._supported_primary_types()
         if requested_type and requested_type not in supported_types:
             return {'count': 0, 'results': [], 'status': 'unsupported_primary_type', 'feedback': {'message': 'This primary type is not supported by the current frozen map. Choose a supported_primary_types value, or omit primary_type and search by query.', 'requested_primary_type': requested_type, 'supported_primary_types': supported_types}}
@@ -293,6 +352,11 @@ class MapAppSandbox(BaseApp):
             if cities and self._normalize_text(place.get('_city_name')) not in cities:
                 continue
             if requested_type and requested_type != self._normalize_primary_type(place.get('primary_type', '')):
+                continue
+            if requested_place_type and not any(
+                requested_place_type == self._normalize_primary_type(value)
+                for value in place['google_types']
+            ):
                 continue
             scored = self._search_score(place, scoped_query, bool(requested_type))
             full = self._normalize_text(query)
@@ -342,7 +406,20 @@ class MapAppSandbox(BaseApp):
         destination_resolved = self._resolve_identity(destination.get('name', ''), destination.get('location'))
         if not origin_resolved or not destination_resolved:
             return {'count': 0, 'routes': [], 'status': 'place_not_resolved', 'feedback': {'message': 'Copy the exact public name and coordinates from search_places for each unresolved endpoint.', 'unresolved_endpoints': [key for (key, resolved) in (('origin', origin_resolved), ('destination', destination_resolved)) if not resolved]}}
-        routes = self._route_index.get((origin_resolved[0], destination_resolved[0]), [])
+        routes = self._lookup_public_routes(origin_resolved, destination_resolved)
+        requested_modes = ("WALK", "TRANSIT", "DRIVE") if canonical_mode == "ALL" else (canonical_mode,)
+        missing_modes = set(requested_modes) - {route["mode"].upper() for route in routes}
+        if missing_modes:
+            if self._coordinate_routes is None:
+                self._coordinate_routes = frozen_coordinate_index(self._route_index)
+            routes = list(routes)
+            for missing_mode in requested_modes:
+                if missing_mode not in missing_modes:
+                    continue
+                key = build_coordinate_key(origin_resolved[1], destination_resolved[1],
+                                           missing_mode, None, "static_v1")
+                if route := self._coordinate_routes.get(key):
+                    routes.append(route)
         if not routes:
             return {'count': 0, 'routes': [], 'status': 'route_not_in_snapshot', 'feedback': {'message': 'The frozen map has no recorded route for this ordered pair. No transport mode is recorded for this ordered pair; changing mode or repeating this pair will not produce a route. This is not proof of real-world unreachability. Try another destination or connection.'}}
         available_modes = sorted({route.get('mode', '').upper() for route in routes})
@@ -352,7 +429,7 @@ class MapAppSandbox(BaseApp):
             return {'count': 0, 'routes': [], 'status': 'mode_not_in_snapshot', 'feedback': {'message': 'This pair has recorded routes, but none for the requested mode. Use ALL to inspect them if the task permits.', 'recorded_modes': available_modes}}
         public_routes = []
         for route in routes:
-            result = {key: value for (key, value) in route.items() if key != '_navigation'}
+            result = {key: value for (key, value) in route.items() if key not in {'_navigation', '_endpoint_record'}}
             navigation = route.get('_navigation') or {}
             if detail_level in {'steps', 'full'}:
                 result['steps'] = navigation.get('steps', [])
@@ -363,6 +440,10 @@ class MapAppSandbox(BaseApp):
         return {'count': len(public_routes), 'routes': public_routes}
 
     def get_tool_schemas(self) -> list[dict[str, Any]]:
+        place_type_description = (
+            "Optional exact match in the complete google_types list. Case, spaces and "
+            "underscores are normalized. If primary_type is also set, both filters must match."
+        )
         primary_type_description = "Optional strict filter on the place's primary_type only, not its secondary google_types. Case, spaces and underscores are normalized: coffee_shop, Coffee Shop and coffee shop refer to the same type. Omit or leave empty for no type filter. Unsupported values return status=unsupported_primary_type with supported_primary_types; a supported type with no matching query returns status=no_matches. Supported primary types in the current frozen map: " + (', '.join(self._supported_primary_types()) or 'none') + '.'
         identity = {'name': {'type': 'string', 'description': 'Public place name'}, 'location': {'type': 'object', 'description': 'Coordinates returned by MapApp'}}
-        return [{'name': 'search_places', 'description': 'Search real places by name, area/address, and place type, including common Chinese type words. Multiple type keywords match broadly (any type), not all required services. Exact names rank before approximate names; saved aliases and fuzzy name candidates include search_match explaining the match. Copy the returned canonical name and coordinates for subsequent calls. Recognized explicit city names restrict results to that city. Category words filter by any matching category; fuzzy names cannot bypass city or category filters. Explicit primary_type remains a strict filter. No matches return recovery feedback; page_exhausted means the offset is beyond the results.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': {'query': {'type': 'string'}, 'limit': {'type': 'integer'}, 'primary_type': {'type': 'string', 'description': primary_type_description}, 'offset': {'type': 'integer', 'minimum': 0, 'description': 'Optional pagination offset; returns total and offset when supplied.'}}, 'required': ['query']}}, {'name': 'get_place_detail', 'description': 'Read frozen map facts for an identified place: district/city, rating, review count, price_level, price_range (currency/minimum/maximum), regular opening_hours and boolean service_attributes. Null means not recorded, not false or free. Price level is a grade, not a monetary amount; the saved range is not a reservation quote. Live operating state belongs to LocalServiceApp.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': identity, 'required': ['name', 'location']}}, {'name': 'query_routes', 'description': 'Query frozen routes between two MapApp identities. Route mode accepts ALL/any, DRIVE/drive/driving/car, WALK/walk/walking/on foot, and TRANSIT/transit/public transit/bus/train in any case. detail_level is optional and defaults to summary. Choose summary when you only need mode, distance_m, duration_s, available, summary, and walking_distance_m. Choose steps when you need those summary fields plus the steps array; each step contains distance_m, duration_s, startLocation, endLocation, travelMode, instruction, and its encoded step polyline. Choose geometry when you need the summary fields plus polyline_points and encoded_polyline for drawing or geometric inspection. Choose full only when you need both steps and geometry; it returns all of the above and can be large. The tool does not provide departure or arrival schedules.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': {'origin': {'type': 'object', 'properties': identity, 'required': ['name', 'location']}, 'destination': {'type': 'object', 'properties': identity, 'required': ['name', 'location']}, 'mode': {'type': 'string', 'description': 'Route mode; natural-language aliases and any case are accepted.'}, 'detail_level': {'type': 'string', 'enum': ['summary', 'steps', 'geometry', 'full'], 'description': 'Optional response detail, default summary. summary=mode/distance_m/duration_s/available/summary/walking_distance_m; steps=summary plus turn-by-turn steps; geometry=summary plus polyline_points and encoded_polyline; full=steps plus geometry. Choose the least detail needed.'}, 'include_navigation': {'type': 'boolean', 'description': 'Optional. Include detailed navigation steps and geometry when true.'}}, 'required': ['origin', 'destination']}}]
+        return [{'name': 'search_places', 'description': 'Search real places by name, area/address, and place type, including common Chinese type words. Multiple type keywords match broadly (any type), not all required services. Exact names rank before approximate names; saved aliases and fuzzy name candidates include search_match explaining the match. Copy the returned canonical name and coordinates for subsequent calls. Recognized explicit city names restrict results to that city. Category words filter by any matching category; fuzzy names cannot bypass city or category filters. Explicit primary_type remains a strict filter. No matches return recovery feedback; page_exhausted means the offset is beyond the results.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': {'query': {'type': 'string'}, 'limit': {'type': 'integer'}, 'primary_type': {'type': 'string', 'description': primary_type_description}, 'place_type': {'type': 'string', 'description': place_type_description}, 'offset': {'type': 'integer', 'minimum': 0, 'description': 'Optional pagination offset; returns total and offset when supplied.'}}, 'required': ['query']}}, {'name': 'get_place_detail', 'description': 'Read frozen map facts for an identified place: district/city, rating, review count, price_level, price_range (currency/minimum/maximum), regular opening_hours and boolean service_attributes. Null means not recorded, not false or free. Price level is a grade, not a monetary amount; the saved range is not a reservation quote. Live operating state belongs to LocalServiceApp.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': identity, 'required': ['name', 'location']}}, {'name': 'query_routes', 'description': 'Query frozen routes between two MapApp identities. Route mode accepts ALL/any, DRIVE/drive/driving/car, WALK/walk/walking/on foot, and TRANSIT/transit/public transit/bus/train in any case. detail_level is optional and defaults to summary. Choose summary when you only need mode, distance_m, duration_s, available, summary, and walking_distance_m. Choose steps when you need those summary fields plus the steps array; each step contains distance_m, duration_s, startLocation, endLocation, travelMode, instruction, and its encoded step polyline. Choose geometry when you need the summary fields plus polyline_points and encoded_polyline for drawing or geometric inspection. Choose full only when you need both steps and geometry; it returns all of the above and can be large. The tool does not provide departure or arrival schedules.', 'parameters': {'type': 'object', 'additionalProperties': False, 'properties': {'origin': {'type': 'object', 'properties': identity, 'required': ['name', 'location']}, 'destination': {'type': 'object', 'properties': identity, 'required': ['name', 'location']}, 'mode': {'type': 'string', 'description': 'Route mode; natural-language aliases and any case are accepted.'}, 'detail_level': {'type': 'string', 'enum': ['summary', 'steps', 'geometry', 'full'], 'description': 'Optional response detail, default summary. summary=mode/distance_m/duration_s/available/summary/walking_distance_m; steps=summary plus turn-by-turn steps; geometry=summary plus polyline_points and encoded_polyline; full=steps plus geometry. Choose the least detail needed.'}, 'include_navigation': {'type': 'boolean', 'description': 'Optional. Include detailed navigation steps and geometry when true.'}}, 'required': ['origin', 'destination']}}]

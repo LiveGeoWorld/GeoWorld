@@ -14,6 +14,7 @@ runtime apps under ``app/runtime`` (:class:`MapAppRuntime`,
 from __future__ import annotations
 from typing import Any
 from app.runtime import LocalServiceAppRuntime, MapAppRuntime, UserInterfaceAppRuntime
+from shared.map_place_index import map_index_places
 from test_runner.place.session import TaskSession
 
 class AppRuntime:
@@ -23,7 +24,7 @@ class AppRuntime:
         self.session = session
         self.places = session.world.get('places', [])
         self.services = session.world.get('services', [])
-        self.map_app = MapAppRuntime(places=self.places, characters=session.world_slice.get('characters', []), cities=session.world.get('cities', []))
+        self.map_app = MapAppRuntime(places=map_index_places(session.world), characters=session.world_slice.get('characters', []), cities=session.world.get('cities', []))
         self.local_service = LocalServiceAppRuntime(services=self.services, places=self.places, cities=session.world.get('cities', []))
         self.user_interface = UserInterfaceAppRuntime()
 

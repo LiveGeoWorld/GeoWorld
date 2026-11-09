@@ -62,7 +62,7 @@ class TaskGenerator:
         cfg = self.config
 
         unsupported = [kind for kind, count in self._resolve_type_counts().items()
-                       if count > 0 and kind != 'place_grounding']
+                       if count > 0 and kind not in {'place_grounding', 'place_discovery', 'route_planning', 'multi_entity', 'safety_planning', 'region_aware', 'itinerary'}]
         if unsupported:
             raise NotImplementedError('Pending migration and integration: ' + ', '.join(unsupported))
 

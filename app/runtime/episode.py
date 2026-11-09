@@ -60,7 +60,7 @@ def load_episode(task_dir, *, route_cache_path='', world_path='', dynamic_event_
         from app.apps.dynamic_user_interface import DynamicUserInterfaceApp
         env.register_app(DynamicUserInterfaceApp())
     else:
-        env.register_app(UserInterfaceApp())
+        env.register_app(UserInterfaceApp(task_type=task_type))
     env.configure_application_catalog(
         environment_contract["applications"],
         always_available_tools={("UserInterfaceApp", "final_answer")},

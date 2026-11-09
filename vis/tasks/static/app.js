@@ -88,6 +88,15 @@ function updateFeasibilityControls() {
   const supported = supportsMixedFeasibility(taskType);
   section.hidden = !taskType;
   mixedOption.disabled = !supported;
+  const routeDefault = taskType === 'route_planning';
+  modeSelect.hidden = routeDefault;
+  if (routeDefault) {
+    modeSelect.value = 'feasible_only';
+    percentWrap.hidden = true;
+    status.hidden = false;
+    status.textContent = '路线任务使用内置可行性采样。';
+    return;
+  }
   if (!supported) {
     modeSelect.value = 'feasible_only';
     percentWrap.hidden = true;
@@ -140,7 +149,16 @@ async function loadBatches(taskType, city = '') {
         `${b.task_count}题`,
         b.history_only_count ? `${b.history_only_count}题仅历史查看` : '',
       ].filter(Boolean).join(' · ');
-      h += `<option value="${attr(b.name)}" title="${attr(b.name)}" style="${bold}" ${b.is_latest ? 'selected' : ''}>${esc(label)}</option>`;
+      const count = Number(b.task_count) || 0;
+      const historyCount = Number(b.history_only_count) || 0;
+      const englishLabel = [
+        b.is_latest ? 'Current batch' : '',
+        !b.display_name || b.display_name === '正式任务构建' ? 'Task batch' : b.display_name,
+        createdAt,
+        count === 1 ? '1 task' : `${count} tasks`,
+        historyCount ? `${historyCount} historical only` : '',
+      ].filter(Boolean).join(' · ');
+      h += `<option data-ui-text data-ui-en-text="${attr(englishLabel)}" value="${attr(b.name)}" title="${attr(b.name)}" style="${bold}" ${b.is_latest ? 'selected' : ''}>${esc(label)}</option>`;
     }
     sel.innerHTML = h || '<option value="" data-ui-text>无批次</option>';
     currentBatch = d.current || 'latest';
@@ -293,6 +311,7 @@ async function refreshRouteResources(force = false) {
     const response = await fetch(`${resourcePath}?city=${encodeURIComponent(city)}`);
     const data = await response.json();
     if (requestId !== routeResourceRequestId || routeResourceKey !== key) return null;
+    if (data.status === 'not_connected') throw new Error('路线资源待迁移接入。');
     if (!response.ok || !data.ok) throw new Error(data.error || '路线资源读取失败');
     routeResourceState = data;
     document.querySelector('#multi-character-current b').textContent = `${data.character_count || 0} 名`;
@@ -425,8 +444,8 @@ async function previewRouteGoogleCost() {
     : region ? 'Region' : safety ? 'Safety' : 'Routing';
   detail.innerHTML = `<div class="route-cost-detail route-cost-loading" role="status" aria-live="polite">
     <div class="route-cost-loading-copy">
-      <div class="route-cost-loading-title">正在预演 ${previewLabel} 路线请求</div>
-      <div class="route-cost-loading-note">${itinerary ? '固定 seed 下的任务结构，并对 Agent 决策进行有限只读模拟' : multiEntity ? '根据人物、POI采样和现有路线缓存计算成本区间' : region ? '根据地域规则候选、人物和现有路线缓存预演 Stage 3 路线补缺' : safety ? '根据风险目标、替代地点、干扰地点和现有路线缓存预演路线补缺' : '根据当前路线池、任务数量和路线参数计算成本区间'}</div>
+      <div class="route-cost-loading-title" data-ui-text>正在预演 ${previewLabel} 路线请求</div>
+      <div class="route-cost-loading-note" data-ui-text>${itinerary ? '固定 seed 下的任务结构，并对 Agent 决策进行有限只读模拟' : multiEntity ? '根据人物、POI采样和现有路线缓存计算成本区间' : region ? '根据地域规则候选、人物和现有路线缓存预演 Stage 3 路线补缺' : safety ? '根据风险目标、替代地点、干扰地点和现有路线缓存预演路线补缺' : '根据当前路线池、任务数量和路线参数计算成本区间'}</div>
       <div class="route-cost-loading-track" aria-hidden="true"><span></span></div>
     </div>
   </div>`;
@@ -459,7 +478,7 @@ async function previewRouteGoogleCost() {
     validateRouteResourceFields();
   } catch (error) {
     routeCostPreview = null;
-    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale">${esc(error.message)}</div></div>`;
+    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale" data-ui-output>${esc(error.message)}</div></div>`;
     validateRouteResourceFields();
   }
 }
@@ -493,7 +512,7 @@ async function previewRegionServiceDetailBuild() {
     serviceDetailPreflight = data;
     renderServiceDetailPreflight(data);
   } catch (error) {
-    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale">${esc(error.message)}</div></div>`;
+    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale" data-ui-output>${esc(error.message)}</div></div>`;
   }
 }
 
@@ -541,7 +560,7 @@ async function startRegionServiceDetailBuild(collectionMode = 'resume') {
     validateRouteResourceFields();
     pollRegionServiceDetailBuild();
   } catch (error) {
-    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale">${esc(error.message)}</div></div>`;
+    detail.innerHTML = `<div class="route-cost-detail"><div class="route-cost-stale" data-ui-output>${esc(error.message)}</div></div>`;
   }
 }
 
@@ -627,36 +646,40 @@ function renderCompositionalCostDetail(data, label) {
   const currentActual = actualCost.current || {};
   const cumulativeActual = actualCost.cumulative || {};
   const money = value => `$${(Number(value) || 0).toFixed(2)}`;
-  const requests = value => `${(Number(value) || 0).toLocaleString()} 次`;
+  const en = window.GeoUI?.language === 'en';
+  const unit = zh => en ? '' : ' ' + zh;
+  const requests = value => `${(Number(value) || 0).toLocaleString()}${unit('次')}`;
   const rule = label === 'Region'
     ? '按人物、地域规则命中目标和本地对照候选，复用 Routing POI覆盖与共享 RouteCache，只补齐缺失路线。'
     : '目标、替代地点和干扰地点优先复用 Routing POI覆盖，复用共享 RouteCache，只补齐人物到候选的缺失路线。';
   detail.innerHTML = `<div class="route-cost-detail">
-    <div class="route-cost-header"><button class="route-cost-back" type="button" onclick="closeRouteCostDetail()" title="返回任务详情">‹</button>
-      <div class="route-cost-heading"><h2 data-ui-text>Google API 成本预估</h2><div>${esc(data.city_label)} · ${label} · ${data.count} 条任务</div></div></div>
-    <div class="route-cost-section"><h3 data-ui-text>路线使用规则</h3><div class="route-cost-rule">${esc(rule)}</div></div>
+    <div class="route-cost-header"><button class="route-cost-back" type="button" onclick="closeRouteCostDetail()" title="返回任务详情" data-ui-title>‹</button>
+      <div class="route-cost-heading"><h2 data-ui-text>Google API 成本预估</h2><div>${esc(data.city_label)} · ${label} · ${data.count}${en ? (Number(data.count) === 1 ? ' task' : ' tasks') : ' 条任务'}</div></div></div>
+    <div class="route-cost-section"><h3 data-ui-text>路线使用规则</h3><div class="route-cost-rule">${esc(en ? (label === 'Region'
+      ? 'Reuse cached routes for the traveler and nearby candidates, and fetch missing routes as needed.'
+      : 'Prefer places already covered by the route cache, and fetch missing routes from the traveler to candidates as needed.') : rule)}</div></div>
     <div class="route-cost-section"><h3 data-ui-text>当前资源</h3><div class="route-cost-grid">
-      <span data-ui-text>Routing POI覆盖</span><b>${Number(data.pool_size || 0).toLocaleString()} 个</b>
-      <span data-ui-text>可用人物</span><b>${Number(data.character_count || 0).toLocaleString()} 名</b>
-      <span data-ui-text>共享缓存路线事实</span><b>${Number(data.cached_route_facts || 0).toLocaleString()} 条</b>
-      ${label === 'Region' ? `<span data-ui-text>服务详情缓存</span><b>${data.service_detail_ready ? '已就绪' : '缺失'}</b><span data-ui-text>地域规则资产</span><b>${data.region_rules_ready ? '已就绪' : '缺失'}</b>` : ''}
+      <span data-ui-text>Routing POI覆盖</span><b>${Number(data.pool_size || 0).toLocaleString()}${unit('个')}</b>
+      <span data-ui-text>可用人物</span><b>${Number(data.character_count || 0).toLocaleString()}${unit('名')}</b>
+      <span data-ui-text>共享缓存路线事实</span><b>${Number(data.cached_route_facts || 0).toLocaleString()}${unit('条')}</b>
+      ${label === 'Region' ? `<span data-ui-text>服务详情缓存</span><b>${data.service_detail_ready ? (en ? 'Ready' : '已就绪') : (en ? 'Missing' : '缺失')}</b><span data-ui-text>地域规则资产</span><b>${data.region_rules_ready ? (en ? 'Ready' : '已就绪') : (en ? 'Missing' : '缺失')}</b>` : ''}
     </div></div>
     <div class="route-cost-section"><h3 data-ui-text>本次 Google API 真实成本（实时计价）</h3><div class="route-cost-grid route-cost-metrics">
-      <span data-ui-text>请求数</span><b>${requests(currentActual.api_requests)}</b><span data-ui-text>坐标复用</span><b>${Number(currentActual.coordinate_reuse || 0).toLocaleString()} 条</b><span data-ui-text>实际费用</span><b>${money(currentActual.cost_usd)}</b>
+      <span data-ui-text>请求数</span><b>${requests(currentActual.api_requests)}</b><span data-ui-text>坐标复用</span><b>${Number(currentActual.coordinate_reuse || 0).toLocaleString()}${unit('条')}</b><span data-ui-text>实际费用</span><b>${money(currentActual.cost_usd)}</b>
     </div></div>
     <div class="route-cost-section"><h3 data-ui-text>Google API 累计成本</h3><div class="route-cost-grid route-cost-metrics">
-      <span data-ui-text>累计请求数</span><b>${requests(cumulativeActual.api_requests)}</b><span data-ui-text>累计坐标复用</span><b>${Number(cumulativeActual.coordinate_reuse || 0).toLocaleString()} 条</b><span data-ui-text>累计费用</span><b>${money(cumulativeActual.cost_usd)}</b>
-    </div><div class="route-cost-note">${esc(actualCost.tracking_note || '')}</div></div>
+      <span data-ui-text>累计请求数</span><b>${requests(cumulativeActual.api_requests)}</b><span data-ui-text>累计坐标复用</span><b>${Number(cumulativeActual.coordinate_reuse || 0).toLocaleString()}${unit('条')}</b><span data-ui-text>累计费用</span><b>${money(cumulativeActual.cost_usd)}</b>
+    </div><div class="route-cost-note">${esc(en ? (actualCost.historical_baseline ? 'Includes the historical cache baseline and subsequently tracked usage.' : 'Usage since cost tracking began.') : actualCost.tracking_note || '')}</div></div>
     <div class="route-cost-section"><h3 data-ui-text>本批预计成本</h3><div class="route-cost-grid route-cost-metrics">
       <span data-ui-text>最低成本</span><b>${requests(minimum.requests)} · ${money(minimum.cost_usd)}</b>
-      <span>${preview.estimate_kind === 'bounded_agent_proxy_simulation' ? '模拟预计' : 'Seed 预演预计'}</span><b>${requests(expected.requests)} · ${money(expected.cost_usd)}</b>
-      <span>${preview.upper_bound_scope === 'retained_task_structure_only' ? '任务结构上限' : '最高成本'}</span><b>${requests(maximum.requests)} · ${money(maximum.cost_usd)}</b>
-      <span data-ui-text>预演候选地点</span><b>${Number(expected.candidate_places || 0).toLocaleString()} 个</b>
-      <span data-ui-text>预计路线复用</span><b>${Number(expected.route_reuse_hits || 0).toLocaleString()} 条</b>
-      <span data-ui-text>预计坐标复用</span><b>${Number(expected.coordinate_reuse_hits || 0).toLocaleString()} 条</b>
+      <span>${preview.estimate_kind === 'bounded_agent_proxy_simulation' ? (en ? 'Simulation estimate' : '模拟预计') : (en ? 'Seed-based estimate' : 'Seed 预演预计')}</span><b>${requests(expected.requests)} · ${money(expected.cost_usd)}</b>
+      <span>${preview.upper_bound_scope === 'retained_task_structure_only' ? (en ? 'Retained-task upper bound' : '任务结构上限') : (en ? 'Maximum cost' : '最高成本')}</span><b>${requests(maximum.requests)} · ${money(maximum.cost_usd)}</b>
+      <span data-ui-text>预演候选地点</span><b>${Number(expected.candidate_places || 0).toLocaleString()}${unit('个')}</b>
+      <span data-ui-text>预计路线复用</span><b>${Number(expected.route_reuse_hits || 0).toLocaleString()}${unit('条')}</b>
+      <span data-ui-text>预计坐标复用</span><b>${Number(expected.coordinate_reuse_hits || 0).toLocaleString()}${unit('条')}</b>
     </div></div>
-    ${preview.estimate_kind === 'bounded_agent_proxy_simulation' ? `<div class="route-cost-note">预计值为 ${Number(preview.sample_count || 0)} 次只读代理模拟的平均值，不是模型真实决策概率。结构上限不包含淘汰候选的路线请求；相关费用与淘汰原因另行记录，实际费用可能超过此值。</div>` : ''}
-    <div class="route-cost-section"><h3 data-ui-text>计费参考</h3><div class="route-cost-grid"><span data-ui-text>计费类型</span><b>${esc(data.sku)}</b><span data-ui-text>参考单价</span><b>$${Number(data.unit_price_usd || 0).toFixed(3)} / 次</b></div><div class="route-cost-note" data-ui-text>预演只读现有资产，不调用 Google API 或构建模型；金额按 Compute Routes Essentials 毛费用计算。</div></div>
+    ${preview.estimate_kind === 'bounded_agent_proxy_simulation' ? `<div class="route-cost-note">${en ? 'Average of ' + Number(preview.sample_count || 0) + ' read-only simulations. The upper bound covers retained tasks. Discarded candidates can increase actual costs.' : '预计值为 ' + Number(preview.sample_count || 0) + ' 次只读代理模拟的平均值，不是模型真实决策概率。结构上限不包含淘汰候选的路线请求；相关费用与淘汰原因另行记录，实际费用可能超过此值。'}</div>` : ''}
+    <div class="route-cost-section"><h3 data-ui-text>计费参考</h3><div class="route-cost-grid"><span data-ui-text>计费类型</span><b>${esc(data.sku)}</b><span data-ui-text>参考单价</span><b>$${Number(data.unit_price_usd || 0).toFixed(3)} / ${en ? 'request' : '次'}</b></div><div class="route-cost-note" data-ui-text>预演只读现有资产，不调用 Google API 或构建模型；金额按 Compute Routes Essentials 毛费用计算。</div></div>
   </div>`;
 }
 
@@ -670,36 +693,38 @@ function renderItineraryCostDetail(data) {
   const currentActual = actualCost.current || {};
   const cumulativeActual = actualCost.cumulative || {};
   const money = value => `$${(Number(value) || 0).toFixed(2)}`;
-  const requests = value => `${(Number(value) || 0).toLocaleString()} 次`;
-  const seededDays = (minimum.days || []).map((days, index) => `第${index + 1}题 ${days}天`).join(' · ') || '无';
+  const en = window.GeoUI?.language === 'en';
+  const label = (zh, english) => en ? english : zh;
+  const requests = value => `${(Number(value) || 0).toLocaleString()}${label(" 次", "")}`;
+  const seededDays = (minimum.days || []).map((days, index) => en ? `Task ${index + 1}: ${days} days` : `第${index + 1}题 ${days}天`).join(' · ') || label('无', 'None');
   detail.innerHTML = `<div class="route-cost-detail">
-    <div class="route-cost-header"><button class="route-cost-back" type="button" onclick="closeRouteCostDetail()" title="返回任务详情">‹</button>
-      <div class="route-cost-heading"><h2 data-ui-text>Google API 成本预估</h2><div>${esc(data.city_label)} · Itinerary · ${data.count} 条任务</div></div></div>
+    <div class="route-cost-header"><button class="route-cost-back" type="button" onclick="closeRouteCostDetail()" title="返回任务详情" data-ui-title>‹</button>
+      <div class="route-cost-heading"><h2 data-ui-text>Google API 成本预估</h2><div>${esc(data.city_label)} · Itinerary · ${data.count} ${label("条任务", Number(data.count) === 1 ? "task" : "tasks")}</div></div></div>
     <div class="route-cost-section"><h3 data-ui-text>路线使用规则</h3><div class="route-cost-rule" data-ui-text>完全复用 Routing POI池 · 不做局部扩散</div><div class="route-cost-rule-details">
       <div data-ui-text>任务地点只从当前 Routing POI池选择；复用已有路线，只为固定边界可达性检查及最终相邻活动缺失的路线发起请求。</div>
       <div data-ui-text>批次 seed 已固定人物、天数、酒店、固定事项和可用时间窗口；预估不调用构建 Agent。</div>
     </div></div>
     <div class="route-cost-section"><h3 data-ui-text>当前资源</h3><div class="route-cost-grid">
-      <span data-ui-text>Routing POI池</span><b>${Number(data.pool_size || 0).toLocaleString()} 个</b>
-      <span data-ui-text>可用人物</span><b>${Number(data.character_count || 0).toLocaleString()} 名</b>
-      <span data-ui-text>共享缓存路线事实</span><b>${Number(data.cached_route_facts || 0).toLocaleString()} 条</b>
+      <span data-ui-text>Routing POI池</span><b>${Number(data.pool_size || 0).toLocaleString()}${label(" 个", "")}</b>
+      <span data-ui-text>可用人物</span><b>${Number(data.character_count || 0).toLocaleString()}${label(" 名", "")}</b>
+      <span data-ui-text>共享缓存路线事实</span><b>${Number(data.cached_route_facts || 0).toLocaleString()}${label(" 条", "")}</b>
       <span data-ui-text>本批 seed 固定天数</span><b>${esc(seededDays)}</b>
     </div></div>
     <div class="route-cost-section"><h3 data-ui-text>本次 Google API 真实成本（实时计价）</h3><div class="route-cost-grid route-cost-metrics">
-      <span data-ui-text>请求数</span><b>${requests(currentActual.api_requests)}</b><span data-ui-text>坐标复用</span><b>${Number(currentActual.coordinate_reuse || 0).toLocaleString()} 条</b><span data-ui-text>实际费用</span><b>${money(currentActual.cost_usd)}</b>
+      <span data-ui-text>请求数</span><b>${requests(currentActual.api_requests)}</b><span data-ui-text>坐标复用</span><b>${Number(currentActual.coordinate_reuse || 0).toLocaleString()}${label(" 条", "")}</b><span data-ui-text>实际费用</span><b>${money(currentActual.cost_usd)}</b>
     </div></div>
     <div class="route-cost-section"><h3 data-ui-text>Google API 累计成本</h3><div class="route-cost-grid route-cost-metrics">
-      <span data-ui-text>累计请求数</span><b>${requests(cumulativeActual.api_requests)}</b><span data-ui-text>累计坐标复用</span><b>${Number(cumulativeActual.coordinate_reuse || 0).toLocaleString()} 条</b><span data-ui-text>累计费用</span><b>${money(cumulativeActual.cost_usd)}</b>
-    </div><div class="route-cost-note">当前城市版本共享 RouteCache 的累计 Routes 成本。${esc(actualCost.tracking_note || '')}</div></div>
+      <span data-ui-text>累计请求数</span><b>${requests(cumulativeActual.api_requests)}</b><span data-ui-text>累计坐标复用</span><b>${Number(cumulativeActual.coordinate_reuse || 0).toLocaleString()}${label(" 条", "")}</b><span data-ui-text>累计费用</span><b>${money(cumulativeActual.cost_usd)}</b>
+    </div><div class="route-cost-note">${en ? "Cumulative route costs for this city version." : "当前城市版本共享 RouteCache 的累计 Routes 成本。" + esc(actualCost.tracking_note || "")}</div></div>
     <div class="route-cost-section"><h3 data-ui-text>本批预计成本</h3><div class="route-cost-grid route-cost-metrics">
       <span data-ui-text>最低必然成本</span><b>${requests(minimum.requests)} · ${money(minimum.cost_usd)}</b>
       <span data-ui-text>模拟预计</span><b>${requests(expected.requests)} · ${money(expected.cost_usd)}</b>
       <span data-ui-text>保守最高成本</span><b>${requests(maximum.requests)} · ${money(maximum.cost_usd)}</b>
-      <span data-ui-text>模拟活动块</span><b>平均 ${Number(expected.activity_blocks || 0).toFixed(1)} 个</b>
-      <span data-ui-text>最多独立 POI活动块</span><b>${Number(maximum.activity_blocks || 0).toLocaleString()} 个</b>
-      <span data-ui-text>预计复用路线命中</span><b>${Number(expected.route_reuse_hits || 0).toLocaleString()} 条</b>
-    </div><div class="route-cost-note">模拟预计来自 ${Number(preview.sample_count || 0).toLocaleString()} 次固定规模的只读 Agent 决策代理，不代表 Agent 输出的真实概率均值。</div></div>
-    <div class="route-cost-section"><h3 data-ui-text>计费参考</h3><div class="route-cost-grid"><span data-ui-text>计费类型</span><b>${esc(data.sku)}</b><span data-ui-text>参考单价</span><b>$${Number(data.unit_price_usd || 0).toFixed(3)} / 次</b></div><div class="route-cost-note" data-ui-text>预演不调用 Google API 或构建 Agent；费用按 Compute Routes Essentials 毛费用计算，不扣账户免费额度，也不包含任务构建模型费用。</div></div>
+      <span data-ui-text>模拟活动块</span><b>${label("平均", "Average")} ${Number(expected.activity_blocks || 0).toFixed(1)}${label(" 个", "")}</b>
+      <span data-ui-text>最多独立 POI活动块</span><b>${Number(maximum.activity_blocks || 0).toLocaleString()}${label(" 个", "")}</b>
+      <span data-ui-text>预计复用路线命中</span><b>${Number(expected.route_reuse_hits || 0).toLocaleString()}${label(" 条", "")}</b>
+    </div><div class="route-cost-note">${en ? `Estimate from ${Number(preview.sample_count || 0).toLocaleString()} read-only simulations. Actual route requests may vary.` : `模拟预计来自 ${Number(preview.sample_count || 0).toLocaleString()} 次固定规模的只读 Agent 决策代理，不代表 Agent 输出的真实概率均值。`}</div></div>
+    <div class="route-cost-section"><h3 data-ui-text>计费参考</h3><div class="route-cost-grid"><span data-ui-text>计费类型</span><b>${esc(data.sku)}</b><span data-ui-text>参考单价</span><b>$${Number(data.unit_price_usd || 0).toFixed(3)} / ${label("次", "request")}</b></div><div class="route-cost-note" data-ui-text>预演不调用 Google API 或构建 Agent；费用按 Compute Routes Essentials 毛费用计算，不扣账户免费额度，也不包含任务构建模型费用。</div></div>
   </div>`;
 }
 
@@ -1043,7 +1068,7 @@ function renderTaskList() {
       data-review-status="${esc(t.review_status || '')}"
       data-prompt-language="${esc(t.prompt_language || t.summary?.prompt_language || '')}"
       onclick="selectTask(this.dataset.folder)">
-      <div class="folder">${renderStatusIcon(t.review_status)} ${esc(t.folder)}</div>
+      <div class="folder">${renderStatusIcon(t.review_status)} <span data-ui-text data-ui-en-text="${attr(englishTaskFolder(t.folder, t.task_id))}">${esc(t.folder)}</span></div>
       <div class="preview">${esc(t.query_preview || t.folder)}</div>
       <div class="meta">
         ${t.task_type ? `<span class="tag task-type-tag">${esc(t.task_type)}</span>` : ''}
@@ -1066,22 +1091,22 @@ function typeMetaLine(t) {
     case 'route_planning':
       return `${s.distance_km ? `<span>${s.distance_km}km</span>` : ''}
         <span>${s.mode || ''}</span>
-        ${s.expected_feasible !== undefined ? `<span>${s.expected_feasible ? '可行' : '不可行'}</span>` : ''}`;
+        ${s.expected_feasible !== undefined ? `<span data-ui-text>${s.expected_feasible ? '可行' : '不可行'}</span>` : ''}`;
     case 'multi_entity':
-      return `${s.character_count ? `<span>${s.character_count}人</span>` : ''}
-        ${s.place_count ? `<span>${s.place_count}餐厅</span>` : ''}`;
+      return `${s.character_count ? `<span data-ui-text>${s.character_count}人</span>` : ''}
+        ${s.place_count ? `<span data-ui-text>${s.place_count}个地点</span>` : ''}`;
     case 'itinerary':
       return `${s.num_days ? `<span>${s.num_days}d</span>` : ''}
-        ${s.event_count ? `<span>${s.event_count}事件</span>` : ''}`;
+        ${s.event_count ? `<span data-ui-text>${s.event_count}事件</span>` : ''}`;
     case 'safety_planning':
       return `${s.risk_dimensions ? `<span>${esc(s.risk_dimensions)}</span>` : ''}
-        ${s.expected_safe !== undefined ? `<span>${s.expected_safe ? '安全' : '不安全'}</span>` : ''}`;
+        ${s.expected_safe !== undefined ? `<span data-ui-text>${s.expected_safe ? '安全' : '不安全'}</span>` : ''}`;
     case 'region_aware':
       return `${s.scene ? `<span>${esc(s.scene)}</span>` : ''}
-        ${s.constraint_count ? `<span>${s.constraint_count}约束</span>` : ''}`;
+        ${s.constraint_count ? `<span data-ui-text>${s.constraint_count}约束</span>` : ''}`;
     case 'dynamic_replanning':
       return `${s.base_task_type ? `<span>${esc(s.base_task_type)}</span>` : ''}
-        ${s.event_count || s.shared_events || s.new_events ? `<span>${s.event_count || ((s.shared_events || 0) + (s.new_events || 0))}事件</span>` : ''}
+        ${s.event_count || s.shared_events || s.new_events ? `<span data-ui-text>${s.event_count || ((s.shared_events || 0) + (s.new_events || 0))}事件</span>` : ''}
         <span>${esc(s.dynamic_pressure || s.frequency_level || '')}</span>`;
     case 'place_grounding':
     case 'place_discovery':
@@ -1093,8 +1118,8 @@ function typeMetaLine(t) {
     default:
       return `${t.category ? `<span>${esc(t.category)}</span>` : ''}
         <span>${t.scenario_type || ''}</span>
-        <span>${t.env_event_count || 0}事件</span>
-        <span>${t.judge_stages || 0}阶段</span>`;
+        <span data-ui-text>${t.env_event_count || 0}事件</span>
+        <span data-ui-text>${t.judge_stages || 0}阶段</span>`;
   }
 }
 
@@ -1976,7 +2001,7 @@ function renderSafetyEditor(tk, data) {
   h += `<div style="margin:4px 0"><label data-ui-text>已拒绝方案 (每行: name|reason)</label><textarea id="sf-rej" rows="3" style="width:100%;margin-top:2px;background:#111;color:#cdd6f4;border:1px solid #444;padding:4px;border-radius:3px;font-size:11px">${esc(rej.map(r=>`${r.name||''}|${r.reason||''}`).join('\n'))}</textarea></div>`;
   h += `<div style="margin:4px 0"><label data-ui-text>约束 (JSON)</label><textarea id="sf-constraints" rows="3" style="width:100%;margin-top:2px;background:#111;color:#cdd6f4;border:1px solid #444;padding:4px;border-radius:3px;font-size:11px">${esc(JSON.stringify(constraints,null,2))}</textarea></div>`;
   h += `<div style="margin:4px 0"><label>user_prompt</label><textarea id="sf-prompt" rows="3" style="width:100%;margin-top:2px;background:#111;color:#cdd6f4;border:1px solid #444;padding:4px;border-radius:3px;font-size:11px">${esc(tk.user_prompt||'')}</textarea></div>`;
-  h += `<button class="save-btn" onclick="sfSaveGT()" data-ui-text>💾 保存 GT</button><span id="sf-save-msg" style="font-size:11px;margin-left:8px"></span>`;
+  h += `<button class="save-btn" onclick="sfSaveGT()" data-ui-text>💾 保存 GT</button><span id="sf-save-msg" data-ui-output style="font-size:11px;margin-left:8px"></span>`;
   h += '</div></div>';
   return h;
 }
@@ -2293,7 +2318,7 @@ function formatGenerationDuration(seconds) {
   const total = Math.max(0, Number(seconds) || 0);
   const minutes = Math.floor(total / 60);
   const remaining = total % 60;
-  return minutes ? `${minutes}:${String(remaining).padStart(2, '0')}` : `${remaining} 秒`;
+  return minutes ? `${minutes}:${String(remaining).padStart(2, '0')}` : (window.GeoUI?.t('{count} 秒', {count:remaining}) || `${remaining} 秒`);
 }
 
 function formatGenerationHeartbeat(value) {
@@ -2520,18 +2545,27 @@ async function viewGenerationJobTasks() {
   filterTasks();
 }
 
-function retryRemainingGeneration() {
-  if (!generationJob) return;
-  const remaining = Math.max(0, (Number(generationJob.requested_count) || 0) - (Number(generationJob.completed_count) || 0));
+async function retryRemainingGeneration() {
+  const job = generationJob;
+  if (!job) return;
+  const remaining = Math.max(0, (Number(job.requested_count) || 0) - (Number(job.completed_count) || 0));
   if (!remaining) return;
-  document.getElementById('gen-count').value = remaining;
-  document.querySelector('input[name="gen-mode"][value="append"]').checked = true;
-  currentTaskType = generationJob.task_type;
-  currentCity = generationJob.city;
-  const typeSelect = document.getElementById('task-type-filter');
-  if (typeSelect) typeSelect.value = currentTaskType;
+  currentTaskType = job.task_type;
+  currentCity = job.city;
+  document.getElementById('task-type-filter').value = currentTaskType;
+  document.getElementById('city-filter').value = currentCity;
+  await loadBatches(currentTaskType, currentCity);
+  const batchSelect = document.getElementById('batch-filter');
+  const canAppend = job.retry_batch_available && Boolean(job.batch);
+  if (canAppend && ![...batchSelect.options].some(option => option.value === job.batch)) {
+    batchSelect.add(new Option(job.batch, job.batch));
+  }
+  if (canAppend) batchSelect.value = job.batch;
   clearGenerationProgress();
-  showGenPanel();
+  await switchBatch(batchSelect.value);
+  document.getElementById('gen-count').value = remaining;
+  document.querySelector(`input[name="gen-mode"][value="${canAppend ? 'append' : 'new'}"]`).checked = true;
+  if (routeCostSelected()) invalidateRouteCostPreview();
 }
 
 function clearGenerationProgress() {
@@ -2970,7 +3004,7 @@ async function loadRegionRuleCities() {
 function renderRegionRuleCities() {
   const list = document.getElementById('task-items');
   document.querySelector('#task-list .sidebar-header h2').textContent = '城市地域准则';
-  document.getElementById('task-count').textContent = `共 ${regionRuleCities.length} 个城市`;
+  document.getElementById('task-count').textContent = GeoUI.t('共 {count} 个城市', {count: regionRuleCities.length});
   const workspaceToggle = `<div class="region-workspace-toggle" role="tablist" aria-label="城市地域准则工作模式">
     <button type="button" role="tab" aria-selected="${regionRuleWorkspace === 'review'}" class="${regionRuleWorkspace === 'review' ? 'active' : ''}" onclick="setRegionRuleWorkspace('review')" data-ui-text>审核</button>
     <button type="button" role="tab" aria-selected="${regionRuleWorkspace === 'build'}" class="${regionRuleWorkspace === 'build' ? 'active' : ''}" onclick="setRegionRuleWorkspace('build')" data-ui-text>新建</button>
@@ -2978,7 +3012,7 @@ function renderRegionRuleCities() {
   const cards = regionRuleCities.map(city => `
     <div class="task-item region-city-item" data-city-id="${escAttr(city.city_id)}" onclick="selectRegionRuleCity(this.dataset.cityId)">
       <div class="region-city-name">${esc(city.city_name)}</div>
-      <div class="region-city-count">地域准则：${Number(city.rule_count) || 0} 条</div>
+      <div class="region-city-count" data-ui-output>地域准则：${Number(city.rule_count) || 0} 条</div>
     </div>`).join('');
   const body = regionRuleWorkspace === 'review'
     ? (cards || '<div class="task-empty" data-ui-text>当前没有可审批的城市地域准则。</div>')
@@ -3149,9 +3183,9 @@ function renderRegionBuildProgressCard(build, city, index) {
   const cityName = city.city_name || build.city_name || build.city_id;
   const cityVersion = city.active_version || String(build.city_version || '1').replace(/^v/, '');
   if (build.status === 'not_started' || build.status === 'queued') {
-    return `<div class="region-build-status queued"><div class="region-build-status-head"><strong>${esc(cityName)} · v${esc(cityVersion)}</strong><span class="region-build-status-label">${esc(statusLabel)} · 第 ${index + 1} 个</span></div></div>`;
+    return `<div class="region-build-status queued"><div class="region-build-status-head"><strong>${esc(cityName)} · v${esc(cityVersion)}</strong><span class="region-build-status-label" data-ui-output>${esc(statusLabel)} · 第 ${index + 1} 个</span></div></div>`;
   }
-  return `<div class="region-build-status ${escAttr(build.status || '')}"><div class="region-build-status-head"><strong>${esc(cityName)} · v${esc(cityVersion)}</strong><span class="region-build-status-label">${esc(statusLabel)}</span></div>${renderRegionBuildStage(build, 1)}${renderRegionBuildStage(build, 2)}${build.error?`<div class="region-build-error">${esc(build.error)}</div>`:''}</div>`;
+  return `<div class="region-build-status ${escAttr(build.status || '')}"><div class="region-build-status-head"><strong>${esc(cityName)} · v${esc(cityVersion)}</strong><span class="region-build-status-label" data-ui-output>${esc(statusLabel)}</span></div>${renderRegionBuildStage(build, 1)}${renderRegionBuildStage(build, 2)}${build.error?`<div class="region-build-error" data-ui-output>${esc(build.error)}</div>`:''}</div>`;
 }
 
 const REGION_BUILD_PHASES = [
@@ -3193,23 +3227,23 @@ function renderRegionBuildStage(build, stageNumber) {
       ? `准则评估进度：${Number(build.completed) || 0} / ${Number(build.total) || 0} 条`
       : '';
   const usageSummary = renderRegionBuildUsageSummary(build, stageNumber, summary || activeSummary);
-  return `<div class="region-build-stage-group ${stageActive ? 'active' : stageComplete ? 'complete' : 'pending'}"><div class="region-build-stage-title">${esc(title)}</div><div class="region-build-phase-strip stage-${stageNumber}">${phases.map(([id, label], localIndex) => {
+  return `<div class="region-build-stage-group ${stageActive ? 'active' : stageComplete ? 'complete' : 'pending'}"><div class="region-build-stage-title" data-ui-output>${esc(title)}</div><div class="region-build-phase-strip stage-${stageNumber}">${phases.map(([id, label], localIndex) => {
     const index = start + localIndex;
     let state = allComplete || index < current ? 'complete' : index === current ? 'current' : 'pending';
     if (index === current && build.status === 'failed') state = 'failed';
     if (index === current && ['interrupted', 'retry_wait'].includes(build.status)) state = 'paused';
-    return `<div class="region-build-phase ${state}" data-phase="${escAttr(id)}">${esc(label)}</div>`;
+    return `<div class="region-build-phase ${state}" data-phase="${escAttr(id)}" data-ui-output>${esc(label)}</div>`;
   }).join('')}</div>${stageActive ? renderRegionBuildCurrentStep(build, stageNumber) : ''}${usageSummary}</div>`;
 }
 
 function renderRegionBuildUsageSummary(build, stageNumber, summary) {
   const usage = (build.stage_usage || {})[`stage${stageNumber}`] || {};
   const requests = Number(usage.requests) || 0;
-  if (!summary || !requests) return summary ? `<div class="region-build-stage-summary"><span>${esc(summary)}</span></div>` : '';
+  if (!summary || !requests) return summary ? `<div class="region-build-stage-summary"><span data-ui-output>${esc(summary)}</span></div>` : '';
   const prompt = Number(usage.prompt_tokens) || 0;
   const completion = Number(usage.completion_tokens) || 0;
   const total = Number(usage.total_tokens) || prompt + completion;
-  return `<div class="region-build-stage-summary"><span>${esc(summary)}</span><span class="region-build-usage"><b>总 Token：${formatTokenNumber(total)}</b><span>输入：${formatTokenNumber(prompt)}</span><span>输出：${formatTokenNumber(completion)}</span><span>模型耗时：${formatGenerationDuration(Number(usage.elapsed_s) || 0)}</span></span></div>`;
+  return `<div class="region-build-stage-summary"><span data-ui-output>${esc(summary)}</span><span class="region-build-usage"><b data-ui-output>总 Token：${formatTokenNumber(total)}</b><span data-ui-output>输入：${formatTokenNumber(prompt)}</span><span data-ui-output>输出：${formatTokenNumber(completion)}</span><span data-ui-output>模型耗时：${formatGenerationDuration(Number(usage.elapsed_s) || 0)}</span></span></div>`;
 }
 
 function renderRegionBuildCurrentStep(build, stageNumber) {
@@ -3278,7 +3312,7 @@ function renderRegionBuildCurrentStep(build, stageNumber) {
   if (build.status === 'interrupted') secondary = '构建已中断，可从当前环节继续';
   const percent = total ? Math.min(100, Math.round(completed * 100 / total)) : 0;
   const measurable = ['media_fetch', 'stage1_extraction', 'stage2_assessment'].includes(phase) && total > 0;
-  return `<div class="region-build-current-step stage-${stageNumber}"><div><span>当前：${esc(detail.replace(/^[^：]+：/, ''))}</span>${measurable ? `<small>${completed} / ${total} · ${percent}%</small>` : ''}</div>${secondary ? `<div class="region-build-current-item">${esc(secondary)}</div>` : ''}${measurable ? `<div class="region-progress-track"><span style="width:${percent}%"></span></div>` : ''}</div>`;
+  return `<div class="region-build-current-step stage-${stageNumber}"><div><span data-ui-output>当前：${esc(detail.replace(/^[^：]+：/, ''))}</span>${measurable ? `<small>${completed} / ${total} · ${percent}%</small>` : ''}</div>${secondary ? `<div class="region-build-current-item" data-ui-output>${esc(secondary)}</div>` : ''}${measurable ? `<div class="region-progress-track"><span style="width:${percent}%"></span></div>` : ''}</div>`;
 }
 
 async function startRegionBuild() {
@@ -3320,13 +3354,13 @@ function renderRegionRulesDetail() {
   const detail = document.getElementById('task-detail');
   detail.classList.add('region-review-content');
   detail.innerHTML = `
-    <div class="section region-review-section"><div class="section-title">${esc(data.city_name || data.city_id || '')} · 地域准则审核</div>
-      <div class="region-rules-layout"><div class="region-rule-pane"><div class="region-rule-list-toolbar"><span>地域准则列表 · 共 ${visibleRules.length} 条</span><select onchange="setRegionRuleStatusFilter(this.value)"><option value="" ${regionRuleStatusFilter === '' ? 'selected' : ''} data-ui-text>全部</option><option value="source_only" ${regionRuleStatusFilter === 'source_only' ? 'selected' : ''} data-ui-text>仅保留</option><option value="eligible" ${regionRuleStatusFilter === 'eligible' ? 'selected' : ''} data-ui-text>可出题</option><option value="needs_split" ${regionRuleStatusFilter === 'needs_split' ? 'selected' : ''} data-ui-text>需拆分</option><option value="pending" ${regionRuleStatusFilter === 'pending' ? 'selected' : ''} data-ui-text>待审核</option><option value="reviewed" ${regionRuleStatusFilter === 'reviewed' ? 'selected' : ''} data-ui-text>已审核</option></select></div><div class="region-rule-list">${visibleRules.map(({row, index}, visibleIndex) => {
+    <div class="section region-review-section"><div class="section-title" data-ui-output>${esc(data.city_name || data.city_id || '')} · 地域准则审核</div>
+      <div class="region-rules-layout"><div class="region-rule-pane"><div class="region-rule-list-toolbar"><span data-ui-output>地域准则列表 · 共 ${visibleRules.length} 条</span><select onchange="setRegionRuleStatusFilter(this.value)"><option value="" ${regionRuleStatusFilter === '' ? 'selected' : ''} data-ui-text>全部</option><option value="source_only" ${regionRuleStatusFilter === 'source_only' ? 'selected' : ''} data-ui-text>仅保留</option><option value="eligible" ${regionRuleStatusFilter === 'eligible' ? 'selected' : ''} data-ui-text>可出题</option><option value="needs_split" ${regionRuleStatusFilter === 'needs_split' ? 'selected' : ''} data-ui-text>需拆分</option><option value="pending" ${regionRuleStatusFilter === 'pending' ? 'selected' : ''} data-ui-text>待审核</option><option value="reviewed" ${regionRuleStatusFilter === 'reviewed' ? 'selected' : ''} data-ui-text>已审核</option></select></div><div class="region-rule-list">${visibleRules.map(({row, index}, visibleIndex) => {
         const review = row.assessment?.human_review?.status || 'pending';
         const reviewLabel = {pending: '待人工审核', approved: '已通过', rejected: '已拒绝', needs_fix: '需修改'}[review] || review;
         const eligibility = {task_source_eligible: '可用于出题', source_only: '仅保留来源', needs_stage1_split: '需要拆分', not_bindable_in_current_map: '当前地图不可绑定'}[row.assessment?.status] || '未判断';
         const text = row.rule?.statement || row.rule?.summary || row.rule?.subject || row.rule?.rule_id || '';
-        return `<button class="region-rule-row status-${escAttr(review)} ${visibleIndex === 0 ? 'active' : ''}" data-rule-index="${index}" onclick="selectRegionRule(${index})"><div class="region-rule-card-meta"><span class="region-review-pill ${escAttr(review)}">${esc(reviewLabel)}</span><span class="region-eligibility ${eligibility === '可用于出题' ? 'eligible' : ''}">${eligibility}</span></div><div class="region-rule-card-text">${esc(text)}</div></button>`;
+        return `<button class="region-rule-row status-${escAttr(review)} ${visibleIndex === 0 ? 'active' : ''}" data-rule-index="${index}" onclick="selectRegionRule(${index})"><div class="region-rule-card-meta"><span class="region-review-pill ${escAttr(review)}" data-ui-output>${esc(reviewLabel)}</span><span class="region-eligibility ${eligibility === '可用于出题' ? 'eligible' : ''}" data-ui-output>${esc(eligibility)}</span></div><div class="region-rule-card-text">${esc(text)}</div></button>`;
       }).join('') || '<div class="task-empty" data-ui-text>当前筛选条件下没有地域准则。</div>'}</div></div><div id="region-rule-inspector"></div></div>
     </div>`;
   if (first) selectRegionRule(first.index);
@@ -3354,7 +3388,7 @@ function selectRegionRule(index) {
     return `<details class="region-evidence"><summary data-ui-text>Wikivoyage 来源正文（只读）</summary><pre>${esc(readable || original)}</pre><details class="region-raw-wikitext"><summary data-ui-text>查看完整原始 Wikitext</summary><pre>${esc(original)}</pre></details></details>`;
   }).join('');
   document.getElementById('region-rule-inspector').innerHTML = `
-    <div class="region-review-heading"><h3>${esc(rule.statement || '')}</h3><span class="region-review-pill ${escAttr(review.status || 'pending')}">${esc({pending: '待人工审核', approved: '已通过', rejected: '已拒绝', needs_fix: '需修改'}[review.status || 'pending'] || review.status || 'pending')}</span></div>
+    <div class="region-review-heading"><h3>${esc(rule.statement || '')}</h3><span class="region-review-pill ${escAttr(review.status || 'pending')}" data-ui-output>${esc({pending: '待人工审核', approved: '已通过', rejected: '已拒绝', needs_fix: '需修改'}[review.status || 'pending'] || review.status || 'pending')}</span></div>
     <div class="region-edit-note" data-ui-text>当前使用 regional_rules.v3 与 Stage 2 assessment v4。人工保存形成覆盖层；Wikivoyage 原始内容保持只读。</div>
     <div class="section-title" data-ui-text>地域准则</div>
     <label class="region-field" data-ui-text>完整准则<textarea id="region-rule-statement" rows="5">${esc(rule.statement || '')}</textarea></label>
@@ -3369,7 +3403,7 @@ function selectRegionRule(index) {
     <div class="section-title" data-ui-text>出题类型绑定与结论</div>
     <div class="region-form-grid"><label data-ui-text>出题来源结论<select id="region-assessment-status" onchange="updateRegionConditionalFields(false)"><option value="task_source_eligible" ${assessment.status === 'task_source_eligible' ? 'selected' : ''} data-ui-text>可作为出题来源</option><option value="source_only" ${assessment.status === 'source_only' ? 'selected' : ''} data-ui-text>仅保留地域来源</option><option value="needs_stage1_split" ${assessment.status === 'needs_stage1_split' ? 'selected' : ''} data-ui-text>需要拆分</option><option value="not_bindable_in_current_map" ${assessment.status === 'not_bindable_in_current_map' ? 'selected' : ''} data-ui-text>当前地图中无法绑定</option></select></label></div>
     <input id="region-review-status" type="hidden" value="${escAttr(review.status || 'pending')}"><div class="region-review-controls"><span data-ui-text>人工审核状态</span><div class="review-bar"><button class="review-btn ${(review.status || 'pending') === 'pending' ? 'active' : ''}" onclick="chooseRegionReviewStatus('pending', this)" data-ui-text>待人工审核</button><button class="review-btn ${(review.status || '') === 'approved' ? 'active' : ''}" onclick="chooseRegionReviewStatus('approved', this)" data-ui-text>通过</button><button class="review-btn ${(review.status || '') === 'needs_fix' ? 'active' : ''}" onclick="chooseRegionReviewStatus('needs_fix', this)" data-ui-text>需修改</button><button class="review-btn ${(review.status || '') === 'rejected' ? 'active' : ''}" onclick="chooseRegionReviewStatus('rejected', this)" data-ui-text>拒绝</button></div></div>
-    <div id="region-binding-fields"><div class="region-field"><span data-ui-text>关联 POI 类型</span><div id="region-selected-types" class="region-selected-types"></div><input id="region-type-search" class="region-type-search" type="search" placeholder="搜索 POI 类型…" oninput="filterRegionTypes(this.value)"><div id="region-assessment-types" class="region-type-checklist">${typeOptions}</div></div>
+    <div id="region-binding-fields"><div class="region-field"><span data-ui-text>关联 POI 类型</span><div id="region-selected-types" class="region-selected-types"></div><input id="region-type-search" class="region-type-search" type="search" placeholder="搜索 POI 类型…" data-ui-placeholder data-ui-placeholder oninput="filterRegionTypes(this.value)"><div id="region-assessment-types" class="region-type-checklist">${typeOptions}</div></div>
     <label class="region-field" data-ui-text>POI 检索词（每行一条）<textarea id="region-assessment-phrases" rows="4">${esc((assessment.poi_retrieval_phrases || []).join('\n'))}</textarea></label></div><label class="region-field" data-ui-text>Stage 2 判断理由<textarea id="region-assessment-reason" rows="4">${esc(assessment.reason || '')}</textarea></label><label class="region-field" data-ui-text>人工审核备注<textarea id="region-review-notes" rows="3">${esc(review.notes || '')}</textarea></label>
     <div class="section-title" data-ui-text>来源证据</div>${evidence || '<div class="muted" data-ui-text>未找到来源证据。</div>'}
     <div class="region-review-actions"><button class="save-btn" onclick="saveRegionRule('${escAttr(rule.rule_id)}')" data-ui-text>保存修订</button></div>`;
@@ -3416,7 +3450,7 @@ function removeRegionType(type) {
 
 function regionBooleanSelect(id, label, value) {
   const normalized = value === true ? 'true' : value === false ? 'false' : '';
-  return `<label>${esc(label)}<select id="${escAttr(id)}"><option value="" ${normalized === '' ? 'selected' : ''} data-ui-text>未判断</option><option value="true" ${normalized === 'true' ? 'selected' : ''} data-ui-text>是</option><option value="false" ${normalized === 'false' ? 'selected' : ''} data-ui-text>否</option></select></label>`;
+  return `<label data-ui-text>${esc(label)}<select id="${escAttr(id)}"><option value="" ${normalized === '' ? 'selected' : ''} data-ui-text>未判断</option><option value="true" ${normalized === 'true' ? 'selected' : ''} data-ui-text>是</option><option value="false" ${normalized === 'false' ? 'selected' : ''} data-ui-text>否</option></select></label>`;
 }
 
 function cleanRegionEvidenceText(source) {
@@ -3539,7 +3573,7 @@ async function restoreRunConfiguration() {
 }
 
 async function deleteRun(runId) {
-  if (!confirm(`确认删除运行 "${runId}" 及其所有数据？`)) return;
+  if (!confirm(GeoUI.t('确认删除运行 "{runId}" 及其所有数据？', {runId}))) return;
   const resp = await fetch(`/api/run?run=${encodeURIComponent(runId)}`, { method: 'DELETE' });
   const data = await resp.json();
   if (data.ok) {
@@ -3552,7 +3586,7 @@ async function deleteRun(runId) {
     }
     await loadRuns();
   } else {
-    alert('删除失败');
+    alert(GeoUI.t('删除失败'));
   }
 }
 
@@ -3635,17 +3669,28 @@ function groupedRunTasks() {
 }
 
 function runTaskGroupTitle(group, groupCount) {
-  if (groupCount === 1) return runTaskTypeLabel(group.source.taskType);
+  const type = `<span data-ui-text>${esc(runTaskTypeLabel(group.source.taskType))}</span>`;
+  if (groupCount === 1) return type;
   const city = group.source.city ? `${runCityLabel(group.source.city)}${group.source.version ? ` v${group.source.version}` : ''}` : '未记录城市';
   const cityTypeKey = [group.source.city, group.source.version, group.source.taskType].join('|');
   const batch = group.duplicateCityTypes.has(cityTypeKey) && group.source.batch ? ` · ${group.source.batch}` : '';
-  return `${city} · ${runTaskTypeLabel(group.source.taskType)}${batch}`;
+  return `<span${group.source.city ? '' : ' data-ui-text'}>${esc(city)}</span> · ${type}${esc(batch)}`;
+}
+
+function englishTaskFolder(folder, fallback) {
+  const value = String(folder || fallback || '');
+  return /[\u3400-\u9fff]/.test(value)
+    ? value.match(/^task_\d+/)?.[0] || String(fallback || value)
+    : value;
 }
 
 function renderRunTaskTitle(folder, fallback) {
   const value = String(folder || fallback || '');
   const match = value.match(/^(.*_)(餐厅|酒店|咖啡馆|博物馆|公园|画廊|餐馆)$/);
-  if (!match) return esc(value);
+  if (!match) {
+    const english = englishTaskFolder(folder, fallback);
+    return english === value ? esc(value) : `<span data-ui-text data-ui-en-text="${attr(english)}">${esc(value)}</span>`;
+  }
   return `${esc(match[1])}<span data-ui-output>${match[2]}</span>`;
 }
 
@@ -3675,7 +3720,7 @@ function renderRunTaskList() {
     html += `<section class="run-task-group ${collapsed ? 'is-collapsed' : ''}">
       <button class="run-task-group-header" type="button" onclick="toggleRunTaskGroup('${attr(group.key)}')" aria-expanded="${!collapsed}">
         <span class="run-group-chevron" aria-hidden="true">${collapsed ? '▸' : '▾'}</span>
-        <span class="run-group-title" data-ui-output>${esc(runTaskGroupTitle(group, groups.length))}</span>
+        <span class="run-group-title" data-ui-output>${runTaskGroupTitle(group, groups.length)}</span>
         <span class="run-group-metrics"><b class="${resultTone}">(${group.passed}/${group.tasks.length}) PASS</b><span class="${resultTone}">${rate}%</span><span>${formatTokenNumber(group.tokens)} tok</span></span>
       </button>`;
     if (!collapsed) {
@@ -3729,7 +3774,9 @@ async function selectRunTask(taskId) {
 function renderAgentRunDetail(taskData, runTask) {
   const report = runTask.run_report || {};
   const outcome = runTask.outcome || {};
-  const metrics = Array.isArray(outcome.metrics) ? outcome.metrics : [];
+  const isDiscovery = (taskData.task?.task_type || outcome.task_type) === 'place_discovery';
+  const metrics = (Array.isArray(outcome.metrics) ? outcome.metrics : [])
+    .filter(metric => !isDiscovery || metric.metric !== 'judge_sequence');
   const trace = Array.isArray(runTask.trajectory) ? runTask.trajectory : [];
   const grade = outcome.grade || report.grade || 'UNKNOWN';
   const answer = outcome.final_answer ?? report.final_answer;
@@ -4250,7 +4297,7 @@ function renderSourceReviewPanel(source) {
   h += '<div class="source-toolbar">';
   h += '<div class="section-title" style="border:none;margin:0;padding:0" data-ui-text>批量样例审查 / Evidence Provenance</div>';
   h += '<div class="judge-toolbar-right">';
-  h += '<span id="source-save-status" class="save-status"></span>';
+  h += '<span id="source-save-status" data-ui-output class="save-status"></span>';
   h += `<button class="btn-save" onclick="saveSource()" data-ui-text>保存样例修改</button>`;
   h += '</div></div>';
   h += `<div class="source-path">source: ${esc(source.source_path || '')}</div>`;
@@ -4303,12 +4350,13 @@ function renderDiscoverySourceReviewPanel(source, ex, data = null) {
   h += '<div class="source-toolbar">';
   h += '<div class="section-title" style="border:none;margin:0;padding:0" data-ui-text>Discovery 样例审查 / Service Evidence</div>';
   h += '<div class="judge-toolbar-right">';
-  h += '<span id="source-save-status" class="save-status"></span>';
+  h += '<span id="source-save-status" data-ui-output class="save-status"></span>';
   h += `<button class="btn-save" onclick="saveSource()" data-ui-text>保存样例修改</button>`;
   h += '</div></div>';
-  if (data) h += renderDiscoveryConditions(data);
+  const construction = ex.evidence_ledger?.construction_contract;
+  if (data && !construction) h += renderDiscoveryConditions(data);
   const profile = resolveQualityProfile(ex);
-  h += (profile.rubric_version || '').startsWith('place_discovery.quality')
+  h += construction ? renderDiscoveryConstruction(construction) : (profile.rubric_version || '').startsWith('place_discovery.quality')
     ? renderDiscoveryQualityPanel(ex, profile, true, data) : renderDifficultyBreakdown(profile) + (data ? renderDiscoveryComparison(data) : '');
   h += '<details class="gr-details"><summary data-ui-text>来源与原始记录</summary>';
   h += `<div class="source-path">source: ${esc(source.source_path || '')}</div>`;
@@ -4368,7 +4416,7 @@ function renderGroundingQualityPanel(ex, profile, evidence = '', records = '') {
     <div class="difficulty-panel-head">
       <div>
         <div class="difficulty-panel-title" data-ui-text>质量审核面板 · Quality Profile</div>
-        <div class="difficulty-panel-desc">
+        <div class="difficulty-panel-desc" data-ui-text>
           客观质量模型：ambiguity_score 衡量 gold 地点在地图上的客观歧义（由同类候选密度与最近同类距离推导），complexity_score 衡量任务输入给 Agent 的信息复杂度。下方"可混淆候选"为 gold 500m 内的全部同类 POI，是审核 gold 可区分性的关键依据。
         </div>
       </div>
@@ -4429,7 +4477,7 @@ function renderDiscoveryQualityPanel(ex, profile, nested = false, data = null) {
     <div class="difficulty-panel-head">
       <div>
         <div class="difficulty-panel-title" data-ui-text>${nested ? '质量评分与指标' : '质量审核面板 · Quality Profile'}</div>
-        <div class="difficulty-panel-desc">
+        <div class="difficulty-panel-desc" data-ui-text>
           客观质量模型：search_ambiguity_score 衡量 gold 服务在搜索空间中的客观歧义（由同区/近邻/同类服务密度推导），constraint_complexity 衡量角色约束与任务输入的复杂度。下方"可混淆候选"列出 1200m 内服务及排除理由，是审核 gold 唯一性的关键依据。
         </div>
       </div>
@@ -4502,11 +4550,11 @@ function renderConfusableCandidates(candidates, kind) {
   }).join('');
   return `<div class="confusable-section">
     <div class="confusable-head">
-      <span class="confusable-title">可混淆候选 · confusable_candidates (${candidates.length})</span>
-      <span class="confusable-hint">${esc(hint)}</span>
+      <span class="confusable-title" data-ui-text>可混淆候选 · confusable_candidates (${candidates.length})</span>
+      <span class="confusable-hint" data-ui-text>${esc(hint)}</span>
     </div>
     <table class="confusable-table">
-      <thead><tr><th>#</th><th data-ui-text>名称</th><th data-ui-text>距离</th><th data-ui-text>类型</th><th>${reasonLabel}</th></tr></thead>
+      <thead><tr><th>#</th><th data-ui-text>名称</th><th data-ui-text>距离</th><th data-ui-text>类型</th><th data-ui-text>${reasonLabel}</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
   </div>`;
@@ -4522,7 +4570,7 @@ function renderDifficultyBreakdown(profile) {
     <div class="difficulty-panel-head">
       <div>
         <div class="difficulty-panel-title" data-ui-text>难度构成面板</div>
-        <div class="difficulty-panel-desc">
+        <div class="difficulty-panel-desc" data-ui-text>
           Final difficulty 由“地点本身的地图歧义”与“任务输入提供给 Agent 的信息难度”共同推导。
           如果人工修改难度，应同步修改下方 difficulty_profile，而不是只改顶层字符串。
         </div>
@@ -4560,7 +4608,7 @@ function renderDiscoveryDifficultyBreakdown(profile) {
     <div class="difficulty-panel-head">
       <div>
         <div class="difficulty-panel-title" data-ui-text>难度构成面板</div>
-        <div class="difficulty-panel-desc">
+        <div class="difficulty-panel-desc" data-ui-text>
           Final difficulty 由“服务候选的天然歧义”与“任务约束的输入难度”共同推导。
           如果人工修改难度，应同步修改下方 difficulty_profile，而不是只改顶层字符串。
         </div>
@@ -4595,7 +4643,7 @@ function renderLegacyDifficultyBreakdown(profile) {
     <div class="difficulty-panel-head">
       <div>
         <div class="difficulty-panel-title" data-ui-text>难度构成面板</div>
-        <div class="difficulty-panel-desc">
+        <div class="difficulty-panel-desc" data-ui-text>
           该样例使用旧版扁平 difficulty_profile，这里保留展示其信息量、属性覆盖、冲突程度和候选歧义。
         </div>
       </div>
@@ -4616,12 +4664,12 @@ function renderLegacyDifficultyBreakdown(profile) {
 
 function difficultyLayerCard(title, level, rationale, rows, explanation) {
   return `<div class="difficulty-card detailed">
-    <div class="difficulty-title">${esc(title)}</div>
+    <div class="difficulty-title" data-ui-text>${esc(title)}</div>
     <div class="difficulty-level ${esc(level || '')}">${esc(level || '-')}</div>
-    <div class="difficulty-explain">${esc(explanation)}</div>
+    <div class="difficulty-explain" data-ui-text>${esc(explanation)}</div>
     <div class="difficulty-rationale">${esc(rationale || '')}</div>
     <div class="difficulty-factor-list">
-      ${rows.map(([label, value]) => `<div><span>${esc(label)}</span><b>${esc(value ?? '-')}</b></div>`).join('')}
+      ${rows.map(([label, value]) => `<div><span data-ui-text>${esc(label)}</span><b>${esc(value ?? '-')}</b></div>`).join('')}
     </div>
   </div>`;
 }

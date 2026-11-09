@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerary Review</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="static/style.css" />
+<link rel="stylesheet" href="/ui/i18n.css">
+<script src="/ui/i18n.js" defer></script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div id="sb-header">
+      <h2>行程规划 Review</h2>
+      <div id="task-nav">
+        <button id="btn-prev" disabled>&lt;</button>
+        <span id="task-counter">-</span>
+        <button id="btn-next" disabled>&gt;</button>
+        <button id="btn-list" title="Task list">☰</button>
+      </div>
+    </div>
+
+    <div id="sb-scroll">
+
+    <div class="section">
+      <div class="section-title" data-target="meta-body">▾ 基本信息 + 生成统计</div>
+      <div id="meta-body" class="section-body">
+        <div class="meta-grid" id="meta-grid"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-target="prompt-body">▾ User Prompt (可编辑)</div>
+      <div id="prompt-body" class="section-body">
+        <textarea id="prompt-text" rows="4"></textarea>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-target="menus-body">▾ Menus (LLM 收到的事件菜单)</div>
+      <div id="menus-body" class="section-body">
+        <div id="menus-content"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title" data-target="timeline-body">▾ GT Itinerary</div>
+      <div id="timeline-body" class="section-body">
+        <div id="timeline"></div>
+      </div>
+    </div>
+
+    <div class="section" id="sec-audit" style="display:none">
+      <div class="section-title a-title" data-target="audit-body">▾ ⚠ Audit Warnings</div>
+      <div id="audit-body" class="section-body"></div>
+    </div>
+
+    <div class="section" id="sec-constraints" style="display:none">
+      <div class="section-title" data-target="constraints-body">▾ Constraints</div>
+      <div id="constraints-body" class="section-body"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title ed-title" data-target="editor-bar-body">▾ GT Editor</div>
+      <div id="editor-bar-body" class="section-body">
+        <div class="ed-bar">
+          <label class="ed-ftoggle">Feasible:
+            <select id="ed-feasible" onchange="onFeasibleChange()">
+              <option value="true">✓ feasible</option>
+              <option value="false">✗ infeasible</option>
+            </select>
+          </label>
+        </div>
+        <div class="editor-actions">
+          <button class="btn-save" onclick="saveGT()">💾 Save GT</button>
+          <button class="btn-approve" onclick="approve()">✅ Approve</button>
+          <button class="btn-reject" onclick="reject()">❌ Reject</button>
+        </div>
+        <div id="editor-status"></div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div id="main-panel">
+    <div id="map"></div>
+    <div id="bottom-bar">
+      <span id="bb-title">POIs</span>
+      <div id="poi-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- edit modal -->
+<div id="edit-modal" style="display:none">
+  <div id="edit-overlay" onclick="closeEdit()"></div>
+  <div id="edit-panel">
+    <h3 id="edit-modal-title">Edit Event</h3>
+    <div class="e-row"><label>Type:</label><select id="ed-type"></select></div>
+    <div class="e-row"><label>Day:</label><span id="ed-day"></span></div>
+    <div class="e-row"><label>Place:</label><select id="ed-place"></select></div>
+    <div class="e-row"><label>Start:</label><input id="ed-start" type="time" step="60" /></div>
+    <div class="e-row"><label>End:</label><input id="ed-end" type="time" step="60" /></div>
+    <div class="btn-row" style="margin-top:10px">
+      <button id="btn-edit-save">Save</button>
+      <button id="btn-edit-cancel" onclick="closeEdit()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div id="list-modal" style="display:none">
+  <div id="list-overlay" onclick="closeList()"></div>
+  <div id="list-panel">
+    <h3>Tasks</h3>
+    <div id="list-content"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="static/app.js"></script>
+</body>
+</html>

@@ -366,3 +366,47 @@ def test_exact_poi_session_ignores_legacy_radius_check():
     assert normalized["stages"][0]["nodes"][0]["hard_checks"] == [{"check_type": "field_equals"}]
     assert normalized["stages"][0]["nodes"][0]["soft_checks"] == []
     assert judge["stages"][0]["nodes"][0]["soft_checks"] == [{"check_type": "geo_within_radius"}]
+
+
+def test_frozen_anchor_lookup_and_saved_route_share_the_same_location(tmp_path):
+    from types import SimpleNamespace
+    from shared.map_place_index import map_index_places
+    from test_runner.place.runtime import AppRuntime
+    from test_runner.place.sandbox_adapter import MapAppSandbox, discovery_route_evidence
+
+    origin = {"lat": 40.713208, "lng": -73.987787}
+    destination = {"lat": 40.75, "lng": -73.95}
+    diner = {"place_id": "diner", "city_id": "ny", "name": "Diner", "location": destination,
+             "map_projection": {"google_place_id": "diner-source"}}
+    anchor = {"google_place_id": "clinic-source", "name": "New York Gouverneur",
+              "location": origin, "address": "227 Madison St"}
+    world = {
+        "cities": [{"city_id": "ny", "name": "New York"}],
+        "places": [diner],
+        "districts": [{"city_id": "ny", "director_notes": {"anchor_places": [
+            anchor, anchor, {**anchor, "google_place_id": "diner-source"},
+        ]}}],
+    }
+    row = {"origin_place_id": "character", "origin_name": anchor["name"],
+           "origin_lat": origin["lat"], "origin_lng": origin["lng"], "dest_place_id": "diner",
+           "mode": "DRIVE", "route": {"duration_s": 1033, "distance_m": 8588}}
+    session = SimpleNamespace(
+        world=world, world_slice={}, curated_source={"example": {
+            "start": {"city_id": "ny", "source_place_id": "clinic-source", "coordinate": origin},
+            "evidence_ledger": {"construction_contract": {"route_evidence": [row]}},
+        }},
+    )
+    assert len(map_index_places(world)) == 2
+    assert world["places"] == [diner]
+    search = AppRuntime(session).map_app.search_places({"keyword": anchor["name"], "limit": 1})
+    place = search["places"][0]
+    assert (place["name"], place["location"], place["address"]) == (anchor["name"], origin, anchor["address"])
+    path = tmp_path / "world.json"
+    write_json(path, world)
+    route_map = MapAppSandbox(world_paths=[str(path)], route_cache_data={"cache": [row]})
+    route_map._load_cache_data(discovery_route_evidence(session))
+    result = route_map.query_routes(
+        origin={"name": place["name"], "location": origin},
+        destination={"name": "Diner", "location": destination}, mode="DRIVE",
+    )
+    assert {r["duration_s"] for r in result["routes"]} == {1033}

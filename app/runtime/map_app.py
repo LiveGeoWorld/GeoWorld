@@ -46,7 +46,11 @@ class MapAppRuntime(RuntimeApp):
                 continue
             if place_type and place.get('primary_type') != place_type:
                 continue
-            matches.append(place_payload(place))
+            payload = place_payload(place)
+            if str(place.get("place_id", "")).startswith("district_anchor:") and norm_query(keyword) == norm_query(place.get("name")):
+                matches.insert(0, payload)
+            else:
+                matches.append(payload)
         identified = matches[0].get('location', {}) if matches else {}
         return {'places': matches[:limit], 'identified_location': identified}
 

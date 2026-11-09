@@ -14,7 +14,7 @@
     const start = document.getElementById('gen-start');
     const type = document.getElementById('task-type-filter')?.value;
     if (start) {
-      const pending = type !== 'place_grounding';
+      const pending = !['place_grounding', 'place_discovery', 'route_planning', 'multi_entity', 'safety_planning', 'region_aware', 'itinerary'].includes(type);
       if (pending) { start.disabled=true; start.dataset.migrationBlocked='1'; }
       else if (start.dataset.migrationBlocked) { start.disabled=false; delete start.dataset.migrationBlocked; }
       start.title = pending ? (window.GeoUI?.language === 'zh-CN' ? '待迁移接入' : 'Pending migration and integration.') : '';

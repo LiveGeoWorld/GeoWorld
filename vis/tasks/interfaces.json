@@ -136,15 +136,15 @@
     "method": "POST",
     "path": "/api/itinerary/cost-preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected",
+    "status_label": "Connected"
   },
   {
     "method": "GET",
     "path": "/api/itinerary/route-resources",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected",
+    "status_label": "Connected"
   },
   {
     "method": "GET",
@@ -192,113 +192,97 @@
     "method": "POST",
     "path": "/api/multi-entity/cost-preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/multi-entity/route-resources",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/region/build/cancel",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/build/config",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/region/build/start",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/build/status",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/region/cost-preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/route-resources",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/rule-cities",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/rules",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/region/rules/update",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/service-detail/preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/region/service-detail/start",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/region/service-detail/status",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "POST",
     "path": "/api/route-planning/cost-preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/route-planning/resources",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
@@ -360,15 +344,13 @@
     "method": "POST",
     "path": "/api/safety/cost-preflight",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",
     "path": "/api/safety/route-resources",
     "feature": "generation",
-    "status": "not_connected",
-    "status_label": "Pending migration and integration"
+    "status": "connected"
   },
   {
     "method": "GET",

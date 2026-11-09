@@ -18,10 +18,10 @@ async function aeQuery(){
  if(!acScope)return;
  const s=aeState,key=JSON.stringify([acScope.world_id,acMode,s.city,s.time,s.zone,s.layers]),request=++s.request;
  const status=document.getElementById('ae-status');
- if(s.time&&!/^[+-](?:0\d|1[0-4]):[0-5]\d$/.test(s.zone)){status.textContent='请填写查看时间对应的 UTC 偏移，例如 +08:00。';return;}
- status.textContent='正在读取事件…';
+ if(s.time&&!/^[+-](?:0\d|1[0-4]):[0-5]\d$/.test(s.zone)){status.textContent=GeoUI.t('请填写查看时间对应的 UTC 偏移，例如 +08:00。');return;}
+ status.textContent=GeoUI.t('正在读取事件…');
  try{const params=new URLSearchParams({world:acScope.world_id,mode:acMode,city:s.city,time:s.time?s.time+s.zone:'',layers:s.layers});const data=await dynamicJSON('/api/app-content/event-overview?'+params);if(request!==s.request||!acOverview||currentView!=='app-content'||key!==JSON.stringify([acScope?.world_id,acMode,s.city,s.time,s.zone,s.layers]))return;s.data=data;s.key=key;s.selected=null;aeRender();}
- catch(e){if(request===s.request&&status.isConnected)status.textContent='读取失败：'+e.message;}
+ catch(e){if(request===s.request&&status.isConnected)status.textContent=GeoUI.t('读取失败：{detail}', {detail: e.message});}
 }
 let aeCalendar={parts:[],level:2,page:2020};
 const aeUnits=['年','月','日','时','分'];
@@ -48,10 +48,10 @@ function aeAvailable(parts){
 function aeTimeOpen(){
  document.getElementById('ae-calendar')?.remove();
  const s=aeState;
- if(!s.city||s.data?.city_id!==s.city||s.data?.mode!==acMode){document.getElementById('ae-status').textContent='请先选择城市并读取事件。';return;}
+ if(!s.city||s.data?.city_id!==s.city||s.data?.mode!==acMode){document.getElementById('ae-status').textContent=GeoUI.t('请先选择城市并读取事件。');return;}
  const windows=s.data.available_windows||[];
  if(!s.zone&&windows.length){s.zone=windows[0].start.match(/(Z|[+-]\d{2}:\d{2})$/)?.[0]?.replace('Z','+00:00')||'';document.getElementById('ae-zone').value=s.zone;}
- if(windows.length&&!/^[+-](?:0\d|1[0-4]):[0-5]\d$/.test(s.zone)){document.getElementById('ae-status').textContent='请先填写有效时区。';return;}
+ if(windows.length&&!/^[+-](?:0\d|1[0-4]):[0-5]\d$/.test(s.zone)){document.getElementById('ae-status').textContent=GeoUI.t('请先填写有效时区。');return;}
  const first=windows.length?new Date(Math.min(...windows.map(w=>Date.parse(w.start)))+aeOffset()).toISOString().slice(0,10):'2026-01-01';
  const base=(s.time||first).split(/[-T:]/).map(Number);
  aeCalendar={parts:s.time?base:base.slice(0,2),level:2,page:Math.floor(base[0]/12)*12};

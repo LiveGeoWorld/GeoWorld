@@ -104,23 +104,18 @@ def run_task(task_dir: str | Path, route_cache_path: str='', model_key: str='cli
             from test_runner.recover_task import verify_binding
             verify_binding(recovery_record, task_data, place_world_binding, dynamic_event_mode, read_json(task_dir / 'task_provenance.json') if (task_dir / 'task_provenance.json').exists() else {})
         result = agent.run(recovery=recovery_record, checkpoint_sink=checkpoint_sink) if recovery_record is not None or checkpoint_sink is not None else agent.run()
-        events = list(runtime_sandbox.events)
-        if task_type == 'place_grounding':
+        if task_type == "place_discovery":
+            metric = check_discovery_answer(result, session.gold)
+        else:
             result.final_answer = runtime_sandbox.final_answer_data
-        else:
-            final_content = str(result.final_answer or {})
-            events.append({'step': len(events) + 1, 'app': 'UserInterfaceApp', 'function': 'send_message_to_user', 'agent_action': 'UserInterfaceApp.send_message_to_user', 'args': {'content': final_content}, 'response': {'status': 'sent'}})
-        judge = evaluate_judge_sequence(session.judge_sequence, events)
-        trajectory_metric = MetricResult(metric='judge_sequence', label='轨迹完整性（辅助指标）', pass_=bool(judge['success']), detail=judge['rationale'])
-        if task_type == 'place_discovery':
-            answer_metric = check_discovery_answer(result, session.gold)
-            result.metrics = [answer_metric, trajectory_metric]
-            result.total_metrics = 1
-            result.passed_metrics = 1 if answer_metric.pass_ else 0
-        else:
-            result.metrics = [trajectory_metric]
-            result.total_metrics = 1
-            result.passed_metrics = 1 if trajectory_metric.pass_ else 0
+            judge = evaluate_judge_sequence(session.judge_sequence, runtime_sandbox.events)
+            metric = MetricResult(
+                metric="judge_sequence", label="轨迹完整性（辅助指标）",
+                pass_=bool(judge["success"]), detail=judge["rationale"],
+            )
+        result.metrics = [metric]
+        result.total_metrics = 1
+        result.passed_metrics = int(metric.pass_)
         result.task_id = task_id
         result.task_folder = task_dir.name
         result.task_type = task_type

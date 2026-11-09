@@ -217,6 +217,7 @@ def test_shortfall_resumes_from_candidate_snapshot_not_character_stage(tmp_path:
 
 
 def test_automatic_candidate_repairs_poi_and_character_gaps_without_restart(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(server, "PIPELINE_ROOT", tmp_path)
     monkeypatch.setattr(server, "WORLD_JOB_LOG_ROOT", tmp_path / "world_jobs")
     world_path = tmp_path / "candidate" / "world.json"
     characters_path = tmp_path / "candidate" / "characters.json"

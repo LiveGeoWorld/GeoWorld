@@ -122,6 +122,21 @@ def task_detail(root: Path, folder: str):
             projected.pop('task_sandbox',None)
         result.update(projected)
     task_type = result["task"].get("task_type")
+    if task_type == "route_planning" and result.get("route_sandbox") is not None:
+        from vis.tasks.workbench_http import inject_bound_route_evidence
+        inject_bound_route_evidence(path, result["route_sandbox"])
+    if task_type == "itinerary" and result.get("task_sandbox"):
+        from vis.tasks.itinerary_review_evidence import inject_itinerary_review
+        inject_itinerary_review(path, result["task_sandbox"])
+    if task_type == "region_aware" and "region_review" not in result:
+        from app.runtime.asset_bindings import _resolve_place_world_snapshot
+        from vis.tasks.region_review import region_review_data
+        try:
+            binding = _resolve_place_world_snapshot(None, path, result["task"])
+            world = read(Path(binding["world_paths"][0]))
+            result["region_review"] = region_review_data(path, result.get("task_sandbox") or {}, world, ROOT)
+        except (FileNotFoundError, ValueError) as exc:
+            result["region_review"] = {"warnings": [str(exc)]}
     if task_type == "dynamic_replanning":
         result["dynamic_review"] = {name: read(path / (name + ".json")) for name in
                                     ("counterfactual_proof", "dynamic_private_audit", "counterfactual_proof_request", "task_provenance")
@@ -187,7 +202,10 @@ def handle_api(handler, method: str, endpoint: str, params: dict):
             app_root=ROOT / 'examples' / 'app_runtime' / 'benchmarks'
         AppHTTP(handler, app_root).handle(endpoint, {k: [v] for k, v in params.items()})
         return
-    if endpoint in {'/api/generate','/api/generate/status','/api/generate/cancel'}:
+    if endpoint in {'/api/generate','/api/generate/status','/api/generate/cancel',
+                    '/api/route-planning/resources','/api/route-planning/cost-preflight',
+                    '/api/multi-entity/route-resources','/api/multi-entity/cost-preflight',
+                    '/api/safety/route-resources','/api/safety/cost-preflight'} or endpoint.startswith(('/api/region/', '/api/itinerary/')):
         from vis.tasks.generation_http import GenerationHTTP
         GenerationHTTP(handler,ROOT/'outputs/benchmarks',params).handle(method,endpoint)
         return
@@ -212,7 +230,7 @@ def handle_api(handler, method: str, endpoint: str, params: dict):
         return
     if endpoint == "/api/config":
         send(handler, {"google_maps_api_key": "", "preferred_basemap": "osm", "model_options": {"generation": __import__("vis.tasks.evaluation_http", fromlist=["_model_options"])._model_options()["generation"], "testing": __import__("vis.tasks.evaluation_http", fromlist=["_model_options"])._model_options()["testing"]},
-                       "generation_task_types": ["place_grounding"], "generation_feasibility": {"mixed_task_types": []}, "workbench_worlds": available_worlds,
+                       "generation_task_types": ["place_grounding", "place_discovery", "route_planning", "multi_entity", "safety_planning", "region_aware", "itinerary"], "generation_feasibility": {"mixed_task_types": []}, "workbench_worlds": available_worlds,
                        "active_task_world": params["world"],
                        "connected_features": ["browse", "app", "evaluation", "map", "review"]})
     elif endpoint == "/api/manifest":

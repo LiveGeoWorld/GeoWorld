@@ -13,12 +13,18 @@ function renderMultiReview(data){
  <details class="gr-details mr-source"><summary>${label('原始记录')}</summary>${mrRaw(sb)}</details></section>`+renderReviewControls(data.task.task_type,data.review_status);
 }
 function mrValue(v){return Array.isArray(v)?v.join(' / '):v??'—';}
-function mrClock(v){return Number.isFinite(v)?`${String(Math.floor(v/60)).padStart(2,'0')}:${String(v%60).padStart(2,'0')}`:'—';}
+function mrClock(v){
+ if(!Number.isFinite(v))return '—';
+ const seconds=Math.round(v*60),pad=n=>String(n).padStart(2,'0');
+ return `${pad(Math.floor(seconds/3600))}:${pad(Math.floor(seconds/60)%60)}${seconds%60?`:${pad(seconds%60)}`:''}`;
+}
 function mrCondition(c){const names={start_time:'共同活动开始时间',commute_min:'单程耗时',travel_mode:'交通方式',google_types:'地点类型'},relations={le:'不超过',ge:'不少于',eq:'等于',in:'允许',contains:'包含'};const subject={activity:'共同活动',place:'地点',all_participants:'所有参与者'}[c.object]||c.object;return `${discoveryLabel(subject)} · ${discoveryLabel(names[c.attribute]||c.attribute)} · ${discoveryLabel(relations[c.relation]||c.relation)} ${esc(mrValue(c.value))}${c.attribute==='commute_min'?' min':''}`;}
+function mrOpening(intervals){return intervals?.map(([start,end])=>mrClock(start)+' — '+mrClock(end)).join(' / ');}
 function mrFailure(f){
  const label=discoveryLabel;
  if(typeof f.constraint==='object')return `${mrCondition(f.constraint)}；${label('实际未包含')} ${esc(f.constraint.value)}`;
  if(f.constraint==='required_place_type')return `${label('地点类型')}：${label('要求')} ${esc(f.expected)}；${label('实际')} ${esc(f.actual)}`;
+ if(f.constraint==='venue_opening_window')return f.reason==='missing_opening_hours'?label('缺少营业时段'):label('营业时段无法容纳完整活动')+(mrOpening(f.opening_intervals)?' · '+mrOpening(f.opening_intervals):'');
  if(['joint_time_window','joint_time_and_open_window'].includes(f.constraint))return `${label('最早开始')} ${mrClock(f.earliest_start_min)}；${label('最迟开始')} ${mrClock(f.latest_start_min)}${f.duration_min!=null?`；${label('活动时长（分钟）')} ${esc(f.duration_min)}`:''}`;
  if(f.constraint==='party_size')return `${label('人数')}：${label('要求')} ${esc(f.required)}；${label('容量')} ${esc(f.capacity)}`;
  if(f.constraint==='dietary')return `${label('饮食')}：${label('要求')} ${esc(mrValue(f.required))}；${label('提供')} ${esc(mrValue(f.provided))}`;
@@ -28,7 +34,7 @@ function mrFailure(f){
  return label('详见保存的核验记录');
 }
 function mrSuccessEvidence(r,p,facts){
- const label=discoveryLabel,parts=[label('满足保存的本题 C')];
+ const label=discoveryLabel,parts=[label(r.commute_ranking?'满足硬条件':'满足保存的本题 C')];
  if(r.meeting_start)parts.push(`${label('共同活动时间')} ${esc(r.meeting_start)}${r.meeting_end?` — ${esc(r.meeting_end)}`:''}`);
  if(facts?.activity?.duration_min!==undefined)parts.push(`${label('活动时长（分钟）')} ${esc(facts.activity.duration_min)}`);
  for(const c of facts?.additional_constraints||[]){
@@ -52,15 +58,25 @@ function multiComparisonHTML(data){
  const proof=sb.candidate_choice_verification||data.candidate_choice_verification;
  const facts=sb.scenario?.public_fact_projection||data.public_fact_projection||proof?.public_constraints;
  const activity=facts?.activity||facts?.meeting||{},people=facts?.participants||[];
+ const early=facts?.early_arrival, preference=facts?.commute_preference;
+ const timing=mrFields([
+  ['提前到场',early?`${early.participants.join(' / ')} · ${early.lead_minutes} min · ${early.purpose}`:null],
+  [preference?.target_minutes==null?'最快通勤':'最接近目标通勤',
+   preference?`${preference.participant} · ${preference.mode}${preference.target_minutes==null?'':` · ${preference.target_minutes} min`}`:null]
+ ]);
  const requirements=facts?`${mrFields([['活动类型',activity.activity_type],['地点类型',activity.required_place_type],['活动时长（分钟）',activity.duration_min],['到达方式',activity.arrival_mode],['允许交通方式',activity.allowed_travel_modes],['通勤上限（分钟）',activity.max_commute_min]])}<div class="mr-c-people">${people.map(p=>`<span><strong>${esc(p.name)}</strong> ${esc(p.available_from)} — ${esc(p.must_leave_by)}${p.budget!==undefined?` · ${label('预算')} ${esc(p.budget)}`:''}${p.dietary&&!['none','无'].includes(p.dietary)?` · ${label('饮食')} ${esc(p.dietary)}`:''}</span>`).join('')}</div>${(facts.additional_constraints||[]).length?`<ul class="mr-added-c">${facts.additional_constraints.map(c=>`<li>${mrCondition(c)}</li>`).join('')}</ul>`:''}`:`<p class="readonly-note">${label('未保存本题关键 C')}</p>`;
  const rows=places.map(p=>{
   const r=proof?.candidate_results?.find(r=>r.place_id===multiReviewId(p)||(p.service_id&&r.service_id===p.service_id)),status=r?.status;
   const reason=status==='excluded'?(r.failures||[]).map(mrFailure).join('<br>'):status==='feasible'?mrSuccessEvidence(r,p,facts):status==='unresolved'?(r.missing_evidence||[]).map(g=>`${label('缺少证据')}：${esc(g.participant||'')} ${label(g.field==='google_types'?'地点类型':'路线耗时')}${g.required_modes?` · ${esc(mrValue(g.required_modes))}`:''}`).join('<br>'):label('未保存核验结果');
-  const details=r?`<details class="mr-candidate-detail"><summary>${label('查看详情')}</summary><div class="mr-candidate-body">${mrFields([['地点类型',p.primary_type],['实际类型',p.types],['共同活动时间',r.meeting_start?`${r.meeting_start} — ${r.meeting_end}`:null]])}${(r.travel_evidence||[]).length?`<table><thead><tr>${['参与者','交通方式','耗时','到达时间'].map(h=>`<th>${label(h)}</th>`).join('')}</tr></thead><tbody>${r.travel_evidence.map(t=>`<tr><td>${esc(t.participant)}</td><td>${esc(t.travel_mode)}</td><td>${esc(t.travel_min)} min</td><td>${mrClock(t.arrival_min)}</td></tr>`).join('')}</tbody></table>`:''}${mrRaw({candidate:p,verification:r})}</div></details>`:'';
-  const warning=(status==='feasible'&&multiReviewId(p)!==expected)?`<div class="mr-inline-warning mr-feasible">${label('该候选仍满足本题 C')}</div>`:status==='unresolved'?`<div class="mr-inline-warning mr-unresolved">${label('证据不足')}</div>`:'';
-  return `<tr><td><button class="mr-link ${multiReviewId(p)===expected?'mr-gt':''}" onclick="focusMultiCandidateOrGT('${escAttr(multiReviewId(p))}')">${multiReviewId(p)===expected?'GT · ':''}${esc(p.name||p.place_name)}</button></td><td class="mr-${status||'unknown'}-evidence">${warning}${reason}${details}</td></tr>`;
+  const details=r?`<details class="mr-candidate-detail"><summary>${label('查看详情')}</summary><div class="mr-candidate-body">${mrFields([['地点类型',p.primary_type],['实际类型',p.types],['营业时段',mrOpening(p.activity_opening_intervals)],['共同活动时间',r.meeting_start?`${r.meeting_start} — ${r.meeting_end}`:null]])}${(r.travel_evidence||[]).length?`<table><thead><tr>${['参与者','交通方式','耗时','到达时间'].map(h=>`<th>${label(h)}</th>`).join('')}</tr></thead><tbody>${r.travel_evidence.map(t=>`<tr><td>${esc(t.participant)}</td><td>${esc(t.travel_mode)}</td><td>${esc(t.travel_min)} min</td><td>${mrClock(t.arrival_min)}</td></tr>`).join('')}</tbody></table>`:''}${mrRaw({candidate:p,verification:r})}</div></details>`:'';
+  const rank=r?.commute_ranking;
+  const accepted=proof?.accepted_place_ids?.includes(multiReviewId(p))??(status==='feasible');
+  const warning=(accepted&&multiReviewId(p)!==expected)?`<div class="mr-inline-warning mr-feasible">${label('该候选仍满足本题 C')}</div>`:status==='unresolved'?`<div class="mr-inline-warning mr-unresolved">${label('证据不足')}</div>`:'';
+  const ranking=rank?mrFields([['路线耗时',`${rank.duration_s} s`],
+   [preference?.target_minutes==null?'排序值':'距目标耗时',`${rank.score_s} s`]]):'';
+  return `<tr><td><button class="mr-link ${multiReviewId(p)===expected?'mr-gt':''}" onclick="focusMultiCandidateOrGT('${escAttr(multiReviewId(p))}')">${multiReviewId(p)===expected?'GT · ':''}${esc(p.name||p.place_name)}</button></td><td class="mr-${status||'unknown'}-evidence">${warning}${reason}${ranking}${details}</td></tr>`;
  }).join('');
- return `<div class="mr-reference"><h3>${label('本题关键 C')}</h3>${requirements}</div><div class="mr-comparison"><h3>${label('候选比较')}</h3><div class="mr-table"><table><thead><tr><th>${label('名称')}</th><th>${label('关键对比依据')}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+ return `<div class="mr-reference"><h3>${label('本题关键 C')}</h3>${requirements}${early||preference?timing:''}</div><div class="mr-comparison"><h3>${label('候选比较')}</h3><div class="mr-table"><table><thead><tr><th>${label('名称')}</th><th>${label('关键对比依据')}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 function focusMultiCandidateOrGT(id){const {people,expected}=multiReviewFacts(multiReviewData);if(id===expected)focusMultiReview(people.length);else focusMultiCandidate(id);}
 function multiPlanHTML(i){const {plans,people}=multiReviewFacts(multiReviewData),p=plans[i];if(!p)return `<p class="readonly-note">${discoveryLabel('未保存协调方案')}</p>`;return mrFields([['共同活动时间',p.meeting_start&&p.meeting_end?`${p.meeting_start} — ${p.meeting_end}`:null],['合计通勤（分钟）',p.total_commute_min],['最长个人通勤（分钟）',p.max_individual_commute_min]])+`<div class="mr-assignments">${(p.assignments||[]).map(a=>`<span>${esc(people.find(x=>x.character_id===a.character_id)?.name||a.character_id)} · ${discoveryLabel(a.arrival_mode==='independent'?'独立到达':a.arrival_mode||'未记录')}</span>`).join('')}</div>`+mrRaw(p);}

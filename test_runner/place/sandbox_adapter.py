@@ -1,6 +1,7 @@
 """Expose curated place runtimes as tools in the unified test environment."""
 from __future__ import annotations
 from typing import Any, Callable
+from shared.map_place_index import map_index_places, source_place_id
 from test_runner.place.runtime import AppRuntime
 from test_runner.place.session import TaskSession
 from app.apps.base import BaseApp
@@ -11,7 +12,14 @@ def discovery_route_evidence(session: TaskSession) -> dict[str, Any]:
     example = session.curated_source.get('example') or {}
     contract = (example.get('evidence_ledger') or {}).get('construction_contract') or {}
     start = example.get('start') or {}
-    place = next((p for p in session.world.get('places', []) if start.get('place_id') and p.get('place_id') == start['place_id']), None)
+    place = next((
+        p for p in map_index_places(session.world)
+        if ((start.get("place_id") and p.get("place_id") == start["place_id"])
+            or (start.get("source_place_id")
+                and p.get("city_id") == start.get("city_id")
+                and source_place_id(p) == start["source_place_id"]
+                and MapAppSandbox._same_location(start.get("coordinate"), p.get("location"))))
+    ), None)
     if place is None:
         return {'cache': []}
     routes = []
