@@ -15,7 +15,7 @@
 
 </div>
 
-![GeoWorld 与 LiveGeo 总览，展示共享城市时间线、交互工具和任务类别](docs/assets/geoworld-livegeo-overview.png)
+[![GeoWorld 总览，展示共享时间线、应用和决策更新](docs/assets/geoworld-github.png)](docs/assets/geoworld-github.pdf)
 
 ## 项目概览
 

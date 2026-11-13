@@ -15,7 +15,7 @@ English · [简体中文](README.zh-CN.md)
 
 </div>
 
-![Overview of GeoWorld and LiveGeo, showing the shared city timeline, tools, and task categories](docs/assets/geoworld-livegeo-overview.png)
+[![GeoWorld overview showing the shared world timeline, Apps, and decision updates](docs/assets/geoworld-github.png)](docs/assets/geoworld-github.pdf)
 
 ## Overview
 
